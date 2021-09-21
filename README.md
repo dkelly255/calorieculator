@@ -1,6 +1,6 @@
 
 # CalorieCulator - Work In Progress
-Note: Provisional content - work in progress & details evolving
+Note: Provisional content: Under construction & details evolving
 ## Introduction
 - CalorieCulator is a site aimed at people who want to take control of and improve their dietary habits
 - The site will initially request the user to input several key measurements (height, weight, age etc) - these measurements will then be used by JavaScript to populate a standard formula (BMR) to calculate and return a personalised daily calorie target
@@ -18,16 +18,92 @@ Note: Provisional content - work in progress & details evolving
 
 ### Scope
 ### Structure
+The site is delivered via a 4 page structure, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow. The four pages map as follows:
+
+**1. Home Page:** The site's home page will greet the user with an introduction to the "What", "Why", and "How" of calorie planning & measurement. 
+
+**2. Calorie Calculation Page:** The Calorie Calculation page will take inputs from the user via HTML data entry fields - including the user's gender, height, weight, age & activity level - allowing Javascript to use these inputs as variables in a pre-determined set of formulas, and returning a personalised calorie target for the user. 
+
+The Harris-Benedict formula is used for the initial Basal Metabolic Rate (hereafter referred to as "BMR") which is then uplifted by an activity factor according to the user's choice (From 1. Sedentary to 5. Very Active)
+
+**3. Macro Mix Page:** The Macro Mix page will ask the user to choose their desired macro-nutrient split (Protein/Carbs/Fats) from three pre-defined options (standard, high-protein, and low-carb) and will then combine this specification with the below to arrive at a personalised daily split in grams per macro-nutrient
+
+
+(1) The output from the calorie calculation page
+
+(2) The standard calories per macronutrient gram formula
+
+The Macro Split will be graphically displayed for the user in the form of a pie-chart, and can be used by the site visitor to support their new controlled diet plans
+
+**4. Meal Planning Page:** The Meal planning page is the final step in the site flow - and will request the user to select their preferences (or unselect their dislikes) from a pre-determined list of common foods from each of the three macronutrient categories (Protein/Carbohydrates & Fats). 
+
+Completion of this activity will trigger Javascript to build the choices into an array per macro group, and then  return one food choice per macro group within boundaries of 
+- (1) Total daily calories are to equal step 1 output (with a possible small error bar +/- tolerance factor for rounding depending on step 3)
+- (2) Daily Calories per individual macro group (Protein/Carb/Fat) are to equal step 2's macro split output (subject to rounding/tolerance)
+- (3) There must be one food from each macro group per meal 
+- (4) There must be three meals per day (Breakfast, Lunch, Dinner)
+
+The user will then see a display of the generated sample daily meal plan, and can also download a copy for use offline if they wish
+
+
 ### Skeleton
 #### Wireframes 
+To drive the early site design efforts, I am using wireframes to map flows across HTML, CSS & Javascript - provisionally using a combination of:
+- Microsoft Powerpoint - Primarily for mapping the web page HTML/CSS aspects & structure
+- Microsoft Excel - Primarily for: 
+    1. Mapping logic & formulas in detail for Javascript
+    2. Showing linkages & integration points between Javascript & the HTML/CSS)
+
+I have chosen these programs as I have experience with both, and Microsoft excel in particular for setting up formula calculations to guide the Javascript programming efforts
+
+**Initial logic flow/mapping diagram** (Under Construction - full version with Step 3 work in progress as of 21/09)
+
+![alt text](readme/logic_flow.png)
+
+**Home Page:**
+
+![alt text](readme/home.png)
+
+**Calorie Calculation Page:**
+
+![alt text](readme/calorie_calculation.png)
+
+**Macro Mix Page HTML:**
+
+![alt text](readme/macros.png)
+
+**Meal Planning Page HTML:**
+
+![alt text](readme/planner.png)
+
 ### Surface
 - #### Color scheme
 - #### Typography
 - #### Imagery
 
 ## Features
-
 ### Existing Features
+
+**Home Page:** The site's home page will greet the user with an introduction to the "What", "Why", and "How" of calorie planning & measurement. 
+
+**Header:**
+
+**Footer:**
+
+**Calorie Calculation Page:** The Calorie Calculation page will take inputs from the user via HTML data entry fields - including the user's gender, height, weight, age & activity level - allowing Javascript to use these inputs as variables in a pre-determined set of formulas, and returning a personalised calorie target for the user. The Harris-Benedict formula is used for the initial Basal Metabolic Rate (hereafter referred to as "BMR") which is then uplifted by an activity factor according to the user's choice (From 1. Sedentary to 5. Very Active)
+
+**Macro Mix Page:** The Macro Mix page will ask the user to choose their desired macro-nutrient split (Protein/Carbs/Fats) from three pre-defined options (standard, high-protein, and low-carb) and will then combine this specification with (1) the output from the calorie calculation page, and (2) the standard calories per macronutrient gram formula, to arrive at a personalised daily split in grams per macro-nutrient. This will be graphically displayed for the user in the form of a pie-chart, and can be used by the site visitor to calibrate their new controlled diet plans
+
+**Meal Planning Page:** The Meal planning page is the final step in the site flow - and will request the user to select their preferences (or unselect their dislikes) from a pre-determined list of common foods from each of the three macronutrient categories (Protein/Carbohydrates & Fats). 
+
+Completion of this activity will trigger Javascript to build the choices into an array per macro group, and then  return one food choice per macro group within boundaries of 
+- (1) Total daily calories are to equal step 1 output (with a possible small error bar +/- tolerance factor for rounding depending on step 3)
+- (2) Daily Calories per individual macro group (Protein/Carb/Fat) are to equal step 2's macro split output (subject to rounding/tolerance)
+- (3) There must be one food from each macro group per meal 
+- (4) There must be three meals per day (Breakfast, Lunch, Dinner)
+
+**Download to CSV:** A feature where the user can click a button to download a copy of their calorie target, macro splits, and meal plans
+
 ### Features Left to implement
 
 ## Testing
