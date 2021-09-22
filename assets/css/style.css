@@ -7,7 +7,8 @@
     background-color: #8EB19D;
 }
 
-
+/* Nav Bar Styling */
+/* Credits: Skillthrive Navbar tutorial */
 
 li, a {
     font-family: "Montserrat", sans-serif;
@@ -49,3 +50,45 @@ header {
     color: #0295CA;
 }
 
+/* Footer Styling */
+/* Credits: Crazy Coders Club Footer tutorial */
+
+footer {
+    background-color:#3b3b3b3b;
+    padding: 40px 80px;
+}
+
+footer p {
+    color: rgb(0, 0, 0);
+    text-align:center;
+    margin-top: 20px;
+}
+
+.social-links li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    
+}
+
+.social-links li a {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    min-width: 40px;
+    height: 40px;
+}
+
+.social-links li a:link, 
+.social-links li a:visited {
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.social-links li a:active, 
+.social-links li a:hover {
+    background-color: #ececec;
+    border-radius: 50%;
+} 
