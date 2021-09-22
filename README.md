@@ -60,6 +60,9 @@ I have chosen these programs as I have experience with both, and Microsoft excel
 
 ![alt text](readme/logic_flow.png)
 
+**Step 3 - Meal Plan Generator logic**
+![alt text](readme/generator_logic.png)
+
 **Home Page:**
 
 ![alt text](readme/home.png)
@@ -80,13 +83,82 @@ I have chosen these programs as I have experience with both, and Microsoft excel
 
 An inventory of the formulas required to enable the site strategy are as follows:
 
-1. Calorie Calculation Page
+A. Calorie Calculation Page
     
-    a. Base Metabolic Rate (BMR) 
-        
-        Male = 66 + (6.3 * bodyweight lbs) + (12.9 * height in inches) - (6.8 * age in years)
+    1. Personal Daily Calorie Target (PDCT)
 
-        Female = 655 + (4.3 * bodyweight lbs) + (4.7 * height in inches) - (4.7 * age in years)
+        PDCT = (BMR * Activity Multiplier) * Goal Scenario
+
+    2. Base Metabolic Rate (BMR) 
+        
+        BMR (Male) = 66 + (6.3 * bodyweight lbs) + (12.9 * height in inches) - (6.8 * age in years)
+
+        BMR (Female) = 655 + (4.3 * bodyweight lbs) + (4.7 * height in inches) - (4.7 * age in years)
+
+    3. Activity Multiplier
+
+        Sedentary = 1.200
+        Lightly Active = 1.375
+        Moderately Active = 1.550
+        Very Active  = 1.725
+        Extra Active = 1.900
+
+    4. Goal Scenario
+
+        Maintain Current Weight = 1.0
+        Gain Weight = 1.10
+        Lose Weight = 0.90
+
+B. Macro Mix Page
+    
+    5. Option 1: Standard Split
+
+        Protein = PDCT * 20%
+        Carbohydrate = PDCT * 50%
+        Fat = PDCT * 30%
+
+    6. Option 2: High Protein
+
+        Protein = PDCT * 45%
+        Carbohydrate = PDCT * 30%
+        Fat = PDCT * 25%
+
+    7. Option 3: High Carbohydrate
+
+        Protein = PDCT * 20%
+        Carbohydrate = PDCT * 10%
+        Fat = PDCT * 70%
+
+C. Meal Planner Page
+
+    8. Meal Split Ratio - Calories per meal (Static)
+
+        Breakfast = PDCT * 25%
+        Lunch = PDCT * 35%
+        Dinner = PDCT * 40%
+
+    9. Macros per meal (Dynamic)
+
+        [Meal Split (formula 8)] * [Macronutrient split (from formula 5-7)] in calories per macro per meal
+        **Note:** there will be 9x of these calculations - protein, carbs, fat by breakfast, lunch, dinner
+
+    10. Foods Lookup Index (Static)
+
+        Pre-populate with:
+        - a fixed index (currently 1 - 5, can be expanded to provide variety)
+        - food name (e.g. chicken for protein, rice for carbohydrate, cheese for fat etc)
+        - estimated calories per gram (source from internet)
+
+    11. Meal Plan generator
+
+        - An array of (foods) by (meals)
+        - Each array element will contain
+            - Food name: a random number generated between 1-5 (or length of index in formula 10) and pulled from formula 10's index
+            - Meal name: the meal being planned (breakfast, lunch or dinner)
+            - Calorie allowance: from formula 9
+            - Quantity: the quantity of the food (in grams) required to fulfill the calorie per meal per macro, by dividing formula 9's output by the food's static calories per gram (lookup to formula 10 array)
+        - Will output one food per macro per meal, to which a note will add fresh vegetables for micronutrients & extra variety
+
 
 
 ### Surface
