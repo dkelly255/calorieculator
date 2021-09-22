@@ -76,6 +76,19 @@ I have chosen these programs as I have experience with both, and Microsoft excel
 
 ![alt text](readme/planner.png)
 
+### Formula Mapping (For Javascript)
+
+An inventory of the formulas required to enable the site strategy are as follows:
+
+1. Calorie Calculation Page
+    
+    a. Base Metabolic Rate (BMR) 
+        
+        Male = 66 + (6.3 * bodyweight lbs) + (12.9 * height in inches) - (6.8 * age in years)
+
+        Female = 655 + (4.3 * bodyweight lbs) + (4.7 * height in inches) - (4.7 * age in years)
+
+
 ### Surface
 - #### Color scheme
 - #### Typography
