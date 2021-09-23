@@ -96,19 +96,40 @@ nav {
     align-items:center;
 }
 
+.homeContainer h1 {
+    
+    
+}
+
 .box {
     height: 400px;
-    width: 300px;
+    width: 340px;
     border: 2px solid white;
     margin: 5px;
     color: white;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.4)
+    background-color: rgba(0, 0, 0, 0.7)
 }
 
-.box h1 {
-    padding-top:10px;
-    
+.smallbox {
+    /* border: 1px solid white; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin:5px;
+}
+
+#homelist {
+    list-style: none;
+    list-style-type: none;
+}
+
+.homeEmphasis {
+    font-size:150% ;
+}
+
+#homelist li {
+    padding-top:7px;
+    padding-bottom: 7px;
 }
 
 /* footer */
