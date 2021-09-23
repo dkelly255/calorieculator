@@ -12,26 +12,56 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url(../images/home1.jpg);
+    background-size:cover;
 }
 
 /* Nav Bar Styling */
 /* Credits: Skillthrive Navbar tutorial */
 
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    background-color: black;
+    border-bottom: 1.5px solid white;
+    border-top: 1.5px solid white;
+}
+
+header div {
+    width:200px;
+    text-align: center;
+    border:2px solid white;
+    border-radius: 20%;
+    color: white;
+    background: rgb(85, 83, 83);
+    font-weight: 400;
+    font-size: 1.2rem;
+    height: 2rem;
+    padding-top: 1.5px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(85, 83, 83);
+    color: white;
+    height: 30px;
+    border-bottom: 1.5px solid white;
+}
+
 .nav_links li, a {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
-    color: #383406;
+    color: white;
     text-decoration: none;
 }
 
-header {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 2%;
-}
+
 
 .logo {
     cursor: pointer;
@@ -54,19 +84,30 @@ header {
 }
 
 .nav_links li a:hover {
-    color: #0295CA;
+    color: black;
+}
+
+/* home page background */
+
+.homeContainer {
+    background-image: url(../images/home.jpg);
+    background-size:cover;
+    height:76vh;
 }
 
 /* footer */
 
 footer {
-    background: rgb(107, 105, 105);
+    background: rgb(85, 83, 83);
     height:auto;
     width: 100vw;
     font-family: inherit;
     padding-top: 10px;
     color: #fff;
-    margin-top: auto;
+    /* margin-top: auto; */
+    position: absolute;
+    bottom: 0;
+    border-top: 1.5px solid white;
 }
 
 .footer-content {
@@ -80,13 +121,18 @@ footer {
 .footer-content h3{
     font-size: 1.8rem;
     font-weight: 400;
-    text-transform: capitalize;
     line-height: 3rem;
+    border:3px solid white;
+    border-radius: 20%;
+    color: white;
+    background: black;
+    width: 280px;
+
 }
 
 .footer-content p {
     max-width: 500px;
-    margin: 5px auto;
+    margin: 1px auto;
     line-height: 28px;
     font-size: 14px;
 }
@@ -97,7 +143,7 @@ footer {
     align-items: center;
     justify-content:space-evenly;
     width: 75vw;
-    margin: 1rem 0 1rem 0;
+    margin: 0.5rem 0 1.0rem 0;
 }
 
 .socials li {
@@ -122,6 +168,8 @@ footer {
     width: 100vw;
     padding: 15px 0 15px 0;
     text-align: center;
+    border-bottom: 1.5px solid white;
+    border-top: 1.5px solid white;
 }
 
 .footer-bottom p {
