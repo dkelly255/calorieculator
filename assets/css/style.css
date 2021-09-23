@@ -87,12 +87,28 @@ nav {
     color: black;
 }
 
-/* home page background */
+/* home page content*/
 
 .homeContainer {
-    background-image: url(../images/home.jpg);
-    background-size:cover;
-    height:76vh;
+    height:70vh;
+    display:flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+.box {
+    height: 400px;
+    width: 300px;
+    border: 2px solid white;
+    margin: 5px;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.box h1 {
+    padding-top:10px;
+    
 }
 
 /* footer */
