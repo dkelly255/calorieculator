@@ -4,13 +4,20 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #8EB19D;
+    
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Nav Bar Styling */
 /* Credits: Skillthrive Navbar tutorial */
 
-li, a {
+.nav_links li, a {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -50,45 +57,75 @@ header {
     color: #0295CA;
 }
 
-/* Footer Styling */
-/* Credits: Crazy Coders Club Footer tutorial */
+/* footer */
 
 footer {
-    background-color:#3b3b3b3b;
-    padding: 40px 80px;
+    background: rgb(107, 105, 105);
+    height:auto;
+    width: 100vw;
+    font-family: inherit;
+    padding-top: 10px;
+    color: #fff;
+    margin-top: auto;
 }
 
-footer p {
-    color: rgb(0, 0, 0);
-    text-align:center;
-    margin-top: 20px;
-}
-
-.social-links li {
-    list-style: none;
-    display: inline-block;
-    margin-left: 20px;
-    
-}
-
-.social-links li a {
-    color: #000;
+.footer-content {
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
-    min-width: 40px;
-    height: 40px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
-.social-links li a:link, 
-.social-links li a:visited {
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 5px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 75vw;
+    margin: 1rem 0 1rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+.socials a {
     text-decoration: none;
-    transition: all 0.5s;
+    color: #fff;
 }
 
-.social-links li a:active, 
-.social-links li a:hover {
-    background-color: #ececec;
-    border-radius: 50%;
-} 
+.socials a i {
+    font-size: 1.5rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: aqua;
+}
+
+.footer-bottom {
+    background: black;
+    width: 100vw;
+    padding: 15px 0 15px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}

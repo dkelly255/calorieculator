@@ -234,7 +234,7 @@ Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https:
 
 Nav Bar & Logo - skillthrive [Navbar Tutorial](https://www.youtube.com/watch?v=PwWHL3RyQgk)
 
-
+Footer credits - https://www.youtube.com/watch?v=zdA3qZNH1vc
 ### Content
 
 
