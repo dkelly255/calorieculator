@@ -1,11 +1,13 @@
 
 # CalorieCulator - Work In Progress
-Note: Provisional content: Under construction & details evolving
+Provisional content: Under construction 
 ## Introduction
 - CalorieCulator is a site aimed at people who want to take control of and improve their dietary habits
 - The site will initially request the user to input several key measurements (height, weight, age etc) - these measurements will then be used by JavaScript to populate a standard formula (BMR) to calculate and return a personalised daily calorie target
 - The next step is to ask the user to choose their macronutrient goals from a list of three options - when combined with the calorie output from step 1, this will allow Javascript to calculate a simple personalised protein/carb/fat macro-nutrient split for the user
 - Finally the site will show the user a list of common foods per macro category - the user will select/unselect their preferences & the site will use the list to generate simple meal plan ideas that fit within the user's Calorie & Macro calculations, generating combinations of food options from each category's inventory of foods to provide variety 
+
+![alt text](readme/am_i_responsive.png)
 
 ## User Experience
 ### Strategy

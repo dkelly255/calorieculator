@@ -61,15 +61,6 @@ nav {
     text-decoration: none;
 }
 
-
-
-.logo {
-    cursor: pointer;
-    width: 140px;
-    height:auto;
-    margin-right: auto;
-}
-
 .nav_links {
     list-style: none;
 }
@@ -84,7 +75,7 @@ nav {
 }
 
 .nav_links li a:hover {
-    color: black;
+    color: aqua;
 }
 
 /* home page content*/
@@ -108,7 +99,7 @@ nav {
     border-radius: 20%;
     color: white;
     background: black;
-    width: 280px;
+    min-width: 280px;
 }
 
 .homeContainer {
@@ -237,4 +228,22 @@ footer {
     font-size: 14px;
     word-spacing: 2px;
     text-transform: capitalize;
+}
+
+/* Calorie Input Form */
+
+.formcontainer {
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    height:50vh;
+    color: white;
+}
+
+form {
+    border: 1.5px solid white;
+}
+
+form div {
+    height:50px;
 }
