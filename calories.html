@@ -51,13 +51,30 @@
 
         
 
-            <div>Gender: <label for="male">Male</label>
-                <input class="gender-input" id="male" name="gender" type="radio" required>
+             <div> 
+                <label for="gender">Gender:</label>
+                <select name="gender-options" id="gender">
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                </select>
+                <!--Gender: <label for="male">Male</label> -->
+                <!-- <input class="gender-input" id="male" name="gender" type="radio" value="male" required>
                 <label for="female">Female</label>
-                <input class="gender-input" id="female" name="gender" type="radio" required>
+                <input class="gender-input" id="female" name="gender" type="radio" value="female" required> -->
             </div>
             
-            <div id="activitycontainer">
+            <label for="activity">Activity Level:</label>
+            <select name="activity-options" id="activity">
+                    <option value="">Estimated Activity Level</option>
+                    <option value="sedentary">Sedentary</option>
+                    <option value="lightlyActive">Lightly Active</option>
+                    <option value="moderatelyActive">Moderately Active</option>
+                    <option value="veryActive">Very Active</option>
+                    <option value="extraActive">Extra Active</option>
+            </select>
+
+            <!-- <div id="activitycontainer">
                 <div class="activity">Activity-Level: </div>
                     <div><label for="sedentary">Sedentary</label>
                     <input class="activity-input" id="sedentary" name="activity" type="radio" required>
@@ -82,14 +99,17 @@
             <div class="activity"> 
                 <label for="eactive">Extra Active</label>
                 <input class="activity-input" id="eactive" name="activity" type="radio" required>
-            </div>
+            </div> -->
 
             <div id="button-container">
             <!-- <input class="calculate-button" type="submit" value="Calculate My PDCT!"> -->
-            <button>Calculate My PDCT!</button>
+            <button id="calculate-pdct">Calculate My PDCT!</button>
             </div>
-
+            
         </form>
+        <section>
+                Your PDCT is <span id="display-pdct"></span>
+        </section>
     </div>
 
 
