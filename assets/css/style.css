@@ -231,7 +231,7 @@ footer {
     display:flex;
     justify-content:space-evenly;
     align-items: center;
-    height:50vh;
+    height:60vh;
     color: white;
 }
 
@@ -247,6 +247,18 @@ form {
 
 form div {
     height:50px;
+}
+
+.formdata {
+    /* border: 1.5px solid white; */
+    display:flex;
+    justify-content: space-between;
+    
+}
+
+.formdata input {
+    height:25px;
+    width:75px;
 }
 
 .activity {
@@ -271,4 +283,6 @@ form div {
 button {
     height:25px;
     text-align: justify;
+    margin-top:25px;
+    
 }
