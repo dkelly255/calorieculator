@@ -111,11 +111,6 @@ nav {
     padding-top: 25px;
 }
 
-/* .homeContainer h1 {
-    
-    
-} */
-
 .box {
     height: 400px;
     width: 340px;
@@ -240,10 +235,29 @@ footer {
     color: white;
 }
 
+.formcontainer h2 {
+    padding-bottom: 35px;
+}
+
 form {
     border: 1.5px solid white;
+    padding:25px;
+    background-color: rgba(0, 0, 0, 0.5)
 }
 
 form div {
     height:50px;
+}
+
+.activity {
+    height:25px;
+    display:flex;
+    justify-content: right;
+}
+
+#activitycontainer{
+    /* border: 1.5px solid white; */
+    display:flex;
+    justify-content: space-between;
+    height:25px;
 }
