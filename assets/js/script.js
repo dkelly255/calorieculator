@@ -41,9 +41,12 @@ function calculateCalories (event) {
     } 
     console.log(bmr)
     console.log(multiplier)
-    let calories = bmr * multiplier
+    let calories = Math.floor(bmr * multiplier)
     console.log(calories)
-    return calories
-    
+        
+    let answer = document.getElementById("display-pdct");
+    console.log(answer)
+    answer.innerHTML = `${calories}!`
 }
-console.log(calories)
+
+

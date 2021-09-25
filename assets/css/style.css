@@ -47,7 +47,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: rgb(85, 83, 83);
+    background-color: #074A88;
     color: white;
     height: 30px;
     border-bottom: 1.5px solid white;
@@ -145,7 +145,7 @@ nav {
 /* footer */
 
 footer {
-    background: rgb(85, 83, 83);
+    background: #074A88;
     height:auto;
     width: 100vw;
     font-family: inherit;
@@ -229,7 +229,8 @@ footer {
 
 .formcontainer {
     display:flex;
-    justify-content:space-evenly;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     height:60vh;
     color: white;
@@ -286,3 +287,18 @@ button {
     margin-top:25px;
     
 }
+
+/* PDCT Display Box */
+
+#pdct-section {
+    /* border: 1.5px solid white; */
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    border:3px solid white;
+    border-radius: 20%;
+    color: white;
+    background: black;
+    width: 280px;
+}
+
