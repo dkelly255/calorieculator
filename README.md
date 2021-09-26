@@ -1,6 +1,8 @@
 
 # CalorieCulator - Work In Progress
-Provisional content: Under construction 
+
+![alt text](readme/logo.png)
+
 ## Introduction
 - CalorieCulator is a site aimed at people who want to take control of and improve their dietary habits
 - The site will initially request the user to input several key measurements (height, weight, age etc) - these measurements will then be used by JavaScript to populate a standard formula (BMR) to calculate and return a personalised daily calorie target
