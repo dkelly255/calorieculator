@@ -47,6 +47,11 @@ function calculateCalories (event) {
     let answer = document.getElementById("display-pdct");
     console.log(answer)
     answer.innerHTML = `${calories}!`
+    console.log(localStorage)
+    localStorage.setItem("pdct",calories)
+    console.log(localStorage)
 }
+
+
 
 
