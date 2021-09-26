@@ -1,25 +1,35 @@
-// let calories
-console.log(document.getElementById("calculate-pdct"));
-console.log(document.getElementById("carry-pdct"));
+        // id "calculate-pdct"exists on calories.html & returns null if logged when not on that specific page of website
+        console.log(document.getElementById("calculate-pdct"));
+        // id "carry-pdct" exists on macros.html & returns null if logged when not on that specific page of website
+        console.log(document.getElementById("carry-pdct"));
+// variable calculatePdct blocks javascript from going any further when on macros.html because it references id "calculate-pdct" which exists on calories.html
 let calculatePdct = document.getElementById("calculate-pdct");
-console.log(calculatePdct)
-calculatePdct.addEventListener("click", calculateCalories);
-console.log(calculatePdct)
-// document.getElementById("display-pdct").innerHTML = calories
+        console.log(calculatePdct)
+    calculatePdct.addEventListener("click", calculateCalories);
+        console.log(calculatePdct)
+
+
+        console.log(document.getElementById("carry-pdct"));
+let carryPdct = document.getElementById("carry-pdct");
+        console.log(carryPdct)
+    carryPdct.addEventListener("click", carryPdct);
+        console.log(carryPdct)
+
+
 
 function calculateCalories (event) {
     event.preventDefault();
     
     let age = document.getElementById("age").value;
-    console.log(age)
+        console.log(age)
     let weight = document.getElementById("weight").value;
-    console.log(weight)
+        console.log(weight)
     let height = document.getElementById("height").value;
-    console.log(height)
+        console.log(height)
     let gender = document.getElementById("gender").value;
-    console.log(gender)
+        console.log(gender)
     let activity = document.getElementById("activity").value
-    console.log(activity)
+        console.log(activity)
 
     if (gender = "male") {
         bmr = 66 + (6.3 * weight) + (12.9 * height) - (6.8 * age); 
@@ -28,8 +38,8 @@ function calculateCalories (event) {
     else {
         bmr = 655 + (4.3 * weight) + (4.7 * height) - (4.7 * age); 
     }
-    console.log(bmr)
-    console.log(age)
+        console.log(bmr)
+        console.log(age)
     if (activity = "sedentary") {
         multiplier = 1.2
     } else if (activity = "lightlyActive") {
@@ -41,24 +51,20 @@ function calculateCalories (event) {
     } else {
         multiplier = 1.9
     } 
-    console.log(bmr)
-    console.log(multiplier)
+        console.log(bmr)
+        console.log(multiplier)
     let calories = Math.floor(bmr * multiplier)
-    console.log(calories)
+        console.log(calories)
         
     let answer = document.getElementById("display-pdct");
-    console.log(answer)
+        console.log(answer)
     answer.innerHTML = `${calories}!`
-    console.log(localStorage)
+        console.log(localStorage)
     localStorage.setItem("pdct",calories)
-    console.log(localStorage)
+        console.log(localStorage)
 }
 
 
-console.log(document.getElementById("carry-pdct"));
-let carryPdct = document.getElementById("carry-pdct");
-console.log(carryPdct)
-carryPdct.addEventListener("click", carryPdct);
-console.log(carryPdct)
+
 
 
