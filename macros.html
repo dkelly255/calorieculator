@@ -29,6 +29,23 @@
 
     <main id="macro-container">
 
+        
+        <section id="macro-step2">
+            <div class="macros-box">
+
+                <div id="button-container">
+                    <button id="carry-pdct">Import My PDCT</button>
+                </div>
+            
+                <div id="macros-logo">&nbsp - Your PDCT:
+                    <span id="pdct-box"></span> 
+                    <i class="fas fa-fire"></i> - &nbsp
+                </div>
+
+                
+            </div>
+        </section>
+
         <section id="choose-macro">
 
             <div class="macro">
@@ -128,10 +145,50 @@
             </div>
             
             <div id="button-container">
-                <button id="calculate-macros">Calculate My Macros!</button>
+                <button id="calculate-macros">Choose Split Option!</button>
                 </div>
 
         </section>
+
+
+        <section id="macro-step3">
+            
+            <div id="button-container">
+                <button id="split-macros">Calculate my Macro-Mix</button>
+            </div>
+
+            <div class="macro">
+                <h3>Your Macros:</h3>
+                <table class = "styled-table">
+                    <thead>
+                        <tr>
+                            <th>Macronutrient</th>
+                            <th>(%) Allocation</th>
+                        </tr>
+                    </thead>
+                        
+                    <tbody>
+                        <tr>
+                            <td>Protein</td>
+                            <td id="protein"></td>
+                        </tr>
+                        <tr>
+                            <td>Carbohydrate</td>
+                            <td id="carbs"></td>
+                        </tr>
+                        <tr>
+                            <td>Fat</td>
+                            <td id="fat"></td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td id="total"></td>
+                        </tr>   
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
     </main>
 
 <footer>

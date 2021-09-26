@@ -1,4 +1,6 @@
 // let calories
+console.log(document.getElementById("calculate-pdct"));
+console.log(document.getElementById("carry-pdct"));
 let calculatePdct = document.getElementById("calculate-pdct");
 console.log(calculatePdct)
 calculatePdct.addEventListener("click", calculateCalories);
@@ -53,5 +55,10 @@ function calculateCalories (event) {
 }
 
 
+console.log(document.getElementById("carry-pdct"));
+let carryPdct = document.getElementById("carry-pdct");
+console.log(carryPdct)
+carryPdct.addEventListener("click", carryPdct);
+console.log(carryPdct)
 
 
