@@ -1,15 +1,12 @@
-        // id "calculate-pdct"exists on calories.html & returns null if logged when not on that specific page of website
-        console.log(document.getElementById("calculate-pdct"));
-        // id "carry-pdct" exists on macros.html & returns null if logged when not on that specific page of website
-        console.log(document.getElementById("carry-pdct"));
-// variable calculatePdct blocks javascript from going any further when on macros.html because it references id "calculate-pdct" which exists on calories.html
+        
+        console.log(document.getElementById("calculate-pdct"));    
 let calculatePdct = document.getElementById("calculate-pdct");
         console.log(calculatePdct)
     calculatePdct.addEventListener("click", calculateCalories);
         console.log(calculatePdct)
 
 
-        console.log(document.getElementById("carry-pdct"));
+        
 let carryPdct = document.getElementById("carry-pdct");
         console.log(carryPdct)
     carryPdct.addEventListener("click", carryPdct);

@@ -271,13 +271,13 @@ footer {
     padding-bottom: 35px;
 }
 
-form {
+#firstform {
     border: 1.5px solid white;
     padding:25px;
     background-color: rgba(0, 0, 0, 0.5)
 }
 
-form div {
+#firstform div {
     height:50px;
 }
 
@@ -349,6 +349,7 @@ button {
 }
 
 #choose-macro {
+   height: 600px;
     /* border: 1.5px solid white; */
     width:20em;
     margin-left: 10px;
@@ -408,3 +409,4 @@ styled-table tbody tr.active-row {
 #selection-container {
     border: 1px solid white;
 }
+

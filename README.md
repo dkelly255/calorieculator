@@ -217,6 +217,8 @@ During the testing phase I used the W3C Validator to confirm that all HTML code 
 ### Javascript Testing
 ### Accessibility Testing
 ### Resolved Bugs
+JS formulas not working on macros.html - needed to add separate .js files for each .html page
+
 ### Unresolved Bugs
 - No unfixed bugs were present in the finalised website code
 ## Deployment
