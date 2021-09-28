@@ -248,6 +248,8 @@ footer {
     text-align: center;
     border-bottom: 1.5px solid white;
     border-top: 1.5px solid white;
+    display:flex;
+    justify-content: space-around;
 }
 
 .footer-bottom p {
@@ -356,10 +358,10 @@ button {
     /* height:30em; */
 }
 
-.macro {
-    /* border: 1.5px solid white; */
+/* .macro {
+    border: 1.5px solid white;
     
-}
+} */
 
 #macro-step3 {
     display: flex;
@@ -415,13 +417,15 @@ styled-table tbody tr.active-row {
 #page3Container {
     border: 1px solid white;
     display:flex;
+    align-items: center;
+    justify-content: space-around;
     color: #fff;
     margin:2px;
     padding:5px;
 }
 
 #foodListContainer {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display:flex;
     flex-direction: column;
     padding:3px;
@@ -429,11 +433,68 @@ styled-table tbody tr.active-row {
 
 .food-groups {
     border: 1px solid white;
-    margin:1px;
-    padding:3px;
-    width:200px;
+    margin:6px;
+    padding-top: 5px;
+    padding-bottom:6px;
+    width:210px;
     display:flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7)
+}
+
+.food-headings {
+    padding-bottom: 5px;
+}
+
+.food-headings, p {
+    padding-left: 5px;
+    text-align: left;
+}
+
+.meal-box {
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 500px;
+    margin: 5px;
+    padding-top:20px;
+    padding-left:20px;
+}
+
+.meal-table {
+    border-collapse:collapse;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+}
+
+.meal-table thead tr {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    text-align: left;
+}
+
+.meal-table th,
+.meal-table td {
+    padding: 4px 10px;
+}
+
+/* .meal-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+} */
+
+.meal-table tbody tr {
+    background-color: #074A88;
+}
+
+.meal-table tbody tr:last-of-type {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+meal-table tbody tr.active-row {
+    font-weight: bold;
+    color: #074A88;
 }
