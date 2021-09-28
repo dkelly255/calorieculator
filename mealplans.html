@@ -24,112 +24,62 @@
     </nav> 
 
     <div class="titleBox">
-        <div id="mainlogo">- Generate Meal Plans <i class="fas fa-fire"></i> -</div>
+        <div id="mainlogo">&nbsp - Generate Meal Plans <i class="fas fa-fire"></i> -&nbsp</div>
     </div>
 
-    <section id="choose-macro">
-<form>
-        <div class="macro">
-            <label for="standard">Standard Balanced</label>
-            <input type="radio" id="standard" name="macro_choice" value="standard">
-            <table class = "styled-table">
-                <thead>
-                    <tr>
-                        <th>Macronutrient</th>
-                        <th>(%) Allocation</th>
-                    </tr>
-                </thead>
-                    
-                <tbody>
-                    <tr>
-                        <td>Protein</td>
-                        <td>25%</td>
-                    </tr>
-                    <tr>
-                        <td>Carbohydrate</td>
-                        <td>45%</td>
-                    </tr>
-                    <tr>
-                        <td>Fat</td>
-                        <td>30%</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td>100%</td>
-                    </tr>   
-                </tbody>
-            </table>
-        </div>
-        
-        <div class="macro">
-            <label for="high-protein">High-Protein</label>
-            <input type="radio" id="high-protein" name="macro_choice" value="high-protein">
-            <table class = "styled-table">
-                <thead>
-                    <tr>
-                        <th>Macronutrient</th>
-                        <th>(%) Allocation</th>
-                    </tr>
-                </thead>
-                    
-                <tbody>
-                    <tr>
-                        <td>Protein</td>
-                        <td>25%</td>
-                    </tr>
-                    <tr>
-                        <td>Carbohydrate</td>
-                        <td>45%</td>
-                    </tr>
-                    <tr>
-                        <td>Fat</td>
-                        <td>30%</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td>100%</td>
-                    </tr>   
-                </tbody>
-            </table>
-        </div>
+    <main id="page3Container">
 
-        <div class="macro">
-            <label for="low-carb">Low-Carb</label>
-        <input type="radio" id="low-carb" name="macro_choice" value="low-carb">
-            <table class = "styled-table">
-                <thead>
-                    <tr>
-                        <th>Macronutrient</th>
-                        <th>(%) Allocation</th>
-                    </tr>
-                </thead>
-                    
-                <tbody>
-                    <tr>
-                        <td>Protein</td>
-                        <td>25%</td>
-                    </tr>
-                    <tr>
-                        <td>Carbohydrate</td>
-                        <td>45%</td>
-                    </tr>
-                    <tr>
-                        <td>Fat</td>
-                        <td>30%</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td>100%</td>
-                    </tr>   
-                </tbody>
-            </table>
-        </div>
-        
-        <div id="button-container">
-            <button id="calculate-macros">Choose Split Option!</button>
-            </div>
-</form>
-    </section>
+        <section id="foodListContainer">
+
+            <section class="food-groups" id="generator_instructions">
+                <h2>Instructions</h2>
+                <br>
+                    <p>Please select foods for inclusion in meal plans:</p>
+                <br>
+            </section>
+            
+            <section class="food-groups" id="protein-foods">
+                <h2>Protein</h2><br>
+                <ul>
+                    <li>Chicken</li>
+                    <li>Fish</li>
+                    <li>Eggs</li>
+                    <li>Turkey</li>
+                    <li>Beef</li>
+                    <li>Pork</li>
+                    <br>
+                </ul>
+            </section>
+
+            <section class="food-groups" id="carb-foods">
+                <h2>Carbs</h2><br>
+                <ul>
+                    <li>Bread</li>
+                    <li>Pasta</li>
+                    <li>Rice</li>
+                    <li>Oats</li>
+                    <li>Potatoes</li>
+                    <li>Quinoa</li>
+                    <br>
+                </ul>
+            </section>
+
+            <section class="food-groups" id="fat-foods">
+                <h2>Fat</h2><br>
+                <ul>
+                    <li>Olive Oil</li>
+                    <li>Butter</li>
+                    <li>Bacon</li>
+                    <li>Cream</li>
+                    <li>Cheese</li>
+                    <li>Almonds</li>
+                    <br>
+                </ul>
+            </section>
+
+        </section>
+
+    </main>
 
 <footer>
     <div class = "footer-content">
@@ -157,7 +107,7 @@
 </footer>
 
 <script src="https://kit.fontawesome.com/45a746d079.js" crossorigin="anonymous"></script>
-<script src="assets/js/script.js"></script>
+<script src="assets/js/meals.js"></script>
 
 </body>
 </html>

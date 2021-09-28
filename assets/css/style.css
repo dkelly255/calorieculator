@@ -81,7 +81,7 @@ nav {
 /* home page content*/
 
 .titleBox {
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     justify-content:space-evenly;
     align-items:center;
@@ -410,3 +410,30 @@ styled-table tbody tr.active-row {
     border: 1px solid white;
 }
 
+/* Meal Generator Page */
+
+#page3Container {
+    border: 1px solid white;
+    display:flex;
+    color: #fff;
+    margin:2px;
+    padding:5px;
+}
+
+#foodListContainer {
+    border: 1px solid white;
+    display:flex;
+    flex-direction: column;
+    padding:3px;
+}
+
+.food-groups {
+    border: 1px solid white;
+    margin:1px;
+    padding:3px;
+    width:200px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7)
+}
