@@ -31,14 +31,29 @@ let chosenOption
                 
             chosenOption = "standard"
                 console.log(chosenOption)
+            document.getElementById("protein").innerHTML=localStorage.pdct * 0.25
+            document.getElementById("carbs").innerHTML=localStorage.pdct * .45
+            document.getElementById("fat").innerHTML=localStorage.pdct * .30
+            document.getElementById("total").innerHTML=localStorage.pdct
+
         } else if (macroArray[1].checked) {
                 
             chosenOption = "highprotein"
                 console.log(chosenOption)
+            document.getElementById("protein").innerHTML=localStorage.pdct * 0.40
+            document.getElementById("carbs").innerHTML=localStorage.pdct * .35
+            document.getElementById("fat").innerHTML=localStorage.pdct * .25
+            document.getElementById("total").innerHTML=localStorage.pdct
+
         } else if (macroArray[2].checked) {
                 
             chosenOption = "lowcarb"
                 console.log(chosenOption)
+            document.getElementById("protein").innerHTML=localStorage.pdct * 0.35
+            document.getElementById("carbs").innerHTML=localStorage.pdct * .10
+            document.getElementById("fat").innerHTML=localStorage.pdct * .55
+            document.getElementById("total").innerHTML=localStorage.pdct
+
         } else {
                 
             chosenOption = "notselected"
@@ -48,22 +63,23 @@ let chosenOption
         console.log(chosenOption)
     }
     console.log(chosenOption)
-    
-let splitButton = document.getElementById("split-macros");
-    console.log(splitButton)
-splitButton.addEventListener("click", mixMyMacros);
-    console.log(splitButton)
+   
+    // deactivated due to time constraints - functionality added to splitMacros above
+// let splitButton = document.getElementById("split-macros");
+//     console.log(splitButton)
+// splitButton.addEventListener("click", mixMyMacros);
+//     console.log(splitButton)
 
-function mixMyMacros (event) {
+// function mixMyMacros (event) {
     
-    if (chosenOption = "standard") {
-        document.getElementById("protein").innerHTML=localStorage.pdct * 0.25
-        document.getElementById("carbs").innerHTML=localStorage.pdct * .45
-        document.getElementById("fat").innerHTML=localStorage.pdct * .30
-        document.getElementById("total").innerHTML=localStorage.pdct
-    } else {
-        console.log("finished")
-    }
+//     if (chosenOption = "standard") {
+//         document.getElementById("protein").innerHTML=localStorage.pdct * 0.25
+//         document.getElementById("carbs").innerHTML=localStorage.pdct * .45
+//         document.getElementById("fat").innerHTML=localStorage.pdct * .30
+//         document.getElementById("total").innerHTML=localStorage.pdct
+//     } else {
+//         console.log("finished")
+//     }
     
     
-}
+// }
