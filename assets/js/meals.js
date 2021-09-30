@@ -33,7 +33,15 @@ const proteinFoods = document.getElementsByClassName("protein-input")
 let numberOfFoods = proteinFoods.length;
 console.log(numberOfFoods)
 
+let proteinArray = []
+console.log(proteinArray)
+
 for (let i = 0; i < numberOfFoods; i++) {
-    console.log(proteinFoods[i].name);
+    if (proteinFoods[i].checked) {
+    proteinArray.push(proteinFoods[i].name);
+    }
 }
 
+console.log(proteinArray)
+console.log(proteinArray[0])
+console.log(proteinFoods[0].checked)
