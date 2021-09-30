@@ -453,17 +453,18 @@ styled-table tbody tr.active-row {
 }
 
 .meal-box {
-    border: 1px solid white;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 500px;
-    margin: 5px;
-    padding-top:20px;
-    padding-left:20px;
+    /* border: 1px solid white;*/
+    background-color: rgba(0, 0, 0, 0.7); 
+    width: 399px;
+    /* margin: 10px;
+    padding-top:10px;
+    padding-left:10px; */
 }
 
 .meal-table {
-    border-collapse:collapse;
-    margin-bottom: 20px;
+    border-collapse:separate;
+    border-top: #fff;
+    margin-bottom: 10px;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
@@ -479,6 +480,7 @@ styled-table tbody tr.active-row {
 .meal-table th,
 .meal-table td {
     padding: 4px 10px;
+    border:1px solid #fff;
 }
 
 /* .meal-table tbody tr {

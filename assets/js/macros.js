@@ -35,6 +35,8 @@ let chosenOption
             document.getElementById("carbs").innerHTML=localStorage.pdct * .45
             document.getElementById("fat").innerHTML=localStorage.pdct * .30
             document.getElementById("total").innerHTML=localStorage.pdct
+        localStorage.setItem("macro","standard")
+        console.log(localStorage)
 
         } else if (macroArray[1].checked) {
                 
@@ -44,6 +46,8 @@ let chosenOption
             document.getElementById("carbs").innerHTML=localStorage.pdct * .35
             document.getElementById("fat").innerHTML=localStorage.pdct * .25
             document.getElementById("total").innerHTML=localStorage.pdct
+        localStorage.setItem("macro","highprotein")
+        console.log(localStorage)
 
         } else if (macroArray[2].checked) {
                 
@@ -53,7 +57,8 @@ let chosenOption
             document.getElementById("carbs").innerHTML=localStorage.pdct * .10
             document.getElementById("fat").innerHTML=localStorage.pdct * .55
             document.getElementById("total").innerHTML=localStorage.pdct
-
+        localStorage.setItem("macro","lowcarb")
+        console.log(localStorage)
         } else {
                 
             chosenOption = "notselected"
