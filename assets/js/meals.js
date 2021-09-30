@@ -26,6 +26,14 @@ document.getElementById('lunch-carbs-calories').innerHTML=(Math.round(lunchTotal
 document.getElementById('lunch-fat-calories').innerHTML=(Math.round(lunchTotalCalories*.30))
 
 
-const rand1 = Math.floor( Math.random() * 6 );
-    console.log(rand1);
+// const rand1 = Math.floor( Math.random() * 6 );
+//     console.log(rand1);
+
+const proteinFoods = document.getElementsByClassName("protein-input")
+let numberOfFoods = proteinFoods.length;
+console.log(numberOfFoods)
+
+for (let i = 0; i < numberOfFoods; i++) {
+    console.log(proteinFoods[i].name);
+}
 
