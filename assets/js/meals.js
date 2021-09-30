@@ -1,8 +1,15 @@
 
 const breakfastAllocation = .25
-const dinnerAllocation = .3
-const lunchAllocation = .35
+const dinnerAllocation = .35
+const lunchAllocation = .40
+console.log(localStorage.pdct)
 
+let generateMealButton = document.getElementById("generate-meals")
+console.log(generateMealButton)
+generateMealButton.addEventListener("click", runMealGenerator)
+console.log(generateMealButton)
+
+function runMealGenerator (event) {
 
 const breakfastTotalCalories = Math.round(localStorage.pdct * breakfastAllocation)
     console.log(breakfastTotalCalories)
@@ -26,8 +33,7 @@ document.getElementById('lunch-carbs-calories').innerHTML=(Math.round(lunchTotal
 document.getElementById('lunch-fat-calories').innerHTML=(Math.round(lunchTotalCalories*.30))
 
 
-// const rand1 = Math.floor( Math.random() * 6 );
-//     console.log(rand1);
+
 
 const proteinFoods = document.getElementsByClassName("protein-input")
 let numberOfFoods = proteinFoods.length;
@@ -45,3 +51,13 @@ for (let i = 0; i < numberOfFoods; i++) {
 console.log(proteinArray)
 console.log(proteinArray[0])
 console.log(proteinFoods[0].checked)
+console.log(proteinArray.length)
+console.log(proteinFoods.length)
+
+const rand1 = Math.floor( Math.random() * (proteinArray.length - 1) );
+    console.log(rand1);
+
+    document.getElementById("breakfast-protein-food").innerHTML=(proteinArray[rand1])
+
+}
+

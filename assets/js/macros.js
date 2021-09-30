@@ -31,9 +31,9 @@ let chosenOption
                 
             chosenOption = "standard"
                 console.log(chosenOption)
-            document.getElementById("protein").innerHTML=localStorage.pdct * 0.25
-            document.getElementById("carbs").innerHTML=localStorage.pdct * .45
-            document.getElementById("fat").innerHTML=localStorage.pdct * .30
+            document.getElementById("protein").innerHTML=Math.floor(localStorage.pdct * 0.25)
+            document.getElementById("carbs").innerHTML=Math.floor(localStorage.pdct * .45)
+            document.getElementById("fat").innerHTML=Math.floor(localStorage.pdct * .30)
             document.getElementById("total").innerHTML=localStorage.pdct
         localStorage.setItem("macro","standard")
         console.log(localStorage)
@@ -42,9 +42,9 @@ let chosenOption
                 
             chosenOption = "highprotein"
                 console.log(chosenOption)
-            document.getElementById("protein").innerHTML=localStorage.pdct * 0.40
-            document.getElementById("carbs").innerHTML=localStorage.pdct * .35
-            document.getElementById("fat").innerHTML=localStorage.pdct * .25
+            document.getElementById("protein").innerHTML=Math.floor(localStorage.pdct * 0.40)
+            document.getElementById("carbs").innerHTML=Math.floor(localStorage.pdct * .35)
+            document.getElementById("fat").innerHTML=Math.floor(localStorage.pdct * .25)
             document.getElementById("total").innerHTML=localStorage.pdct
         localStorage.setItem("macro","highprotein")
         console.log(localStorage)
@@ -53,9 +53,9 @@ let chosenOption
                 
             chosenOption = "lowcarb"
                 console.log(chosenOption)
-            document.getElementById("protein").innerHTML=localStorage.pdct * 0.35
-            document.getElementById("carbs").innerHTML=localStorage.pdct * .10
-            document.getElementById("fat").innerHTML=localStorage.pdct * .55
+            document.getElementById("protein").innerHTML=Math.floor(localStorage.pdct * 0.35)
+            document.getElementById("carbs").innerHTML=Math.floor(localStorage.pdct * .10)
+            document.getElementById("fat").innerHTML=Math.floor(localStorage.pdct * .55)
             document.getElementById("total").innerHTML=localStorage.pdct
         localStorage.setItem("macro","lowcarb")
         console.log(localStorage)
