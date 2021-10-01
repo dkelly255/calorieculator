@@ -38,27 +38,27 @@ document.getElementById('lunch-fat-calories').innerHTML=(Math.round(lunchTotalCa
 const proteinIndex = [
     {
       "name": "chicken",
-      "calpergram": 2,      
+      "calpergram": 1.51,      
     },
     {
         "name": "turkey",
-        "calpergram": 7,
+        "calpergram": 1.04,
     },
     {
         "name": "fish",
-        "calpergram": 15,
+        "calpergram": 0.76,
     },
     {
         "name": "beef",
-        "calpergram": 3,
+        "calpergram": 1.52,
     },
     {
         "name": "eggs",
-        "calpergram": 12.2,
+        "calpergram": 1.4,
     },
     {
         "name": "pork",
-        "calpergram": 11,
+        "calpergram": 1.58,
     },
   ]
     console.log(proteinIndex)
@@ -107,7 +107,8 @@ const food1grams = (Math.round(breakfastTotalCalories*.25)) / (proteinIndex.find
     console.log('hello')
     console.log(rand1);
 
-document.getElementById("breakfast-protein-grams").innerHTML=(food1grams)  
+// populate grams per food into meal plan table template
+document.getElementById("breakfast-protein-grams").innerHTML=(Math.round(food1grams))  
 
 
 }
