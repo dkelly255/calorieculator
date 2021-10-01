@@ -1,16 +1,19 @@
-
+// Fixed allocation of percentage calories per meal
 const breakfastAllocation = .25
 const dinnerAllocation = .35
 const lunchAllocation = .40
 console.log(localStorage.pdct)
 
+// Eventlistener to generate meal button
 let generateMealButton = document.getElementById("generate-meals")
 console.log(generateMealButton)
 generateMealButton.addEventListener("click", runMealGenerator)
 console.log(generateMealButton)
 
+// Overall Function to generate meal ideas on click of button above
 function runMealGenerator (event) {
 
+// Breakfast Calories Allocation per Macronutrient
 const breakfastTotalCalories = Math.round(localStorage.pdct * breakfastAllocation)
     console.log(breakfastTotalCalories)
 document.getElementById('breakfast-total-calories').innerHTML=(breakfastTotalCalories)
@@ -18,6 +21,7 @@ document.getElementById('breakfast-protein-calories').innerHTML=(Math.round(brea
 document.getElementById('breakfast-carbs-calories').innerHTML=(Math.round(breakfastTotalCalories*.45))
 document.getElementById('breakfast-fat-calories').innerHTML=(Math.round(breakfastTotalCalories*.30))
 
+// Dinner Calories Allocation per Macronutrient
 const dinnerTotalCalories = Math.round(localStorage.pdct * dinnerAllocation)
     console.log(dinnerTotalCalories)
 document.getElementById('dinner-total-calories').innerHTML=(dinnerTotalCalories)
@@ -25,14 +29,13 @@ document.getElementById('dinner-protein-calories').innerHTML=(Math.round(dinnerT
 document.getElementById('dinner-carbs-calories').innerHTML=(Math.round(dinnerTotalCalories*.45))
 document.getElementById('dinner-fat-calories').innerHTML=(Math.round(dinnerTotalCalories*.30))
 
+// Lunch Calories Allocation per Macronutrient
 const lunchTotalCalories = Math.round(localStorage.pdct * lunchAllocation)
     console.log(lunchTotalCalories)
 document.getElementById('lunch-total-calories').innerHTML=(lunchTotalCalories)
 document.getElementById('lunch-protein-calories').innerHTML=(Math.round(lunchTotalCalories*.25))
 document.getElementById('lunch-carbs-calories').innerHTML=(Math.round(lunchTotalCalories*.45))
 document.getElementById('lunch-fat-calories').innerHTML=(Math.round(lunchTotalCalories*.30))
-
-
 
 // Fixed lookup index of foods per macronutrient - food name and calories per gram for meal generator grams column
 const proteinIndex = [
