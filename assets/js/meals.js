@@ -41,16 +41,16 @@ const proteinIndex = [
       "calpergram": 2,      
     },
     {
-        "name": "Turkey",
+        "name": "turkey",
         "calpergram": 7,
     },
     {
-        "name": "Fish",
+        "name": "fish",
         "calpergram": 15,
     },
     {
         "name": "beef",
-        "calpergram": 9,
+        "calpergram": 3,
     },
     {
         "name": "eggs",
@@ -67,6 +67,7 @@ let proteinIndexLength = proteinIndex.length
 
 // proteinFoods =  list of all possible foods that can be selected by user - baseline options for random meal generator
 const proteinFoods = document.getElementsByClassName("protein-input")
+    console.log(proteinFoods)
 let numberOfFoods = proteinFoods.length;
     console.log(numberOfFoods)
 
@@ -87,7 +88,7 @@ for (let i = 0; i < numberOfFoods; i++) {
     console.log(proteinArray.length)
     console.log(proteinFoods.length)
 
-// Random number between 1 and how many food have been checked per food group - used to pick a random checked food's name for meal plan buildout
+// rand1 = Random number between 1 and how many food have been checked per food group - used to pick a random checked food's name for meal plan buildout
 const rand1 = Math.floor( Math.random() * (proteinArray.length - 1) );
     console.log(rand1);
 const food1 = proteinArray[rand1]
@@ -97,29 +98,17 @@ document.getElementById("breakfast-protein-food").innerHTML=(food1)
     console.log(proteinIndex[rand1].calpergram)
     console.log(proteinArray[rand1])
     
-
+// log calories per gram of randomly selected food from user choices
+    console.log(proteinIndex.find(x => x.name === proteinArray[rand1]).calpergram)
   
-    console.log(proteinIndex.find(x => x.name === 'chicken').calpergram)
+// calculate grams of selected food required to fill calories allocation
+const food1grams = (Math.round(breakfastTotalCalories*.25)) / (proteinIndex.find(x => x.name === proteinArray[rand1]).calpergram)
+    console.log(food1grams)
     console.log('hello')
-
-    // for (let i = 0; i < proteinIndexLength; i++) {
-    //     if (proteinIndex[i].name = proteinArray[rand1]) {
-            
-    //         // document.getElementById("breakfast-protein-grams").innerHTML=(proteinIndex[i].calpergram);
-    //         console.log(proteinIndex[i].name)
-    //         console.log(proteinArray[rand1])
-    //         console.log[i]
-    //     } else {
-    //         console.log("food not in array")
-    //     }
-    // }
     console.log(rand1);
-    
 
+document.getElementById("breakfast-protein-grams").innerHTML=(food1grams)  
 
-
-// document.getElementById("breakfast-protein-grams").innerHTML=(proteinArray[rand1])
-//     console.log(rand1);
 
 }
 
