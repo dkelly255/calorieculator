@@ -65,21 +65,50 @@ const proteinIndex = [
     },
   ]
     console.log(proteinIndex)
+
+    const carbIndex = [
+        {
+          "name": "bread",
+          "calpergram": 2.51,      
+        },
+        {
+            "name": "pasta",
+            "calpergram": 2.04,
+        },
+        {
+            "name": "rice",
+            "calpergram": 1.76,
+        },
+        {
+            "name": "oats",
+            "calpergram": 2.52,
+        },
+        {
+            "name": "cereal",
+            "calpergram": 2.4,
+        },
+        {
+            "name": "quinoa",
+            "calpergram": 2.58,
+        },
+      ]
+        console.log(carbIndex)
+
 let proteinIndexLength = proteinIndex.length
     console.log(proteinIndexLength)
 
 // proteinFoods =  list of all possible foods that can be selected by user - baseline options for random meal generator
 const proteinFoods = document.getElementsByClassName("protein-input")
     console.log(proteinFoods)
-let numberOfFoods = proteinFoods.length;
-    console.log(numberOfFoods)
+let numberOfFoodsProtein = proteinFoods.length;
+    console.log(numberOfFoodsProtein)
 
 // proteinArray = foods selected by user for inclusion in meal generator options - extracted from proteinFoods
 let proteinArray = []
     console.log(proteinArray)
 
 // function to extract which foods are checked by user, and push onto proteinArray 
-for (let i = 0; i < numberOfFoods; i++) {
+for (let i = 0; i < numberOfFoodsProtein; i++) {
     if (proteinFoods[i].checked) {
     proteinArray.push(proteinFoods[i].name);
     }
@@ -112,6 +141,36 @@ const food1grams = (Math.round(breakfastTotalCalories*.25)) / (proteinIndex.find
 
 // populate grams per food into meal plan table template
 document.getElementById("breakfast-protein-grams").innerHTML=(Math.round(food1grams))  
+
+const carbFoods = document.getElementsByClassName("carb-input")
+    console.log(carbFoods)
+let numberOfFoodsCarbs = carbFoods.length;
+    console.log(numberOfFoodsCarbs)
+let carbArray = []
+    console.log(carbArray)
+    
+for (let i = 0; i < numberOfFoodsCarbs; i++) {
+    if (carbFoods[i].checked) {
+    carbArray.push(carbFoods[i].name);
+    }
+}
+
+    console.log(carbArray)
+    console.log(carbArray[0])
+    console.log(carbFoods[0].checked)
+
+const rand2 = Math.floor( Math.random() * (carbArray.length - 1) );
+    console.log(rand2);
+const food2 = carbArray[rand2]
+document.getElementById("breakfast-carbs-food").innerHTML=(food2)
+    console.log(rand2);
+
+const food2grams = (Math.round(breakfastTotalCalories*.25)) / (carbIndex.find(x => x.name === carbArray[rand2]).calpergram)
+    console.log(food2grams)
+    console.log('hello')
+    console.log(rand2);
+
+document.getElementById("breakfast-carbs-grams").innerHTML=(Math.round(food2grams)) 
 
 
 }
