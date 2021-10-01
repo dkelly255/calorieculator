@@ -1,7 +1,7 @@
 // Fixed allocation of percentage calories per meal
 const breakfastAllocation = .25
-const dinnerAllocation = .35
 const lunchAllocation = .40
+const dinnerAllocation = .35
 console.log(localStorage.pdct)
 
 // Eventlistener to generate meal button
@@ -21,6 +21,14 @@ document.getElementById('breakfast-protein-calories').innerHTML=(Math.round(brea
 document.getElementById('breakfast-carbs-calories').innerHTML=(Math.round(breakfastTotalCalories*.45))
 document.getElementById('breakfast-fat-calories').innerHTML=(Math.round(breakfastTotalCalories*.30))
 
+// Lunch Calories Allocation per Macronutrient
+const lunchTotalCalories = Math.round(localStorage.pdct * lunchAllocation)
+    console.log(lunchTotalCalories)
+document.getElementById('lunch-total-calories').innerHTML=(lunchTotalCalories)
+document.getElementById('lunch-protein-calories').innerHTML=(Math.round(lunchTotalCalories*.25))
+document.getElementById('lunch-carbs-calories').innerHTML=(Math.round(lunchTotalCalories*.45))
+document.getElementById('lunch-fat-calories').innerHTML=(Math.round(lunchTotalCalories*.30))
+
 // Dinner Calories Allocation per Macronutrient
 const dinnerTotalCalories = Math.round(localStorage.pdct * dinnerAllocation)
     console.log(dinnerTotalCalories)
@@ -29,13 +37,7 @@ document.getElementById('dinner-protein-calories').innerHTML=(Math.round(dinnerT
 document.getElementById('dinner-carbs-calories').innerHTML=(Math.round(dinnerTotalCalories*.45))
 document.getElementById('dinner-fat-calories').innerHTML=(Math.round(dinnerTotalCalories*.30))
 
-// Lunch Calories Allocation per Macronutrient
-const lunchTotalCalories = Math.round(localStorage.pdct * lunchAllocation)
-    console.log(lunchTotalCalories)
-document.getElementById('lunch-total-calories').innerHTML=(lunchTotalCalories)
-document.getElementById('lunch-protein-calories').innerHTML=(Math.round(lunchTotalCalories*.25))
-document.getElementById('lunch-carbs-calories').innerHTML=(Math.round(lunchTotalCalories*.45))
-document.getElementById('lunch-fat-calories').innerHTML=(Math.round(lunchTotalCalories*.30))
+
 
 // Fixed lookup index of foods per macronutrient - food name and calories per gram for meal generator grams column
 const proteinIndex = [
@@ -94,9 +96,38 @@ const proteinIndex = [
       ]
         console.log(carbIndex)
 
+        const fatIndex = [
+        {
+          "name": "butter",
+          "calpergram": 4.51,      
+        },
+        {
+            "name": "cheese",
+            "calpergram": 4.04,
+        },
+        {
+            "name": "cream",
+            "calpergram": 3.76,
+        },
+        {
+            "name": "nuts",
+            "calpergram": 4.52,
+        },
+        {
+            "name": "bacon",
+            "calpergram": 5.4,
+        },
+        {
+            "name": "olive-oil",
+            "calpergram": 9.58,
+        },
+      ]
+        console.log(fatIndex)
+
 let proteinIndexLength = proteinIndex.length
     console.log(proteinIndexLength)
 
+//Breakfast section of meal generator
 // proteinFoods =  list of all possible foods that can be selected by user - baseline options for random meal generator
 const proteinFoods = document.getElementsByClassName("protein-input")
     console.log(proteinFoods)
@@ -142,6 +173,7 @@ const food1grams = (Math.round(breakfastTotalCalories*.25)) / (proteinIndex.find
 // populate grams per food into meal plan table template
 document.getElementById("breakfast-protein-grams").innerHTML=(Math.round(food1grams))  
 
+// Carb section of Breakfast generation
 const carbFoods = document.getElementsByClassName("carb-input")
     console.log(carbFoods)
 let numberOfFoodsCarbs = carbFoods.length;
@@ -172,6 +204,73 @@ const food2grams = (Math.round(breakfastTotalCalories*.25)) / (carbIndex.find(x 
 
 document.getElementById("breakfast-carbs-grams").innerHTML=(Math.round(food2grams)) 
 
+// Fat section of Breakfast generation
+const fatFoods = document.getElementsByClassName("fat-input")
+    console.log(fatFoods)
+let numberOfFoodsFat = fatFoods.length;
+    console.log(numberOfFoodsFat)
+let fatArray = []
+    console.log(fatArray)
+    
+for (let i = 0; i < numberOfFoodsFat; i++) {
+    if (fatFoods[i].checked) {
+    fatArray.push(fatFoods[i].name);
+    }
+}
 
+    console.log(fatArray)
+    console.log(fatArray[0])
+    console.log(fatFoods[0].checked)
+
+const rand3 = Math.floor( Math.random() * (fatArray.length - 1) );
+    console.log(rand3);
+const food3 = fatArray[rand3]
+document.getElementById("breakfast-fat-food").innerHTML=(food3)
+    console.log(rand3);
+
+const food3grams = (Math.round(breakfastTotalCalories*.25)) / (fatIndex.find(x => x.name === fatArray[rand3]).calpergram)
+    console.log(food3grams)
+    console.log('hello')
+    console.log(rand3);
+
+document.getElementById("breakfast-fat-grams").innerHTML=(Math.round(food3grams)) 
+document.getElementById("breakfast-total-grams").innerHTML=(Math.round(food1grams + food2grams + food3grams)) 
+
+// Lunch section of meal generator
+// protein section of lunch 
+const rand4 = Math.floor( Math.random() * (proteinArray.length - 1) );
+    console.log(rand4);
+const food4 = proteinArray[rand4]
+document.getElementById("lunch-protein-food").innerHTML=(food4)
+    console.log(rand4);
+    console.log(proteinIndex[rand4].name)
+    console.log(proteinIndex[rand4].calpergram)
+    console.log(proteinArray[rand4]) 
+    console.log(proteinIndex.find(x => x.name === proteinArray[rand4]).calpergram)
+const food4grams = (Math.round(lunchTotalCalories*.40)) / (proteinIndex.find(x => x.name === proteinArray[rand4]).calpergram)
+    console.log(food4grams)
+    console.log('hello')
+    console.log(rand4);
+document.getElementById("lunch-protein-grams").innerHTML=(Math.round(food4grams))
+
+// carb section of lunch 
+const rand5 = Math.floor( Math.random() * (carbArray.length - 1) );
+    console.log(rand5);
+const food5 = carbArray[rand5]
+document.getElementById("lunch-carbs-food").innerHTML=(food5)
+    console.log(carbIndex.find(x => x.name === carbArray[rand5]).calpergram)
+const food5grams = (Math.round(lunchTotalCalories*.40)) / (carbIndex.find(x => x.name === carbArray[rand5]).calpergram)
+document.getElementById("lunch-carbs-grams").innerHTML=(Math.round(food5grams))
+
+// fat section of lunch 
+const rand6 = Math.floor( Math.random() * (fatArray.length - 1) );
+    console.log(rand6);
+const food6 = fatArray[rand6]
+document.getElementById("lunch-fat-food").innerHTML=(food6)
+    console.log(fatIndex.find(x => x.name === fatArray[rand6]).calpergram)
+const food6grams = (Math.round(lunchTotalCalories*.40)) / (fatIndex.find(x => x.name === fatArray[rand6]).calpergram)
+document.getElementById("lunch-fat-grams").innerHTML=(Math.round(food6grams))
+
+// end of Meal Generator function
 }
 

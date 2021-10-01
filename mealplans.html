@@ -108,27 +108,27 @@
                     <legend>Fat:</legend>
                         <div>
                             <label for="butter">Butter</label>
-                            <input type="checkbox" id="chicken" name="chicken" checked>
+                            <input class = "fat-input" type="checkbox" id="butter" name="butter" checked>
                         </div>
                         <div>
                             <label for="cheese">Cheese</label>
-                            <input type="checkbox" id="turkey" name="turkey" checked>
+                            <input class = "fat-input" type="checkbox" id="cheese" name="cheese" checked>
                         </div>
                         <div>
                             <label for="cream">Cream</label>
-                            <input type="checkbox" id="fish" name="fish" checked>
+                            <input class = "fat-input" type="checkbox" id="cream" name="cream" checked>
                         </div>
                         <div>
                             <label for="nuts">Nuts</label>
-                            <input type="checkbox" id="beef" name="beef" checked>
+                            <input class = "fat-input" type="checkbox" id="nuts" name="nuts" checked>
                         </div>
                         <div>
                             <label for="bacon">Bacon</label>
-                            <input type="checkbox" id="eggs" name="eggs" checked>
+                            <input class = "fat-input" type="checkbox" id="bacon" name="bacon" checked>
                         </div>    
                         <div>    
                             <label for="olive-oil">Olive Oil</label>
-                            <input type="checkbox" id="pork" name="pork" checked> 
+                            <input class = "fat-input" type="checkbox" id="olive-oil" name="olive-oil" checked> 
                         </div>
                 </fieldset>
 
@@ -188,6 +188,46 @@
                 <table class = "meal-table">
                     <thead>
                         <tr>
+                            <th>Lunch</th>
+                            <th>Food Choice</th>
+                            <th>Grams</th>
+                            <th>Calories</th>
+                        </tr>
+                    </thead>
+                        
+                    <tbody>                        
+                        <tr>
+                            <td>Protein</td>
+                            <td id="lunch-protein-food"></td>
+                            <td id="lunch-protein-grams"></td>
+                            <td id="lunch-protein-calories"></td>
+                        </tr>
+                        <tr>
+                            <td>Carbs</td>
+                            <td id="lunch-carbs-food"></td>
+                            <td id="lunch-carbs-grams"></td>
+                            <td id="lunch-carbs-calories"></td>
+                        </tr>
+                        <tr>
+                            <td>Fat</td>
+                            <td id="lunch-fat-food"></td>
+                            <td id="lunch-fat-grams"></td>
+                            <td id="lunch-fat-calories"></td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td id="lunch-total-food"></td>
+                            <td id="lunch-total-grams"></td>
+                            <td id="lunch-total-calories"></td>
+                        </tr>   
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="meal-box" id="dinner">
+                <table class = "meal-table">
+                    <thead>
+                        <tr>
                             <th>Dinner</th>
                             <th>Food Choice</th>
                             <th>Grams</th>
@@ -219,46 +259,6 @@
                             <td id="dinner-total-food"></td>
                             <td id="dinner-total-grams"></td>
                             <td id="dinner-total-calories"></td>
-                        </tr>   
-                    </tbody>
-                </table>
-            </section>
-
-            <section class="meal-box" id="dinner">
-                <table class = "meal-table">
-                    <thead>
-                        <tr>
-                            <th>Lunch</th>
-                            <th>Food Choice</th>
-                            <th>Grams</th>
-                            <th>Calories</th>
-                        </tr>
-                    </thead>
-                        
-                    <tbody>
-                        <tr>
-                            <td>Protein</td>
-                            <td id="lunch-protein-food"></td>
-                            <td id="lunch-protein-grams"></td>
-                            <td id="lunch-protein-calories"></td>
-                        </tr>
-                        <tr>
-                            <td>Carbs</td>
-                            <td id="lunch-carbs-food"></td>
-                            <td id="lunch-carbs-grams"></td>
-                            <td id="lunch-carbs-calories"></td>
-                        </tr>
-                        <tr>
-                            <td>Fat</td>
-                            <td id="lunch-fat-food"></td>
-                            <td id="lunch-fat-grams"></td>
-                            <td id="lunch-fat-calories"></td>
-                        </tr>
-                        <tr>
-                            <td>Total</td>
-                            <td id="lunch-total-food"></td>
-                            <td id="lunch-total-grams"></td>
-                            <td id="lunch-total-calories"></td>
                         </tr>   
                     </tbody>
                 </table>
