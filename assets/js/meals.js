@@ -1,6 +1,6 @@
 // Fixed allocation of percentage calories per meal
-const breakfastAllocation = .25
-const lunchAllocation = .40
+const breakfastAllocation = .30
+const lunchAllocation = .35
 const dinnerAllocation = .35
 console.log(localStorage.pdct)
 
@@ -51,7 +51,7 @@ const proteinIndex = [
     },
     {
         "name": "fish",
-        "calpergram": 0.76,
+        "calpergram": 0.86,
     },
     {
         "name": "beef",
