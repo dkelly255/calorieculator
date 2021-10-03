@@ -144,11 +144,36 @@ nav {
     align-items:flex-start;
     margin-top: 15px;
     padding-top: 25px;
+    /* font-size: 80%; */
+}
+
+@media screen and (max-width:700px) {
+    .homeContainer {
+        font-size:90%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .homeContainer {
+        font-size:80%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .homeContainer {
+        font-size:70%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .homeContainer {
+        font-size:65%;
+    }
 }
 
 .box {
     min-height: 400px;
-    width: 340px;
+    /* width: 340px; */
     border: 2px solid white;
     margin: 5px;
     color: white;
