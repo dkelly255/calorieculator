@@ -210,9 +210,9 @@ footer {
     font-family: inherit;
     padding-top: 10px;
     color: #fff;
-    /* margin-top: auto; */
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
+    /* position:absolute;
+    bottom: 0; */
     border-top: 1.5px solid white;
 }
 
