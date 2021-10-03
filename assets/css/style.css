@@ -93,7 +93,7 @@ nav {
     text-align: center;
 }
 
-#mainlogo {
+.mainlogo {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.25rem;
@@ -190,7 +190,7 @@ nav {
     text-align: center;
 }
 
-#buttonlogo {
+.buttonlogo {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.25rem;
@@ -336,7 +336,7 @@ footer {
     height:25px;
 }
 
-#button-container {
+.button-container {
     display:flex;
     justify-content: space-evenly;
     align-items: center;
