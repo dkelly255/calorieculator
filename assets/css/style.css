@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-image: url(../images/home1.jpg);
-    background-size:cover;
+    /* background-size:cover; */
 }
 
 /* Nav Bar Styling */
@@ -22,7 +22,7 @@ body {
 header {
     position: sticky;
     top: 0;
-    width: 100%;
+    width:100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -141,13 +141,13 @@ nav {
     height:auto;
     display:flex;
     justify-content:space-evenly;
-    align-items:center;
+    align-items:flex-start;
     margin-top: 15px;
     padding-top: 25px;
 }
 
 .box {
-    height: 400px;
+    min-height: 400px;
     width: 340px;
     border: 2px solid white;
     margin: 5px;
@@ -450,7 +450,7 @@ styled-table tbody tr.active-row {
 /* Meal Generator Page */
 
 #page3Container {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display:flex;
     align-items: center;
     justify-content: space-around;
