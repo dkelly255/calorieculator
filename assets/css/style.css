@@ -20,6 +20,8 @@ body {
 /* Credits: Skillthrive Navbar tutorial */
 
 header {
+    position: sticky;
+    top: 0;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -194,8 +196,8 @@ nav {
     line-height: 2.25rem;
     border:3px solid white;
     border-radius: 20%;
-    color: white;
-    background: black;
+    color: black;
+    background: rgb(175, 172, 172);
     min-width: 280px;
 }
 
