@@ -11,7 +11,7 @@
 <body>
 
     <header>
-        <div>- CalorieCulator <i class="fas fa-fire"></i> -</div>
+        <h1>- CalorieCulator <i class="fas fa-fire"></i> -</h1>
     </header>
     
     <nav>
@@ -23,279 +23,255 @@
         </ul>
     </nav> 
 
-    <div class="titleBox">
+    <h2 class="titleBox">
         <div class="mainlogo">&nbsp - Generate Meal Plans <i class="fas fa-fire"></i> -&nbsp</div>
-    </div>
+    </h2>
 
     <main id="page3Container">
-
         <section id="foodListContainer">
-
             <section class="food-groups" id="generator_instructions">
-                <h2 class="food-headings">Instructions</h2>
+                    <h3 class="food-headings">Instructions</h3>                
+                    <p>Please select foods for inclusion in meal plans:</p>                
+            </section>            
+                             
+            <fieldset class="food-groups">
+                <legend>Protein:</legend>
+                    <div>
+                        <label for="chicken">Chicken</label>
+                        <input class="protein-input" type="checkbox" id="chicken" name="chicken" checked>
+                    </div>
+                    <div>
+                        <label for="turkey">Turkey</label>
+                        <input class="protein-input" type="checkbox" id="turkey" name="turkey" checked>
+                    </div>
+                    <div>
+                        <label for="fish">Fish</label>
+                        <input class="protein-input" type="checkbox" id="fish" name="fish" checked>
+                    </div>
+                    <div>
+                        <label for="beef">beef</label>
+                        <input class="protein-input" type="checkbox" id="beef" name="beef" checked>
+                    </div>
+                    <div>
+                        <label for="eggs">eggs</label>
+                        <input class="protein-input" type="checkbox" id="eggs" name="eggs" checked>
+                    </div>    
+                    <div>    
+                        <label for="pork">pork</label>
+                        <input class="protein-input" type="checkbox" id="pork" name="pork" checked> 
+                    </div>
+            </fieldset>         
+        
+            <fieldset class="food-groups">
+                <legend>Carbohydrate:</legend>
+                    <div>
+                        <label for="bread">Bread</label>
+                        <input class="carb-input" type="checkbox" id="bread" name="bread" checked>
+                    </div>
+                    <div>
+                        <label for="pasta">Pasta</label>
+                        <input class="carb-input" type="checkbox" id="pasta" name="pasta" checked>
+                    </div>
+                    <div>
+                        <label for="rice">Rice</label>
+                        <input class="carb-input" type="checkbox" id="rice" name="rice" checked>
+                    </div>
+                    <div>
+                        <label for="oats">Oats</label>
+                        <input class="carb-input" type="checkbox" id="oats" name="oats" checked>
+                    </div>
+                    <div>
+                        <label for="cereal">Cereal</label>
+                        <input class="carb-input" type="checkbox" id="cereal" name="cereal" checked>
+                    </div>    
+                    <div>    
+                        <label for="quinoa">Quinoa</label>
+                        <input class="carb-input" type="checkbox" id="quinoa" name="quinoa" checked> 
+                    </div>
+            </fieldset>
                 
-                    <p>Please select foods for inclusion in meal plans:</p>
-                
-            </section>
-            
-            <!-- <section  id="protein-foods"> -->
-                  
-                <fieldset class="food-groups">
-                    <legend>Protein:</legend>
-                        <div>
-                            <label for="chicken">Chicken</label>
-                            <input class="protein-input" type="checkbox" id="chicken" name="chicken" checked>
-                        </div>
-                        <div>
-                            <label for="turkey">Turkey</label>
-                            <input class="protein-input" type="checkbox" id="turkey" name="turkey" checked>
-                        </div>
-                        <div>
-                            <label for="fish">Fish</label>
-                            <input class="protein-input" type="checkbox" id="fish" name="fish" checked>
-                        </div>
-                        <div>
-                            <label for="beef">beef</label>
-                            <input class="protein-input" type="checkbox" id="beef" name="beef" checked>
-                        </div>
-                        <div>
-                            <label for="eggs">eggs</label>
-                            <input class="protein-input" type="checkbox" id="eggs" name="eggs" checked>
-                        </div>    
-                        <div>    
-                            <label for="pork">pork</label>
-                            <input class="protein-input" type="checkbox" id="pork" name="pork" checked> 
-                        </div>
-                </fieldset>
-
-            <!-- </section> -->
-
-            <!-- <section class="food-groups" id="carb-foods"> -->
-
-                <fieldset class="food-groups">
-                    <legend>Carbohydrate:</legend>
-                        <div>
-                            <label for="bread">Bread</label>
-                            <input class="carb-input" type="checkbox" id="bread" name="bread" checked>
-                        </div>
-                        <div>
-                            <label for="pasta">Pasta</label>
-                            <input class="carb-input" type="checkbox" id="pasta" name="pasta" checked>
-                        </div>
-                        <div>
-                            <label for="rice">Rice</label>
-                            <input class="carb-input" type="checkbox" id="rice" name="rice" checked>
-                        </div>
-                        <div>
-                            <label for="oats">Oats</label>
-                            <input class="carb-input" type="checkbox" id="oats" name="oats" checked>
-                        </div>
-                        <div>
-                            <label for="cereal">Cereal</label>
-                            <input class="carb-input" type="checkbox" id="cereal" name="cereal" checked>
-                        </div>    
-                        <div>    
-                            <label for="quinoa">Quinoa</label>
-                            <input class="carb-input" type="checkbox" id="quinoa" name="quinoa" checked> 
-                        </div>
-                </fieldset>
-
-            <!-- </section> -->
-
-            <!-- <section class="food-groups" id="fat-foods"> -->
-                
-                <fieldset class="food-groups">
-                    <legend>Fat:</legend>
-                        <div>
-                            <label for="butter">Butter</label>
-                            <input class = "fat-input" type="checkbox" id="butter" name="butter" checked>
-                        </div>
-                        <div>
-                            <label for="cheese">Cheese</label>
-                            <input class = "fat-input" type="checkbox" id="cheese" name="cheese" checked>
-                        </div>
-                        <div>
-                            <label for="cream">Cream</label>
-                            <input class = "fat-input" type="checkbox" id="cream" name="cream" checked>
-                        </div>
-                        <div>
-                            <label for="nuts">Nuts</label>
-                            <input class = "fat-input" type="checkbox" id="nuts" name="nuts" checked>
-                        </div>
-                        <div>
-                            <label for="bacon">Bacon</label>
-                            <input class = "fat-input" type="checkbox" id="bacon" name="bacon" checked>
-                        </div>    
-                        <div>    
-                            <label for="olive-oil">Olive Oil</label>
-                            <input class = "fat-input" type="checkbox" id="olive-oil" name="olive-oil" checked> 
-                        </div>
-                </fieldset>
-
-            <!-- </section> -->
-
+            <fieldset class="food-groups">
+                <legend>Fat:</legend>
+                    <div>
+                        <label for="butter">Butter</label>
+                        <input class = "fat-input" type="checkbox" id="butter" name="butter" checked>
+                    </div>
+                    <div>
+                        <label for="cheese">Cheese</label>
+                        <input class = "fat-input" type="checkbox" id="cheese" name="cheese" checked>
+                    </div>
+                    <div>
+                        <label for="cream">Cream</label>
+                        <input class = "fat-input" type="checkbox" id="cream" name="cream" checked>
+                    </div>
+                    <div>
+                        <label for="nuts">Nuts</label>
+                        <input class = "fat-input" type="checkbox" id="nuts" name="nuts" checked>
+                    </div>
+                    <div>
+                        <label for="bacon">Bacon</label>
+                        <input class = "fat-input" type="checkbox" id="bacon" name="bacon" checked>
+                    </div>    
+                    <div>    
+                        <label for="olive-oil">Olive Oil</label>
+                        <input class = "fat-input" type="checkbox" id="olive-oil" name="olive-oil" checked> 
+                    </div>
+            </fieldset>   
         </section>
 
-        <section id="generate-container">
-            
-                <button id="generate-meals">Generate A Meal Plan</button>
+        <section id="generate-container">            
+                <button id="generate-meals">Generate A Meal Plan</button>                
+        </section>
+
+        <section id="mealplan-container">            
+                <section class="meal-box" id="breakfast">
+                    <table class = "meal-table">
+                        <thead>
+                            <tr>
+                                <th>Breakfast</th>
+                                <th>Food Choice</th>
+                                <th>Grams</th>
+                                <th>Calories</th>
+                            </tr>
+                        </thead>
+                            
+                        <tbody>
+                            <tr>
+                                <td>Protein</td>
+                                <td id="breakfast-protein-food"></td>
+                                <td id="breakfast-protein-grams"></td>
+                                <td id="breakfast-protein-calories"></td>
+                            </tr>
+                            <tr>
+                                <td>Carbs</td>
+                                <td id="breakfast-carbs-food"></td>
+                                <td id="breakfast-carbs-grams"></td>
+                                <td id="breakfast-carbs-calories"></td>
+                            </tr>
+                            <tr>
+                                <td>Fat</td>
+                                <td id="breakfast-fat-food"></td>
+                                <td id="breakfast-fat-grams"></td>
+                                <td id="breakfast-fat-calories"></td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td id="breakfast-total-food"></td>
+                                <td id="breakfast-total-grams"></td>
+                                <td id="breakfast-total-calories"></td>
+                            </tr>   
+                        </tbody>
+                    </table>
+                </section>
                 
-        </section>
+                <section class="meal-box" id="lunch">
+                    <table class = "meal-table">
+                        <thead>
+                            <tr>
+                                <th>Lunch</th>
+                                <th>Food Choice</th>
+                                <th>Grams</th>
+                                <th>Calories</th>
+                            </tr>
+                        </thead>
+                            
+                        <tbody>                        
+                            <tr>
+                                <td>Protein</td>
+                                <td id="lunch-protein-food"></td>
+                                <td id="lunch-protein-grams"></td>
+                                <td id="lunch-protein-calories"></td>
+                            </tr>
+                            <tr>
+                                <td>Carbs</td>
+                                <td id="lunch-carbs-food"></td>
+                                <td id="lunch-carbs-grams"></td>
+                                <td id="lunch-carbs-calories"></td>
+                            </tr>
+                            <tr>
+                                <td>Fat</td>
+                                <td id="lunch-fat-food"></td>
+                                <td id="lunch-fat-grams"></td>
+                                <td id="lunch-fat-calories"></td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td id="lunch-total-food"></td>
+                                <td id="lunch-total-grams"></td>
+                                <td id="lunch-total-calories"></td>
+                            </tr>   
+                        </tbody>
+                    </table>
+                </section>
 
-        <section id="mealplan-container">
-            
-            <section class="meal-box" id="breakfast">
-                <table class = "meal-table">
-                    <thead>
-                        <tr>
-                            <th>Breakfast</th>
-                            <th>Food Choice</th>
-                            <th>Grams</th>
-                            <th>Calories</th>
-                        </tr>
-                    </thead>
-                        
-                    <tbody>
-                        <tr>
-                            <td>Protein</td>
-                            <td id="breakfast-protein-food"></td>
-                            <td id="breakfast-protein-grams"></td>
-                            <td id="breakfast-protein-calories"></td>
-                        </tr>
-                        <tr>
-                            <td>Carbs</td>
-                            <td id="breakfast-carbs-food"></td>
-                            <td id="breakfast-carbs-grams"></td>
-                            <td id="breakfast-carbs-calories"></td>
-                        </tr>
-                        <tr>
-                            <td>Fat</td>
-                            <td id="breakfast-fat-food"></td>
-                            <td id="breakfast-fat-grams"></td>
-                            <td id="breakfast-fat-calories"></td>
-                        </tr>
-                        <tr>
-                            <td>Total</td>
-                            <td id="breakfast-total-food"></td>
-                            <td id="breakfast-total-grams"></td>
-                            <td id="breakfast-total-calories"></td>
-                        </tr>   
-                    </tbody>
-                </table>
+                <section class="meal-box" id="dinner">
+                    <table class = "meal-table">
+                        <thead>
+                            <tr>
+                                <th>Dinner</th>
+                                <th>Food Choice</th>
+                                <th>Grams</th>
+                                <th>Calories</th>
+                            </tr>
+                        </thead>
+                            
+                        <tbody>
+                            <tr>
+                                <td>Protein</td>
+                                <td id="dinner-protein-food"></td>
+                                <td id="dinner-protein-grams"></td>
+                                <td id="dinner-protein-calories"></td>
+                            </tr>
+                            <tr>
+                                <td>Carbs</td>
+                                <td id="dinner-carbs-food"></td>
+                                <td id="dinner-carbs-grams"></td>
+                                <td id="dinner-carbs-calories"></td>
+                            </tr>
+                            <tr>
+                                <td>Fat</td>
+                                <td id="dinner-fat-food"></td>
+                                <td id="dinner-fat-grams"></td>
+                                <td id="dinner-fat-calories"></td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td id="dinner-total-food"></td>
+                                <td id="dinner-total-grams"></td>
+                                <td id="dinner-total-calories"></td>
+                            </tr>   
+                        </tbody>
+                    </table>
+                </section>
             </section>
-            
-            <section class="meal-box" id="lunch">
-                <table class = "meal-table">
-                    <thead>
-                        <tr>
-                            <th>Lunch</th>
-                            <th>Food Choice</th>
-                            <th>Grams</th>
-                            <th>Calories</th>
-                        </tr>
-                    </thead>
-                        
-                    <tbody>                        
-                        <tr>
-                            <td>Protein</td>
-                            <td id="lunch-protein-food"></td>
-                            <td id="lunch-protein-grams"></td>
-                            <td id="lunch-protein-calories"></td>
-                        </tr>
-                        <tr>
-                            <td>Carbs</td>
-                            <td id="lunch-carbs-food"></td>
-                            <td id="lunch-carbs-grams"></td>
-                            <td id="lunch-carbs-calories"></td>
-                        </tr>
-                        <tr>
-                            <td>Fat</td>
-                            <td id="lunch-fat-food"></td>
-                            <td id="lunch-fat-grams"></td>
-                            <td id="lunch-fat-calories"></td>
-                        </tr>
-                        <tr>
-                            <td>Total</td>
-                            <td id="lunch-total-food"></td>
-                            <td id="lunch-total-grams"></td>
-                            <td id="lunch-total-calories"></td>
-                        </tr>   
-                    </tbody>
-                </table>
-            </section>
-
-            <section class="meal-box" id="dinner">
-                <table class = "meal-table">
-                    <thead>
-                        <tr>
-                            <th>Dinner</th>
-                            <th>Food Choice</th>
-                            <th>Grams</th>
-                            <th>Calories</th>
-                        </tr>
-                    </thead>
-                        
-                    <tbody>
-                        <tr>
-                            <td>Protein</td>
-                            <td id="dinner-protein-food"></td>
-                            <td id="dinner-protein-grams"></td>
-                            <td id="dinner-protein-calories"></td>
-                        </tr>
-                        <tr>
-                            <td>Carbs</td>
-                            <td id="dinner-carbs-food"></td>
-                            <td id="dinner-carbs-grams"></td>
-                            <td id="dinner-carbs-calories"></td>
-                        </tr>
-                        <tr>
-                            <td>Fat</td>
-                            <td id="dinner-fat-food"></td>
-                            <td id="dinner-fat-grams"></td>
-                            <td id="dinner-fat-calories"></td>
-                        </tr>
-                        <tr>
-                            <td>Total</td>
-                            <td id="dinner-total-food"></td>
-                            <td id="dinner-total-grams"></td>
-                            <td id="dinner-total-calories"></td>
-                        </tr>   
-                    </tbody>
-                </table>
-            </section>
-
-        </section>
-
-
     </main>
 
-<footer>
-    <div class = "footer-content">
-        <h3>- CalorieCulator <i class="fas fa-fire"></i> -</h3>
-        <p>Connect With Us</p>
-    <ul class = "socials">
-        <li><a href="http://facebook.com" target="_blank" rel="noopener" 
-                aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="http://instagram.com" target="_blank" rel="noopener" 
-                aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="http://twitter.com" target="_blank" rel="noopener" 
-                aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="http://youtube.com" target="_blank" rel="noopener" 
-                aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-youtube"></i></a></li>
-        <li><a href="http://linkedin.com" target="_blank" rel="noopener" 
-                aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/dkelly255" target="_blank" rel="noopener" 
-                    aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-github"></i></a></li>
-    </ul>
-    </div>
-    <div class="footer-bottom">
-        <p>Copyrights &copy; CalorieCulator 2021. All rights reserved.</p>
-    </div>
+    <footer>
+        <div class = "footer-content">
+            <h4>- CalorieCulator <i class="fas fa-fire"></i> -</h4>
+            <p>Connect With Us</p>
+        <ul class = "socials">
+            <li><a href="http://facebook.com" target="_blank" rel="noopener" 
+                    aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="http://instagram.com" target="_blank" rel="noopener" 
+                    aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="http://twitter.com" target="_blank" rel="noopener" 
+                    aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="http://youtube.com" target="_blank" rel="noopener" 
+                    aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="http://linkedin.com" target="_blank" rel="noopener" 
+                    aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/dkelly255" target="_blank" rel="noopener" 
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-github"></i></a></li>
+        </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyrights &copy; CalorieCulator 2021. All rights reserved.</p>
+        </div>
 
-</footer>
+    </footer>
 
-<script src="https://kit.fontawesome.com/45a746d079.js" crossorigin="anonymous"></script>
-<script src="assets/js/meals.js"></script>
-
+    <script src="https://kit.fontawesome.com/45a746d079.js" crossorigin="anonymous"></script>
+    <script src="assets/js/meals.js"></script>
 </body>
 </html>

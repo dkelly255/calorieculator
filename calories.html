@@ -11,7 +11,7 @@
 <body>
 
     <header>
-        <div>- CalorieCulator <i class="fas fa-fire"></i> -</div>
+        <h1>- CalorieCulator <i class="fas fa-fire"></i> -</h1>
     </header>
     
     <nav>
@@ -23,33 +23,29 @@
         </ul>
     </nav>
 
-    <div class="titleBox">
+    <h2 class="titleBox">
         <div class="mainlogo">&nbsp - Step 1: Calculate PDCT <i class="fas fa-fire"></i> - &nbsp</div>
-    </div>
+    </h2>
 
     <main class = "formcontainer">
         <form id="firstform" class="bmrinputs" method="POST" action="https://formdump.codeinstitute.net/">
             
-            <h2>Personal Daily Calorie Target:</h2>
-
-       
+            <h3>Personal Daily Calorie Target:</h3>   
 
             <div class="formdata">
-            <label for="age">Age (Years):</label>
-            <input class="age-input" id="age" name="age" type="number" required>
+                <label for="age">Age (Years):</label>
+                <input class="age-input" id="age" name="age" type="number" required>
             </div>
             
             <div class="formdata">
-            <label for="weight">Weight (lbs/Pounds):</label>
-            <input class="weight-input" id="weight" name="weight" type="number" required>
+                <label for="weight">Weight (lbs/Pounds):</label>
+                <input class="weight-input" id="weight" name="weight" type="number" required>
             </div>
 
             <div class="formdata">
-            <label for="height">Height (Inches):</label>
-            <input class="height-input" id="height" name="height" type="number" required>
-            </div>
-
-        
+                <label for="height">Height (Inches):</label>
+                <input class="height-input" id="height" name="height" type="number" required>
+            </div>        
 
              <div> 
                 <label for="gender">Gender:</label>
@@ -58,7 +54,6 @@
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                 </select>
-                
             </div>
             
             <label for="activity">Activity Level:</label>
@@ -72,10 +67,10 @@
             </select>
 
             <div class="button-container">
-            <button id="calculate-pdct">Calculate My PDCT!</button>
-            </div>
-            
+                <button id="calculate-pdct">Calculate My PDCT!</button>
+            </div>            
         </form>
+        
         <section id="pdct-section">
                 &nbsp Your PDCT is: <span id="display-pdct"></span>
         </section>
@@ -85,35 +80,32 @@
         </div>
     </main>
 
+    <footer>
+        <div class = "footer-content">        
+            <h3>- CalorieCulator <i class="fas fa-fire"></i> -</h3>
+            <p>Connect With Us</p>
+            <ul class = "socials">
+                <li><a href="http://facebook.com" target="_blank" rel="noopener" 
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="http://instagram.com" target="_blank" rel="noopener" 
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="http://twitter.com" target="_blank" rel="noopener" 
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="http://youtube.com" target="_blank" rel="noopener" 
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="http://linkedin.com" target="_blank" rel="noopener" 
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/dkelly255" target="_blank" rel="noopener" 
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
 
+        <div class="footer-bottom">
+            <p>Copyrights &copy; CalorieCulator 2021. All rights reserved.</p>
+        </div>
+    </footer>
 
-<footer>
-    <div class = "footer-content">
-        <h3>- CalorieCulator <i class="fas fa-fire"></i> -</h3>
-        <p>Connect With Us</p>
-    <ul class = "socials">
-        <li><a href="http://facebook.com" target="_blank" rel="noopener" 
-                aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="http://instagram.com" target="_blank" rel="noopener" 
-                aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="http://twitter.com" target="_blank" rel="noopener" 
-                aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="http://youtube.com" target="_blank" rel="noopener" 
-                aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-youtube"></i></a></li>
-        <li><a href="http://linkedin.com" target="_blank" rel="noopener" 
-                aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="https://github.com/dkelly255" target="_blank" rel="noopener" 
-                aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-github"></i></a></li>
-    </ul>
-    </div>
-    <div class="footer-bottom">
-        <p>Copyrights &copy; CalorieCulator 2021. All rights reserved.</p>
-    </div>
-
-</footer>
-
-<script src="https://kit.fontawesome.com/45a746d079.js" crossorigin="anonymous"></script>
-<script src="assets/js/script.js"></script>
-
+    <script src="https://kit.fontawesome.com/45a746d079.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
