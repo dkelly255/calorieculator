@@ -1,4 +1,5 @@
-        
+/* jshint esversion: 8 */
+
         console.log(document.getElementById("calculate-pdct"));    
 let calculatePdct = document.getElementById("calculate-pdct");
         console.log(calculatePdct);
