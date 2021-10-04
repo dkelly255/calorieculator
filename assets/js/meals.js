@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 // Fixed allocation of percentage calories per meal
 const breakfastAllocation = .30
 const lunchAllocation = .35

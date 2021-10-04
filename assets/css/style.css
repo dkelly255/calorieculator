@@ -231,7 +231,7 @@ nav {
 footer {
     background: #074A88;
     height:auto;
-    width: 100vw;
+    width: 100%;
     font-family: inherit;
     padding-top: 10px;
     color: #fff;
@@ -296,7 +296,7 @@ footer {
 
 .footer-bottom {
     background: black;
-    width: 100vw;
+    width: 100%;
     padding: 15px 0 15px 0;
     text-align: center;
     border-bottom: 1.5px solid white;
@@ -376,6 +376,10 @@ button {
 
 #calculate-macros {
     margin-top:5px;
+}
+
+.hide {
+    display: none;
 }
 
 
