@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Standard html head content tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to css stylesheet for styling page content -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Link for importation of favicon to display in browser tab header -->
     <link rel='icon' sizes="192x192" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- Title for display in browser tab header -->
     <title>CalorieCulator</title>
 </head>
 <body>
-
+    <!-- Main Header with logo & icon -->
     <header>
         <h1>- CalorieCulator <i class="fas fa-fire"></i> -</h1>
     </header>
-    
+    <!-- Nav bar with links to all site content -->
     <nav>
         <ul class="nav_links">
             <li><a href="index.html">Home</a></li>
@@ -22,32 +26,37 @@
             <li><a href="mealplans.html">Meal Plans</a></li>
         </ul>
     </nav>
-
+    <!-- Welcome message greeting with icon-->
     <h2 class="titleBox">
         <div class="mainlogo">&nbsp - Step 1: Calculate PDCT <i class="fas fa-fire"></i> - &nbsp</div>
     </h2>
-
+    <!-- Main section of page - container to house page main content and allow flex styling (see style.css) -->
     <main class="formcontainer">
+        <!-- Form to house contents of user data input areas for personal daily calorie target (PDCT) calculation -->
         <form id="firstform" class="bmrinputs" method="POST" action="https://formdump.codeinstitute.net/">
-            
+            <!-- PDCT data input section header -->
             <h3>Personal Daily Calorie Target:</h3>   
-
+            <!-- Each of the 4x divs below contains a user data input - for styling in style.css and javascript functionality in calories.js -->
             <div class="formdata">
+                <!-- Age input set to required, and measured in data-type "number" -->
                 <label for="age">Age (Years):</label>
                 <input class="age-input" id="age" name="age" type="number" required>
             </div>
             
             <div class="formdata">
+                <!-- Weight input set to required, and measured in data-type "number" -->
                 <label for="weight">Weight (lbs/Pounds):</label>
                 <input class="weight-input" id="weight" name="weight" type="number" required>
             </div>
 
             <div class="formdata">
+                <!-- Height input set to required, and measured in data-type "number" -->
                 <label for="height">Height (Inches):</label>
                 <input class="height-input" id="height" name="height" type="number" required>
             </div>        
 
              <div> 
+                 <!-- Gender input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
                 <label for="gender">Gender:</label>
                 <select name="gender-options" id="gender">
                         <option value="">Select Gender</option>
@@ -56,6 +65,7 @@
                 </select>
             </div>
             
+            <!-- Activity input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
             <label for="activity">Activity Level:</label>
             <select name="activity-options" id="activity">
                     <option value="">Estimated Activity Level</option>
@@ -65,25 +75,29 @@
                     <option value="veryActive">Very Active</option>
                     <option value="extraActive">Extra Active</option>
             </select>
-
-            <div class="button-container">
+            <!-- Button for user to click to trigger calculation of PDCT upon completion of form inputs above -->
+            <section class="button-container">
                 <button id="calculate-pdct">Calculate My PDCT!</button>
-            </div>            
+            </section>            
         </form>
-        
+        <!-- Output placeholder box to display the user's PDCT after inputs have been provided and calculation has been performed -->
         <section id="pdct-section">
                 &nbsp Your PDCT is: <span id="display-pdct"></span>
         </section>
-
-        <div class="buttonBox">
+        <!-- Button to allow user to proceed to next step in the process post-completion of PDCT calculation -->
+        <section class="buttonBox">
             <a href="macros.html" class="buttonlogo">- Next Step <i class="fas fa-fire"></i> -</a>
-        </div>
+        </section>
     </main>
 
+    <!-- Footer with site logo, links to allow users to connect on Social Media, and copyright statement-->
     <footer>
-        <div class="footer-content">        
-            <h3>- CalorieCulator <i class="fas fa-fire"></i> -</h3>
-            <p>Connect With Us</p>
+        <!-- First section of footer -->
+        <section class="footer-content">
+            <!-- Heading section of content for footer -->
+            <h4>- CalorieCulator <i class="fas fa-fire"></i> -</h4>
+            <p>Connect With Us:</p>
+            <!-- Social media links, with clickable icons -->
             <ul class="socials">
                 <li><a href="http://facebook.com" target="_blank" rel="noopener" 
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-facebook"></i></a></li>
@@ -95,17 +109,18 @@
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-youtube"></i></a></li>
                 <li><a href="http://linkedin.com" target="_blank" rel="noopener" 
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/dkelly255" target="_blank" rel="noopener" 
-                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://github.com/dkelly255" target="_blank" rel="noopener" 
+                            aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-github"></i></a></li>
             </ul>
-        </div>
-
-        <div class="footer-bottom">
+        </section>
+        <!-- copyright statements for footer -->
+        <section class="footer-bottom">
             <p>Copyrights &copy; CalorieCulator 2021. All rights reserved.</p>
-        </div>
+        </section>    
     </footer>
-
+    <!-- fontawesome scripts for linking into page content -->
     <script src="https://kit.fontawesome.com/45a746d079.js" crossorigin="anonymous"></script>
+    <!-- Javascript functionality programmed on script.js and added to page via this scipt tag -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
