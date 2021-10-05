@@ -1,5 +1,7 @@
+/* Importation of google fonts link for custom font styling */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+/* Set generic styles to apply by default to all elements */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,6 +10,8 @@
     font-family: "Montserrat", sans-serif;
 }
 
+/* Use flex display on body elements to aid with site layout and responsiveness */
+/* Cooking & food preparation related background image used to contribute to positive user experience */
 body {
     display: flex;
     flex-direction: column;
@@ -16,9 +20,9 @@ body {
     /* background-size:cover; */
 }
 
-/* Nav Bar Styling */
+/* Nav Bar Styling from lines 26 to 85 */
 /* Credits: Skillthrive Navbar tutorial */
-
+/* Header positioned as sticky to remain on screen when scrolling */
 header {
     position: sticky;
     top: 0;
@@ -80,8 +84,7 @@ nav {
     color: aqua;
 }
 
-/* home page content*/
-
+/* home page content from line 89 - line 174*/
 .titleBox {
     margin-top: 30px;
     display: flex;
@@ -89,7 +92,6 @@ nav {
     align-items:center;
     width: 100%;
     height:5vh;
-    /* border: 1px solid white; */
     text-align: center;
 }
 
@@ -105,18 +107,14 @@ nav {
 }
 
 #macros-box {
-    /* margin-top: 50px; */
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
     align-items:center;
     width: 100%;
     height:10vh;
-    /* border: 1px solid white; */
     text-align: center;
 }
-
-
 
 #macros-logo {
     font-size: 1.1rem;
@@ -128,7 +126,6 @@ nav {
     background: black;
     min-width: 280px;
     margin-left: 10px;
-    /* margin-top: 20px; */
     margin-bottom: 40px;
 }
 
@@ -143,10 +140,40 @@ nav {
     justify-content:space-evenly;
     align-items:flex-start;
     margin-top: 15px;
-    padding-top: 25px;
-    
+    padding-top: 25px;    
 }
 
+.box {
+    min-height: 400px;
+    width: 340px;
+    border: 2px solid white;
+    margin: 5px;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7)
+}
+
+.smallbox {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin:5px;
+}
+
+#homelist {
+    list-style: none;
+    list-style-type: none;
+}
+
+.homeEmphasis {
+    font-size:150% ;
+}
+
+#homelist li {
+    padding-top:7px;
+    padding-bottom: 7px;
+}
+
+/* Media queries for adding screen-size/form-factor responsiveness to home page */
 @media screen and (max-width:700px) {
     .homeContainer {
         font-size:90%;
@@ -171,39 +198,7 @@ nav {
     }
 }
 
-.box {
-    min-height: 400px;
-    width: 340px;
-    border: 2px solid white;
-    margin: 5px;
-    color: white;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7)
-}
-
-.smallbox {
-    /* border: 1px solid white; */
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin:5px;
-}
-
-#homelist {
-    list-style: none;
-    list-style-type: none;
-}
-
-.homeEmphasis {
-    font-size:150% ;
-}
-
-#homelist li {
-    padding-top:7px;
-    padding-bottom: 7px;
-}
-
-/* Next Step Buttons */
-
+/* Next Step Buttons, used across first 3x pages of site, consitent styling with varying text content */
 .buttonBox {
     margin-top: 40px;
     display: flex;
@@ -211,7 +206,6 @@ nav {
     align-items:center;
     width: 100%;
     height:5vh;
-    /* border: 1px solid white; */
     text-align: center;
 }
 
@@ -226,8 +220,7 @@ nav {
     min-width: 280px;
 }
 
-/* footer */
-
+/* Footer styling consistent on all pages */
 footer {
     background: #074A88;
     height:auto;
@@ -235,9 +228,7 @@ footer {
     font-family: inherit;
     padding-top: 10px;
     color: #fff;
-    margin-top: auto;
-    /* position:absolute;
-    bottom: 0; */
+    margin-top: auto;    
     border-top: 1.5px solid white;
 }
 
@@ -258,7 +249,6 @@ footer {
     color: white;
     background: black;
     width: 280px;
-
 }
 
 .footer-content p {
