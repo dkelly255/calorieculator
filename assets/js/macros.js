@@ -49,8 +49,8 @@ function splitMacros(event) {
         chosenOption = "standard";
         console.log(chosenOption);
         document.getElementById("protein").innerHTML = Math.floor(localStorage.pdct * 0.25);
-        document.getElementById("carbs").innerHTML = Math.floor(localStorage.pdct * .45);
-        document.getElementById("fat").innerHTML = Math.floor(localStorage.pdct * .30);
+        document.getElementById("carbs").innerHTML = Math.floor(localStorage.pdct * 0.45);
+        document.getElementById("fat").innerHTML = Math.floor(localStorage.pdct * 0.30);
         document.getElementById("total").innerHTML = localStorage.pdct;
         localStorage.setItem("macro", "standard");
         console.log(localStorage);
@@ -60,8 +60,8 @@ function splitMacros(event) {
         chosenOption = "highprotein";
         console.log(chosenOption);
         document.getElementById("protein").innerHTML = Math.floor(localStorage.pdct * 0.40);
-        document.getElementById("carbs").innerHTML = Math.floor(localStorage.pdct * .35);
-        document.getElementById("fat").innerHTML = Math.floor(localStorage.pdct * .25);
+        document.getElementById("carbs").innerHTML = Math.floor(localStorage.pdct * 0.35);
+        document.getElementById("fat").innerHTML = Math.floor(localStorage.pdct * 0.25);
         document.getElementById("total").innerHTML = localStorage.pdct;
         localStorage.setItem("macro", "highprotein");
         console.log(localStorage);
@@ -71,8 +71,8 @@ function splitMacros(event) {
         chosenOption = "lowcarb";
         console.log(chosenOption);
         document.getElementById("protein").innerHTML = Math.floor(localStorage.pdct * 0.35);
-        document.getElementById("carbs").innerHTML = Math.floor(localStorage.pdct * .10);
-        document.getElementById("fat").innerHTML = Math.floor(localStorage.pdct * .55);
+        document.getElementById("carbs").innerHTML = Math.floor(localStorage.pdct * 0.10);
+        document.getElementById("fat").innerHTML = Math.floor(localStorage.pdct * 0.55);
         document.getElementById("total").innerHTML = localStorage.pdct;
         localStorage.setItem("macro", "lowcarb");
         console.log(localStorage);

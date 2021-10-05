@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 
-        console.log(document.getElementById("calculate-pdct"));    
+console.log(document.getElementById("calculate-pdct"));    
 let calculatePdct = document.getElementById("calculate-pdct");
         console.log(calculatePdct);
     calculatePdct.addEventListener("click", calculateCalories);
@@ -17,6 +17,8 @@ let carryPdct = document.getElementById("carry-pdct");
 
 function calculateCalories (event) {
     event.preventDefault();
+  	let bmr;
+    let multiplier;
     
     let age = document.getElementById("age").value;
         console.log(age);
@@ -29,7 +31,7 @@ function calculateCalories (event) {
     let activity = document.getElementById("activity").value;
         console.log(activity);
 
-    if (gender = "male") {
+    if (gender == "male") {
         bmr = 66 + (6.3 * weight) + (12.9 * height) - (6.8 * age); 
         console.log(bmr);
     } 
@@ -38,13 +40,13 @@ function calculateCalories (event) {
     }
         console.log(bmr);
         console.log(age);
-    if (activity = "sedentary") {
+    if (activity == "sedentary") {
         multiplier = 1.2;
-    } else if (activity = "lightlyActive") {
+    } else if (activity == "lightlyActive") {
         multiplier = 1.375;
-    } else if (activity = "moderatelyActive") {
+    } else if (activity == "moderatelyActive") {
         multiplier = 1.55;
-    } else if (activity = "veryActive") {
+    } else if (activity == "veryActive") {
         multiplier = 1.725;
     } else {
         multiplier = 1.9;
@@ -61,8 +63,3 @@ function calculateCalories (event) {
     localStorage.setItem("pdct",calories);
         console.log(localStorage);
 }
-
-
-
-
-
