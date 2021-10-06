@@ -435,7 +435,7 @@ the user's PDCT and macro split combination */
 .hide {
     display: none;
 }
-/* Meal Generator Page code from line 438 to line 517 */
+/* Meal Generator Page code from line 438 to line 515 */
 /* setting styles for parent container housing meal generation page content */
 #page3Container {
     display:flex;
@@ -452,7 +452,8 @@ direction to orientate elements appropriately*/
     flex-direction: column;
     padding:3px;
 }
-
+/* Setting styling for "food-groups" class - this class covers the lists of Protein/Carb/Fat based foods
+from which the user can select/unselect when creating their meal plans */
 .food-groups {
     border: 1px solid white;
     margin:6px;
@@ -464,21 +465,26 @@ direction to orientate elements appropriately*/
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7)
 }
-
-.food-headings {
+/* Adding padding to separate instructions header */
+#food-heading {
     padding-bottom: 5px;
 }
-
-.food-headings, p {
+/* Adding padding to text within instructions box */
+#food-heading, p {
     padding-left: 5px;
     text-align: left;
 }
-
+/* Align the headers of each food choice list towards the left of the fieldsets via legend text-alignment */
+legend {
+    text-align:left;
+}
+/* This class covers the tables which store the user's meal plan ideas after they have been generated
+setting backgrounds to opaque black to allow the fonts to stand out and be easily read with high contrast */
 .meal-box {
     background-color: rgba(0, 0, 0, 0.7); 
     width: 399px;
 }
-
+/* Setting styles for the meal generation templates - Breakfast, Lunch & Dinner */
 .meal-table {
     border-collapse:separate;
     border-top: #fff;
@@ -487,32 +493,23 @@ direction to orientate elements appropriately*/
     font-family: sans-serif;
     min-width: 400px;
 }
-
+/* Set color of meal-table headers to black with white text to allow high contrast & be easily readable */
 .meal-table thead tr {
     background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
     text-align: left;
 }
-
+/* Set padding & borders of table headers & data cells */
 .meal-table th,
 .meal-table td {
     padding: 4px 10px;
     border:1px solid #fff;
 }
-
+/* Setting background color of table body cells to standard blue for consistency with rest of site */
 .meal-table tbody tr {
     background-color: #074A88;
 }
-
+/* Setting last rows of tables to same black color as headings & previous tables for consistency & readability */
 .meal-table tbody tr:last-of-type {
     background-color: rgba(0, 0, 0, 0.7);
-}
-
-meal-table tbody tr.active-row {
-    font-weight: bold;
-    color: #074A88;
-}
-
-legend {
-    text-align:left;
 }
