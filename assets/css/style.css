@@ -342,7 +342,7 @@ parent container using flex */
     background: black;
     width: 280px;
 }
-/* Styling for Macros.html Page from lines 346 - 445*/
+/* Styling for Macros.html Page from lines 346 - 437*/
 /* Setting Display Properties for overall wrapper element contaings macros.html child elements */
 #macro-container {
     display: flex;
@@ -385,64 +385,59 @@ parent container using flex */
     width:20em;
     margin-left: 10px;
 }
-
+/* This code sets the styles for the 3x tables used to display the macronutrient mixes available to the user*/
 .styled-table {
     border-collapse:collapse;
     margin-bottom: 20px;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 300px;
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
 }
-
+/* Setting the background colour to opaque black with white text for the table title rows */
 .styled-table thead tr {
     background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
     text-align: left;
 }
-
+/* Setting padding for the table headers & data cells */
 .styled-table th,
 .styled-table td {
     padding: 4px 10px;
 }
-
+/* Setting the background of the table body to the signature CalorieCUlator blue color */
 .styled-table tbody tr {
     background-color: #074A88;
 }
-
+/* Setting the background color of the bottom row of each table to black for 
+presentation purposes and to highlight the totals */
 .styled-table tbody tr:last-of-type {
     background-color: rgba(0, 0, 0, 0.7);
 }
-
-styled-table tbody tr.active-row {
-    font-weight: bold;
-    color: #074A88;
-}
-
+/* Parent container with flex display properties for the table displaying 
+the user's PDCT and macro split combination */
 #macro-step3 {
     display: flex;
     flex-direction: column;
     justify-content:center;
     margin-right: 10px;
 }
+/* Adding header to  table displaying user's macro-nutrient split applied to their PDCT */
 #yourmacros {
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
-    width:300px;
-    
+    width:300px;    
 }
 /* Setting margins for calculation button on Macros.html page */
 #calculate-macros {
     margin-top:5px;
 }
-
+/* Hide class used in Javascript functions to set display:none until required display criteria are met  */
 .hide {
     display: none;
 }
-
-/* Meal Generator Page */
+/* Meal Generator Page code from line 438 to line 517 */
+/* setting styles for parent container housing meal generation page content */
 #page3Container {
-    /* border: 1px solid white; */
     display:flex;
     align-items: center;
     justify-content: space-around;
@@ -450,9 +445,9 @@ styled-table tbody tr.active-row {
     margin:2px;
     padding:5px;
 }
-
+/* Styling the first section element (id=foodcontainer) on meal generation page - using flex display/column 
+direction to orientate elements appropriately*/
 #foodListContainer {
-    /* border: 1px solid white; */
     display:flex;
     flex-direction: column;
     padding:3px;
@@ -480,12 +475,8 @@ styled-table tbody tr.active-row {
 }
 
 .meal-box {
-    /* border: 1px solid white;*/
     background-color: rgba(0, 0, 0, 0.7); 
     width: 399px;
-    /* margin: 10px;
-    padding-top:10px;
-    padding-left:10px; */
 }
 
 .meal-table {
@@ -495,7 +486,6 @@ styled-table tbody tr.active-row {
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
 }
 
 .meal-table thead tr {
@@ -509,10 +499,6 @@ styled-table tbody tr.active-row {
     padding: 4px 10px;
     border:1px solid #fff;
 }
-
-/* .meal-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-} */
 
 .meal-table tbody tr {
     background-color: #074A88;
