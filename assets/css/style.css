@@ -84,7 +84,9 @@ nav {
     color: aqua;
 }
 
-/* home page content from line 89 - line 174*/
+/* home page content from line 89 - line 149*/
+/* Generic styling for class titlebox - applies to main heading under navbar on each page
+- flex used to centrally align content*/
 .titleBox {
     margin-top: 30px;
     display: flex;
@@ -94,7 +96,8 @@ nav {
     height:5vh;
     text-align: center;
 }
-
+/* Generic styling for class mainlogo - applies to main heading under navbar on each page,
+with varying content depending on page */
 .mainlogo {
     font-size: 1.5rem;
     font-weight: 400;
@@ -105,35 +108,7 @@ nav {
     background: black;
     min-width: 280px;
 }
-
-#macros-box {
-    display: flex;
-    flex-direction: column;
-    justify-content:space-evenly;
-    align-items:center;
-    width: 100%;
-    height:10vh;
-    text-align: center;
-}
-
-#macros-logo {
-    font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 2.25rem;
-    border:3px solid white;
-    border-radius: 20%;
-    color: white;
-    background: black;
-    min-width: 280px;
-    margin-left: 10px;
-    margin-bottom: 40px;
-}
-
-#macro-step2 {
-    display: flex;
-    align-items:center;
-}
-
+/* Setting up flex display properties, margin & padding for homepage container element */
 .homeContainer {
     height:auto;
     display:flex;
@@ -142,7 +117,7 @@ nav {
     margin-top: 15px;
     padding-top: 25px;    
 }
-
+/* Box class applies to 3x main content boxes on home page - setting heights, widths, borders, colors & text-alignment */
 .box {
     min-height: 400px;
     width: 340px;
@@ -152,18 +127,21 @@ nav {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7)
 }
-
+/* Class smallbox sits within class box and is used to house the unordered list 
+that organises the home page detailed content in each larger box above*/
 .smallbox {
     padding-top: 5px;
     padding-bottom: 5px;
     margin:5px;
 }
-
+/* Styling for the lists of detailed information on each homepage "about" box - 
+ensuring list bullet points are removed*/
 #homelist {
     list-style: none;
     list-style-type: none;
 }
-
+/* This class rule enlarges the text for selected sections of the home page detail boxes
+to inform the user of the headings & structure of each box */
 .homeEmphasis {
     font-size:150% ;
 }
@@ -396,6 +374,34 @@ button {
     color:#fff;
     margin:10px;
     padding:10px;
+}
+
+#macros-box {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items:center;
+    width: 100%;
+    height:10vh;
+    text-align: center;
+}
+
+#macros-logo {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    border:3px solid white;
+    border-radius: 20%;
+    color: white;
+    background: black;
+    min-width: 280px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+#macro-step2 {
+    display: flex;
+    align-items:center;
 }
 
 #choose-macro {
