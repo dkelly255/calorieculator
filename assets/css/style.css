@@ -19,7 +19,12 @@ body {
     background-image: url(../images/home1.jpg);
     /* background-size:cover; */
 }
-
+/* Setting heights & text-alignent of all button elements on site */
+button {
+    height:25px;
+    text-align: justify;
+    margin-top:25px;
+}
 /* Nav Bar Styling from lines 26 to 85 */
 /* Credits: Skillthrive Navbar tutorial */
 /* Header positioned as sticky to remain on screen when scrolling */
@@ -200,7 +205,7 @@ to inform the user of the headings & structure of each box */
     min-width: 280px;
 }
 
-/* Footer styling lines 204 - 283 - repeated & used on all site pages */
+/* Footer styling lines 204 - 289 - repeated & used on all site pages */
 /* Setting background color, height, width, fonts, padding & borders for footer container element */
 footer {
     background: #074A88;
@@ -282,8 +287,7 @@ footer {
     word-spacing: 2px;
     text-transform: capitalize;
 }
-
-/* Calorie Input page styling from lines 287 - 370 */
+/* Calorie Input page styling from lines 287 - 345 */
 /* setting flex display properties for overall form container main element within which the PDCT data entry occurs */
 .formcontainer {
     display:flex;
@@ -327,15 +331,8 @@ parent container using flex */
     align-items: center;
     margin-bottom: 20px;
 }
-/* Setting heights & text-alignent of all button elements on site */
-button {
-    height:25px;
-    text-align: justify;
-    margin-top:25px;
-}
-/* PDCT Display Box */
+/* Setting styling for PDCT Display Box to display user's PDCT after calculation*/
 #pdct-section {
-    /* border: 1.5px solid white; */
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.25rem;
@@ -345,16 +342,21 @@ button {
     background: black;
     width: 280px;
 }
-/* Macros Page */
+/* Styling for Macros.html Page from lines 346 - 445*/
+/* Setting Display Properties for overall wrapper element contaings macros.html child elements */
 #macro-container {
-    /* border: 1.5px solid white; */
     display: flex;
     justify-content: space-between;
     color:#fff;
     margin:10px;
     padding:10px;
 }
-
+/* Setting flex display property to allow styling of child elements for importation of PDCT from local storage */
+#macro-step2 {
+    display: flex;
+    align-items:center;
+}
+/* Styling for id macros-box - this triggers javascript to import  the user's PDCT from Local Storage when they click */
 #macros-box {
     display: flex;
     flex-direction: column;
@@ -364,7 +366,7 @@ button {
     height:10vh;
     text-align: center;
 }
-
+/* Styling for display box to hold the user's PDCT when import button above has been clicked */
 #macros-logo {
     font-size: 1.1rem;
     font-weight: 400;
@@ -377,25 +379,11 @@ button {
     margin-left: 10px;
     margin-bottom: 40px;
 }
-
-#macro-step2 {
-    display: flex;
-    align-items:center;
-}
-
+/* Container styling & alignment for the second main content section of macros.html */
 #choose-macro {
-   height: 600px;
-    /* border: 1.5px solid white; */
+    height: 600px;
     width:20em;
     margin-left: 10px;
-    /* height:30em; */
-}
-
-#macro-step3 {
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    margin-right: 10px;
 }
 
 .styled-table {
@@ -418,10 +406,6 @@ button {
     padding: 4px 10px;
 }
 
-/* .styled-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-} */
-
 .styled-table tbody tr {
     background-color: #074A88;
 }
@@ -430,23 +414,24 @@ button {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-
 styled-table tbody tr.active-row {
     font-weight: bold;
     color: #074A88;
 }
 
-#selection-container {
-    border: 1px solid white;
+#macro-step3 {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-right: 10px;
 }
-
 #yourmacros {
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
     width:300px;
     
 }
-/* Setting margins for caulcation button on Macros.html page */
+/* Setting margins for calculation button on Macros.html page */
 #calculate-macros {
     margin-top:5px;
 }
@@ -456,7 +441,6 @@ styled-table tbody tr.active-row {
 }
 
 /* Meal Generator Page */
-
 #page3Container {
     /* border: 1px solid white; */
     display:flex;
