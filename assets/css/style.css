@@ -35,7 +35,7 @@ header {
     border-bottom: 1.5px solid white;
     border-top: 1.5px solid white;
 }
-
+/* Styling to make logo portion of header (in the h1) distinctive and recognisable to users*/
 header h1 {
     width:200px;
     text-align: center;
@@ -48,7 +48,7 @@ header h1 {
     height: 2rem;
     padding-top: 1.5px;
 }
-
+/* Styling to align the clickable links within the nav bar to the right of the screen with flex for presentation purposes */
 nav {
     display: flex;
     justify-content: flex-end;
@@ -58,7 +58,7 @@ nav {
     height: 30px;
     border-bottom: 1.5px solid white;
 }
-
+/* Setting the fonts, sizes and colors of the text for the nav bar links */
 .nav_links li, a {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -66,20 +66,20 @@ nav {
     color: white;
     text-decoration: none;
 }
-
+/* Removing the bullet points from the list items within the nav bar */
 .nav_links {
     list-style: none;
 }
-
+/* Ensuring the nav bar links display consecutively using inline-block display setting */
 .nav_links li {
     display:inline-block;
     padding: 0px 10px;
 }
-
+/* Setting gentle transition for the highlighting of a nav bar link when hovered over */
 .nav_links li a {
     transition: all 0.3s ease 0s;
 }
-
+/* Setting the font color to change to aqua when navbar links are hovered over */
 .nav_links li a:hover {
     color: aqua;
 }
