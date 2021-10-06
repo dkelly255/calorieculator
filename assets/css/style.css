@@ -145,31 +145,32 @@ to inform the user of the headings & structure of each box */
 .homeEmphasis {
     font-size:150% ;
 }
-
+/* Adding padding to help aesthetic disply of individual list items within home page main boxes */
 #homelist li {
     padding-top:7px;
     padding-bottom: 7px;
 }
 
 /* Media queries for adding screen-size/form-factor responsiveness to home page */
+/* For screen sizes 700 pixels & below */
 @media screen and (max-width:700px) {
     .homeContainer {
         font-size:90%;
     }
 }
-
+/* For screen sizes 600 pixels & below */
 @media screen and (max-width:600px) {
     .homeContainer {
         font-size:80%;
     }
 }
-
+/* For screen sizes 450 pixels & below */
 @media screen and (max-width:450px) {
     .homeContainer {
         font-size:70%;
     }
 }
-
+/* For screen sizes 400 pixels & below */
 @media screen and (max-width:400px) {
     .homeContainer {
         font-size:65%;
@@ -177,6 +178,7 @@ to inform the user of the headings & structure of each box */
 }
 
 /* Next Step Buttons, used across first 3x pages of site, consitent styling with varying text content */
+/* buttonBox is a container for the clickable buttonlogo element contents */
 .buttonBox {
     margin-top: 40px;
     display: flex;
@@ -186,7 +188,7 @@ to inform the user of the headings & structure of each box */
     height:5vh;
     text-align: center;
 }
-
+/* buttonlogo is the actual visibile button on which the user can click to proceed to the next stage of the flow */
 .buttonlogo {
     font-size: 1.5rem;
     font-weight: 400;
@@ -198,7 +200,8 @@ to inform the user of the headings & structure of each box */
     min-width: 280px;
 }
 
-/* Footer styling consistent on all pages */
+/* Footer styling lines 204 - 283 - repeated & used on all site pages */
+/* Setting background color, height, width, fonts, padding & borders for footer container element */
 footer {
     background: #074A88;
     height:auto;
@@ -209,7 +212,7 @@ footer {
     margin-top: auto;    
     border-top: 1.5px solid white;
 }
-
+/* Setting up display rules for footer content - to ensure proper alignment of social media Icons & other content */
 .footer-content {
     display: flex;
     align-items: center;
@@ -217,7 +220,7 @@ footer {
     flex-direction: column;
     text-align: center;
 }
-
+/* Styling header/CalorieCulator logo portion of footer */
 .footer-content h4{
     font-size: 1.5rem;
     font-weight: 400;
@@ -228,14 +231,14 @@ footer {
     background: black;
     width: 280px;
 }
-
+/* Styling for "connect with us" paragraph */
 .footer-content p {
     max-width: 500px;
     margin: 1px auto;
     line-height: 28px;
     font-size: 14px;
 }
-
+/* Applying proper styling to social media icons container within footer */
 .socials {
     list-style: none;
     display: flex;
@@ -244,24 +247,25 @@ footer {
     width: 75vw;
     margin: 0.5rem 0 1.0rem 0;
 }
-
+/* Setting appropriate margins for social media icon list items */
 .socials li {
     margin: 0 10px;
 }
+/* Styling color of Social Media anchors to white */
 .socials a {
     text-decoration: none;
     color: #fff;
 }
-
+/* Setting aqua highlight transition timing for social media icons when hovered */
 .socials a i {
     font-size: 1.5rem;
     transition: color .4s ease;
 }
-
+/* Setting aqua highlight color for social media icons when hovered */
 .socials a:hover i {
     color: aqua;
 }
-
+/* Styling bottom line of footer containing copyright section - black background with white text & border */
 .footer-bottom {
     background: black;
     width: 100%;
@@ -272,15 +276,15 @@ footer {
     display:flex;
     justify-content: space-around;
 }
-
+/* Styling font-size & word-spacing for copyright messages with first letters capitalised as standard */
 .footer-bottom p {
     font-size: 14px;
     word-spacing: 2px;
     text-transform: capitalize;
 }
 
-/* Calorie Input Form */
-
+/* Calorie Input page styling from lines 287 - 370 */
+/* setting flex display properties for overall form container main element within which the PDCT data entry occurs */
 .formcontainer {
     display:flex;
     flex-direction: column;
@@ -289,71 +293,47 @@ footer {
     height:60vh;
     color: white;
 }
-
+/* Formatting & styling PDCT form header to be centralised with appropriate padding */
 .formcontainer h3 {
     padding-bottom: 35px;
     text-align: center;
 }
-
+/* Styling firstform id - this is the id of the parent data entry form element on calories.html 
+With black opaque background to ensure foreground information is never distracted by background image*/
 #firstform {
     border: 1.5px solid white;
     padding:25px;
     background-color: rgba(0, 0, 0, 0.5)
 }
-
+/* Each form input is wrapped in a div - this styling will keep a consistent height for the div spacing */
 #firstform div {
     height:50px;
 }
-
+/* The 3x text entry fields in the form have class "formdata" - this styling aligns them within the 
+parent container using flex */
 .formdata {
-    /* border: 1.5px solid white; */
     display:flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
 }
-
+/* Setting the heights & widths of the formdata inputs for text data entry */
 .formdata input {
     height:25px;
     width:75px;
 }
-
-.activity {
-    height:25px;
-    display:flex;
-    justify-content: right;
-}
-
-#activitycontainer{
-    /* border: 1.5px solid white; */
-    display:flex;
-    justify-content: space-between;
-    height:25px;
-}
-
+/* Styling container element for "calculate my pdct" button - using flex to center display */
 .button-container {
     display:flex;
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 20px;
 }
-
+/* Setting heights & text-alignent of all button elements on site */
 button {
     height:25px;
     text-align: justify;
     margin-top:25px;
 }
-
-#calculate-macros {
-    margin-top:5px;
-}
-
-.hide {
-    display: none;
-}
-
-
 /* PDCT Display Box */
-
 #pdct-section {
     /* border: 1.5px solid white; */
     font-size: 1.5rem;
@@ -365,7 +345,6 @@ button {
     background: black;
     width: 280px;
 }
-
 /* Macros Page */
 #macro-container {
     /* border: 1.5px solid white; */
@@ -466,6 +445,14 @@ styled-table tbody tr.active-row {
     text-align: center;
     width:300px;
     
+}
+/* Setting margins for caulcation button on Macros.html page */
+#calculate-macros {
+    margin-top:5px;
+}
+
+.hide {
+    display: none;
 }
 
 /* Meal Generator Page */
