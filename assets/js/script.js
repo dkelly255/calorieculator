@@ -1,25 +1,27 @@
 /* jshint esversion: 8 */
 
-console.log(document.getElementById("calculate-pdct"));    
+    console.log(document.getElementById("calculate-pdct"));    
+/* Declare variable calculatePdct and define as the button with ID below from the DOM
+This will be used for storing the user's personal daily calorie target */
 let calculatePdct = document.getElementById("calculate-pdct");
         console.log(calculatePdct);
+    /* Add event listener to the variable, to listen for a "click" event, and 
+    run function calculateCalories when the button is clicked */
     calculatePdct.addEventListener("click", calculateCalories);
         console.log(calculatePdct);
-
-
-        
-let carryPdct = document.getElementById("carry-pdct");
-        console.log(carryPdct);
-    carryPdct.addEventListener("click", carryPdct);
-        console.log(carryPdct);
-
-
-
+/* Defining the Function calculateCalories called by event listener attached to variable 
+calculatePdct - this function is passed an event (the click) */
 function calculateCalories (event) {
+    /* First step is to prevent the default behaviour following the click - default behaviour is to 
+    submit the form */
     event.preventDefault();
-  	let bmr;
+  	/* Definition of variables used within function calculations
+      BMR = Base Metabolic Rate*/
+    let bmr;
+    // Multiplier is the activity multiplier applied to the user's PDCT based on their lifestyle
     let multiplier;
-    
+    /* Variables Age, weight, height, gender and activity are all declared and defined as their equivalent 
+    DOM element IDs */
     let age = document.getElementById("age").value;
         console.log(age);
     let weight = document.getElementById("weight").value;
@@ -30,7 +32,8 @@ function calculateCalories (event) {
         console.log(gender);
     let activity = document.getElementById("activity").value;
         console.log(activity);
-
+    /* First if statement within function - checks if user is male or female, and uses the appropriate
+    BMR formula accordingly*/
     if (gender == "male") {
         bmr = 66 + (6.3 * weight) + (12.9 * height) - (6.8 * age); 
         console.log(bmr);
@@ -40,7 +43,9 @@ function calculateCalories (event) {
     }
         console.log(bmr);
         console.log(age);
-    if (activity == "sedentary") {
+    /* Second if statement which checks which Activity level the user has selected, and sets the value
+    of the "multiplier" variable accordingly*/        
+        if (activity == "sedentary") {
         multiplier = 1.2;
     } else if (activity == "lightlyActive") {
         multiplier = 1.375;
@@ -53,13 +58,19 @@ function calculateCalories (event) {
     } 
         console.log(bmr);
         console.log(multiplier);
+    /* Declaring & defining the variable "calories" which is the output of the formula and holds the user's
+    personal daily calorie target calculation*/
     let calories = Math.floor(bmr * multiplier);
         console.log(calories);
-        
+    /*  Declaring & defining the variable "answer" which is set to the vacant span element (id "display-pdct")
+    from the DOM */
     let answer = document.getElementById("display-pdct");
         console.log(answer);
+    // Setting the contents of "answer" to the user's pdct using template literals and the innerHTML property
     answer.innerHTML = `${calories}!`;
         console.log(localStorage);
+    /* Creating an entry in local storage to allow the user's pdct be accessed by the following pages 
+    in downstream calculations for macros and mealplans */
     localStorage.setItem("pdct",calories);
         console.log(localStorage);
 }
