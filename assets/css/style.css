@@ -89,7 +89,9 @@ nav {
     color: aqua;
 }
 
-/* home page content from line 89 - line 149*/
+
+
+/* Home page content styling section*/
 /* Generic styling for class titlebox - applies to main heading under navbar on each page
 - flex used to centrally align content*/
 .titleBox {
@@ -117,6 +119,7 @@ with varying content depending on page */
 .homeContainer {
     height:auto;
     display:flex;
+    flex-wrap:wrap;
     justify-content:space-evenly;
     align-items:flex-start;
     margin-top: 15px;
@@ -131,6 +134,30 @@ with varying content depending on page */
     color: white;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7)
+}
+/* Media queries for site nav bar & header*/
+/* For screen sizes 425 pixels & below */
+@media screen and (max-width:425px) {
+    .nav_links li, a{
+        font-size:12px;
+        padding:0px 2px;        
+    }
+    .mainlogo {
+        margin-bottom: 50px ;
+    }
+    .buttonBox {
+        margin:15px 0;
+    }
+    .box {
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width:300px) {
+    .nav_links li, a{
+        font-size:11px;
+        padding:0px 1px;
+        
+    }
 }
 /* Class smallbox sits within class box and is used to house the unordered list 
 that organises the home page detailed content in each larger box above*/
@@ -158,29 +185,29 @@ to inform the user of the headings & structure of each box */
 
 /* Media queries for adding screen-size/form-factor responsiveness to home page */
 /* For screen sizes 700 pixels & below */
-@media screen and (max-width:700px) {
+/* @media screen and (max-width:700px) {
     .homeContainer {
         font-size:90%;
     }
 }
 /* For screen sizes 600 pixels & below */
-@media screen and (max-width:600px) {
+/* @media screen and (max-width:600px) {
     .homeContainer {
         font-size:80%;
     }
-}
+} */
 /* For screen sizes 450 pixels & below */
-@media screen and (max-width:450px) {
+/* @media screen and (max-width:450px) {
     .homeContainer {
         font-size:70%;
     }
-}
+} */
 /* For screen sizes 400 pixels & below */
-@media screen and (max-width:400px) {
+/* @media screen and (max-width:400px) {
     .homeContainer {
         font-size:65%;
     }
-}
+} */ */
 
 /* Next Step Buttons, used across first 3x pages of site, consitent styling with varying text content */
 /* buttonBox is a container for the clickable buttonlogo element contents */
