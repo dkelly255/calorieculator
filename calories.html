@@ -26,60 +26,63 @@
             <li><a href="mealplans.html">Meal Plans</a></li>
         </ul>
     </nav>
-    <!-- Welcome message greeting with icon-->
-    <h2 class="titleBox">
-        <div class="mainlogo">&nbsp - Step 1: Calculate PDCT <i class="fas fa-fire"></i> - &nbsp</div>
-    </h2>
+    
     <!-- Main section of page - container to house page main content and allow flex styling (see style.css) -->
     <main class="formcontainer">
+        <!-- Welcome message greeting with icon-->
+        <h2 class="titleBox">
+            <div class="mainlogo">&nbsp - Step 1: Calculate PDCT <i class="fas fa-fire"></i> - &nbsp</div>
+        </h2>
         <!-- Form to house contents of user data input areas for personal daily calorie target (PDCT) calculation -->
-        <form id="firstform" class="bmrinputs" method="POST" action="https://formdump.codeinstitute.net/">
-            <!-- PDCT data input section header -->
-            <h3>Personal Daily Calorie Target:</h3>   
-            <!-- Each of the 4x divs below contains a user data input - for styling in style.css and javascript functionality in calories.js -->
-            <div class="formdata">
-                <!-- Age input set to required, and measured in data-type "number" -->
-                <label for="age">Age (Years):</label>
-                <input class="age-input" id="age" name="age" type="number" required>
-            </div>
-            
-            <div class="formdata">
-                <!-- Weight input set to required, and measured in data-type "number" -->
-                <label for="weight">Weight (lbs/Pounds):</label>
-                <input class="weight-input" id="weight" name="weight" type="number" required>
-            </div>
+        <div id="firstformcontainer">
+            <form id="firstform" class="bmrinputs" method="POST" action="https://formdump.codeinstitute.net/">
+                <!-- PDCT data input section header -->
+                <h3>Personal Daily Calorie Target:</h3>   
+                <!-- Each of the 4x divs below contains a user data input - for styling in style.css and javascript functionality in calories.js -->
+                <div class="formdata">
+                    <!-- Age input set to required, and measured in data-type "number" -->
+                    <label for="age">Age (Years):</label>
+                    <input class="age-input" id="age" name="age" type="number" required>
+                </div>
+                
+                <div class="formdata">
+                    <!-- Weight input set to required, and measured in data-type "number" -->
+                    <label for="weight">Weight (lbs/Pounds):</label>
+                    <input class="weight-input" id="weight" name="weight" type="number" required>
+                </div>
 
-            <div class="formdata">
-                <!-- Height input set to required, and measured in data-type "number" -->
-                <label for="height">Height (Inches):</label>
-                <input class="height-input" id="height" name="height" type="number" required>
-            </div>        
+                <div class="formdata">
+                    <!-- Height input set to required, and measured in data-type "number" -->
+                    <label for="height">Height (Inches):</label>
+                    <input class="height-input" id="height" name="height" type="number" required>
+                </div>        
 
-             <div> 
-                 <!-- Gender input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
-                <label for="gender">Gender:</label>
-                <select name="gender-options" id="gender">
-                        <option value="">Select Gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
+                <div> 
+                    <!-- Gender input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
+                    <label for="gender">Gender:</label>
+                    <select name="gender-options" id="gender">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                    </select>
+                </div>
+                
+                <!-- Activity input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
+                <label for="activity">Activity Level:</label>
+                <select name="activity-options" id="activity">
+                        <option value="">Estimated Activity Level</option>
+                        <option value="sedentary">Sedentary</option>
+                        <option value="lightlyActive">Lightly Active</option>
+                        <option value="moderatelyActive">Moderately Active</option>
+                        <option value="veryActive">Very Active</option>
+                        <option value="extraActive">Extra Active</option>
                 </select>
-            </div>
-            
-            <!-- Activity input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
-            <label for="activity">Activity Level:</label>
-            <select name="activity-options" id="activity">
-                    <option value="">Estimated Activity Level</option>
-                    <option value="sedentary">Sedentary</option>
-                    <option value="lightlyActive">Lightly Active</option>
-                    <option value="moderatelyActive">Moderately Active</option>
-                    <option value="veryActive">Very Active</option>
-                    <option value="extraActive">Extra Active</option>
-            </select>
-            <!-- Button for user to click to trigger calculation of PDCT upon completion of form inputs above -->
-            <section class="button-container">
-                <button id="calculate-pdct">Calculate My PDCT!</button>
-            </section>            
-        </form>
+                <!-- Button for user to click to trigger calculation of PDCT upon completion of form inputs above -->
+                <section class="button-container">
+                    <button id="calculate-pdct">Calculate My PDCT!</button>
+                </section>            
+            </form>
+        </div>
         <!-- Output placeholder box to display the user's PDCT after inputs have been provided and calculation has been performed -->
         <section id="pdct-section">
                 &nbsp Your PDCT is: <span id="display-pdct"></span>

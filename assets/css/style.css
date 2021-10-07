@@ -5,8 +5,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
-    
+    padding: 0;    
     font-family: "Montserrat", sans-serif;
 }
 
@@ -145,6 +144,7 @@ with varying content depending on page */
     .mainlogo {
         margin-bottom: 50px ;
     }
+    
     .buttonBox {
         margin:15px 0;
     }
@@ -183,32 +183,6 @@ to inform the user of the headings & structure of each box */
     padding-bottom: 7px;
 }
 
-/* Media queries for adding screen-size/form-factor responsiveness to home page */
-/* For screen sizes 700 pixels & below */
-/* @media screen and (max-width:700px) {
-    .homeContainer {
-        font-size:90%;
-    }
-}
-/* For screen sizes 600 pixels & below */
-/* @media screen and (max-width:600px) {
-    .homeContainer {
-        font-size:80%;
-    }
-} */
-/* For screen sizes 450 pixels & below */
-/* @media screen and (max-width:450px) {
-    .homeContainer {
-        font-size:70%;
-    }
-} */
-/* For screen sizes 400 pixels & below */
-/* @media screen and (max-width:400px) {
-    .homeContainer {
-        font-size:65%;
-    }
-} */ */
-
 /* Next Step Buttons, used across first 3x pages of site, consitent styling with varying text content */
 /* buttonBox is a container for the clickable buttonlogo element contents */
 .buttonBox {
@@ -232,7 +206,7 @@ to inform the user of the headings & structure of each box */
     min-width: 280px;
 }
 
-/* Footer styling lines 204 - 289 - repeated & used on all site pages */
+/* Footer styling - repeated & used on all site pages */
 /* Setting background color, height, width, fonts, padding & borders for footer container element */
 footer {
     background: #074A88;
@@ -318,11 +292,14 @@ footer {
 /* setting flex display properties for overall form container main element within which the PDCT data entry occurs */
 .formcontainer {
     display:flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
     justify-content: space-evenly;
     align-items: center;
-    height:60vh;
+    height:auto;
     color: white;
+    margin-top: 15px;
+    padding-top: 25px; 
 }
 /* Formatting & styling PDCT form header to be centralised with appropriate padding */
 .formcontainer h3 {
@@ -334,7 +311,14 @@ With black opaque background to ensure foreground information is never distracte
 #firstform {
     border: 1.5px solid white;
     padding:25px;
-    background-color: rgba(0, 0, 0, 0.5)
+    background-color: rgba(0, 0, 0, 0.5);
+    width:400px;
+}
+
+#firstformcontainer {
+    display: flex;
+    width:90vw;
+    justify-content: center;
 }
 /* Each form input is wrapped in a div - this styling will keep a consistent height for the div spacing */
 #firstform div {
