@@ -136,7 +136,8 @@ const fatIndex = [
     ];
     console.log(fatIndex);
 
-//Breakfast section of meal generator
+// Breakfast section of meal generator
+// Protein section of Breakfast section
 // proteinFoods =  list of all possible foods that can be selected by user - baseline options for random meal generator
 const proteinFoods = document.getElementsByClassName("protein-input");
     console.log(proteinFoods);
