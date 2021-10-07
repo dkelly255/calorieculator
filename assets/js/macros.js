@@ -87,11 +87,12 @@ function splitMacros(event) {
         localStorage.setItem("macro", "lowcarb");
         console.log(localStorage);
     } else {
-
+        // If no option is selected
         chosenOption = "notselected";
         console.log(chosenOption);
     }
 
     console.log(chosenOption);
+    // End of the splitMacros function
 }
 console.log(chosenOption);

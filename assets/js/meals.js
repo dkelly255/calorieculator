@@ -6,42 +6,50 @@ const lunchAllocation = 0.35;
 const dinnerAllocation = 0.35;
     console.log(localStorage.pdct);
 
-// Eventlistener to generate meal button
+// Add variable for the DOM element button with id "generate-meals" 
 let generateMealButton = document.getElementById("generate-meals");
     console.log(generateMealButton);
+// Add an eventlistener to generate meal button to listen for a "click" event and run the 
+// function "runMealGenerator when the event occurs"
 generateMealButton.addEventListener("click", runMealGenerator);
     console.log(generateMealButton);
 
-// Overall Function to generate meal ideas on click of button above
+// Defining the Function to generate meal ideas on click of button above
 function runMealGenerator (event) {
 
-// Breakfast Calories Allocation per Macronutrient
+// Declare a variable to store Calories Allocation per Macronutrient for Breakfast meal 
 const breakfastTotalCalories = Math.round(localStorage.pdct * breakfastAllocation);
     console.log(breakfastTotalCalories);
+// Populate each section of the "Breakfast" output table with the relative calories per macronutrient 
 document.getElementById('breakfast-total-calories').innerHTML=(breakfastTotalCalories);
+// Use Math.round() to ensure numbers are readable & displayed without decimal points
 document.getElementById('breakfast-protein-calories').innerHTML=(Math.round(breakfastTotalCalories*0.25));
 document.getElementById('breakfast-carbs-calories').innerHTML=(Math.round(breakfastTotalCalories*0.45));
 document.getElementById('breakfast-fat-calories').innerHTML=(Math.round(breakfastTotalCalories*0.30));
 
-// Lunch Calories Allocation per Macronutrient
+
+// Declare a variable to store Calories Allocation per Macronutrient for Lunch meal 
 const lunchTotalCalories = Math.round(localStorage.pdct * lunchAllocation);
     console.log(lunchTotalCalories);
+// Populate each section of the "Lunch" output table with the relative calories per macronutrient
 document.getElementById('lunch-total-calories').innerHTML=(lunchTotalCalories);
+// Use Math.round() to ensure numbers are readable & displayed without decimal points 
 document.getElementById('lunch-protein-calories').innerHTML=(Math.round(lunchTotalCalories*0.25));
 document.getElementById('lunch-carbs-calories').innerHTML=(Math.round(lunchTotalCalories*0.45));
 document.getElementById('lunch-fat-calories').innerHTML=(Math.round(lunchTotalCalories*0.30));
 
-// Dinner Calories Allocation per Macronutrient
+// Declare a variable to store Calories Allocation per Macronutrient for Dinner meal 
 const dinnerTotalCalories = Math.round(localStorage.pdct * dinnerAllocation);
     console.log(dinnerTotalCalories);
+// Populate each section of the "Dinner" output table with the relative calories per macronutrient
 document.getElementById('dinner-total-calories').innerHTML=(dinnerTotalCalories);
+// Use Math.round() to ensure numbers are readable & displayed without decimal points 
 document.getElementById('dinner-protein-calories').innerHTML=(Math.round(dinnerTotalCalories*0.25));
 document.getElementById('dinner-carbs-calories').innerHTML=(Math.round(dinnerTotalCalories*0.45));
 document.getElementById('dinner-fat-calories').innerHTML=(Math.round(dinnerTotalCalories*0.30));
 
-
-
 // Fixed lookup index of foods per macronutrient - food name and calories per gram for meal generator grams column
+// proteinIndex covers all possible protein foods selectable by the user
 const proteinIndex = [
     {
       "name": "chicken",
@@ -69,7 +77,8 @@ const proteinIndex = [
     },
   ];
     console.log(proteinIndex);
-
+// Fixed lookup index of foods per macronutrient - food name and calories per gram for meal generator grams column
+// carbIndex covers all possible protein foods selectable by the user
 const carbIndex = [
     {
         "name": "bread",
@@ -97,8 +106,9 @@ const carbIndex = [
     },
     ];
     console.log(carbIndex);
-
-    const fatIndex = [
+// Fixed lookup index of foods per macronutrient - food name and calories per gram for meal generator grams column
+// fatIndex covers all possible protein foods selectable by the user
+const fatIndex = [
     {
         "name": "butter",
         "calpergram": 4.51,      
@@ -126,13 +136,11 @@ const carbIndex = [
     ];
     console.log(fatIndex);
 
-let proteinIndexLength = proteinIndex.length;
-    console.log(proteinIndexLength);
-
 //Breakfast section of meal generator
 // proteinFoods =  list of all possible foods that can be selected by user - baseline options for random meal generator
 const proteinFoods = document.getElementsByClassName("protein-input");
     console.log(proteinFoods);
+// Declaring a variable to measure the maximum number of foods to be included in random number generator 
 let numberOfFoodsProtein = proteinFoods.length;
     console.log(numberOfFoodsProtein);
 
@@ -155,7 +163,9 @@ for (let i = 0; i < numberOfFoodsProtein; i++) {
 // rand1 = Random number between 1 and how many food have been checked per food group - used to pick a random checked food's name for meal plan buildout
 const rand1 = Math.floor( Math.random() * (proteinArray.length - 1) );
     console.log(rand1);
+// Declare variable for the first food to be randomly selected for the breakfast meal generator
 const food1 = proteinArray[rand1];
+// Set the inner HTML content of the first cell in the Breakfast output table to be equal to food1
 document.getElementById("breakfast-protein-food").innerHTML=(food1);
     console.log(rand1);
     console.log(proteinIndex[rand1].name);
@@ -168,7 +178,6 @@ document.getElementById("breakfast-protein-food").innerHTML=(food1);
 // calculate grams of selected food required to fill calories allocation
 const food1grams = (Math.round(breakfastTotalCalories*0.25)) / (proteinIndex.find(x => x.name === proteinArray[rand1]).calpergram);
     console.log(food1grams);
-    console.log('hello');
     console.log(rand1);
 
 // populate grams per food into meal plan table template
