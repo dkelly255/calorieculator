@@ -100,7 +100,7 @@ nav {
     justify-content:space-evenly;
     align-items:center;
     width: 100%;
-    height:5vh;
+    /* height:5vh; */
     text-align: center;
 }
 /* Generic styling for class mainlogo - applies to main heading under navbar on each page,
@@ -116,8 +116,10 @@ with varying content depending on page */
     min-width: 280px;
 }
 @media screen and (max-width:400px) {
+    
     .mainlogo{
-        font-size:1.0rem;               
+        font-size:1.0rem;    
+        min-width: 250px;           
     }    
 }
 
@@ -141,31 +143,7 @@ with varying content depending on page */
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7)
 }
-/* Media queries for site nav bar & header*/
-/* For screen sizes 425 pixels & below */
-@media screen and (max-width:425px) {
-    .nav_links li, a{
-        font-size:12px;
-        padding:0px 2px;        
-    }
-    .mainlogo {
-        margin-bottom: 50px ;
-    }
-    
-    .buttonBox {
-        margin:15px 0;
-    }
-    .box {
-        margin: 10px 0;
-    }
-}
-@media screen and (max-width:300px) {
-    .nav_links li, a{
-        font-size:11px;
-        padding:0px 1px;
-        
-    }
-}
+
 /* Class smallbox sits within class box and is used to house the unordered list 
 that organises the home page detailed content in each larger box above*/
 .smallbox {
@@ -201,6 +179,7 @@ to inform the user of the headings & structure of each box */
     height:5vh;
     text-align: center;
 }
+
 /* buttonlogo is the actual visibile button on which the user can click to proceed to the next stage of the flow */
 .buttonlogo {
     font-size: 1.5rem;
@@ -211,6 +190,39 @@ to inform the user of the headings & structure of each box */
     color: black;
     background: rgb(175, 172, 172);
     min-width: 280px;
+}
+/* Media queries for site nav bar & header*/
+/* For screen sizes 425 pixels & below */
+@media screen and (max-width:425px) {
+    .nav_links li, a{
+        font-size:12px;
+        padding:0px 2px;        
+    }
+    .mainlogo {
+        margin-bottom: 50px ;
+    }
+    
+    .buttonBox {
+        margin:15px 0;
+        width:90vw;
+    }
+    .buttonlogo {
+        min-width: 260px;
+    }
+    .box {
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width:300px) {
+    .nav_links li, a{
+        font-size:11px;
+        padding:0px 1px;
+        
+    }
+}
+
+#userTable {
+    font-size:80%;
 }
 
 /* Footer styling - repeated & used on all site pages */
@@ -376,7 +388,10 @@ parent container using flex */
 /* Setting Display Properties for overall wrapper element contaings macros.html child elements */
 #macro-container {
     display: flex;
-    justify-content: space-between;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
     color:#fff;
     margin:10px;
     padding:10px;
@@ -385,6 +400,9 @@ parent container using flex */
 #macro-step2 {
     display: flex;
     align-items:center;
+    margin: 10px 0px;
+    padding:1px;
+    width:90vw;
 }
 /* Styling for id macros-box - this triggers javascript to import  the user's PDCT from Local Storage when they click */
 #macros-box {
@@ -393,7 +411,7 @@ parent container using flex */
     justify-content:space-evenly;
     align-items:center;
     width: 100%;
-    height:10vh;
+    /* height:10vh; */
     text-align: center;
 }
 /* Styling for display box to hold the user's PDCT when import button above has been clicked */
@@ -405,15 +423,14 @@ parent container using flex */
     border-radius: 20%;
     color: white;
     background: black;
-    min-width: 280px;
+    min-width: 260px;
     margin-left: 10px;
     margin-bottom: 40px;
 }
 /* Container styling & alignment for the second main content section of macros.html */
-#choose-macro {
-    height: 600px;
-    width:20em;
-    margin-left: 10px;
+#choose-macro {    
+    /* width:20em; */
+    /* margin-left: 10px; */
 }
 /* This code sets the styles for the 3x tables used to display the macronutrient mixes available to the user*/
 .styled-table {
@@ -421,7 +438,7 @@ parent container using flex */
     margin-bottom: 20px;
     font-size: 0.9em;
     font-family: sans-serif;
-    min-width: 300px;
+    min-width: 260px;
 }
 /* Setting the background colour to opaque black with white text for the table title rows */
 .styled-table thead tr {
@@ -449,13 +466,15 @@ the user's PDCT and macro split combination */
     display: flex;
     flex-direction: column;
     justify-content:center;
+    align-items: center;
     margin-right: 10px;
+    width:90vw;
 }
 /* Adding header to  table displaying user's macro-nutrient split applied to their PDCT */
 #yourmacros {
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
-    width:300px;    
+    min-width:260px;    
 }
 /* Setting margins for calculation button on Macros.html page */
 #calculate-macros {

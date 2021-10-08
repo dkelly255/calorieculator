@@ -25,20 +25,20 @@
             <li><a href="macros.html">Macro-Mix</a></li>
             <li><a href="mealplans.html">Meal Plans</a></li>
         </ul>
-    </nav>    
-    <!-- Welcome message greeting with icon-->
-    <h2 class="titleBox">
-        <div class="mainlogo">- Welcome <i class="fas fa-fire"></i> -</div>
-    </h2>
+    </nav>        
     <!-- Main section of page - container to house child content and allow flex styling (see style.css) -->
-    <main id="macro-container">        
+    <main id="macro-container">  
+        <!-- Welcome message greeting with icon-->
+        <h2 class="titleBox">
+            <div class="mainlogo">- Welcome <i class="fas fa-fire"></i> -</div>
+        </h2>      
         <!-- Section displaying container for importing PDCT (housed in local stroage from calories.html) -->
         <section id="macro-step2">
             <!-- macros-box id to allow flex styling (style.css line 107) -->
             <article id="macros-box">
                 <!-- Button to allow user import previously calculated PDCT from local storage -->
                 <section class="button-container">
-                    <button id="carry-pdct">Import My PDCT</button>
+                    <button id="carry-pdct">&nbsp Step 1 - Import My PDCT &nbsp </button>
                 </section>
                 <!-- Box with vacant space to house PDCT imported from local storage when user clicks button above -->
                 <section id="macros-logo">&nbsp - Your PDCT:
@@ -167,7 +167,7 @@
                 <!-- Heading for table displaying user's calories per macronutrient -->
                 <h3 id="yourmacros">Your Macros:</h3>
                 <!-- This table contains the detail of the user's PDCT apportioned across the 3x macronutrient categories -->
-                <table class="styled-table">
+                <table class="styled-table" id="userTable">
                     <thead>
                         <tr>
                             <th>Macronutrient</th>
