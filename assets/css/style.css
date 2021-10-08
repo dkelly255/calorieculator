@@ -94,7 +94,8 @@ nav {
 /* Generic styling for class titlebox - applies to main heading under navbar on each page
 - flex used to centrally align content*/
 .titleBox {
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 1px;
     display: flex;
     justify-content:space-evenly;
     align-items:center;
@@ -114,6 +115,12 @@ with varying content depending on page */
     background: black;
     min-width: 280px;
 }
+@media screen and (max-width:400px) {
+    .mainlogo{
+        font-size:1.0rem;               
+    }    
+}
+
 /* Setting up flex display properties, margin & padding for homepage container element */
 .homeContainer {
     height:auto;
@@ -186,7 +193,7 @@ to inform the user of the headings & structure of each box */
 /* Next Step Buttons, used across first 3x pages of site, consitent styling with varying text content */
 /* buttonBox is a container for the clickable buttonlogo element contents */
 .buttonBox {
-    margin-top: 40px;
+    margin: 25px 0;
     display: flex;
     justify-content:space-evenly;
     align-items:center;
@@ -319,6 +326,8 @@ With black opaque background to ensure foreground information is never distracte
     display: flex;
     width:90vw;
     justify-content: center;
+    margin-bottom:25px;
+    margin-top: 25px;
 }
 /* Each form input is wrapped in a div - this styling will keep a consistent height for the div spacing */
 #firstform div {
@@ -353,6 +362,16 @@ parent container using flex */
     background: black;
     width: 280px;
 }
+@media screen and (max-width:400px) {
+    #pdct-section{
+        font-size:1.25rem;                       
+    }
+    #firstformcontainer {
+    margin-top: 1px;
+    }
+        
+}
+
 /* Styling for Macros.html Page from lines 346 - 437*/
 /* Setting Display Properties for overall wrapper element contaings macros.html child elements */
 #macro-container {
