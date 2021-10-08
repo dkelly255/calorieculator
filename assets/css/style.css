@@ -16,7 +16,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-image: url(../images/home1.jpg);
-    /* background-size:cover; */
 }
 /* Setting heights & text-alignent of all button elements on site */
 button {
@@ -24,7 +23,7 @@ button {
     text-align: justify;
     margin-top:25px;
 }
-/* Nav Bar Styling from lines 26 to 85 */
+/* Nav Bar Styling section below */
 /* Credits: Skillthrive Navbar tutorial */
 /* Header positioned as sticky to remain on screen when scrolling */
 header {
@@ -87,9 +86,6 @@ nav {
 .nav_links li a:hover {
     color: aqua;
 }
-
-
-
 /* Home page content styling section*/
 /* Generic styling for class titlebox - applies to main heading under navbar on each page
 - flex used to centrally align content*/
@@ -115,14 +111,13 @@ with varying content depending on page */
     background: black;
     min-width: 280px;
 }
-@media screen and (max-width:400px) {
-    
+/* Media query to aid presentation of main logo on smaller screen sizes */
+@media screen and (max-width:400px) {    
     .mainlogo{
         font-size:1.0rem;    
         min-width: 250px;           
     }    
 }
-
 /* Setting up flex display properties, margin & padding for homepage container element */
 .homeContainer {
     height:auto;
@@ -143,7 +138,6 @@ with varying content depending on page */
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7)
 }
-
 /* Class smallbox sits within class box and is used to house the unordered list 
 that organises the home page detailed content in each larger box above*/
 .smallbox {
@@ -153,7 +147,7 @@ that organises the home page detailed content in each larger box above*/
 }
 /* Styling for the lists of detailed information on each homepage "about" box - 
 ensuring list bullet points are removed*/
-#homelist {
+.homelist {
     list-style: none;
     list-style-type: none;
 }
@@ -163,11 +157,10 @@ to inform the user of the headings & structure of each box */
     font-size:150% ;
 }
 /* Adding padding to help aesthetic disply of individual list items within home page main boxes */
-#homelist li {
+.homelist li {
     padding-top:7px;
     padding-bottom: 7px;
 }
-
 /* Next Step Buttons, used across first 3x pages of site, consitent styling with varying text content */
 /* buttonBox is a container for the clickable buttonlogo element contents */
 .buttonBox {
@@ -179,7 +172,6 @@ to inform the user of the headings & structure of each box */
     height:5vh;
     text-align: center;
 }
-
 /* buttonlogo is the actual visibile button on which the user can click to proceed to the next stage of the flow */
 .buttonlogo {
     font-size: 1.5rem;
@@ -216,15 +208,13 @@ to inform the user of the headings & structure of each box */
 @media screen and (max-width:300px) {
     .nav_links li, a{
         font-size:11px;
-        padding:0px 1px;
-        
+        padding:0px 1px;        
     }
 }
-
+/* Reducing font-size in DOM element userTable to aid with alignment on screen */
 #userTable {
     font-size:80%;
 }
-
 /* Footer styling - repeated & used on all site pages */
 /* Setting background color, height, width, fonts, padding & borders for footer container element */
 footer {
@@ -333,7 +323,7 @@ With black opaque background to ensure foreground information is never distracte
     background-color: rgba(0, 0, 0, 0.5);
     width:400px;
 }
-
+/* Applying styles to page container to resolve original choppy display issues */
 #firstformcontainer {
     display: flex;
     width:90vw;
@@ -342,7 +332,7 @@ With black opaque background to ensure foreground information is never distracte
     margin-top: 25px;
 }
 /* Each form input is wrapped in a div - this styling will keep a consistent height for the div spacing */
-#firstform div {
+#firstform section {
     height:50px;
 }
 /* The 3x text entry fields in the form have class "formdata" - this styling aligns them within the 
@@ -374,17 +364,16 @@ parent container using flex */
     background: black;
     width: 280px;
 }
+/* Media queries to aid layout of pdct-section and the form container on screens smaller than 400px */
 @media screen and (max-width:400px) {
     #pdct-section{
         font-size:1.25rem;                       
     }
     #firstformcontainer {
     margin-top: 1px;
-    }
-        
+    }        
 }
-
-/* Styling for Macros.html Page from lines 346 - 437*/
+/* Styling section for Macros.html Page*/
 /* Setting Display Properties for overall wrapper element contaings macros.html child elements */
 #macro-container {
     display: flex;
@@ -426,11 +415,6 @@ parent container using flex */
     min-width: 260px;
     margin-left: 10px;
     margin-bottom: 40px;
-}
-/* Container styling & alignment for the second main content section of macros.html */
-#choose-macro {    
-    /* width:20em; */
-    /* margin-left: 10px; */
 }
 /* This code sets the styles for the 3x tables used to display the macronutrient mixes available to the user*/
 .styled-table {
@@ -532,7 +516,6 @@ legend {
 setting backgrounds to opaque black to allow the fonts to stand out and be easily read with high contrast */
 .meal-box {
     background-color: rgba(0, 0, 0, 0.7); 
-    /* width: 399px; */
 }
 /* Setting styles for the meal generation templates - Breakfast, Lunch & Dinner */
 .meal-table {
@@ -543,13 +526,12 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
     font-family: sans-serif;
     width:100%;
 }
-
+/* Media query to aid sizing of the user's meal table display on very small screens below 325 pixels in width */
 @media screen and (max-width:325px) {
     .meal-table {
         font-size:0.7em;
     }
 }
-
 /* Set color of meal-table headers to black with white text to allow high contrast & be easily readable */
 .meal-table thead tr {
     background-color: rgba(0, 0, 0, 0.7);
@@ -570,9 +552,9 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
 .meal-table tbody tr:last-of-type {
     background-color: rgba(0, 0, 0, 0.7);
 }
-
+/* Applying corrective styles to the meal generator page container to aid with page flow and presentation*/
 #generate-container {
-    width:90vw;
+    width:95vw;
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
