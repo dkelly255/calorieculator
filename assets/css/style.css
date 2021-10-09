@@ -123,13 +123,14 @@ with varying content depending on page */
 }
 /* Setting up flex display properties, margin & padding for homepage container element */
 .homeContainer {
-    height:auto;
+    /* height:auto; */
     display:flex;
     flex-wrap:wrap;
     justify-content:space-evenly;
     align-items:flex-start;
     margin-top: 15px;
-    padding-top: 25px;    
+    padding-top: 25px; 
+     min-height: 75vh;
 }
 /* Box class applies to 3x main content boxes on home page - setting heights, widths, borders, colors & text-alignment */
 .box {

@@ -87,7 +87,7 @@ I have chosen these programs as I have experience with both, and Microsoft excel
 
 ![alt text](readme/planner.png)
 
-### Formula Mapping (For Javascript)
+### Javascript Skeleton / Formula Mapping 
 
 An inventory of the formulas required to enable the site strategy are as follows:
 
