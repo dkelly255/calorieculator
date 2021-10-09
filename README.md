@@ -4,15 +4,16 @@
 ![alt text](readme/logo.png)
 
 ## Introduction
-- CalorieCulator is a site aimed at people who want to take control of and improve their dietary habits
-- The site will initially request the user to input several key measurements (height, weight, age etc) - these measurements will then be used by JavaScript to populate a standard formula (BMR) to calculate and return a personalised daily calorie target
-- The next step is to ask the user to choose their macronutrient goals from a list of three options - when combined with the calorie output from step 1, this will allow Javascript to calculate a simple personalised protein/carb/fat macro-nutrient split for the user
-- Finally the site will show the user a list of common foods per macro category - the user will select/unselect their preferences & the site will use the list to generate simple meal plan ideas that fit within the user's Calorie & Macro calculations, generating combinations of food options from each category's inventory of foods to provide variety 
+- CalorieCulator is a lifestyle improvement site allowing users to calculate a personalised daily calorie target, apply a range of Macronutrient options, and generate sample meal plans
+- The site will initially request the user to input several key measurements (height, weight, age etc) - these measurements will then be used by JavaScript to populate a standard formula (BMR) to calculate and return the user's personalised daily calorie target (PDCT)
+- The next step is to ask the user to choose their macronutrient goals from a list of three options - when combined with the calorie output from step 1, this will allow Javascript to calculate a simple personalised protein/carb/fat macronutrient split for the user
+- Finally the site will show the user a list of common foods per macronutrient category - the user will select/unselect their preferences & the site will use the list to generate simple meal plan ideas that fit within the user's Calorie & Macro calculations, generating combinations of food options from each category's inventory of foods to provide variety 
 
 ![alt text](readme/am_i_responsive.png)
 
 ## User Experience
 ### Strategy
+User Needs / Product Objectives
 - #### User Stories
     - As a user of the site I would like to be able to:
         - Learn about why planning & measuring calorie intake can be beneficial for health
@@ -21,7 +22,9 @@
         - Generate meal plan ideas based on my personal calorie target & macro mix calculations, and my chosen preferred food selections
 
 ### Scope
+Functional Specifications / Content Requirements
 ### Structure
+Interation Design / Information Architecture
 The site is delivered via a 4 page structure, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow. The four pages map as follows:
 
 **1. Home Page:** The site's home page will greet the user with an introduction to the "What", "Why", and "How" of calorie planning & measurement. 
@@ -51,6 +54,7 @@ The user will then see a display of the generated sample daily meal plan, and ca
 
 
 ### Skeleton
+Interface Design/Navigation Design/Information Design
 #### Wireframes 
 To drive the early site design efforts, I am using wireframes to map flows across HTML, CSS & Javascript - provisionally using a combination of:
 - Microsoft Powerpoint - Primarily for mapping the web page HTML/CSS aspects & structure
@@ -60,7 +64,7 @@ To drive the early site design efforts, I am using wireframes to map flows acros
 
 I have chosen these programs as I have experience with both, and Microsoft excel in particular for setting up formula calculations to guide the Javascript programming efforts
 
-**Initial logic flow/mapping diagram** (Under Construction - full version with Step 3 work in progress as of 21/09)
+**Initial logic flow/mapping diagram** 
 
 ![alt text](readme/logic_flow.png)
 
