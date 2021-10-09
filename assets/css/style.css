@@ -16,6 +16,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-image: url(../images/home1.jpg);
+    align-items: center;
 }
 /* Setting heights & text-alignent of all button elements on site */
 button {
@@ -60,6 +61,7 @@ nav {
     color: white;
     height: 30px;
     border-bottom: 1.5px solid white;
+    width: 100vw;
 }
 /* Setting the fonts, sizes and colors of the text for the nav bar links */
 .nav_links li, a {
@@ -200,8 +202,15 @@ to inform the user of the headings & structure of each box */
     }
     .box {
         margin: 10px 0;
+        width: 85vw;
     }
 }
+@media screen and (max-width:700px) {
+    .box {
+        min-height:unset;
+    }
+}
+
 @media screen and (max-width:300px) {
     .nav_links li, a{
         font-size:11px;
@@ -468,10 +477,11 @@ the user's PDCT and macro split combination */
     display:flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     color: #fff;
     margin:2px;
     padding:5px;
+    max-width: 1250px;
 }
 /* Styling the first section element (id=foodcontainer) on meal generation page - using flex display/column 
 direction to orientate elements appropriately*/
@@ -548,8 +558,8 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
 }
 /* Applying corrective styles to the meal generator page container to aid with page flow and presentation*/
 #generate-container {
-    width:95vw;
+    /* width:95vw; */
     display: flex;
-    justify-content: center;
+    justify-content:space-around ;
     margin-bottom: 25px;
 }
