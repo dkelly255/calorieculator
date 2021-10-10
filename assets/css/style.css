@@ -350,7 +350,7 @@ With black opaque background to ensure foreground information is never distracte
 /* Applying styles to page container to resolve original choppy display issues */
 #firstformcontainer {
     display: flex;
-    width:90vw;
+    width:95vw;
     justify-content: center;
     margin-bottom:25px;
     margin-top: 5px;
