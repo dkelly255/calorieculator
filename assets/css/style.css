@@ -127,7 +127,7 @@ with varying content depending on page */
     display:flex;
     flex-wrap:wrap;
     justify-content:space-evenly;
-    align-items:flex-start;
+    align-items:center;
     margin-top: 15px;
     padding-top: 25px; 
      min-height: 75vh;
@@ -205,6 +205,9 @@ to inform the user of the headings & structure of each box */
         margin: 10px 0;
         width: 85vw;
     }
+    nav {
+        justify-content: center;
+    }
 }
 @media screen and (max-width:700px) {
     .box {
@@ -253,6 +256,19 @@ footer {
     background: black;
     width: 280px;
 }
+@media screen and (max-width:300px) {
+    .footer-content h4{
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 2.0rem;
+        border:3px solid white;
+        border-radius: 20%;
+        color: white;
+        background: black;
+        width: 260px;
+    }
+}
+
 /* Styling for "connect with us" paragraph */
 .footer-content p {
     max-width: 500px;
@@ -311,10 +327,10 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    height:auto;
     color: white;
     margin-top: 15px;
     padding-top: 15px; 
+    min-height:75vh;
 }
 /* Formatting & styling PDCT form header to be centralised with appropriate padding */
 .formcontainer h3 {
@@ -389,12 +405,12 @@ parent container using flex */
     color:#fff;
     margin:10px;
     padding:10px;
+    width:75vw;
 }
 /* Setting flex display property to allow styling of child elements for importation of PDCT from local storage */
 #macro-step2 {
     display: flex;
     align-items:center;
-    margin-bottom: 10px;
     padding:1px;
     width:90vw;
 }
@@ -418,7 +434,7 @@ parent container using flex */
     background: black;
     min-width: 260px;
     margin-left: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
 /* This code sets the styles for the 3x tables used to display the macronutrient mixes available to the user*/
 .styled-table {
@@ -482,7 +498,9 @@ the user's PDCT and macro split combination */
     color: #fff;
     margin:2px;
     padding:5px;
+    width:75vw;
     max-width: 1250px;
+    min-height: 75vh;
 }
 /* Styling the first section element (id=foodcontainer) on meal generation page - using flex display/column 
 direction to orientate elements appropriately*/
@@ -563,4 +581,11 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
     display: flex;
     justify-content:space-around ;
     margin-bottom: 25px;
+}
+#split_header {
+    margin-bottom: 20px;
+    text-align: center;
+    border: #fff solid 3px;
+    border-radius: 20%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
