@@ -1,14 +1,16 @@
 /* jshint esversion: 8 */
-
-    console.log(document.getElementById("calculate-pdct"));    
+// Clear local storage upon page load to prevent any invalid calculations or flows through the site
+localStorage.clear();
+    
 /* Declare variable calculatePdct and define as the button with ID below from the DOM
 This will be used for storing the user's personal daily calorie target */
 let calculatePdct = document.getElementById("calculate-pdct");
-        console.log(calculatePdct);
-    /* Add event listener to the variable, to listen for a "click" event, and 
-    run function calculateCalories when the button is clicked */
-    calculatePdct.addEventListener("click", calculateCalories);
-        console.log(calculatePdct);
+
+/* Add event listener to the variable, to listen for a "click" event, and 
+run function calculateCalories when the button is clicked */
+calculatePdct.addEventListener("click", calculateCalories);
+        
+
 /* Defining the Function calculateCalories called by event listener attached to variable 
 calculatePdct - this function is passed an event (the click) */
 function calculateCalories (event) {

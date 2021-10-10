@@ -31,36 +31,37 @@
     <main class="formcontainer">
         <!-- Welcome message greeting with icon-->
         <section class="titleBox">
-            <h2 class="mainlogo">&nbsp; - Step 1: Calculate PDCT <i class="fas fa-fire"></i> - &nbsp;</h2>
+            <h2 class="mainlogo">&nbsp; - Step 1: Calculate PDCT <i class="fas fa-fire"></i> - &nbsp;<br>
+            &nbsp;&nbsp;(Personal Daily Calorie Target)&nbsp;&nbsp;</h2>
         </section>
         <!-- Form to house contents of user data input areas for personal daily calorie target (PDCT) calculation -->
         <section id="firstformcontainer">
             <form id="firstform" class="bmrinputs" method="POST" action="https://formdump.codeinstitute.net/">
                 <!-- PDCT data input section header -->
-                <h3>Personal Daily Calorie Target:</h3>   
+                <h3>Please Complete Each Field Below:</h3>   
                 <!-- Each of the 4x sections below contains a user data input - for styling in style.css and javascript functionality in calories.js -->
                 <section class="formdata">
                     <!-- Age input set to required, and measured in data-type "number" -->
                     <label for="age">Age (Years):</label>
-                    <input class="age-input" id="age" name="age" type="number" required>
+                    <input class="age-input pdctInput" id="age" name="age" type="number" required>
                 </section>
                 
                 <section class="formdata">
                     <!-- Weight input set to required, and measured in data-type "number" -->
                     <label for="weight">Weight (lbs/Pounds):</label>
-                    <input class="weight-input" id="weight" name="weight" type="number" required>
+                    <input class="weight-input pdctInput" id="weight" name="weight" type="number" required>
                 </section>
 
                 <section class="formdata">
                     <!-- Height input set to required, and measured in data-type "number" -->
                     <label for="height">Height (Inches):</label>
-                    <input class="height-input" id="height" name="height" type="number" required>
+                    <input class="height-input pdctInput" id="height" name="height" type="number" required>
                 </section>        
 
                 <section> 
                     <!-- Gender input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
                     <label for="gender">Gender:</label>
-                    <select name="gender-options" id="gender">
+                    <select class="pdctInput" name="gender-options" id="gender">
                             <option value="">Select Gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
@@ -69,7 +70,7 @@
                 
                 <!-- Activity input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
                 <label for="activity">Activity Level:</label>
-                <select name="activity-options" id="activity">
+                <select class="pdctInput" name="activity-options" id="activity">
                         <option value="">Please Select</option>
                         <option value="sedentary">Sedentary</option>
                         <option value="lightlyActive">Lightly Active</option>

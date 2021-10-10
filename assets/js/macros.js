@@ -2,7 +2,7 @@
 
     console.log(localStorage.pdct);
     console.log(document.getElementById("carry-pdct"));
-// Set a variable equal to the DOM element button with id "carry-pdct" 
+// Set a variable equal to the DOM element button with id "`carry`-pdct" 
 let carryPdct = document.getElementById("carry-pdct");
     console.log(carryPdct);
 // Attach an event listener to the variable, to run function "importPdct" when a "click" event occurs
