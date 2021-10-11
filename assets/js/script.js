@@ -30,24 +30,23 @@ function calculateCalories (event) {
     let gender = document.getElementById("gender").value;        
     let activity = document.getElementById("activity").value;
         
-    /* First "if" statement within function - checks if user is male or female, and uses the appropriate
-    BMR formula accordingly, whilst alerting user if a gender has not been selected*/
     
+    // Create an array to store the contents of numeric data entry variables for flow control/checks
     const checks = [age, weight, height];
-    console.log(checks);
-    console.log(checks[0]);
-    console.log(checks[1]);
-    console.log(checks[2]);
-    console.log(checks[0]=="");
-    console.log(checks[1]=="");
-    console.log(checks[2]=="");
-    
-    if (checks[0]=="") {
-        alert("Please populate Age, Weight & Height fields")
+    /* First "if" statement within function - checks if inputs are populate, and whether the user is male or female, 
+    and uses the appropriate BMR formula accordingly, whilst alerting user if a inputs have not been populated*/
+    if (age < 18 || age > 95) {
+        alert("Age must be between 18 and 95 for safety purposes");
+    } else if (weight < 85 || weight > 800) {
+        alert("Starting Weight should not be under 85lbs or over 800 lbs for safety purposes");
+    } else if (height < 36 || height >107 ) {
+        alert("Height should be between 36 to 107 inches for safety purposes")
+    } else if (checks[0]=="") {
+        alert("Please populate Age, Weight & Height fields");
     } else if (checks[1]=="") {
-        alert("Please populate Age, Weight & Height fields")
+        alert("Please populate Age, Weight & Height fields");
     } else if (checks[2]=="") {
-        alert("Please populate Age, Weight & Height fields")
+        alert("Please populate Age, Weight & Height fields");
     } else if (gender == "male") {
         bmr = 66 + (6.3 * weight) + (12.9 * height) - (6.8 * age); 
     } else if (gender == "female") {
@@ -88,3 +87,15 @@ function calculateCalories (event) {
     in downstream calculations for macros and mealplans */
     localStorage.setItem("pdct",calories);
 }
+
+// Attempting addition of control to final "Next Step" button on page
+// let next_step1 = document.getElementById("nextStep1");
+// next_step1.addEventListener("click", flowCheck1);
+
+// function flowCheck1(event)
+//     event.preventDefault();
+//     if (localStorage.length == 0) {
+//         alert("Please complete PDCT calculation prior to proceeding")
+//     } else {
+//         window.location.href = "macros.html"
+//     }
