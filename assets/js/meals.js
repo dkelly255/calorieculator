@@ -303,6 +303,10 @@ document.getElementById("dinner-fat-food").innerHTML=(food9);
 const food9grams = (Math.round(dinnerTotalCalories*0.35)) / (fatIndex.find(x => x.name === fatArray[rand9]).calpergram);
 document.getElementById("dinner-fat-grams").innerHTML=(Math.round(food9grams));
 document.getElementById("dinner-total-grams").innerHTML=(Math.round(food7grams + food8grams + food9grams));
+
+// Grand total section of meal generator
+document.getElementById("total-total-grams").innerHTML=Math.round((food1grams + food2grams + food3grams + food4grams + food5grams + food6grams + food7grams + food8grams + food9grams));
+document.getElementById("total-total-calories").innerHTML=(localStorage.pdct);
 // end of Meal Generator function
 }
 

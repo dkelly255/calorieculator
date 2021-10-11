@@ -620,3 +620,10 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
     border-radius: 20%;
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+#total-header {
+    width:200px;
+}
+#grandSubTotal {
+    background-color:#074A88; ;
+}
