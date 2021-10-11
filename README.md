@@ -12,8 +12,9 @@
 ![alt text](readme/am_i_responsive.png)
 
 ## User Experience
-### Strategy
-User Needs / Product Objectives
+
+### **Strategy**
+The site strategy is framed around addressing the user needs below:
 - #### User Stories
     - As a user of the site I would like to be able to:
         - Learn about why planning & measuring calorie intake can be beneficial for health
@@ -21,73 +22,58 @@ User Needs / Product Objectives
         - Receive macro-nutrient mix calculation based on my personalised calorie target above combined with my chosen macro-split option
         - Generate meal plan ideas based on my personal calorie target & macro mix calculations, and my chosen preferred food selections
 
-### Scope
+
+### **Scope**
 Functional Specifications / Content Requirements
-### Structure
-Interation Design / Information Architecture
-The site is delivered via a 4 page structure, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow. The four pages map as follows:
+- The Scope of the website is informed by the Strategy above, I wanted to ensure the site would have the right scope to actualise the strategy by including content and interactivity that address the user stories
+- The site's scope covers some of the benefits of choosing to measure and control caloric intake, set against background images to help a user visually internalise aspects of the activity,as well as three interactive pages to allow the user calculate their calorie targets, macronutrient splits, and meal plans
+- I have also demarcated the original possible list of site scope into "existing features" and "features yet to implement" - with the former containing the final features of the live site in the spirit of ensuring a Minimum Viable Product (MVP) that would meet project deadlines
 
-**1. Home Page:** The site's home page will greet the user with an introduction to the "What", "Why", and "How" of calorie planning & measurement. 
+### **Structure**
+The site is structured via a 4 page layout, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow. The four pages map as follows:
 
-**2. Calorie Calculation Page:** The Calorie Calculation page will take inputs from the user via HTML data entry fields - including the user's gender, height, weight, age & activity level - allowing Javascript to use these inputs as variables in a pre-determined set of formulas, and returning a personalised calorie target for the user. 
+*1. Home Page:* The site's home page will greet the user with an introduction to the "What", "Why", and "How" of calorie planning & measurement. 
 
-The Harris-Benedict formula is used for the initial Basal Metabolic Rate (hereafter referred to as "BMR") which is then uplifted by an activity factor according to the user's choice (From 1. Sedentary to 5. Very Active)
+*2. Calorie Calculation Page:* The Calorie Calculation page will take inputs from the user via HTML data entry fields - including the user's gender, height, weight, age & activity level - allowing Javascript to use these inputs as variables in a pre-determined set of formulas, and returning a personalised calorie target for the user. The Harris-Benedict formula is used for the initial Basal Metabolic Rate (hereafter referred to as "BMR") which is then uplifted by an activity factor according to the user's choice (From 1. Sedentary to 5. Very Active)
 
-**3. Macro Mix Page:** The Macro Mix page will ask the user to choose their desired macro-nutrient split (Protein/Carbs/Fats) from three pre-defined options (standard, high-protein, and low-carb) and will then combine this specification with the below to arrive at a personalised daily split in grams per macro-nutrient
+*3. Macro Mix Page:* The Macro Mix page will ask the user to choose their desired macro-nutrient split (Protein/Carbs/Fats) from three pre-defined options (standard, high-protein, and low-carb) and will then combine this specification with the output from the calorie calculation page, and standard estimated calories per macronutrient per gram to arrive at a personalised daily split in grams per macro-nutrient
 
+*4. Meal Planning Page:* The Meal planning page is the final step in the site flow - and will request the user to select their preferences (or unselect their dislikes) from a pre-determined list of common foods from each of the three macronutrient categories (Protein/Carbohydrates & Fats). 
 
-(1) The output from the calorie calculation page
-
-(2) The standard calories per macronutrient gram formula
-
-The Macro Split will be graphically displayed for the user in the form of a pie-chart, and can be used by the site visitor to support their new controlled diet plans
-
-**4. Meal Planning Page:** The Meal planning page is the final step in the site flow - and will request the user to select their preferences (or unselect their dislikes) from a pre-determined list of common foods from each of the three macronutrient categories (Protein/Carbohydrates & Fats). 
-
-Completion of this activity will trigger Javascript to build the choices into an array per macro group, and then  return one food choice per macro group within boundaries of 
+Completion of this activity will trigger Javascript to build the choices into an array per macro group, and then return one random food choice per macro group within boundaries of: 
 - (1) Total daily calories are to equal step 1 output (with a possible small error bar +/- tolerance factor for rounding depending on step 3)
 - (2) Daily Calories per individual macro group (Protein/Carb/Fat) are to equal step 2's macro split output (subject to rounding/tolerance)
 - (3) There must be one food from each macro group per meal 
 - (4) There must be three meals per day (Breakfast, Lunch, Dinner)
 
-The user will then see a display of the generated sample daily meal plan, and can also download a copy for use offline if they wish
+The final structural element will enable the user to see a display of the generated sample daily meal plan idea on the page for their personal use
 
-
-### Skeleton
-Interface Design/Navigation Design/Information Design
-#### Wireframes 
-To drive the early site design efforts, I am using wireframes to map flows across HTML, CSS & Javascript - provisionally using a combination of:
+### **Skeleton**
+To drive the early site interface & navigvation design efforts, I am using wireframes to map flows across HTML, CSS & Javascript - using a combination of Microsoft Excel & Powerpoint as I have experience with both:
 - Microsoft Powerpoint - Primarily for mapping the web page HTML/CSS aspects & structure
-- Microsoft Excel - Primarily for: 
-    1. Mapping logic & formulas in detail for Javascript
-    2. Showing linkages & integration points between Javascript & the HTML/CSS)
+- Microsoft Excel - Primarily for mapping logic & formulas in detail for Javascript & showing linkages & integration points between Javascript & HTML/CSS
 
-I have chosen these programs as I have experience with both, and Microsoft excel in particular for setting up formula calculations to guide the Javascript programming efforts
+#### *Site Wireframe - Original Skeleton Concept:*
 
-**Initial logic flow/mapping diagram** 
+![alt text](readme/site_plan.png)
 
-![alt text](readme/logic_flow.png)
-
-**Step 3 - Meal Plan Generator logic**
-![alt text](readme/generator_logic.png)
-
-**Home Page:**
+*Home Page:*
 
 ![alt text](readme/home.png)
 
-**Calorie Calculation Page:**
+*Calorie Calculation Page:*
 
 ![alt text](readme/calorie_calculation.png)
 
-**Macro Mix Page HTML:**
+*Macro Mix Page HTML:*
 
 ![alt text](readme/macros.png)
 
-**Meal Planning Page HTML:**
+*Meal Planning Page HTML:*
 
 ![alt text](readme/planner.png)
 
-### Javascript Skeleton / Formula Mapping 
+#### *Javascript Skeleton / Formula Mapping:*
 
 An inventory of the formulas required to enable the site strategy are as follows:
 
@@ -164,12 +150,12 @@ C. Meal Planner Page
             - Food name: a random number generated between 1-5 (or length of index in formula 10) and pulled from formula 10's index
             - Meal name: the meal being planned (breakfast, lunch or dinner)
             - Calorie allowance: from formula 9
-            - Quantity: the quantity of the food (in grams) required to fulfill the calorie per meal per macro, by dividing formula 9's output by the food's static calories per gram (lookup to formula 10 array)
-        - Will output one food per macro per meal, to which a note will add fresh vegetables for micronutrients & extra variety
+            - Quantity: of the food (in grams) required to meet the calorie per meal per macro, by dividing formula 9's output by the food's static calories per gram (lookup to formula 10 array)
+        - Output will be one food per macronutrient per meal
 
 
 
-### Surface
+### **Surface**
 - #### Color scheme
 - #### Typography
 - #### Imagery
