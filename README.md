@@ -1,7 +1,6 @@
 
-# CalorieCulator - Work In Progress
+# ![alt text](readme/logo.png)
 
-![alt text](readme/logo.png)
 
 ## Introduction
 - CalorieCulator is a lifestyle improvement site allowing users to calculate a personalised daily calorie target, apply a range of Macronutrient options, and generate sample meal plans
