@@ -24,29 +24,40 @@ function calculateCalories (event) {
     let multiplier;
     /* Variables Age, weight, height, gender and activity are all declared and defined as their equivalent 
     DOM element IDs */
-    let age = document.getElementById("age").value;
-        console.log(age);
-    let weight = document.getElementById("weight").value;
-        console.log(weight);
-    let height = document.getElementById("height").value;
-        console.log(height);
-    let gender = document.getElementById("gender").value;
-        console.log(gender);
+    let age = document.getElementById("age").value;      
+    let weight = document.getElementById("weight").value;        
+    let height = document.getElementById("height").value;        
+    let gender = document.getElementById("gender").value;        
     let activity = document.getElementById("activity").value;
-        console.log(activity);
-    /* First if statement within function - checks if user is male or female, and uses the appropriate
-    BMR formula accordingly*/
-    if (gender == "male") {
+        
+    /* First "if" statement within function - checks if user is male or female, and uses the appropriate
+    BMR formula accordingly, whilst alerting user if a gender has not been selected*/
+    
+    const checks = [age, weight, height];
+    console.log(checks);
+    console.log(checks[0]);
+    console.log(checks[1]);
+    console.log(checks[2]);
+    console.log(checks[0]=="");
+    console.log(checks[1]=="");
+    console.log(checks[2]=="");
+    
+    if (checks[0]=="") {
+        alert("Please populate Age, Weight & Height fields")
+    } else if (checks[1]=="") {
+        alert("Please populate Age, Weight & Height fields")
+    } else if (checks[2]=="") {
+        alert("Please populate Age, Weight & Height fields")
+    } else if (gender == "male") {
         bmr = 66 + (6.3 * weight) + (12.9 * height) - (6.8 * age); 
-        console.log(bmr);
-    } 
-    else {
+    } else if (gender == "female") {
         bmr = 655 + (4.3 * weight) + (4.7 * height) - (4.7 * age); 
+    } else {
+        alert("Please select a Gender"); 
     }
-        console.log(bmr);
-        console.log(age);
+        
     /* Second if statement which checks which Activity level the user has selected, and sets the value
-    of the "multiplier" variable accordingly*/        
+    of the "multiplier" variable accordingly, and alerts the user if an activity level has not been selected*/        
         if (activity == "sedentary") {
         multiplier = 1.2;
     } else if (activity == "lightlyActive") {
@@ -55,24 +66,25 @@ function calculateCalories (event) {
         multiplier = 1.55;
     } else if (activity == "veryActive") {
         multiplier = 1.725;
-    } else {
+    } else if (activity == "extraActive") {
         multiplier = 1.9;
-    } 
-        console.log(bmr);
-        console.log(multiplier);
+    } else {
+        alert("Please select an Activity Level")
+    }        
+        
     /* Declaring & defining the variable "calories" which is the output of the formula and holds the user's
     personal daily calorie target calculation*/
     let calories = Math.floor(bmr * multiplier);
-        console.log(calories);
+    
     /*  Declaring & defining the variable "answer" which is set to the vacant span element (id "display-pdct")
     from the DOM */
     let answer = document.getElementById("display-pdct");
-        console.log(answer);
     // Setting the contents of "answer" to the user's pdct using template literals and the innerHTML property
-    answer.innerHTML = `${calories}!`;
-        console.log(localStorage);
+    // Including a control check that prevents "NaN" being populated as the PDCT output
+    if (isNaN(calories)) {
+        answer.innerHTML = "";
+    } else answer.innerHTML = `${calories}!`;
     /* Creating an entry in local storage to allow the user's pdct be accessed by the following pages 
     in downstream calculations for macros and mealplans */
     localStorage.setItem("pdct",calories);
-        console.log(localStorage);
 }
