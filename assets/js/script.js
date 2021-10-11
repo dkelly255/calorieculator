@@ -33,7 +33,7 @@ function calculateCalories (event) {
     
     // Create an array to store the contents of numeric data entry variables for flow control/checks
     const checks = [age, weight, height];
-    /* First "if" statement within function - checks if inputs are populate, and whether the user is male or female, 
+    /* First "if" statement within function - checks if inputs are populated, and whether the user is male or female, 
     and uses the appropriate BMR formula accordingly, whilst alerting user if a inputs have not been populated*/
     if (age < 18 || age > 95) {
         alert("Age must be between 18 and 95 for safety purposes");
