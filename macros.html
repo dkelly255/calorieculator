@@ -53,9 +53,9 @@
             <form method="POST" action="https://formdump.codeinstitute.net/">
                 <!-- Each Macro-nutrient Split option is contained in a section element -->
                 <h2 id="split_header">Now Choose <br> A Macro Split:</h2>
-                <section>                    
+                <section class="splitOptions">                    
                     <!-- "Standard Balanced"" option is presented for selection via a radio button which the user can select -->
-                    <label for="standard">Standard Balanced</label>
+                    <label for="standard">&nbsp;Standard Balanced</label>
                     <input type="radio" id="standard" name="macro_choice" value="standard">
                     <!-- The details of the "Standard Balanced" option are stored in the table below 
                         with the % of calories per macronutrient as the table data -->
@@ -87,9 +87,9 @@
                     </table>
                 </section>
                 <!-- Each Macro-nutrient Split option is contained in a section element -->
-                <section>
+                <section class="splitOptions">
                     <!-- "High-Protein" option is presented for selection via a radio button which the user can select -->
-                    <label for="high-protein">High-Protein</label>
+                    <label for="high-protein">&nbsp;High-Protein</label>
                     <input type="radio" id="high-protein" name="macro_choice" value="high-protein">
                      <!-- The details of the "High Protein" option are stored in the table below 
                         with the % of calories per macronutrient as the table data -->
@@ -121,9 +121,9 @@
                     </table>
                 </section>
                 <!-- Each Macro-nutrient Split option is contained in a section element -->
-                <section>     
+                <section class="splitOptions">     
                     <!-- "Low-Carb" option is presented for selection via a radio button which the user can select -->               
-                    <label for="low-carb">Low-Carb</label>
+                    <label for="low-carb">&nbsp;Low-Carb</label>
                     <input type="radio" id="low-carb" name="macro_choice" value="low-carb">
                      <!-- The details of the "Low Carb" option are stored in the table below 
                         with the % of calories per macronutrient as the table data -->
@@ -172,7 +172,7 @@
                     <thead>
                         <tr>
                             <th>Macronutrient</th>
-                            <th>Calorie Allocation</th>
+                            <th>Calories</th>
                         </tr>
                     </thead>
                         
@@ -198,7 +198,7 @@
             </section>
             <!-- Button to allow user to proceed to next step in the process post-completion of Macro-Split calculation -->
             <section class="buttonBox">
-                <a href="mealplans.html" class="buttonlogo">- Next Step <i class="fas fa-fire"></i> -</a>
+                <a href="mealplans.html" class="buttonlogo">- To Final Step <i class="fas fa-fire"></i> -</a>
             </section>                
         </section>
     </main>   

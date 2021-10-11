@@ -225,7 +225,7 @@ to inform the user of the headings & structure of each box */
 }
 /* Reducing font-size in DOM element userTable to aid with alignment on screen */
 #userTable {
-    font-size:80%;
+    font-size:95%;
 }
 /* Footer styling - repeated & used on all site pages */
 /* Setting background color, height, width, fonts, padding & borders for footer container element */
@@ -626,4 +626,11 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
 }
 #grandSubTotal {
     background-color:#074A88; ;
+}
+.splitOptions {
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+.splitOptions label {
+    font-size: 90%;
 }
