@@ -40,7 +40,7 @@ function calculateCalories (event) {
     } else if (weight < 85 || weight > 800) {
         alert("Starting Weight should not be under 85lbs or over 800 lbs for safety purposes");
     } else if (height < 36 || height >107 ) {
-        alert("Height should be between 36 to 107 inches for safety purposes")
+        alert("Height should be between 36 to 107 inches for safety purposes");
     } else if (checks[0]=="") {
         alert("Please populate Age, Weight & Height fields");
     } else if (checks[1]=="") {
@@ -68,7 +68,7 @@ function calculateCalories (event) {
     } else if (activity == "extraActive") {
         multiplier = 1.9;
     } else {
-        alert("Please select an Activity Level")
+        alert("Please select an Activity Level");
     }        
         
     /* Declaring & defining the variable "calories" which is the output of the formula and holds the user's

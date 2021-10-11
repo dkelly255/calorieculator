@@ -156,9 +156,23 @@ C. Meal Planner Page
 
 
 ### **Surface**
+The first four Planes of UX enabled the Surface Plane to take shape in terms of finalising the look and feel of the website in terms of color schemes, typography, and imagery:
 - #### Color scheme
+    - I used the [Coolors](https://coolors.co) color consultation website to generate a [color palette](https://coolors.co/074a88-ffffff-000000) to underpin the content of the site
+    - This consists of [Yale Blue](https://coolors.co/074a88-ffffff-000000) (#074A88) and [Black](https://coolors.co/074a88-ffffff-000000) (#000000) backgrounds and highlights behind [White](https://coolors.co/074a88-ffffff-000000) (#FFFFFF) text and borders to ensure sufficient contrast, and that foreground text is never distracted by background imagery
+
+    ![alt text](readme/color_palette.png)
 - #### Typography
+    - I chose the [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserrat) font to aid readability & help promote a positive emotional response from the external users of the site.  
+    ![alt text](readme/typography.png)
+
+    - I also used [Fontawesome](https://fontawesome.com/) to embed the fire icons,  to help emphasise important elements of the site, and to help with generating a positive emotional response with the site users, and for the favicon image, added to the top of all the site's pages via the head element of the HTML to help with the User Experience & create a professional feel when browsing
+
 - #### Imagery
+    - The site is lighter on imagery as it is primarily a calculation engine - however the the hero image is used on all four pages of the site and helps grab the users initial attention before allowing them focus on the content
+    - At all times I have ensured that foreground information and content is never distracted by this background imagery by using opacity setting on the color palettes. 
+    - The imagery is fully detailed in the Credits section, and is primarily sourced from both [Pexels](pexel.com) and [Pixabay](pixabay.com)
+        
 
 ## Features
 ### Existing Features
@@ -191,21 +205,50 @@ Completion of this activity will trigger Javascript to build the choices into an
 - Additionally I tested the site on different devices, operating systems and form factors - Desktop & Laptop (Windows) Ipad Tablet (IOS), and Galaxy Note 10 Phone (Android)
 
 ### HTML Testing
-During the testing phase I used the W3C Validator to confirm that all HTML code was error free & functioned as expected
+During the testing phase I used the W3C Validator to confirm that all HTML code was error free & functioned as expected - the only warnings from the validation were related to articles & sections without headings - which are acceptable in this context as they are used in place of divs when working with flex in HTML to optimise the site layout
 
 **Home Page:**
+![alt text](readme/home_html_validation.png)
 
 **Calorie Calculation Page:**
+![alt text](readme/calories_html_validation.png)
 
 **Macro Mix Page HTML:**
+![alt text](readme/macros_html_validation.png)
 
 **Meal Planning Page HTML:**
+![alt text](readme/mealplans_html_validation.png)
 
 ### CSS Testing
 - The CSS Jigsaw Validator was used to confirm that the CSS code was error free & functioned as expected.
 - As my CSS Code was contained in a single stylesheet (style.css) - I was able to validate the full website's styling via one direct input
+
+![alt text](readme/css_validation.png)
+
 ### Javascript Testing
+
+I used the Jshint.com Javascript validation service to validate all of the site's Javascript, and confirmed that no errors or warnings were present per illustrations below:
+
+*script.js - javascript supporting calories.html:*
+![alt text](readme/script_js_validation.png)
+*macros.js - javascript supporting macros.html:*
+![alt text](readme/macros_js_validation.png)
+*meals.js - javascript supporting mealplans.html:*
+![alt text](readme/meals_js_validation.png)
+
 ### Accessibility Testing
+*Homepage Lighthouse Scores:*
+![alt text](readme/home_lighthouse.png)
+
+*Calorie Calculation Page Lighthouse Scores:*
+![alt text](readme/calories_lighthouse.png)
+
+*Macro Split Page Lighthouse Scores:*
+![alt text](readme/macros_lighthouse.png)
+
+*Meal Generation Page Lighthouse Scores:*
+![alt text](readme/meals_lighthouse.png)
+
 ### Resolved Bugs
 JS formulas not working on macros.html - needed to add separate .js files for each .html page
 

@@ -11,9 +11,9 @@ function importPdct() {
     /*Take the pdct from local storage and set it to the inner HTML contents of the DOM element "pdct-box"
     This displays/imports the user's pdct from the previous page in preparation for the application of 
     Macro-nutrient split option selections */
-    console.log(localStorage)
+    console.log(localStorage);
     if (isNaN(localStorage.pdct)) {
-        alert("Please complete PDCT calculation on prior page before proceeding")
+        alert("Please complete PDCT calculation on prior page before proceeding");
         document.getElementById("pdct-box").innerHTML = "";
         
     }
