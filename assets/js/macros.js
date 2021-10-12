@@ -13,8 +13,7 @@ function importPdct() {
     Macro-nutrient split option selections */
     if (isNaN(localStorage.pdct)) {
         alert("Please complete PDCT calculation on prior page before proceeding");
-        document.getElementById("pdct-box").innerHTML = "";
-        
+        document.getElementById("pdct-box").innerHTML = "";        
     }
     document.getElementById("pdct-box").innerHTML = localStorage.pdct;
 }
@@ -55,8 +54,7 @@ function splitMacros(event) {
     // Apply the "standard" macronutrient split if "standard" radio button has been selected by user 
     if (macroArray[0].checked) {
 
-        chosenOption = "standard";
-        
+        chosenOption = "standard";        
         document.getElementById("protein").innerHTML = Math.floor(localStorage.pdct * 0.25);
         document.getElementById("carbs").innerHTML = Math.floor(localStorage.pdct * 0.45);
         document.getElementById("fat").innerHTML = Math.floor(localStorage.pdct * 0.30);
@@ -87,8 +85,6 @@ function splitMacros(event) {
         // If no option is selected
         chosenOption = "notselected";
         
-    }
-
-    
-    // End of the splitMacros function
+    }    
+    // End of splitMacros function
 }
