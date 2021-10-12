@@ -168,7 +168,11 @@ The first four Planes of UX enabled the Surface Plane to take shape in terms of 
     - I also used [Fontawesome](https://fontawesome.com/) to embed the fire icons,  to help emphasise important elements of the site, and to help with generating a positive emotional response with the site users, and for the favicon image, added to the top of all the site's pages via the head element of the HTML to help with the User Experience & create a professional feel when browsing
 
 - #### Imagery
-    - The site is lighter on imagery as it is primarily a calculation engine - however the the hero image is used on all four pages of the site and helps grab the users initial attention before allowing them focus on the content
+    - The site is lighter on imagery as it is primarily a calculation engine - however the the hero image is used on all four pages of the site and helps grab the users initial attention before allowing them focus on the content, whilst also being orientated towards the overall site theme of healthy eating. The imagehas a relatively dark background which helps with ensuring a high contrast ratio for the foreground text throughout the site
+
+
+    ![alt text](assets/images/home1.jpg)
+
     - At all times I have ensured that foreground information and content is never distracted by this background imagery by using opacity setting on the color palettes. 
     - The imagery is fully detailed in the Credits section, and is primarily sourced from both [Pexels](pexel.com) and [Pixabay](pixabay.com)
         
@@ -196,7 +200,7 @@ The site footer contains the CalorieCulator logo, as well as clickable links to 
 
 **Page Titles:** 
 
-Each page contains a header, which either welcomes the user (Home Page) or gives the user direction and instruction on the function of the current page (Calorie Calculation, Macro-Mix, and Meal Plan pages). The Site headers are set against a black background, with white text and white borders to ensure a high contrast ratio, promote consistency in the look & feel of the site across pages, and to help avoid the user becoming disorientated as they anvigate the site flow & functionality
+Each page contains a header, which either welcomes the user (Home Page) or gives the user direction and instruction on the function of the current page (Calorie Calculation, Macro-Mix, and Meal Plan pages). The Site headers are set against a black background, with white text and white borders to ensure a high contrast ratio, promote consistency in the look & feel of the site across pages, and to help avoid the user becoming disorientated as they anvigate the site flow & functionality. For consistency & readability, the same format is used to display the user's PDCT on the calorie caluclation page and the macro-mix pages.
 
 ![alt text](readme/page_titles.png)
 
@@ -222,19 +226,48 @@ The Calorie Calculation page contains a "Calculate My PDCT" button - triggering 
 
 The Macro-mix page contains a "Begin - Import My PDCT" button - triggering Javascript to get the previously calculated PDCT from local storage & display for the user in preparation for the application of the Macronutrient split options to follow
 
-**Macro Mix Page:** The Macro Mix page will ask the user to choose their desired macro-nutrient split (Protein/Carbs/Fats) from three pre-defined options (standard, high-protein, and low-carb) and will then combine this specification with (1) the output from the calorie calculation page, and (2) the standard calories per macronutrient gram formula, to arrive at a personalised daily split in grams per macro-nutrient. This will be graphically displayed for the user in the form of a pie-chart, and can be used by the site visitor to calibrate their new controlled diet plans
+![alt text](readme/macro_button_1.png)
 
-**Meal Planning Page:** The Meal planning page is the final step in the site flow - and will request the user to select their preferences (or unselect their dislikes) from a pre-determined list of common foods from each of the three macronutrient categories (Protein/Carbohydrates & Fats). 
+And also contains a button which is programmed to be hidden until the user has selected a Macronutrient split option, when the user has selected an option, Javascript will use CSS attributes & the DOM model to make the button visible & clickable for the user to calculate & display their personal macro split
 
-Completion of this activity will trigger Javascript to build the choices into an array per macro group, and then  return one food choice per macro group within boundaries of 
-- (1) Total daily calories are to equal step 1 output (with a possible small error bar +/- tolerance factor for rounding depending on step 3)
-- (2) Daily Calories per individual macro group (Protein/Carb/Fat) are to equal step 2's macro split output (subject to rounding/tolerance)
-- (3) There must be one food from each macro group per meal 
-- (4) There must be three meals per day (Breakfast, Lunch, Dinner)
+![alt text](readme/macro_button_2.png)
+
+Lastly, the final calculate button is on the Meal Plan Generator page, where the user can click a button after selecting their desired food choices, to trigger the generation of meal plan ideas
+
+![alt text](readme/meal_button.png)
+
+**Macronutrient Split Option Display/Selector**
+
+The user is presented with three common macronutrient split options via this feature - it is a table formatted using the site's color palette for consistency, and displays to the user the details of each of the three options, together with a clickable radio button for each option. Upon the selection of a split option, a button will appear, allowing the user to click to apply the pre-defined split to their PDCT
+
+![alt text](readme/macro_display.png)
+
+**Personal Macro Calorie Allocation table**
+
+The final feature on the macros page is a table to display the user's PDCT allocated according to their chosen Macronutrient mix. This table is formatted consistently and uses the same color palette as the rest of the site:
+
+![alt text](readme/personal_macros.png)
+
+**Food Selection Tables**
+
+This feature allows the user to select/de-select a range of food for inclusion/exclusion from their generated meal plan ideas. The table is structured via three fieldset elements, each with a legend title, and each containing several common sample foods per macronutrient category. Each food within each macronutrient category then has a checkbox which allows the user to specifiy their individua personalised choices, to be fed as inputs to the random meal generator:
+
+![alt text](readme/food_selection.png)
+
+**Meal-Plan Generator Output Display**
+
+The final feature on the meal-generation page is the output display which houses the randomly generated meal plans for each meal. The table is formatted consistently with the site's color palette, and with the previous site tables - and displays a breakdown for the user of some meal plan ideas across breakfast, lunch, and dinner, with one food per macronutrient category. The meal plan generation is triggered by a button covered in the section above.
+
+![alt text](readme/meal_output.png)
+
+### Features Left to implement:
+
+
+**Slider for desired weight loss goal:** - to apply a scalar to the PDCT to either lose, gain, or maintain weight
+
+**Pie Chart for Macronutrient splits** - to aid with displaying the macronutrient splits graphically
 
 **Download to CSV:** A feature where the user can click a button to download a copy of their calorie target, macro splits, and meal plans
-
-### Features Left to implement
 
 ## Testing
 ### Generic Testing
