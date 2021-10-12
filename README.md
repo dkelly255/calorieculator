@@ -1,6 +1,4 @@
-
 # ![alt text](readme/logo.png)
-
 
 ## Introduction
 - CalorieCulator is a lifestyle improvement site allowing users to calculate a personalised daily calorie target, apply a range of Macronutrient options, and generate sample meal plans
@@ -307,29 +305,50 @@ I used the Jshint.com Javascript validation service to validate all of the site'
 ![alt text](readme/meals_js_validation.png)
 
 ### Accessibility Testing
-The DevTools suite, and Lighthouse were used to audit the site's accessibility and found the only accessiblity deficiencies in the site were driven by Search Engine Optimisation - the pre-SEO adjusted Lighthouse scores are shown below for reference
+The DevTools suite, and Lighthouse were used to audit the site's accessibility and found the only accessiblity deficiencies in the site were driven by Search Engine Optimisation 
 
-*Homepage Lighthouse Scores:*
+The **pre-SEO adjusted** Lighthouse scores (with SEO deficiency) are shown below for reference
+
+*Homepage Lighthouse Scores (pre-SEO adjustment):*
 
 ![alt text](readme/home_lighthouse.png)
 
-*Calorie Calculation Page Lighthouse Scores:*
+*Calorie Calculation Page Lighthouse Scores (pre-SEO adjustment):*
 
 ![alt text](readme/calories_lighthouse.png)
 
-*Macro Split Page Lighthouse Scores:*
+*Macro Split Page Lighthouse Scores (pre-SEO adjustment):*
 
 ![alt text](readme/macros_lighthouse.png)
 
-*Meal Generation Page Lighthouse Scores:*
+*Meal Generation Page Lighthouse Scores (pre-SEO adjustment):*
 
 ![alt text](readme/meals_lighthouse.png)
 
+After adding a description and keywords to the Head of each HTML page, the SEO scores were improved to 100%, leaving the final Lighthouse/Accesibilty scores per page below:
+
+*Homepage Lighthouse Scores (post-SEO adjustment):*
+
+![alt text](readme/post_seo_home.png)
+
+*Calorie Calculation Page Lighthouse Scores (post-SEO adjustment):*
+
+![alt text](readme/post_seo_calories.png)
+
+*Macro Split Page Lighthouse Scores (post-SEO adjustment):*
+
+![alt text](readme/post_seo_macros.png)
+
+*Meal Generation Page Lighthouse Scores (post-SEO adjustment):*
+
+![alt text](readme/post_seo_meals.png)
+
 ### Resolved Bugs
-JS formulas not working on macros.html - needed to add separate .js files for each .html page
+Initially I found that my Javascript formulas were not working - however this was simply because I needed to add a script tag with a separate .js files for each .html page and was easily resolved
 
 ### Unresolved Bugs
 - No unfixed bugs were present in the finalised website code
+
 ## Deployment
 - The site was deployed to Github pages. The steps to display are as follows:
     - In the GitHub repository, navigate to the settings tab
