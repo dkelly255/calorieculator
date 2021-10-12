@@ -263,7 +263,7 @@ The final feature on the meal-generation page is the output display which houses
 ### Features Left to implement:
 
 
-**Slider for desired weight loss goal:** - Originally it was my intention to include a feature to allow the user to apply a scalar to their PDCT to either lose, gain, or maintain weight. To lose weight, a 10% reduction would be applied to the PDCT, to gain weight, a 10% increase would be applied, and to maintain their current weight, no scalar would be applied. This feature was descoped due to project deadlines.
+**Calorie goal scenario PDCT adjustment:** - Originally it was my intention to include a feature to allow the user to apply a scalar to their PDCT to either lose, gain, or maintain weight. To lose weight, a 10% reduction would be applied to the PDCT, to gain weight, a 10% increase would be applied, and to maintain their current weight, no scalar would be applied. This feature was descoped due to project deadlines.
 
 **Pie Chart for Macronutrient splits** - This feature was intended for the Macr-mix page, to aid with displaying the macronutrient splits graphically in the form of a simple pie-chart with a slice for each macronutrient (Protein/Carbohydrate/Fat). Due to the complexities inherent in adding the graphical piechart, I decided to de-scope this feature, as the site still functions as intended without the pie chart.
 
@@ -307,16 +307,22 @@ I used the Jshint.com Javascript validation service to validate all of the site'
 ![alt text](readme/meals_js_validation.png)
 
 ### Accessibility Testing
+The DevTools suite, and Lighthouse were used to audit the site's accessibility and found the only accessiblity deficiencies in the site were driven by Search Engine Optimisation - the pre-SEO adjusted Lighthouse scores are shown below for reference
+
 *Homepage Lighthouse Scores:*
+
 ![alt text](readme/home_lighthouse.png)
 
 *Calorie Calculation Page Lighthouse Scores:*
+
 ![alt text](readme/calories_lighthouse.png)
 
 *Macro Split Page Lighthouse Scores:*
+
 ![alt text](readme/macros_lighthouse.png)
 
 *Meal Generation Page Lighthouse Scores:*
+
 ![alt text](readme/meals_lighthouse.png)
 
 ### Resolved Bugs
