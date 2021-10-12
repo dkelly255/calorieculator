@@ -344,7 +344,8 @@ After adding a description and keywords to the Head of each HTML page, the SEO s
 ![alt text](readme/post_seo_meals.png)
 
 ### Resolved Bugs
-Initially I found that my Javascript formulas were not working - however this was simply because I needed to add a script tag with a separate .js files for each .html page and was easily resolved
+- Initially I found that my Javascript formulas were not working - however this was simply because I needed to add a script tag with a separate .js files for each .html page and was easily resolved
+- At several stages during design of the site I found javascript formulas were not working as intended, - the most common of which were slight naming differences between javascript variables and their HTML/DOM counterparts (for example uppercase vs lowercase etc), and syntax errors - however through comprehensive debugging I was able to resolve all of these issues 
 
 ### Unresolved Bugs
 - No unfixed bugs were present in the finalised website code
@@ -367,10 +368,8 @@ Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https:
 ## Credits
 
 Nav Bar & Logo - skillthrive [Navbar Tutorial](https://www.youtube.com/watch?v=PwWHL3RyQgk)
-
 Footer credits - https://www.youtube.com/watch?v=zdA3qZNH1vc
-### Content
+ ### Content
+ ### Media
 
-
-### Media
 
