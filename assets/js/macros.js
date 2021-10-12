@@ -11,7 +11,6 @@ function importPdct() {
     /*Take the pdct from local storage and set it to the inner HTML contents of the DOM element "pdct-box"
     This displays/imports the user's pdct from the previous page in preparation for the application of 
     Macro-nutrient split option selections */
-    console.log(localStorage);
     if (isNaN(localStorage.pdct)) {
         alert("Please complete PDCT calculation on prior page before proceeding");
         document.getElementById("pdct-box").innerHTML = "";
@@ -68,7 +67,6 @@ function splitMacros(event) {
     } else if (macroArray[1].checked) {
 
         chosenOption = "highprotein";
-        console.log(chosenOption);
         document.getElementById("protein").innerHTML = Math.floor(localStorage.pdct * 0.40);
         document.getElementById("carbs").innerHTML = Math.floor(localStorage.pdct * 0.35);
         document.getElementById("fat").innerHTML = Math.floor(localStorage.pdct * 0.25);
