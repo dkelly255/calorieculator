@@ -72,9 +72,9 @@ To drive the early site interface & navigvation design efforts, I am using wiref
 
 ![alt text](readme/planner.png)
 
-#### *Javascript Skeleton / Formula Mapping:*
+#### *Javascript Skeleton:*
 
-An inventory of the formulas required to enable the site strategy are as follows:
+I carried out a Formula & Funciton Mapping exercise to arrive at a provisional inventory of the formulas required to enable the site strategy, the original mapping was as follows:
 
 A. Calorie Calculation Page
     
@@ -176,21 +176,49 @@ The first four Planes of UX enabled the Surface Plane to take shape in terms of 
 ## Features
 ### Existing Features
 
-**Header:** The header is common to all pages, and contains a simple blue border with white borders consistent with the site's design, against which the CalorieCulator logo is set. The header is positioned to remain visible when scrolling down the page on smaller displays.
+**Header:** 
 
-**Responsive Navigation Bar:** The Nav bar contains links to all four site pages, and contains a highlight to both show the user which page they are currently on, as well as highlighting when the user scrolls over a clickable link. The Nav bar is also fully responsive down to a ultra small screen sizes below 300 pixels in width, and is positioned to disappear off the page when users scroll down, to help maximise screen content on smaller devices
+The header is common to all pages, and contains a simple blue border with white borders consistent with the site's design, against which the CalorieCulator logo is set. The header is positioned to remain visible when scrolling down the page on smaller displays.
 
-**Footer:** The site footer contains the CalorieCulator logo, as well as clickable links to various external Social Media sites where users can connect. The links will always open in a new tab, and the footer is fully resposive using media queries from large screens down to small mobile devices. It contains a combination of Yale blue and black backgrounds, with white text and borders to ensure high contrast ratios and for consistency with the site's design & color scheme.
+![alt text](readme/header.png)
 
-**Page Titles:** Each page contains a header, which either welcomes the user (Home Page) or gives the user direction and instruction on the function of the current page (Calorie Calculation, Macro-Mix, and Meal Plan pages). The Site headers are set against a black background, with white text and white borders to ensure a high contrast ratio, promote consistency in the look & feel of the site across pages, and to help avoid the user becoming disorientated as they anvigate the site flow & functionality
+**Responsive Navigation Bar:** 
 
-**Navigation Buttons:** The site contains three clickable navigation buttons - a "Begin" button on the home page, a "Next Step" button on the MyCalories page, and a "To Final Step" button on the Macro-Mix page. These buttons are features added to aid the user in traversing the site flow, and are formatted with a grey background and black text to differentiate them from the site headers & content to allow easy navigation of the site for the user.
+The Nav bar contains links to all four site pages, and contains a highlight to both show the user which page they are currently on, as well as highlighting when the user scrolls over a clickable link. The Nav bar is also fully responsive down to a ultra small screen sizes below 300 pixels in width, and is positioned to disappear off the page when users scroll down, to help maximise screen content on smaller devices.
 
-**Calorie Calculation Form:** The Calorie Calculation form takes inputs from the user via HTML data entry fields allowing Javascript to use these inputs as variables in a pre-determined set of formulas, and returning a personalised calorie target for the user. The form is set against a dark background with slight transparency, to ensure foreground text is not distracted by the background imagery, and features three numeric input fields for age, weight & height, as well as two drop down menus for gender and activity level selection. Lastly, the form also contains a calculation button feature, further detailed below
+![alt text](readme/navbar.png)
 
-**Calculation Buttons:** The site features four calculation/instruction buttons at various points - each of which trigger Javascript to perform certain tasks & interactivity. 
+**Footer:** 
+
+The site footer contains the CalorieCulator logo, as well as clickable links to various external Social Media sites where users can connect. The links will always open in a new tab, and the footer is fully resposive using media queries from large screens down to small mobile devices. It contains a combination of Yale blue and black backgrounds, with white text and borders to ensure high contrast ratios and for consistency with the site's design & color scheme.
+
+![alt text](readme/footer.png)
+
+**Page Titles:** 
+
+Each page contains a header, which either welcomes the user (Home Page) or gives the user direction and instruction on the function of the current page (Calorie Calculation, Macro-Mix, and Meal Plan pages). The Site headers are set against a black background, with white text and white borders to ensure a high contrast ratio, promote consistency in the look & feel of the site across pages, and to help avoid the user becoming disorientated as they anvigate the site flow & functionality
+
+![alt text](readme/page_titles.png)
+
+**Navigation Buttons:** 
+
+The site contains three clickable navigation buttons - a "Begin" button on the home page, a "Next Step" button on the MyCalories page, and a "To Final Step" button on the Macro-Mix page. These buttons are features added to aid the user in traversing the site flow, and are formatted with a grey background and black text to differentiate them from the site headers & content to allow easy navigation of the site for the user.
+
+![alt text](readme/navbutton.png)
+
+**Calorie Calculation Form:** 
+
+The Calorie Calculation form takes inputs from the user via HTML data entry fields allowing Javascript to use these inputs as variables in a pre-determined set of formulas, and returning a personalised calorie target for the user. The form is set against a dark background with slight transparency, to ensure foreground text is not distracted by the background imagery, and features three numeric input fields for age, weight & height, as well as two drop down menus for gender and activity level selection. Lastly, the form also contains a calculation button feature, further detailed below
+
+![alt text](readme/calorie_form.png)
+
+**Calculation Buttons:** 
+
+The site features four calculation/instruction buttons at various points - each of which trigger Javascript to perform certain tasks & interactivity. 
 
 The Calorie Calculation page contains a "Calculate My PDCT" button - triggering the Javascript PDCT calculation function & output storage via an event listener, programmed on script.js.  
+
+![alt text](readme/calculate_button.png)
 
 The Macro-mix page contains a "Begin - Import My PDCT" button - triggering Javascript to get the previously calculated PDCT from local storage & display for the user in preparation for the application of the Macronutrient split options to follow
 
