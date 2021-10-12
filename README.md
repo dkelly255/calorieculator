@@ -263,11 +263,11 @@ The final feature on the meal-generation page is the output display which houses
 ### Features Left to implement:
 
 
-**Slider for desired weight loss goal:** - to apply a scalar to the PDCT to either lose, gain, or maintain weight
+**Slider for desired weight loss goal:** - Originally it was my intention to include a feature to allow the user to apply a scalar to their PDCT to either lose, gain, or maintain weight. To lose weight, a 10% reduction would be applied to the PDCT, to gain weight, a 10% increase would be applied, and to maintain their current weight, no scalar would be applied. This feature was descoped due to project deadlines.
 
-**Pie Chart for Macronutrient splits** - to aid with displaying the macronutrient splits graphically
+**Pie Chart for Macronutrient splits** - This feature was intended for the Macr-mix page, to aid with displaying the macronutrient splits graphically in the form of a simple pie-chart with a slice for each macronutrient (Protein/Carbohydrate/Fat). Due to the complexities inherent in adding the graphical piechart, I decided to de-scope this feature, as the site still functions as intended without the pie chart.
 
-**Download to CSV:** A feature where the user can click a button to download a copy of their calorie target, macro splits, and meal plans
+**Download to CSV:** The final feature left to implement was a "download to CSV" option for the Meal generation page. This feature would have allowed the user to click a button to download a copy of their calorie target, macro splits, and meal plans which they could then save, or print for their own use. However I decided to descope the feature to prioritise other more critical elements of the site's functionality.
 
 ## Testing
 ### Generic Testing
