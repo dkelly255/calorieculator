@@ -373,6 +373,10 @@ Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https:
  ### Content
 
  - The [Hero Image](https://pixabay.com/photos/salad-food-italian-tasty-wooden-2068220/) was sourced from [Pixabay](https://pixabay.com/photos/salad-food-italian-tasty-wooden-2068220/) and is free for commercial use with no attribution required
+ - The BMR (Base Metabolic Rate) formula was taken from
+ - The Harris-Benedict equation was used for the activity level adjustments 
+ - The Macronutrient split options were taken from 
+ - The calories per gram estimates on each food group were taken from
 
  ### Media
 - The images in the Site were taken from [Pixabay](https://pixabay.com/)
