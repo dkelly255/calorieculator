@@ -348,7 +348,7 @@ After adding a description and keywords to the Head of each HTML page, the SEO s
 - At several stages during design of the site I found javascript formulas were not working as intended, - the most common of which were slight naming differences between javascript variables and their HTML/DOM counterparts (for example uppercase vs lowercase etc), and syntax errors - however through comprehensive debugging I was able to resolve all of these issues 
 
 ### Unresolved Bugs
-- No unfixed bugs were present in the finalised website code
+- No unresolved bugs were present in the finalised website code
 
 ## Deployment
 - The site was deployed to Github pages. The steps to display are as follows:
@@ -367,9 +367,15 @@ Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https:
 
 ## Credits
 
-Nav Bar & Logo - skillthrive [Navbar Tutorial](https://www.youtube.com/watch?v=PwWHL3RyQgk)
-Footer credits - https://www.youtube.com/watch?v=zdA3qZNH1vc
- ### Content
- ### Media
+- The Navigation Bar & Logo ideas were apated from ideas in a tutorial from Skillthrive [Navbar Tutorial](https://www.youtube.com/watch?v=PwWHL3RyQgk)
+- The Footer was adapted from ideas in a tutorial from Code Opacity [Footer Tutorial](https://www.youtube.com/watch?v=zdA3qZNH1vc)
 
+ ### Content
+
+ - The [Hero Image](https://pixabay.com/photos/salad-food-italian-tasty-wooden-2068220/) was sourced from [Pixabay](https://pixabay.com/photos/salad-food-italian-tasty-wooden-2068220/) and is free for commercial use with no attribution required
+
+ ### Media
+- The images in the Site were taken from [Pixabay](https://pixabay.com/)
+- The site fonts were taken from [Google Fonts](https://fonts.google.com/)
+- All Icons, including the Favicon used throughout the site were sourced from [FontAwesome](https://fontawesome.com/)
 
