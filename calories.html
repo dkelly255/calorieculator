@@ -26,7 +26,7 @@
         <ul class="nav_links">
             <li><a href="index.html">Home</a></li>
             <li><a href="calories.html" class="active">My Calories</a></li>
-            <li><a href="macros.html">Macro-Mix</a></li>
+            <li id="link-macro" class="hide"><a href="macros.html">Macro-Mix</a></li>
             <li><a href="mealplans.html">Meal Plans</a></li>
         </ul>
     </nav>
@@ -89,11 +89,11 @@
             </form>
         </section>
         <!-- Output placeholder box to display the user's PDCT after inputs have been provided and calculation has been performed -->
-        <section id="pdct-section">
+        <section id="pdct-section" class="hide">
                 &nbsp; Your PDCT is: <span id="display-pdct"></span>
         </section>
         <!-- Button to allow user to proceed to next step in the process post-completion of PDCT calculation -->
-        <section class="buttonBox">
+        <section id="buttonBox" class="buttonBox hide">
             <a id="nextStep1" href="macros.html" class="buttonlogo">- Next Step <i class="fas fa-fire"></i> -</a>
         </section>
     </main>

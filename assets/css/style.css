@@ -5,9 +5,11 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;    
+    padding: 0;
     font-family: "Montserrat", sans-serif;
 }
+
+
 /* Use flex display on body elements to aid with site layout and responsiveness */
 /* Cooking & food preparation related background image used to contribute to positive user experience */
 body {
@@ -17,32 +19,35 @@ body {
     background-image: url(../images/home1.jpg);
     align-items: center;
 }
+
 /* Setting heights & text-alignent of all button elements on site */
 button {
-    height:25px;
+    height: 25px;
     text-align: justify;
-    margin-top:25px;
+    margin-top: 25px;
 }
+
 /* Nav Bar Styling section below */
 /* Credits: Skillthrive Navbar tutorial */
 /* Header positioned as sticky to remain on screen when scrolling */
 header {
     position: sticky;
     top: 0;
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 5px;
-    background-color:#074A88;
+    background-color: #074A88;
     border-bottom: 1.5px solid white;
     border-top: 1.5px solid white;
 }
+
 /* Styling to make logo portion of header (in the h1) distinctive and recognisable to users*/
 header h1 {
-    width:200px;
+    width: 200px;
     text-align: center;
-    border:2px solid white;
+    border: 2px solid white;
     border-radius: 20%;
     color: white;
     background: black;
@@ -51,6 +56,7 @@ header h1 {
     height: 2rem;
     padding-top: 1.5px;
 }
+
 /* Styling to align the clickable links within the nav bar to the right of the screen with flex for presentation purposes */
 nav {
     display: flex;
@@ -60,36 +66,44 @@ nav {
     color: white;
     height: 30px;
     border-bottom: 1.5px solid white;
-    width: 100vw;
+    width: 100%;
 }
+
 /* Setting the fonts, sizes and colors of the text for the nav bar links */
-.nav_links li, a {
+.nav_links li,
+a {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: white;
     text-decoration: none;
 }
+
 /* Removing the bullet points from the list items within the nav bar */
 .nav_links {
     list-style: none;
 }
+
 /* Ensuring the nav bar links display consecutively using inline-block display setting */
 .nav_links li {
-    display:inline-block;
+    display: inline-block;
     padding: 0px 10px;
 }
+
 /* Setting gentle transition for the highlighting of a nav bar link when hovered over */
 .nav_links li a {
     transition: all 0.3s ease 0s;
 }
+
 /* Setting the font color to change to aqua when navbar links are hovered over */
 .nav_links li a:hover {
     color: aqua;
 }
+
 .active {
     color: aqua;
 }
+
 /* Home page content styling section*/
 /* Generic styling for class titlebox - applies to main heading under navbar on each page
 - flex used to centrally align content*/
@@ -97,43 +111,47 @@ nav {
     margin-top: 15px;
     margin-bottom: 1px;
     display: flex;
-    justify-content:space-evenly;
-    align-items:center;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
     /* height:5vh; */
     text-align: center;
 }
+
 /* Generic styling for class mainlogo - applies to main heading under navbar on each page,
 with varying content depending on page */
 .mainlogo {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.25rem;
-    border:3px solid white;
+    border: 3px solid white;
     border-radius: 20%;
     color: white;
     background: black;
     min-width: 280px;
     margin-bottom: 25px;
 }
+
 /* Media query to aid presentation of main logo on smaller screen sizes */
-@media screen and (max-width:400px) {    
-    .mainlogo{
-        font-size:1.0rem;    
-        min-width: 250px;           
-    }    
+@media screen and (max-width:400px) {
+    .mainlogo {
+        font-size: 1.0rem;
+        min-width: 250px;
+    }
 }
+
 /* Setting up flex display properties, margin & padding for homepage container element */
 .homeContainer {
     /* height:auto; */
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-evenly;
-    align-items:center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
     margin-top: 15px;
-    padding-top: 25px; 
-     min-height: 75vh;
+    padding-top: 25px;
+    min-height: 75vh;
 }
+
 /* Box class applies to 3x main content boxes on home page - setting heights, widths, borders, colors & text-alignment */
 .box {
     min-height: 400px;
@@ -144,101 +162,120 @@ with varying content depending on page */
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7)
 }
+
 /* Class smallbox sits within class box and is used to house the unordered list 
 that organises the home page detailed content in each larger box above*/
 .smallbox {
     padding-top: 5px;
     padding-bottom: 5px;
-    margin:5px;
+    margin: 5px;
 }
+
 /* Styling for the lists of detailed information on each homepage "about" box - 
 ensuring list bullet points are removed*/
 .homelist {
     list-style: none;
     list-style-type: none;
 }
+
 /* This class rule enlarges the text for selected sections of the home page detail boxes
 to inform the user of the headings & structure of each box */
 .homeEmphasis {
-    font-size:150% ;
+    font-size: 150%;
 }
+
 /* Adding padding to help aesthetic disply of individual list items within home page main boxes */
 .homelist li {
-    padding-top:7px;
+    padding-top: 7px;
     padding-bottom: 7px;
 }
+
 /* Next Step Buttons, used across first 3x pages of site, consitent styling with varying text content */
 /* buttonBox is a container for the clickable buttonlogo element contents */
 .buttonBox {
     margin: 25px 0;
     display: flex;
-    justify-content:space-evenly;
-    align-items:center;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
-    height:5vh;
+    height: 5vh;
     text-align: center;
 }
+
 /* buttonlogo is the actual visibile button on which the user can click to proceed to the next stage of the flow */
 .buttonlogo {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.25rem;
-    border:3px solid white;
+    border: 3px solid white;
     border-radius: 20%;
     color: black;
     background: rgb(175, 172, 172);
     min-width: 280px;
 }
+
 /* Media queries for site nav bar & header*/
 /* For screen sizes 425 pixels & below */
 @media screen and (max-width:425px) {
-    .nav_links li, a{
-        font-size:12px;
-        padding:0px 2px;        
-    }    
-    .buttonBox {
-        margin:15px 0;
-        width:90vw;
+
+    .nav_links li,
+    a {
+        font-size: 12px;
+        padding: 0px 2px;
     }
+
+    .buttonBox {
+        margin: 15px 0;
+        width: 90vw;
+    }
+
     .buttonlogo {
         min-width: 260px;
     }
+
     .box {
         margin: 10px 0;
         width: 85vw;
     }
+
     nav {
         justify-content: center;
     }
 }
+
 @media screen and (max-width:700px) {
     .box {
-        min-height:unset;
+        min-height: unset;
     }
 }
 
 @media screen and (max-width:300px) {
-    .nav_links li, a{
-        font-size:11px;
-        padding:0px 1px;        
+
+    .nav_links li,
+    a {
+        font-size: 11px;
+        padding: 0px 1px;
     }
 }
+
 /* Reducing font-size in DOM element userTable to aid with alignment on screen */
 #userTable {
-    font-size:95%;
+    font-size: 95%;
 }
+
 /* Footer styling - repeated & used on all site pages */
 /* Setting background color, height, width, fonts, padding & borders for footer container element */
 footer {
     background: #074A88;
-    height:auto;
+    height: auto;
     width: 100%;
     font-family: inherit;
     padding-top: 10px;
     color: #fff;
-    margin-top: auto;    
+    margin-top: auto;
     border-top: 1.5px solid white;
 }
+
 /* Setting up display rules for footer content - to ensure proper alignment of social media Icons & other content */
 .footer-content {
     display: flex;
@@ -247,23 +284,25 @@ footer {
     flex-direction: column;
     text-align: center;
 }
+
 /* Styling header/CalorieCulator logo portion of footer */
-.footer-content h4{
+.footer-content h4 {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.25rem;
-    border:3px solid white;
+    border: 3px solid white;
     border-radius: 20%;
     color: white;
     background: black;
     width: 280px;
 }
+
 @media screen and (max-width:300px) {
-    .footer-content h4{
+    .footer-content h4 {
         font-size: 1.25rem;
         font-weight: 400;
         line-height: 2.0rem;
-        border:3px solid white;
+        border: 3px solid white;
         border-radius: 20%;
         color: white;
         background: black;
@@ -278,33 +317,39 @@ footer {
     line-height: 28px;
     font-size: 14px;
 }
+
 /* Applying proper styling to social media icons container within footer */
 .socials {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     width: 75vw;
     margin: 0.5rem 0 1.0rem 0;
 }
+
 /* Setting appropriate margins for social media icon list items */
 .socials li {
     margin: 0 10px;
 }
+
 /* Styling color of Social Media anchors to white */
 .socials a {
     text-decoration: none;
     color: #fff;
 }
+
 /* Setting aqua highlight transition timing for social media icons when hovered */
 .socials a i {
     font-size: 1.5rem;
     transition: color .4s ease;
 }
+
 /* Setting aqua highlight color for social media icons when hovered */
 .socials a:hover i {
     color: aqua;
 }
+
 /* Styling bottom line of footer containing copyright section - black background with white text & border */
 .footer-bottom {
     background: black;
@@ -313,109 +358,123 @@ footer {
     text-align: center;
     border-bottom: 1.5px solid white;
     border-top: 1.5px solid white;
-    display:flex;
+    display: flex;
     justify-content: space-around;
 }
+
 /* Styling font-size & word-spacing for copyright messages with first letters capitalised as standard */
 .footer-bottom p {
     font-size: 14px;
     word-spacing: 2px;
     text-transform: capitalize;
 }
+
 /* Calorie Input page styling from lines 287 - 345 */
 /* setting flex display properties for overall form container main element within which the PDCT data entry occurs */
 .formcontainer {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     color: white;
     margin-top: 15px;
-    padding-top: 15px; 
-    min-height:75vh;
+    padding-top: 15px;
+    min-height: 75vh;
 }
+
 /* Formatting & styling PDCT form header to be centralised with appropriate padding */
 .formcontainer h3 {
     padding-bottom: 35px;
     text-align: center;
 }
+
 /* Styling firstform id - this is the id of the parent data entry form element on calories.html 
 With black opaque background to ensure foreground information is never distracted by background image*/
 #firstform {
     border: 1.5px solid white;
-    padding:25px;
+    padding: 25px;
     background-color: rgba(0, 0, 0, 0.5);
-    width:400px;
+    width: 400px;
 }
+
 /* Applying styles to page container to resolve original choppy display issues */
 #firstformcontainer {
     display: flex;
-    width:95vw;
+    width: 95vw;
     justify-content: center;
-    margin-bottom:25px;
+    margin-bottom: 25px;
     margin-top: 5px;
 }
+
 /* Each form input is wrapped in a div - this styling will keep a consistent height for the div spacing */
 #firstform section {
-    height:50px;
+    height: 50px;
 }
+
 /* The 3x text entry fields in the form have class "formdata" - this styling aligns them within the 
 parent container using flex */
 .formdata {
-    display:flex;
-    justify-content: space-between;    
+    display: flex;
+    justify-content: space-between;
 }
+
 /* Setting the heights & widths of the formdata inputs for text data entry */
 .formdata input {
-    height:25px;
-    width:75px;
+    height: 25px;
+    width: 75px;
 }
+
 /* Styling container element for "calculate my pdct" button - using flex to center display */
 .button-container {
-    display:flex;
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 20px;
 }
+
 /* Setting styling for PDCT Display Box to display user's PDCT after calculation*/
 #pdct-section {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.25rem;
-    border:3px solid white;
+    border: 3px solid white;
     border-radius: 20%;
     color: white;
     background: black;
     width: 280px;
 }
+
 /* Media queries to aid layout of pdct-section and the form container on screens smaller than 400px */
 @media screen and (max-width:400px) {
-    #pdct-section{
-        font-size:1.25rem;                       
+    #pdct-section {
+        font-size: 1.25rem;
     }
+
     #firstformcontainer {
-    margin-top: 1px;
-    }        
+        margin-top: 1px;
+    }
 }
+
 /* Styling section for Macros.html Page*/
 /* Setting Display Properties for overall wrapper element contaings macros.html child elements */
 #macro-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content: space-between;
     /* align-items:flex-start; */
-    color:#fff;
-    margin:10px;
-    padding:10px;
-    width:90vw;
-    max-width:1250px;
+    color: #fff;
+    margin: 10px;
+    padding: 10px;
+    width: 90vw;
+    max-width: 1250px;
     min-height: 75vh;
 }
+
 /* Setting flex display property to allow styling of child elements for importation of PDCT from local storage */
 #macro-step2 {
     display: flex;
-    align-items:flex-start;
-    padding:1px;
+    align-items: flex-start;
+    padding: 1px;
     /* width:90vw; */
 }
 
@@ -423,8 +482,8 @@ parent container using flex */
 #macros-box {
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
-    align-items:center;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
     text-align: center;
 }
@@ -434,7 +493,7 @@ parent container using flex */
     font-size: 1.1rem;
     font-weight: 400;
     line-height: 2.25rem;
-    border:3px solid white;
+    border: 3px solid white;
     border-radius: 20%;
     color: white;
     background: black;
@@ -442,57 +501,64 @@ parent container using flex */
     margin-left: 10px;
     margin-bottom: 15px;
 }
+
 /* This code sets the styles for the 3x tables used to display the macronutrient mixes available to the user*/
 .styled-table {
-    border-collapse:collapse;
+    border-collapse: collapse;
     margin-bottom: 20px;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 260px;
 }
+
 /* Setting the background colour to opaque black with white text for the table title rows */
 .styled-table thead tr {
     background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
     text-align: left;
 }
+
 /* Setting padding for the table headers & data cells */
 .styled-table th,
 .styled-table td {
     padding: 4px 10px;
 }
+
 /* Setting the background of the table body to the signature CalorieCUlator blue color */
 .styled-table tbody tr {
     background-color: #074A88;
 }
+
 /* Setting the background color of the bottom row of each table to black for 
 presentation purposes and to highlight the totals */
 .styled-table tbody tr:last-of-type {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
 /* Parent container with flex display properties for the table displaying 
 the user's PDCT and macro split combination */
 #macro-step3 {
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     margin-right: 10px;
     /* width:90vw; */
 }
+
 @media screen and (max-width:950px) {
     #macro-step2 {
-        width:90vw;
+        width: 90vw;
     }
-    #macros-box {
-        /* align-items: flex-start; */
-    }
+
     #macros-logo {
         margin-bottom: 25px;
     }
+
     #choose-macro {
         margin-top: 20px;
     }
+
     #macro-step3 {
         margin-top: 20px;
         margin-left: 10px;
@@ -505,114 +571,129 @@ the user's PDCT and macro split combination */
     }
 
 }
+
 /* Adding header to  table displaying user's macro-nutrient split applied to their PDCT */
 #yourmacros {
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
-    min-width:260px;    
+    min-width: 260px;
 }
+
 /* Setting margins for calculation button on Macros.html page */
 #calculate-macros {
-    margin-top:5px;
+    margin-top: 5px;
 }
-/* Hide class used in Javascript functions to set display:none until required display criteria are met  */
-.hide {
-    display: none;
-}
+
+
 /* Meal Generator Page code from line 438 to line 515 */
 /* setting styles for parent container housing meal generation page content */
 #page3Container {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     color: #fff;
-    margin:2px;
-    padding:5px;
-    width:75vw;
+    margin: 2px;
+    padding: 5px;
+    width: 75vw;
     max-width: 1250px;
     min-height: 75vh;
 }
+
 /* Styling the first section element (id=foodcontainer) on meal generation page - using flex display/column 
 direction to orientate elements appropriately*/
 #foodListContainer {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    padding:3px;
+    padding: 3px;
 }
+
 /* Setting styling for "food-groups" class - this class covers the lists of Protein/Carb/Fat based foods
 from which the user can select/unselect when creating their meal plans */
 .food-groups {
     border: 1px solid white;
-    margin:6px;
+    margin: 6px;
     padding-top: 5px;
-    padding-bottom:6px;
-    width:210px;
-    display:flex;
+    padding-bottom: 6px;
+    width: 210px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7)
 }
+
 /* Adding padding to separate instructions header */
 #food-heading {
     padding-bottom: 5px;
 }
+
 /* Adding padding to text within instructions box */
-#food-heading, p {
+#food-heading,
+p {
     padding-left: 5px;
     text-align: left;
 }
+
 /* Align the headers of each food choice list towards the left of the fieldsets via legend text-alignment */
 legend {
-    text-align:left;
+    text-align: left;
 }
+
 /* This class covers the tables which store the user's meal plan ideas after they have been generated
 setting backgrounds to opaque black to allow the fonts to stand out and be easily read with high contrast */
 .meal-box {
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: rgba(0, 0, 0, 0.7);
 }
+
 /* Setting styles for the meal generation templates - Breakfast, Lunch & Dinner */
 .meal-table {
-    border-collapse:separate;
+    border-collapse: separate;
     border-top: #fff;
     margin-bottom: 10px;
     font-size: 0.9em;
     font-family: sans-serif;
-    width:100%;
+    width: 100%;
 }
+
 /* Media query to aid sizing of the user's meal table display on very small screens below 325 pixels in width */
 @media screen and (max-width:325px) {
     .meal-table {
-        font-size:0.7em;
+        font-size: 0.7em;
     }
 }
+
 /* Set color of meal-table headers to black with white text to allow high contrast & be easily readable */
 .meal-table thead tr {
     background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
     text-align: left;
 }
+
 /* Set padding & borders of table headers & data cells */
 .meal-table th,
 .meal-table td {
     padding: 4px 10px;
-    border:1px solid #fff;
+    border: 1px solid #fff;
 }
+
 /* Setting background color of table body cells to standard blue for consistency with rest of site */
 .meal-table tbody tr {
     background-color: #074A88;
 }
+
 /* Setting last rows of tables to same black color as headings & previous tables for consistency & readability */
 .meal-table tbody tr:last-of-type {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
 /* Applying corrective styles to the meal generator page container to aid with page flow and presentation*/
 #generate-container {
     /* width:95vw; */
     display: flex;
-    justify-content:space-around ;
+    justify-content: space-around;
     margin-bottom: 25px;
 }
+
 #split_header {
     margin-bottom: 20px;
     text-align: center;
@@ -622,15 +703,25 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
 }
 
 #total-header {
-    width:200px;
+    width: 200px;
 }
+
 #grandSubTotal {
-    background-color:#074A88; ;
+    background-color: #074A88;
+    ;
 }
+
 .splitOptions {
     background-color: rgba(0, 0, 0, 0.7);
-    
+
 }
+
 .splitOptions label {
     font-size: 90%;
+}
+
+/* Hide class used in Javascript functions to set display:none until required display criteria are met  */
+.hide,
+.nav_links li.hide {
+    display: none;
 }

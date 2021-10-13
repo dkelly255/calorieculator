@@ -2,10 +2,10 @@
 
 // Set a variable equal to the DOM element button with id "`carry`-pdct" 
 let carryPdct = document.getElementById("carry-pdct");
-    
+
 // Attach an event listener to the variable, to run function "importPdct" when a "click" event occurs
 carryPdct.addEventListener("click", importPdct);
-    
+
 // Defining the importPdct function to be ran by event listener above
 function importPdct() {
     /*Take the pdct from local storage and set it to the inner HTML contents of the DOM element "pdct-box"
@@ -13,7 +13,7 @@ function importPdct() {
     Macro-nutrient split option selections */
     if (isNaN(localStorage.pdct)) {
         alert("Please complete PDCT calculation on prior page before proceeding");
-        document.getElementById("pdct-box").innerHTML = "";        
+        document.getElementById("pdct-box").innerHTML = "";
     }
     document.getElementById("pdct-box").innerHTML = localStorage.pdct;
 }
@@ -22,10 +22,10 @@ function importPdct() {
 let macroChoice = document.getElementById("calculate-macros");
 // Add the "hide" class to the button above
 macroChoice.classList.add("hide");
-    
+
 // Add event listener to the button, to run function "splitMacros" when a "click" event occurs 
 macroChoice.addEventListener("click", splitMacros);
-    
+
 /* Create an array of all DOM elements with name "macro_choice" (i.e all radio buttons) and store
 in variable macroArray*/
 let macroArray = document.getElementsByName("macro_choice");
@@ -51,40 +51,40 @@ appropriate macronutrient split in each case*/
 function splitMacros(event) {
     // Prevent default submission of form when button is clicked
     event.preventDefault();
+    let protein, carbs, fat;
     // Apply the "standard" macronutrient split if "standard" radio button has been selected by user 
     if (macroArray[0].checked) {
-
-        chosenOption = "standard";        
-        document.getElementById("protein").innerHTML = Math.floor(localStorage.pdct * 0.25);
-        document.getElementById("carbs").innerHTML = Math.floor(localStorage.pdct * 0.45);
-        document.getElementById("fat").innerHTML = Math.floor(localStorage.pdct * 0.30);
-        document.getElementById("total").innerHTML = localStorage.pdct;
+        chosenOption = "standard";
+        protein = Math.floor(localStorage.pdct * 0.25);
+        carbs = Math.floor(localStorage.pdct * 0.45);
+        fat = Math.floor(localStorage.pdct * 0.30);
         localStorage.setItem("macro", "standard");
-        
-    // Apply the "high protein" macronutrient split if the "high protein" radio button has been selected by user 
+
+        // Apply the "high protein" macronutrient split if the "high protein" radio button has been selected by user 
     } else if (macroArray[1].checked) {
-
         chosenOption = "highprotein";
-        document.getElementById("protein").innerHTML = Math.floor(localStorage.pdct * 0.40);
-        document.getElementById("carbs").innerHTML = Math.floor(localStorage.pdct * 0.35);
-        document.getElementById("fat").innerHTML = Math.floor(localStorage.pdct * 0.25);
-        document.getElementById("total").innerHTML = localStorage.pdct;
+        protein = Math.floor(localStorage.pdct * 0.40);
+        carbs = Math.floor(localStorage.pdct * 0.35);
+        fat = Math.floor(localStorage.pdct * 0.25);
         localStorage.setItem("macro", "highprotein");
-        
-    // Apply the "lowcarb" macronutrient split if the "low carb" radio button has been selected by user 
-    } else if (macroArray[2].checked) {
 
+        // Apply the "lowcarb" macronutrient split if the "low carb" radio button has been selected by user 
+    } else if (macroArray[2].checked) {
         chosenOption = "lowcarb";
-        document.getElementById("protein").innerHTML = Math.floor(localStorage.pdct * 0.35);
-        document.getElementById("carbs").innerHTML = Math.floor(localStorage.pdct * 0.10);
-        document.getElementById("fat").innerHTML = Math.floor(localStorage.pdct * 0.55);
-        document.getElementById("total").innerHTML = localStorage.pdct;
+        protein = Math.floor(localStorage.pdct * 0.35);
+        carbs = Math.floor(localStorage.pdct * 0.10);
+        fat = Math.floor(localStorage.pdct * 0.55);
         localStorage.setItem("macro", "lowcarb");
-        
+
     } else {
         // If no option is selected
         chosenOption = "notselected";
-        
-    }    
+    }
+
+    // Update each HTML element on the DOM using the variables above
+    document.getElementById("protein").innerHTML = protein;
+    document.getElementById("carbs").innerHTML = carbs;
+    document.getElementById("fat").innerHTML = fat;
+    document.getElementById("total").innerHTML = localStorage.pdct;
     // End of splitMacros function
 }
