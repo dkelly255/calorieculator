@@ -42,30 +42,74 @@ function calculateCalories(event) {
     let gender = document.getElementById("gender").value;
     let activity = document.getElementById("activity").value;
 
+    // Get the modals
+    const ageModal = document.getElementById("ageModal");
+    const weightModal = document.getElementById("weightModal");
+    const heightModal = document.getElementById("heightModal");
+    const numericsModal = document.getElementById("numericsModal");
+    const genderModal = document.getElementById("genderModal");
+    const activityModal = document.getElementById("activityModal");
+
+
+    // Get the <span> elements that close the modals
+    const ageSpan = document.getElementById("ageSpan");
+    const weightSpan = document.getElementById("weightSpan");
+    const heightSpan = document.getElementById("heightSpan");
+    const numericsSpan = document.getElementById("numericsSpan");
+    const genderSpan = document.getElementById("genderSpan");
+    const activitySpan = document.getElementById("activitySpan");
+
+
+
 
     // Create an array to store the contents of numeric data entry variables for flow control/checks
     const checks = [age, weight, height];
     /* First "if" statement within function - checks if inputs are populated, and whether the user is male or female, 
-    and uses the appropriate BMR formula accordingly, whilst alerting user if a inputs have not been populated*/
+    and uses the appropriate BMR formula accordingly, whilst alerting user via modals if inputs have not been populated*/
     if (age < 18 || age > 95) {
-        alert("Age must be between 18 and 95 for safety purposes");
+        ageModal.style.display = "block";
+        ageSpan.onclick = function () {
+            ageModal.style.display = "none";
+        }       
     } else if (weight < 85 || weight > 800) {
-        alert("Starting Weight should not be under 85lbs or over 800 lbs for safety purposes");
+        weightModal.style.display = "block";
+        weightSpan.onclick = function () {
+            weightModal.style.display = "none";
+        }  
     } else if (height < 36 || height > 107) {
-        alert("Height should be between 36 to 107 inches for safety purposes");
+        heightModal.style.display = "block";
+        heightSpan.onclick = function () {
+            heightModal.style.display = "none";
+        }  
     } else if (checks[0] == "") {
-        alert("Please populate Age, Weight & Height fields");
+        numericsModal.style.display = "block";
+        numericsSpan.onclick = function () {
+            numericsModal.style.display = "none";
+        }  
     } else if (checks[1] == "") {
-        alert("Please populate Age, Weight & Height fields");
+        numericsModal.style.display = "block";
+        numericsSpan.onclick = function () {
+            numericsModal.style.display = "none";
+        }  
     } else if (checks[2] == "") {
-        alert("Please populate Age, Weight & Height fields");
+        numericsModal.style.display = "block";
+        numericsSpan.onclick = function () {
+            numericsModal.style.display = "none";
+        }  
     } else if (gender == "male") {
         bmr = 66 + (6.3 * weight) + (12.9 * height) - (6.8 * age);
+        console.log(activity)
     } else if (gender == "female") {
         bmr = 655 + (4.3 * weight) + (4.7 * height) - (4.7 * age);
-    } else {
-        alert("Please select a Gender");
-    }
+        console.log(activity)
+    } else if (gender != "male" || gender != "female") {
+        console.log(activity)
+        genderModal.style.display = "block";
+        genderSpan.onclick = function () {
+            genderModal.style.display = "none";
+            console.log(activity)
+        } 
+    } 
 
     /* Second if statement which checks which Activity level the user has selected, and sets the value
     of the "multiplier" variable accordingly, and alerts the user if an activity level has not been selected*/
@@ -80,7 +124,10 @@ function calculateCalories(event) {
     } else if (activity == "extraActive") {
         multiplier = 1.9;
     } else {
-        alert("Please select an Activity Level");
+        activityModal.style.display = "block";
+        activitySpan.onclick = function () {
+            activityModal.style.display = "none";
+        }  
     }
 
     /* Declaring & defining the variable "calories" which is the output of the formula and holds the user's
@@ -99,15 +146,3 @@ function calculateCalories(event) {
     in downstream calculations for macros and mealplans */
     localStorage.setItem("pdct", calories);
 }
-
-// Attempting addition of control to final "Next Step" button on page
-// let next_step1 = document.getElementById("nextStep1");
-// next_step1.addEventListener("click", flowCheck1);
-
-// function flowCheck1(event)
-//     event.preventDefault();
-//     if (localStorage.length == 0) {
-//         alert("Please complete PDCT calculation prior to proceeding")
-//     } else {
-//         window.location.href = "macros.html"
-//     }

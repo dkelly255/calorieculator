@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Standard html head content tags -->
     <meta charset="UTF-8">
@@ -16,6 +17,7 @@
     <!-- Title for display in browser tab header -->
     <title>CalorieCulator</title>
 </head>
+
 <body>
     <!-- Main Header with logo & icon -->
     <header>
@@ -30,26 +32,26 @@
             <!-- <li><a href="mealplans.html">Meal Plans</a></li> -->
         </ul>
     </nav>
-    
+
     <!-- Main section of page - container to house page main content and allow flex styling (see style.css) -->
     <main class="formcontainer">
         <!-- Welcome message greeting with icon-->
         <section class="titleBox">
             <h2 class="mainlogo">&nbsp; - Step 1: Calculate PDCT <i class="fas fa-fire"></i> - &nbsp;<br>
-            &nbsp;&nbsp;(Personal Daily Calorie Target)&nbsp;&nbsp;</h2>
+                &nbsp;&nbsp;(Personal Daily Calorie Target)&nbsp;&nbsp;</h2>
         </section>
         <!-- Form to house contents of user data input areas for personal daily calorie target (PDCT) calculation -->
         <section id="firstformcontainer">
             <form id="firstform" class="bmrinputs" method="POST" action="https://formdump.codeinstitute.net/">
                 <!-- PDCT data input section header -->
-                <h3>Please Complete Each Field Below:</h3>   
+                <h3>Please Complete Each Field Below:</h3>
                 <!-- Each of the 4x sections below contains a user data input - for styling in style.css and javascript functionality in calories.js -->
                 <section class="formdata">
                     <!-- Age input set to required, and measured in data-type "number" -->
                     <label for="age">Age (Years):</label>
                     <input class="age-input pdctInput" id="age" name="age" type="number" required min="18">
                 </section>
-                
+
                 <section class="formdata">
                     <!-- Weight input set to required, and measured in data-type "number" -->
                     <label for="weight">Weight (lbs/Pounds):</label>
@@ -60,42 +62,90 @@
                     <!-- Height input set to required, and measured in data-type "number" -->
                     <label for="height">Height (Inches):</label>
                     <input class="height-input pdctInput" id="height" name="height" type="number" required>
-                </section>        
+                </section>
 
-                <section> 
+                <section>
                     <!-- Gender input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
                     <label for="gender">Gender:</label>
                     <select class="pdctInput" name="gender-options" id="gender">
-                            <option value="">Select Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
                     </select>
                 </section>
-                
+
                 <!-- Activity input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
                 <label for="activity">Activity Level:</label>
                 <select class="pdctInput" name="activity-options" id="activity">
-                        <option value="">Please Select</option>
-                        <option value="sedentary">Sedentary</option>
-                        <option value="lightlyActive">Lightly Active</option>
-                        <option value="moderatelyActive">Moderately Active</option>
-                        <option value="veryActive">Very Active</option>
-                        <option value="extraActive">Extra Active</option>
+                    <option value="">Please Select</option>
+                    <option value="sedentary">Sedentary</option>
+                    <option value="lightlyActive">Lightly Active</option>
+                    <option value="moderatelyActive">Moderately Active</option>
+                    <option value="veryActive">Very Active</option>
+                    <option value="extraActive">Extra Active</option>
                 </select>
                 <!-- Button for user to click to trigger calculation of PDCT upon completion of form inputs above -->
                 <section class="button-container">
                     <button id="calculate-pdct">Calculate My PDCT</button>
-                </section>            
+                </section>
             </form>
         </section>
         <!-- Output placeholder box to display the user's PDCT after inputs have been provided and calculation has been performed -->
         <section id="pdct-section" class="hide">
-                &nbsp; Your PDCT is: <span id="display-pdct"></span>
+            &nbsp; Your PDCT is: <span id="display-pdct"></span>
         </section>
         <!-- Button to allow user to proceed to next step in the process post-completion of PDCT calculation -->
         <section id="buttonBox" class="buttonBox hide">
             <a id="nextStep1" href="macros.html" class="buttonlogo">- Next Step <i class="fas fa-fire"></i> -</a>
         </section>
+        <!-- Age Check Modal -->
+        <div id="ageModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="ageSpan">&times;</span>
+                <p>Age must be between 18 and 100</p>
+            </div>
+        </div>
+        <!-- Weight Check Modal -->
+        <div id="weightModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="weightSpan">&times;</span>
+                <p>Starting Weight should not be under 85lbs or over 800 lbs for safety purposes</p>
+            </div>
+        </div>
+        <!-- Height Check Modal -->
+        <div id="heightModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="heightSpan">&times;</span>
+                <p>Height should be between 36 to 107 inches for safety purposes</p>
+            </div>
+        </div>
+        <!-- Numeric Fields Check Modal -->
+        <div id="numericsModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="numericsSpan">&times;</span>
+                <p>Please populate Age, Weight & Height fields</p>
+            </div>
+        </div>
+        <!-- Gender Check Modal -->
+        <div id="genderModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="genderSpan">&times;</span>
+                <p>Please select a Gender</p>
+            </div>
+        </div>
+        <!-- Activity Check Modal -->
+        <div id="activityModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="activitySpan">&times;</span>
+                <p>Please select an Activity Level</p>
+            </div>
+        </div>
     </main>
 
     <!-- Footer with site logo, links to allow users to connect on Social Media, and copyright statement-->
@@ -107,28 +157,30 @@
             <p>Connect With Us:</p>
             <!-- Social media links, with clickable icons -->
             <ul class="socials">
-                <li><a href="http://facebook.com" target="_blank" rel="noopener" 
+                <li><a href="http://facebook.com" target="_blank" rel="noopener"
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="http://instagram.com" target="_blank" rel="noopener" 
-                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="http://twitter.com" target="_blank" rel="noopener" 
+                <li><a href="http://instagram.com" target="_blank" rel="noopener"
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li><a href="http://twitter.com" target="_blank" rel="noopener"
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="http://youtube.com" target="_blank" rel="noopener" 
+                <li><a href="http://youtube.com" target="_blank" rel="noopener"
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="http://linkedin.com" target="_blank" rel="noopener" 
+                <li><a href="http://linkedin.com" target="_blank" rel="noopener"
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="https://github.com/dkelly255" target="_blank" rel="noopener" 
-                            aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://github.com/dkelly255" target="_blank" rel="noopener"
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-github"></i></a></li>
             </ul>
         </section>
         <!-- copyright statements for footer -->
         <section class="footer-bottom">
             <p>Copyrights &copy; CalorieCulator 2021. All rights reserved.</p>
-        </section>    
+        </section>
     </footer>
     <!-- fontawesome scripts for linking into page content -->
     <script src="https://kit.fontawesome.com/45a746d079.js" crossorigin="anonymous"></script>
     <!-- Javascript functionality programmed on script.js file and added to page via this scipt tag -->
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
