@@ -1,5 +1,7 @@
 /* jshint esversion: 8 */
 
+
+
 // Set a variable equal to the DOM element button with id "`carry`-pdct" 
 let carryPdct = document.getElementById("carry-pdct");
 
@@ -17,6 +19,11 @@ function importPdct() {
     }
     document.getElementById("pdct-box").innerHTML = localStorage.pdct;
 }
+
+let linkMeals = document.getElementById("linkMeals");
+let toFinalStepBtn = document.getElementById("toFinalStepBtn");
+let yourMacrosSection = document.getElementById("yourMacrosSection");
+
 /* Set a variable equal to the DOM element button with id "calculate-macros" - this button will be hidden
  using further instructions below, until the user has selected a split option */
 let macroChoice = document.getElementById("calculate-macros");
@@ -46,11 +53,18 @@ function checkRadio() {
 }
 // Declare variable for use in function splitMacros to check which macro option the user has selected
 let chosenOption;
-/* Function used by event listener on line 25 to go through each macroArray element and check if it has been selected, applying the 
+/* Function used by event listener to go through each macroArray element and check if it has been selected, applying the 
 appropriate macronutrient split in each case*/
 function splitMacros(event) {
     // Prevent default submission of form when button is clicked
     event.preventDefault();
+
+    if (localStorage.getItem("pdct")) {
+        linkMeals.classList.remove("hide");
+        toFinalStepBtn.classList.remove("hide");
+        yourMacrosSection.classList.remove("hide");
+    };
+
     let protein, carbs, fat;
     // Apply the "standard" macronutrient split if "standard" radio button has been selected by user 
     if (macroArray[0].checked) {
