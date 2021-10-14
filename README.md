@@ -31,7 +31,7 @@ This was simply a very basic Microsoft Word document which I kept live and regul
 The original document is included in the repository for context, and can be downloaded by [Clicking Here](scope_tracker.docx) 
 
 ### **Structure**
-The site is structured via a 4 page layout, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow - with access controls around the third and fourth apges, to ensure a user cannot prematurely attempt downstream calculations minimising the potential for errors/logic clashes. The four pages map as follows:
+The site is structured via a 4 page layout, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow - with access controls around the third and fourth pages, to ensure a user cannot prematurely attempt downstream calculations minimising the potential for errors/logic clashes. The four pages map as follows:
 
 *1. Home Page:* The site's home page will greet the user with an introduction to the "What", "Why", and "How" of calorie planning & measurement. This page will always be available to the user, as it does not contain any calculations but instead is focused on providing an introduction, with background and context to the user in advance of the calculations on the following pages
 
