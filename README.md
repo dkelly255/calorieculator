@@ -316,6 +316,8 @@ The meal plan generation is triggered by a button covered in the section above.
 
 **Pie Chart for Macronutrient splits** - This feature was intended for the Macro-mix page, to aid with displaying the macronutrient splits graphically in the form of a simple pie-chart with a slice for each macronutrient (Protein/Carbohydrate/Fat). Due to the complexities inherent in adding the graphical piechart, I decided to de-scope this feature, as the site still functions as intended without the pie chart.
 
+**Customisable Meal Calorie Allocations** - This feature would allow the user to select their own customised allocation of calories across each meal - Breakfast, Lunch and Dinner - with the addition of the associated checks & balances to guard data integrity before calculation. However in the interest of project deadlines I decided to limit the meal calorie allocations to static percentages (25% of the PDCT for breakfast, 35% for lunch, and 40% for Dinner) in the Javascript logic, with the percentages fixed at the beginning of the meals.js file.
+
 **Download to CSV:** The final feature left to implement was a "download to CSV" option for the Meal generation page. This feature would have allowed the user to click a button to download a copy of their calorie target, macro splits, and meal plans which they could then save, or print for their own use. However I decided to descope the feature to prioritise other more critical elements of the site's functionality.
 
 ## **Testing**
