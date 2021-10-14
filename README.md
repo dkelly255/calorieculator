@@ -434,6 +434,21 @@ After adding a description and keywords to the Head of each HTML page, the SEO s
 ### Resolved Bugs
 - Initially I found that my Javascript formulas were not working - however this was simply because I needed to add a script tag with a separate Javascript (.js) files for each HTML page and was easily resolved
 - At several stages during design of the site I found javascript formulas were not working as intended, - the most common of which were slight naming differences between javascript variables and their HTML/DOM counterparts (for example uppercase vs lowercase etc), and syntax errors - however through comprehensive debugging I was able to resolve all of these issues 
+- Towards the end of development I also found that the Meal Generation code contained a bug which was preventing the last food in the list of each of the three macronutrients from being available to the generator function. This was due to the presence of an unnecessary minus adjustment I was making to the length of the food arrays, which when combined with the Math.Floor() approach, meant that the final food in the list would never be available to the function: 
+
+Protein Bug Example:
+
+![alt text](readme/generator_bug1_protein.png)
+
+Carbohydrate Bug Example:
+
+![alt text](readme/generator_bug1_carbs.png)
+
+Fat Bug Example:
+
+![alt text](readme/generator_bug1_fat.png)
+
+I identified and solved this issue by removing the negative one adjustments from all sections of the function:
 
 ### Unresolved Bugs
 - No unresolved bugs were present in the finalised website code
@@ -467,6 +482,7 @@ Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https:
  - The [Harris-Benedict equation](https://www.omnicalculator.com/health/bmr-harris-benedict-equation#what-is-the-harris-benedict-equation) was used for the activity level adjustments, and was sourced from [Omnicalculator.com](https://www.omnicalculator.com/health/bmr-harris-benedict-equation#what-is-the-harris-benedict-equation) 
  - The [Macronutrient split options](https://betterme.world/articles/macro-split-for-cutting/) ideas were taken from [betterme.world](https://betterme.world/articles/macro-split-for-cutting/)
  - The [calories per gram estimates](https://www.nhs.uk/live-well/healthy-weight/calorie-checker/) on each food group were taken from [NHS.co.uk](https://www.nhs.uk/live-well/healthy-weight/calorie-checker/)
+ - Javascript function checkAllInputs was arrived at via [Stack Overflow](https://stackoverflow.com/) as noted in the javascript comments on meal.js. User [derpischer](https://stackoverflow.com/users/3776927/derpirscher) provided guidance on how to solve my problem of having the meal generation button hidden until selection of at least one of each list of 6x foods per macro group had occured. The link to the original question and answer on Stack Overflow are shown [by clicking here](https://stackoverflow.com/questions/69571703/how-can-i-hide-a-button-until-at-least-three-input-checkboxes-one-from-each-sep) and the comments in meals.js clearly call out the credits for this code adaption being attributed to derpischer & Stack Overflow.
 
  ### Media
 - As per above - The images in the Site were taken from [Pixabay](https://pixabay.com/)
