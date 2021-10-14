@@ -299,45 +299,57 @@ The meal plan generation is triggered by a button covered in the section above.
 
 **Calorie goal scenario PDCT adjustment:** - Originally it was my intention to include a feature to allow the user to apply a scalar to their PDCT to either lose, gain, or maintain weight. To lose weight, a 10% reduction would be applied to the PDCT, to gain weight, a 10% increase would be applied, and to maintain their current weight, no scalar would be applied. This feature was descoped due to project deadlines.
 
-**Pie Chart for Macronutrient splits** - This feature was intended for the Macr-mix page, to aid with displaying the macronutrient splits graphically in the form of a simple pie-chart with a slice for each macronutrient (Protein/Carbohydrate/Fat). Due to the complexities inherent in adding the graphical piechart, I decided to de-scope this feature, as the site still functions as intended without the pie chart.
+**Pie Chart for Macronutrient splits** - This feature was intended for the Macro-mix page, to aid with displaying the macronutrient splits graphically in the form of a simple pie-chart with a slice for each macronutrient (Protein/Carbohydrate/Fat). Due to the complexities inherent in adding the graphical piechart, I decided to de-scope this feature, as the site still functions as intended without the pie chart.
 
 **Download to CSV:** The final feature left to implement was a "download to CSV" option for the Meal generation page. This feature would have allowed the user to click a button to download a copy of their calorie target, macro splits, and meal plans which they could then save, or print for their own use. However I decided to descope the feature to prioritise other more critical elements of the site's functionality.
 
-## Testing
+## **Testing**
 
-### Browser Testing
+### **Browser Testing**
 I completed testing of the website pages in multiple broswers: Chrome, Firefox, Edge, and Safari, and also used DevTools to confirm that the project is responsive, functional and aesthetically pleasing on all standard screen sizes
 
-Google Chrome:
+**Google Chrome:**
 
-Microsoft Edge:
+![alt text](readme/chrome.png)
 
-Firefox:
+**Microsoft Edge:**
 
-Safari:
+![alt text](readme/edge.png)
 
-### Device Testing
+**Firefox:**
+
+![alt text](readme/ffox.png)
+
+**Safari:**
+
+![alt text](readme/safari.png)
+
+### **Device Testing**
 Additionally I tested the site on different devices, operating systems and form factors - physically testing on Desktop (Windows) Ipad Tablet (IOS), and Galaxy Note 10 Phone (Android), and virtually testing multiple form factors via the dev tools auditing suite:
 
-Android Galaxy Note 10 (Phone):
+- **Android Galaxy Note 10 (Phone):**
 
-Windows 10 (Desktop):
+- **Windows 10 (Desktop):**
 
-Apple Ipad (Tablet):
+- **Apple Ipad (Tablet):**
 
-### HTML Testing
+### **HTML Testing**
 During the testing phase I used the W3C Validator to confirm that all HTML code was error free & functioned as expected - the only warnings from the validation were related to articles & sections without headings - which are acceptable in this context as they are used in place of divs when working with flex in HTML to optimise the site layout
 
 **Home Page:**
+
 ![alt text](readme/home_html_validation.png)
 
 **Calorie Calculation Page:**
+
 ![alt text](readme/calories_html_validation.png)
 
 **Macro Mix Page HTML:**
+
 ![alt text](readme/macros_html_validation.png)
 
 **Meal Planning Page HTML:**
+
 ![alt text](readme/mealplans_html_validation.png)
 
 ### CSS Testing
@@ -422,6 +434,7 @@ Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https:
 
 - The Navigation Bar & Logo ideas were apated from ideas in a tutorial from Skillthrive [Navbar Tutorial](https://www.youtube.com/watch?v=PwWHL3RyQgk)
 - The Footer was adapted from ideas in a tutorial from Code Opacity [Footer Tutorial](https://www.youtube.com/watch?v=zdA3qZNH1vc)
+- The Modal programming was adapted from a W3Schools HowTo on CSS/Javasript Modals [Modals HowTo](https://www.w3schools.com/howto/howto_css_modals.asp)
 
  ### Content
 
