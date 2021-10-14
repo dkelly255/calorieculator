@@ -60,7 +60,7 @@ function checkAllInputs() {
     if (p && f && c) {
         // if condition is met - then show the button
         generateMealButton.classList.remove("hide");
-        mealDisplayTable.classList.remove("hide");
+
     } else { // if condition is not met - then at least one food group has not been selected and is missing
         //so keep the button hidden
         generateMealButton.classList.add("hide");
@@ -71,8 +71,7 @@ function checkAllInputs() {
 // Defining the Function to generate meal ideas on click of button above
 function runMealGenerator() {
 
-    console.log(localStorage.macro)
-    console.log(localStorage.macro == "lowcarb")
+    mealDisplayTable.classList.remove("hide");
 
     let breakfastTotalCalories;
     let lunchTotalCalories;
