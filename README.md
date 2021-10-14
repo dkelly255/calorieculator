@@ -64,7 +64,7 @@ The full original document is also linked above downloadable from the repository
 
 *Individual page wireframes*:
 
-[Click here](site-wireframe.pptx) to view & download original Powerpoint File - snapshots below:
+[Click here](site_wireframe.pptx) to view & download original Powerpoint File - snapshots below:
 
 *Home Page:*
 
