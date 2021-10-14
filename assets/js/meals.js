@@ -15,8 +15,14 @@ generateMealButton.addEventListener("click", runMealGenerator);
 // Defining the Function to generate meal ideas on click of button above
 function runMealGenerator(event) {
 
+    console.log(localStorage.macro)
+    console.log(localStorage.macro=="lowcarb")
+
+    if (localStorage.macro=="standard") {
+
     // Declare a variable to store Calories Allocation per Macronutrient for Breakfast meal 
     const breakfastTotalCalories = Math.round(localStorage.pdct * breakfastAllocation);
+    console.log(breakfastTotalCalories)
 
     // Populate each section of the "Breakfast" output table with the relative calories per macronutrient 
     document.getElementById('breakfast-total-calories').innerHTML = (breakfastTotalCalories);
@@ -27,6 +33,8 @@ function runMealGenerator(event) {
 
     // Declare a variable to store Calories Allocation per Macronutrient for Lunch meal 
     const lunchTotalCalories = Math.round(localStorage.pdct * lunchAllocation);
+    console.log(breakfastTotalCalories)
+    console.log(lunchTotalCalories)
 
     // Populate each section of the "Lunch" output table with the relative calories per macronutrient
     document.getElementById('lunch-total-calories').innerHTML = (lunchTotalCalories);
@@ -37,7 +45,9 @@ function runMealGenerator(event) {
 
     // Declare a variable to store Calories Allocation per Macronutrient for Dinner meal 
     const dinnerTotalCalories = Math.round(localStorage.pdct * dinnerAllocation);
-
+    console.log(breakfastTotalCalories)
+    console.log(lunchTotalCalories)
+    console.log(dinnerTotalCalories)
     // Populate each section of the "Dinner" output table with the relative calories per macronutrient
     document.getElementById('dinner-total-calories').innerHTML = (dinnerTotalCalories);
     // Use Math.round() to ensure numbers are readable & displayed without decimal points 
@@ -45,6 +55,10 @@ function runMealGenerator(event) {
     document.getElementById('dinner-carbs-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.45));
     document.getElementById('dinner-fat-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.30));
 
+    }
+    console.log(breakfastTotalCalories)
+    console.log(lunchTotalCalories)
+    console.log(dinnerTotalCalories)
     // Fixed lookup index of foods per macronutrient - food name and calories per gram for meal generator grams column
     // proteinIndex covers all possible protein foods selectable by the user
     const proteinIndex = [{
