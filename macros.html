@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Standard html head content tags -->
     <meta charset="UTF-8">
@@ -16,6 +17,7 @@
     <!-- Title for display in browser tab header -->
     <title>CalorieCulator</title>
 </head>
+
 <body>
     <!-- Main Header with logo & icon -->
     <header>
@@ -29,27 +31,27 @@
             <li><a href="macros.html" class="active">Macro-Mix</a></li>
             <li id="linkMeals" class="hide"><a href="mealplans.html">Meal Plans</a></li>
         </ul>
-    </nav>        
+    </nav>
     <!-- Main section of page - container to house child content and allow flex styling (see style.css) -->
-    <main id="macro-container">  
+    <main id="macro-container">
         <!-- Welcome message greeting with fire icon-->
         <section class="titleBox">
             <h2 class="mainlogo">- Step 2: Choose <i class="fas fa-fire"></i> -<br>
-            &nbsp;&nbsp;(A Macro Split Option)&nbsp;&nbsp;</h2>
-        </section>      
+                (A Macro Split Option)</h2>
+        </section>
         <!-- Section displaying container for importing PDCT (housed in local stroage from calories.html) -->
         <section id="macro-step2">
             <!-- macros-box id to allow flex styling (style.css line 107) -->
             <article id="macros-box">
                 <!-- Button to allow user import previously calculated PDCT from local storage -->
                 <section class="button-container">
-                    <button id="carry-pdct">&nbsp; Begin - Import My PDCT &nbsp; </button>
+                    <button id="carry-pdct">Begin - Import My PDCT</button>
                 </section>
                 <!-- Box with vacant space to house PDCT imported from local storage when user clicks button above -->
-                <section id="macros-logo">&nbsp; - Your PDCT:
-                    <span id="pdct-box"></span> 
-                    <i class="fas fa-fire"></i> - &nbsp;
-                </section>                
+                <section id="macros-logo"> - Your PDCT:
+                    <span id="pdct-box"></span>
+                    <i class="fas fa-fire"></i> - 
+                </section>
             </article>
         </section>
         <!-- This section contains the three possible macronutrient splits that a user can choose to apply to their PDCT -->
@@ -58,9 +60,9 @@
             <form method="POST" action="https://formdump.codeinstitute.net/">
                 <!-- Each Macro-nutrient Split option is contained in a section element -->
                 <h2 id="split_header">Now Choose <br> A Macro Split:</h2>
-                <section class="splitOptions">                    
+                <section class="splitOptions">
                     <!-- "Standard Balanced"" option is presented for selection via a radio button which the user can select -->
-                    <label for="standard">&nbsp;Standard Balanced</label>
+                    <label for="standard">Standard Balanced</label>
                     <input type="radio" id="standard" name="macro_choice" value="standard">
                     <!-- The details of the "Standard Balanced" option are stored in the table below 
                         with the % of calories per macronutrient as the table data -->
@@ -70,7 +72,7 @@
                                 <th>Macronutrient</th>
                                 <th>(%) Allocation</th>
                             </tr>
-                        </thead>                                
+                        </thead>
                         <tbody>
                             <tr>
                                 <td>Protein</td>
@@ -87,16 +89,16 @@
                             <tr>
                                 <td>Total</td>
                                 <td>100%</td>
-                            </tr>   
+                            </tr>
                         </tbody>
                     </table>
                 </section>
                 <!-- Each Macro-nutrient Split option is contained in a section element -->
                 <section class="splitOptions">
                     <!-- "High-Protein" option is presented for selection via a radio button which the user can select -->
-                    <label for="high-protein">&nbsp;High-Protein</label>
+                    <label for="high-protein">High-Protein</label>
                     <input type="radio" id="high-protein" name="macro_choice" value="high-protein">
-                     <!-- The details of the "High Protein" option are stored in the table below 
+                    <!-- The details of the "High Protein" option are stored in the table below 
                         with the % of calories per macronutrient as the table data -->
                     <table class="styled-table">
                         <thead>
@@ -104,7 +106,7 @@
                                 <th>Macronutrient</th>
                                 <th>(%) Allocation</th>
                             </tr>
-                        </thead>                                
+                        </thead>
                         <tbody>
                             <tr>
                                 <td>Protein</td>
@@ -121,16 +123,16 @@
                             <tr>
                                 <td>Total</td>
                                 <td>100%</td>
-                            </tr>   
+                            </tr>
                         </tbody>
                     </table>
                 </section>
                 <!-- Each Macro-nutrient Split option is contained in a section element -->
-                <section class="splitOptions">     
-                    <!-- "Low-Carb" option is presented for selection via a radio button which the user can select -->               
-                    <label for="low-carb">&nbsp;Low-Carb</label>
+                <section class="splitOptions">
+                    <!-- "Low-Carb" option is presented for selection via a radio button which the user can select -->
+                    <label for="low-carb">Low-Carb</label>
                     <input type="radio" id="low-carb" name="macro_choice" value="low-carb">
-                     <!-- The details of the "Low Carb" option are stored in the table below 
+                    <!-- The details of the "Low Carb" option are stored in the table below 
                         with the % of calories per macronutrient as the table data -->
                     <table class="styled-table">
                         <thead>
@@ -138,7 +140,7 @@
                                 <th>Macronutrient</th>
                                 <th>(%) Allocation</th>
                             </tr>
-                        </thead>                                
+                        </thead>
                         <tbody>
                             <tr>
                                 <td>Protein</td>
@@ -155,20 +157,20 @@
                             <tr>
                                 <td>Total</td>
                                 <td>100%</td>
-                            </tr>   
+                            </tr>
                         </tbody>
                     </table>
                 </section>
                 <!-- Button for user to click to trigger calculation split of PDCT across macronutrients upon selection
                      of a split option above -->
                 <section class="button-container">
-                    <button id="calculate-macros">&nbsp; Apply Split to PDCT&nbsp;</button>
+                    <button id="calculate-macros"> Apply Split to PDCT</button>
                 </section>
             </form>
         </section>
         <!-- This section houses the output of the user's PDCT split according to their chosen pre-defined macronutrient goals -->
-        <section id="macro-step3" >
-            
+        <section id="macro-step3">
+
             <section id="yourMacrosSection" class="hide">
                 <!-- Heading for table displaying user's calories per macronutrient -->
                 <h3 id="yourmacros">Your Macros:</h3>
@@ -180,7 +182,7 @@
                             <th>Calories</th>
                         </tr>
                     </thead>
-                        
+
                     <tbody>
                         <tr>
                             <td>Protein</td>
@@ -197,16 +199,16 @@
                         <tr>
                             <td>Total</td>
                             <td id="total"></td>
-                        </tr>   
+                        </tr>
                     </tbody>
                 </table>
             </section>
             <!-- Button to allow user to proceed to next step in the process post-completion of Macro-Split calculation -->
-            <section id = "toFinalStepBtn" class="buttonBox hide">
+            <section id="toFinalStepBtn" class="buttonBox hide">
                 <a href="mealplans.html" class="buttonlogo">- To Final Step <i class="fas fa-fire"></i> -</a>
-            </section>                
+            </section>
         </section>
-    </main>   
+    </main>
     <!-- Footer with site logo, links to allow users to connect on Social Media, and copyright statement-->
     <footer>
         <!-- First section of footer -->
@@ -216,28 +218,30 @@
             <p>Connect With Us:</p>
             <!-- Social media links, with clickable icons -->
             <ul class="socials">
-                <li><a href="http://facebook.com" target="_blank" rel="noopener" 
+                <li><a href="http://facebook.com" target="_blank" rel="noopener"
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="http://instagram.com" target="_blank" rel="noopener" 
-                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="http://twitter.com" target="_blank" rel="noopener" 
+                <li><a href="http://instagram.com" target="_blank" rel="noopener"
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li><a href="http://twitter.com" target="_blank" rel="noopener"
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="http://youtube.com" target="_blank" rel="noopener" 
+                <li><a href="http://youtube.com" target="_blank" rel="noopener"
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="http://linkedin.com" target="_blank" rel="noopener" 
+                <li><a href="http://linkedin.com" target="_blank" rel="noopener"
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="https://github.com/dkelly255" target="_blank" rel="noopener" 
-                            aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://github.com/dkelly255" target="_blank" rel="noopener"
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-github"></i></a></li>
             </ul>
         </section>
         <!-- copyright statements for footer -->
         <section class="footer-bottom">
             <p>Copyrights &copy; CalorieCulator 2021. All rights reserved.</p>
-        </section>    
+        </section>
     </footer>
     <!-- fontawesome scripts for linking into page content -->
     <script src="https://kit.fontawesome.com/45a746d079.js" crossorigin="anonymous"></script>
     <!-- Javascript functionality programmed on macros.js file and added to page via this scipt tag -->
     <script src="assets/js/macros.js"></script>
 </body>
+
 </html>

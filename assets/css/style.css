@@ -25,6 +25,8 @@ button {
     height: 25px;
     text-align: justify;
     margin-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Nav Bar Styling section below */
@@ -130,6 +132,8 @@ with varying content depending on page */
     background: black;
     min-width: 280px;
     margin-bottom: 25px;
+    padding-left:15px;
+    padding-right:15px;
 }
 
 /* Media query to aid presentation of main logo on smaller screen sizes */
@@ -442,6 +446,7 @@ parent container using flex */
     color: white;
     background: black;
     width: 280px;
+    padding-left:15px
 }
 
 /* Media queries to aid layout of pdct-section and the form container on screens smaller than 400px */
@@ -500,6 +505,8 @@ parent container using flex */
     min-width: 260px;
     margin-left: 10px;
     margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* This code sets the styles for the 3x tables used to display the macronutrient mixes available to the user*/
@@ -717,6 +724,7 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
 
 .splitOptions label {
     font-size: 90%;
+    padding-left: 7px;
 }
 
 /* Hide class used in Javascript functions to set display:none until required display criteria are met  */

@@ -272,7 +272,7 @@ And also contains a button which is programmed to be hidden until the user has s
 
 ![alt text](readme/macro_button_2.png)
 
-Lastly, the final calculate button is on the Meal Plan Generator page, where the user can click a button after selecting their desired food choices, to trigger the generation of meal plan ideas
+Lastly, the final calculate button is on the Meal Plan Generator page, where the user can click a button after selecting their desired food choices, to trigger the generation of meal plan ideas. This button is also programmed to be hidden until the user has selected at least one food from each group - to prevent any calculation errors and maintain positive User Experience
 
 ![alt text](readme/meal_button.png)
 
@@ -294,7 +294,7 @@ The final feature on the macros page is a table to display the user's PDCT alloc
 
 This feature allows the user to select/de-select a range of food for inclusion/exclusion from their generated meal plan ideas. The table is structured via three fieldset elements, each with a legend title, and each containing several common sample foods per macronutrient category. 
 
-Each food within each macronutrient category then has a checkbox which allows the user to specifiy their individua personalised choices, to be fed as inputs to the random meal generator:
+Each food within each macronutrient category then has a checkbox which allows the user to specifiy their individua personalised choices, to be fed as inputs to the random meal generator, and is controlled by a Javascript function ensuring meal generation cannot be triggered until sufficient food selections have been made by the user:
 
 ![alt text](readme/food_selection.png)
 

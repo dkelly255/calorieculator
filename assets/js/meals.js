@@ -17,114 +17,126 @@ generateMealButton.addEventListener("click", runMealGenerator);
 
 // find all input fields
 const proteinInputs = document.querySelectorAll("input[class='protein-input']");
-console.log(proteinInputs[0].checked)
 const carbInputs = document.querySelectorAll("input[class='carb-input']");
-console.log(carbInputs)
 const fatInputs = document.querySelectorAll("input[class='fat-input']");
-console.log(fatInputs)
 const allInputs = document.querySelectorAll("input[type='checkbox']");
-console.log(allInputs)
-// add click event-listener for all input buttons
+
+// add click event-listener for all input fields
 allInputs.forEach((input) => {
     input.addEventListener("click", checkAllInputs);
 });
 
 // Function "checkallInputs" - Credits to Stack overflow member: derpirscher - see link in readme
-// check if any input buttons are 'checked'
+// Scan to assess if at least one input buttons from each subgroup (protein/carbs/fats) are 'checked'
+// If condition is true - unhide the "generate" button to allow proceeding to generate meal plans
+// If condition is false - keep "generate" button hidden to prevent calculation errors
 function checkAllInputs() {
-    // if the generateMealButton button is 'not' hidden, then unhide it
-    let p = false, f = false, c = false; //protein, carbon, fat
-  for (let i = 0; i < proteinInputs.length; i++) {
-    if (proteinInputs[i].checked) { p = true; break;} //we found at least one
-  }
-  for (let i = 0; i < fatInputs.length; i++) {
-    if (fatInputs[i].checked) { f = true; break;} //we found at least one
-  }
-  for (let i = 0; i < carbInputs.length; i++) {
-    if (carbInputs[i].checked) { c = true; break;} //we found at least one
-  }
-
-  if (p && f && c) {  //found at least one in each section
-    //show the button
-    generateMealButton.classList.remove("hide");
-  } else {  //at least one is missing
-    //hide the button
-    generateMealButton.classList.add("hide");
-  }
+    //define local variables for protein, carbs & fat
+    let p = false,
+        f = false,
+        c = false;
+    // Check each food group for the presence of at least one "checked" input   
+    for (let i = 0; i < proteinInputs.length; i++) {
+        //When at least one "check" has been found - set variable to true and break
+        if (proteinInputs[i].checked) {
+            p = true;
+            break;
+        }
+    }
+    for (let i = 0; i < fatInputs.length; i++) {
+        if (fatInputs[i].checked) {
+            f = true;
+            break;
+        }
+    }
+    for (let i = 0; i < carbInputs.length; i++) {
+        if (carbInputs[i].checked) {
+            c = true;
+            break;
+        }
+    }
+    // Check if at least one "checked" input is present in each food group section
+    if (p && f && c) {
+        // if condition is met - then show the button
+        generateMealButton.classList.remove("hide");
+    } else { // if condition is not met - then at least one food group has not been selected and is missing
+        //so keep the button hidden
+        generateMealButton.classList.add("hide");
+    }
 }
 
 // Defining the Function to generate meal ideas on click of button above
 function runMealGenerator() {
 
     console.log(localStorage.macro)
-    console.log(localStorage.macro=="lowcarb")
+    console.log(localStorage.macro == "lowcarb")
 
     let breakfastTotalCalories;
     let lunchTotalCalories;
     let dinnerTotalCalories;
 
-    if (localStorage.macro=="standard") {
-
-    // Declare a variable to store Calories Allocation per Macronutrient for Breakfast meal 
-    breakfastTotalCalories = Math.round(localStorage.pdct * breakfastAllocation);
-    console.log(breakfastTotalCalories)
-
-    // Populate each section of the "Breakfast" output table with the relative calories per macronutrient 
-    document.getElementById('breakfast-total-calories').innerHTML = (breakfastTotalCalories);
-    // Use Math.round() to ensure numbers are readable & displayed without decimal points
-    document.getElementById('breakfast-protein-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.25));
-    document.getElementById('breakfast-carbs-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.45));
-    document.getElementById('breakfast-fat-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.30));
-
-    // Declare a variable to store Calories Allocation per Macronutrient for Lunch meal 
-    lunchTotalCalories = Math.round(localStorage.pdct * lunchAllocation);
-    console.log(breakfastTotalCalories)
-    console.log(lunchTotalCalories)
-
-    // Populate each section of the "Lunch" output table with the relative calories per macronutrient
-    document.getElementById('lunch-total-calories').innerHTML = (lunchTotalCalories);
-    // Use Math.round() to ensure numbers are readable & displayed without decimal points 
-    document.getElementById('lunch-protein-calories').innerHTML = (Math.round(lunchTotalCalories * 0.25));
-    document.getElementById('lunch-carbs-calories').innerHTML = (Math.round(lunchTotalCalories * 0.45));
-    document.getElementById('lunch-fat-calories').innerHTML = (Math.round(lunchTotalCalories * 0.30));
-
-    // Declare a variable to store Calories Allocation per Macronutrient for Dinner meal 
-    dinnerTotalCalories = Math.round(localStorage.pdct * dinnerAllocation);
-    console.log(breakfastTotalCalories)
-    console.log(lunchTotalCalories)
-    console.log(dinnerTotalCalories)
-    // Populate each section of the "Dinner" output table with the relative calories per macronutrient
-    document.getElementById('dinner-total-calories').innerHTML = (dinnerTotalCalories);
-    // Use Math.round() to ensure numbers are readable & displayed without decimal points 
-    document.getElementById('dinner-protein-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.25));
-    document.getElementById('dinner-carbs-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.45));
-    document.getElementById('dinner-fat-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.30));
-
-    } else if (localStorage.macro=="highprotein") {
+    if (localStorage.macro == "standard") {
 
         // Declare a variable to store Calories Allocation per Macronutrient for Breakfast meal 
         breakfastTotalCalories = Math.round(localStorage.pdct * breakfastAllocation);
         console.log(breakfastTotalCalories)
-    
+
+        // Populate each section of the "Breakfast" output table with the relative calories per macronutrient 
+        document.getElementById('breakfast-total-calories').innerHTML = (breakfastTotalCalories);
+        // Use Math.round() to ensure numbers are readable & displayed without decimal points
+        document.getElementById('breakfast-protein-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.25));
+        document.getElementById('breakfast-carbs-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.45));
+        document.getElementById('breakfast-fat-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.30));
+
+        // Declare a variable to store Calories Allocation per Macronutrient for Lunch meal 
+        lunchTotalCalories = Math.round(localStorage.pdct * lunchAllocation);
+        console.log(breakfastTotalCalories)
+        console.log(lunchTotalCalories)
+
+        // Populate each section of the "Lunch" output table with the relative calories per macronutrient
+        document.getElementById('lunch-total-calories').innerHTML = (lunchTotalCalories);
+        // Use Math.round() to ensure numbers are readable & displayed without decimal points 
+        document.getElementById('lunch-protein-calories').innerHTML = (Math.round(lunchTotalCalories * 0.25));
+        document.getElementById('lunch-carbs-calories').innerHTML = (Math.round(lunchTotalCalories * 0.45));
+        document.getElementById('lunch-fat-calories').innerHTML = (Math.round(lunchTotalCalories * 0.30));
+
+        // Declare a variable to store Calories Allocation per Macronutrient for Dinner meal 
+        dinnerTotalCalories = Math.round(localStorage.pdct * dinnerAllocation);
+        console.log(breakfastTotalCalories)
+        console.log(lunchTotalCalories)
+        console.log(dinnerTotalCalories)
+        // Populate each section of the "Dinner" output table with the relative calories per macronutrient
+        document.getElementById('dinner-total-calories').innerHTML = (dinnerTotalCalories);
+        // Use Math.round() to ensure numbers are readable & displayed without decimal points 
+        document.getElementById('dinner-protein-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.25));
+        document.getElementById('dinner-carbs-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.45));
+        document.getElementById('dinner-fat-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.30));
+
+    } else if (localStorage.macro == "highprotein") {
+
+        // Declare a variable to store Calories Allocation per Macronutrient for Breakfast meal 
+        breakfastTotalCalories = Math.round(localStorage.pdct * breakfastAllocation);
+        console.log(breakfastTotalCalories)
+
         // Populate each section of the "Breakfast" output table with the relative calories per macronutrient 
         document.getElementById('breakfast-total-calories').innerHTML = (breakfastTotalCalories);
         // Use Math.round() to ensure numbers are readable & displayed without decimal points
         document.getElementById('breakfast-protein-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.40));
         document.getElementById('breakfast-carbs-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.35));
         document.getElementById('breakfast-fat-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.25));
-    
+
         // Declare a variable to store Calories Allocation per Macronutrient for Lunch meal 
         lunchTotalCalories = Math.round(localStorage.pdct * lunchAllocation);
         console.log(breakfastTotalCalories)
         console.log(lunchTotalCalories)
-    
+
         // Populate each section of the "Lunch" output table with the relative calories per macronutrient
         document.getElementById('lunch-total-calories').innerHTML = (lunchTotalCalories);
         // Use Math.round() to ensure numbers are readable & displayed without decimal points 
         document.getElementById('lunch-protein-calories').innerHTML = (Math.round(lunchTotalCalories * 0.40));
         document.getElementById('lunch-carbs-calories').innerHTML = (Math.round(lunchTotalCalories * 0.35));
         document.getElementById('lunch-fat-calories').innerHTML = (Math.round(lunchTotalCalories * 0.25));
-    
+
         // Declare a variable to store Calories Allocation per Macronutrient for Dinner meal 
         dinnerTotalCalories = Math.round(localStorage.pdct * dinnerAllocation);
         console.log(breakfastTotalCalories)
@@ -136,45 +148,45 @@ function runMealGenerator() {
         document.getElementById('dinner-protein-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.40));
         document.getElementById('dinner-carbs-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.35));
         document.getElementById('dinner-fat-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.25));
-    
-        } else if (localStorage.macro=="lowcarb") {
 
-            // Declare a variable to store Calories Allocation per Macronutrient for Breakfast meal 
-            breakfastTotalCalories = Math.round(localStorage.pdct * breakfastAllocation);
-            console.log(breakfastTotalCalories)
-        
-            // Populate each section of the "Breakfast" output table with the relative calories per macronutrient 
-            document.getElementById('breakfast-total-calories').innerHTML = (breakfastTotalCalories);
-            // Use Math.round() to ensure numbers are readable & displayed without decimal points
-            document.getElementById('breakfast-protein-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.35));
-            document.getElementById('breakfast-carbs-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.10));
-            document.getElementById('breakfast-fat-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.55));
-        
-            // Declare a variable to store Calories Allocation per Macronutrient for Lunch meal 
-            lunchTotalCalories = Math.round(localStorage.pdct * lunchAllocation);
-            console.log(breakfastTotalCalories)
-            console.log(lunchTotalCalories)
-        
-            // Populate each section of the "Lunch" output table with the relative calories per macronutrient
-            document.getElementById('lunch-total-calories').innerHTML = (lunchTotalCalories);
-            // Use Math.round() to ensure numbers are readable & displayed without decimal points 
-            document.getElementById('lunch-protein-calories').innerHTML = (Math.round(lunchTotalCalories * 0.35));
-            document.getElementById('lunch-carbs-calories').innerHTML = (Math.round(lunchTotalCalories * 0.10));
-            document.getElementById('lunch-fat-calories').innerHTML = (Math.round(lunchTotalCalories * 0.55));
-        
-            // Declare a variable to store Calories Allocation per Macronutrient for Dinner meal 
-            dinnerTotalCalories = Math.round(localStorage.pdct * dinnerAllocation);
-            console.log(breakfastTotalCalories)
-            console.log(lunchTotalCalories)
-            console.log(dinnerTotalCalories)
-            // Populate each section of the "Dinner" output table with the relative calories per macronutrient
-            document.getElementById('dinner-total-calories').innerHTML = (dinnerTotalCalories);
-            // Use Math.round() to ensure numbers are readable & displayed without decimal points 
-            document.getElementById('dinner-protein-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.35));
-            document.getElementById('dinner-carbs-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.10));
-            document.getElementById('dinner-fat-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.55));
-        
-            }
+    } else if (localStorage.macro == "lowcarb") {
+
+        // Declare a variable to store Calories Allocation per Macronutrient for Breakfast meal 
+        breakfastTotalCalories = Math.round(localStorage.pdct * breakfastAllocation);
+        console.log(breakfastTotalCalories)
+
+        // Populate each section of the "Breakfast" output table with the relative calories per macronutrient 
+        document.getElementById('breakfast-total-calories').innerHTML = (breakfastTotalCalories);
+        // Use Math.round() to ensure numbers are readable & displayed without decimal points
+        document.getElementById('breakfast-protein-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.35));
+        document.getElementById('breakfast-carbs-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.10));
+        document.getElementById('breakfast-fat-calories').innerHTML = (Math.round(breakfastTotalCalories * 0.55));
+
+        // Declare a variable to store Calories Allocation per Macronutrient for Lunch meal 
+        lunchTotalCalories = Math.round(localStorage.pdct * lunchAllocation);
+        console.log(breakfastTotalCalories)
+        console.log(lunchTotalCalories)
+
+        // Populate each section of the "Lunch" output table with the relative calories per macronutrient
+        document.getElementById('lunch-total-calories').innerHTML = (lunchTotalCalories);
+        // Use Math.round() to ensure numbers are readable & displayed without decimal points 
+        document.getElementById('lunch-protein-calories').innerHTML = (Math.round(lunchTotalCalories * 0.35));
+        document.getElementById('lunch-carbs-calories').innerHTML = (Math.round(lunchTotalCalories * 0.10));
+        document.getElementById('lunch-fat-calories').innerHTML = (Math.round(lunchTotalCalories * 0.55));
+
+        // Declare a variable to store Calories Allocation per Macronutrient for Dinner meal 
+        dinnerTotalCalories = Math.round(localStorage.pdct * dinnerAllocation);
+        console.log(breakfastTotalCalories)
+        console.log(lunchTotalCalories)
+        console.log(dinnerTotalCalories)
+        // Populate each section of the "Dinner" output table with the relative calories per macronutrient
+        document.getElementById('dinner-total-calories').innerHTML = (dinnerTotalCalories);
+        // Use Math.round() to ensure numbers are readable & displayed without decimal points 
+        document.getElementById('dinner-protein-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.35));
+        document.getElementById('dinner-carbs-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.10));
+        document.getElementById('dinner-fat-calories').innerHTML = (Math.round(dinnerTotalCalories * 0.55));
+
+    }
     console.log(breakfastTotalCalories)
     console.log(lunchTotalCalories)
     console.log(dinnerTotalCalories)
