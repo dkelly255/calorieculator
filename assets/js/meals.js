@@ -32,10 +32,24 @@ allInputs.forEach((input) => {
 // check if any input buttons are 'checked'
 function checkAllInputs() {
     // if the generateMealButton button is 'not' hidden, then unhide it
-    
-    if (generateMealButton.classList.contains("hide")) {
-        generateMealButton.classList.remove("hide");
-    }
+    let p = false, f = false, c = false; //protein, carbon, fat
+  for (let i = 0; i < proteinInputs.length; i++) {
+    if (proteinInputs[i].checked) { p = true; break;} //we found at least one
+  }
+  for (let i = 0; i < fatInputs.length; i++) {
+    if (fatInputs[i].checked) { f = true; break;} //we found at least one
+  }
+  for (let i = 0; i < carbInputs.length; i++) {
+    if (carbInputs[i].checked) { c = true; break;} //we found at least one
+  }
+
+  if (p && f && c) {  //found at least one in each section
+    //show the button
+    generateMealButton.classList.remove("hide");
+  } else {  //at least one is missing
+    //hide the button
+    generateMealButton.classList.add("hide");
+  }
 }
 
 
