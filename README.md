@@ -19,9 +19,14 @@ The site strategy is framed around addressing the *User Needs* and **User Storie
 
 
 ### **Scope**
+
 The Site Scope is informed by the Strategy above, in terms of the Functional Specifications and Content Requirements of the site - I wanted to ensure optimal scope to actualise the strategy by including content and interactivity that help enable the user stories:
 - The site's scope encompasses the informational benefits of choosing to measure and control caloric intake, set against background images to help a user visually internalise aspects of the activity, as well as three interactive pages to allow the user calculate their calorie targets, macronutrient splits, and meal plans
 - I have also demarcated the original possible list of site scope into **"existing features"** and **"features yet to implement"** - with the former containing the final features of the live site in the spirit of ensuring a Minimum Viable Product (MVP) that would meet project deadlines
+
+To ensure control of the site scope my overall Project Management approach was to use a constantly evolving personal issue & item [Tracking File](scope_tracker.pptx)
+
+This was simply a very basic Microsoft Word document which I kept live and regularly added to/deleted from as the project scope evolved - I found this helped in bringing the project scope through the development process and to identify and avoid issue such as scope creep which may otherwise been detrimental to the User Experience. The original document is included in the repository for context, and can be downloaded by [Clicking Here](scope_tracker.pptx) 
 
 ### **Structure**
 The site is structured via a 4 page layout, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow - with access controls around the third and fourth apges, to ensure a user cannot prematurely attempt downstream calculations minimising the potential for errors/logic clashes. The four pages map as follows:
@@ -49,11 +54,15 @@ To drive the early site interface & navigvation design efforts, I am using wiref
 
 #### *Site Wireframe - Original Skeleton Concept:*
 
+[Click here](calculations_wireframe.xlsx) to view & download original Excel File - snapshot below:
+
 ![alt text](readme/site_plan.png)
 
-This document is also downloadable from the repository should there be a need to peruse further through the detailed formulas & mechanics originally put together as a guide:
+The full original document is also linked above downloadable from the repository should there be a need to dive down further into the detailed formulas & mechanics originally put together as a guide:
 
-[Original Excel File](calculations_wireframe.xlsx)
+*Individual page wireframes*:
+
+[Click here](site-wireframe.pptx) to view & download original Powerpoint File - snapshots below:
 
 *Home Page:*
 
@@ -73,7 +82,7 @@ This document is also downloadable from the repository should there be a need to
 
 #### *Javascript Skeleton:*
 
-I carried out a Formula & Funciton Mapping exercise to arrive at a provisional inventory of the formulas required to enable the site strategy, the original mapping was as follows:
+The calculation wireframing allowed me to then carry out a Formula & Function Mapping exercise for Javascript. To arrive at a provisional inventory of the formulas required to enable the site strategy, the original function mapping output was as follows:
 
 A. Calorie Calculation Page
     
@@ -442,6 +451,7 @@ Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https:
 
 ## Credits
 
+### Code 
 - The Navigation Bar & Logo ideas were apated from ideas in a tutorial from Skillthrive [Navbar Tutorial](https://www.youtube.com/watch?v=PwWHL3RyQgk)
 - The Footer was adapted from ideas in a tutorial from Code Opacity [Footer Tutorial](https://www.youtube.com/watch?v=zdA3qZNH1vc)
 - The Modal programming was adapted from a W3Schools HowTo on CSS/Javascript Modals [Modals HowTo](https://www.w3schools.com/howto/howto_css_modals.asp)
