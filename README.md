@@ -51,6 +51,10 @@ To drive the early site interface & navigvation design efforts, I am using wiref
 
 ![alt text](readme/site_plan.png)
 
+This document is also downloadable from the repository should there be a need to peruse further through the detailed formulas & mechanics originally put together as a guide:
+
+[Original Excel File](calculations_wireframe.xlsx)
+
 *Home Page:*
 
 ![alt text](readme/home.png)
