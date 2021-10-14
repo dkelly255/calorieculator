@@ -29,6 +29,7 @@ allInputs.forEach((input) => {
     input.addEventListener("click", checkAllInputs);
 });
 
+// Function "checkallInputs" - Credits to Stack overflow member: derpirscher - see link in readme
 // check if any input buttons are 'checked'
 function checkAllInputs() {
     // if the generateMealButton button is 'not' hidden, then unhide it
@@ -51,9 +52,6 @@ function checkAllInputs() {
     generateMealButton.classList.add("hide");
   }
 }
-
-
-
 
 // Defining the Function to generate meal ideas on click of button above
 function runMealGenerator() {
