@@ -8,8 +8,9 @@ const dinnerAllocation = 0.40;
 
 // Add variable for the DOM element button with id "generate-meals" 
 let generateMealButton = document.getElementById("generate-meals");
-
+let mealDisplayTable = document.getElementById("mealplan-container");
 generateMealButton.classList.add("hide");
+mealDisplayTable.classList.add("hide");
 
 // Add an eventlistener to generate meal button to listen for a "click" event and run the 
 // function "runMealGenerator when the event occurs"
@@ -59,9 +60,11 @@ function checkAllInputs() {
     if (p && f && c) {
         // if condition is met - then show the button
         generateMealButton.classList.remove("hide");
+        mealDisplayTable.classList.remove("hide");
     } else { // if condition is not met - then at least one food group has not been selected and is missing
         //so keep the button hidden
         generateMealButton.classList.add("hide");
+        mealDisplayTable.classList.add("hide");
     }
 }
 
