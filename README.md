@@ -329,9 +329,15 @@ Additionally I tested the site on different devices, operating systems and form 
 
 - **Android Galaxy Note 10 (Phone):**
 
+![alt text](readme/note10.png)
+
 - **Windows 10 (Desktop):**
 
+![alt text](readme/windows_pc.png)
+
 - **Apple Ipad (Tablet):**
+
+![alt text](readme/ipad.png)
 
 ### **HTML Testing**
 During the testing phase I used the W3C Validator to confirm that all HTML code was error free & functioned as expected - the only warnings from the validation were related to articles & sections without headings - which are acceptable in this context as they are used in place of divs when working with flex in HTML to optimise the site layout
@@ -409,7 +415,7 @@ After adding a description and keywords to the Head of each HTML page, the SEO s
 ![alt text](readme/post_seo_meals.png)
 
 ### Resolved Bugs
-- Initially I found that my Javascript formulas were not working - however this was simply because I needed to add a script tag with a separate .js files for each .html page and was easily resolved
+- Initially I found that my Javascript formulas were not working - however this was simply because I needed to add a script tag with a separate Javascript (.js) files for each HTML page and was easily resolved
 - At several stages during design of the site I found javascript formulas were not working as intended, - the most common of which were slight naming differences between javascript variables and their HTML/DOM counterparts (for example uppercase vs lowercase etc), and syntax errors - however through comprehensive debugging I was able to resolve all of these issues 
 
 ### Unresolved Bugs
@@ -434,18 +440,18 @@ Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https:
 
 - The Navigation Bar & Logo ideas were apated from ideas in a tutorial from Skillthrive [Navbar Tutorial](https://www.youtube.com/watch?v=PwWHL3RyQgk)
 - The Footer was adapted from ideas in a tutorial from Code Opacity [Footer Tutorial](https://www.youtube.com/watch?v=zdA3qZNH1vc)
-- The Modal programming was adapted from a W3Schools HowTo on CSS/Javasript Modals [Modals HowTo](https://www.w3schools.com/howto/howto_css_modals.asp)
+- The Modal programming was adapted from a W3Schools HowTo on CSS/Javascript Modals [Modals HowTo](https://www.w3schools.com/howto/howto_css_modals.asp)
 
  ### Content
 
  - The [Hero Image](https://pixabay.com/photos/salad-food-italian-tasty-wooden-2068220/) was sourced from [Pixabay](https://pixabay.com/photos/salad-food-italian-tasty-wooden-2068220/) and is free for commercial use with no attribution required
  - The [BMR](https://www.medicinenet.com/what_is_the_formula_to_calculate_bmr/article.htm) (Base Metabolic Rate) formulas for both Male & Female were taken from [Medicinenet.com](https://www.medicinenet.com/what_is_the_formula_to_calculate_bmr/article.htm)
  - The [Harris-Benedict equation](https://www.omnicalculator.com/health/bmr-harris-benedict-equation#what-is-the-harris-benedict-equation) was used for the activity level adjustments, and was sourced from [Omnicalculator.com](https://www.omnicalculator.com/health/bmr-harris-benedict-equation#what-is-the-harris-benedict-equation) 
- - The [Macronutrient split options](https://betterme.world/articles/macro-split-for-cutting/) ideas were taken from [beterme.world](https://betterme.world/articles/macro-split-for-cutting/)
+ - The [Macronutrient split options](https://betterme.world/articles/macro-split-for-cutting/) ideas were taken from [betterme.world](https://betterme.world/articles/macro-split-for-cutting/)
  - The [calories per gram estimates](https://www.nhs.uk/live-well/healthy-weight/calorie-checker/) on each food group were taken from [NHS.co.uk](https://www.nhs.uk/live-well/healthy-weight/calorie-checker/)
 
  ### Media
-- The images in the Site were taken from [Pixabay](https://pixabay.com/)
+- As per above - The images in the Site were taken from [Pixabay](https://pixabay.com/)
 - The site fonts were taken from [Google Fonts](https://fonts.google.com/)
 - All Icons, including the Favicon used throughout the site were sourced from [FontAwesome](https://fontawesome.com/)
 
