@@ -11,31 +11,28 @@
 ## User Experience
 
 ### **Strategy**
-The site strategy is framed around addressing the user needs below:
-- #### User Stories
-    - As a user of the site I would like to be able to:
-        - Learn about why planning & measuring calorie intake can be beneficial for health
-        - Obtain a personalised daily calorie target calculation based on my individual measurements & activity level
-        - Receive macro-nutrient mix calculation based on my personalised calorie target above combined with my chosen macro-split option
-        - Generate meal plan ideas based on my personal calorie target & macro mix calculations, and my chosen preferred food selections
+The site strategy is framed around addressing the *User Needs* and **User Stories** below:
+- Allow users to learn about why planning & measuring calorie intake can be beneficial for health
+- Enable Users to obtain a personalised daily calorie target calculation based on my individual measurements & activity level
+- Give Users the ability to calculate individualised macro-nutrient mix calculations based on the individual calorie targets above combined with chosen macro-split options
+- Generate meal plan ideas for users based on personalised calorie target & macro mix calculations, and personalised chosen preferred food selections
 
 
 ### **Scope**
-Functional Specifications / Content Requirements
-- The Scope of the website is informed by the Strategy above, I wanted to ensure the site would have the right scope to actualise the strategy by including content and interactivity that address the user stories
-- The site's scope covers some of the benefits of choosing to measure and control caloric intake, set against background images to help a user visually internalise aspects of the activity,as well as three interactive pages to allow the user calculate their calorie targets, macronutrient splits, and meal plans
-- I have also demarcated the original possible list of site scope into "existing features" and "features yet to implement" - with the former containing the final features of the live site in the spirit of ensuring a Minimum Viable Product (MVP) that would meet project deadlines
+The Site Scope is informed by the Strategy above, in terms of the Functional Specifications and Content Requirements of the site - I wanted to ensure optimal scope to actualise the strategy by including content and interactivity that help enable the user stories:
+- The site's scope encompasses the informational benefits of choosing to measure and control caloric intake, set against background images to help a user visually internalise aspects of the activity, as well as three interactive pages to allow the user calculate their calorie targets, macronutrient splits, and meal plans
+- I have also demarcated the original possible list of site scope into **"existing features"** and **"features yet to implement"** - with the former containing the final features of the live site in the spirit of ensuring a Minimum Viable Product (MVP) that would meet project deadlines
 
 ### **Structure**
-The site is structured via a 4 page layout, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow. The four pages map as follows:
+The site is structured via a 4 page layout, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow - with access controls around the third and fourth apges, to ensure a user cannot prematurely attempt downstream calculations minimising the potential for errors/logic clashes. The four pages map as follows:
 
-*1. Home Page:* The site's home page will greet the user with an introduction to the "What", "Why", and "How" of calorie planning & measurement. 
+*1. Home Page:* The site's home page will greet the user with an introduction to the "What", "Why", and "How" of calorie planning & measurement. This page will always be available to the user, as it does not contain any calculations but instead is focused on providing an introduction, with background and context to the user in advance of the calculations on the following pages
 
-*2. Calorie Calculation Page:* The Calorie Calculation page will take inputs from the user via HTML data entry fields - including the user's gender, height, weight, age & activity level - allowing Javascript to use these inputs as variables in a pre-determined set of formulas, and returning a personalised calorie target for the user. The Harris-Benedict formula is used for the initial Basal Metabolic Rate (hereafter referred to as "BMR") which is then uplifted by an activity factor according to the user's choice (From 1. Sedentary to 5. Very Active)
+*2. Calorie Calculation Page:* The Calorie Calculation page will take inputs from the user via HTML data entry fields - including the user's gender, height, weight, age & activity level - allowing Javascript to use these inputs as variables in a pre-determined set of formulas, and returning a personalised calorie target for the user. The Harris-Benedict formula is used for the initial Basal Metabolic Rate (hereafter referred to as "BMR") which is then uplifted by an activity factor according to the user's choice (From 1. Sedentary to 5. Very Active). This page is also always available to the user as it is not dependent on inputs or outputs from any previous pages.
 
-*3. Macro Mix Page:* The Macro Mix page will ask the user to choose their desired macro-nutrient split (Protein/Carbs/Fats) from three pre-defined options (standard, high-protein, and low-carb) and will then combine this specification with the output from the calorie calculation page, and standard estimated calories per macronutrient per gram to arrive at a personalised daily split in grams per macro-nutrient
+*3. Macro Mix Page:* The Macro Mix page will ask the user to choose their desired macro-nutrient split (Protein/Carbs/Fats) from three pre-defined options (standard, high-protein, and low-carb) and will then combine this specification with the output from the calorie calculation page, and standard estimated calories per macronutrient per gram to arrive at a personalised daily split in grams per macro-nutrient. This page is hidden from the user via javascript functionality until page 2 has been completed, as it is dependent on the output from completion of the calorie calculation on page 2.
 
-*4. Meal Planning Page:* The Meal planning page is the final step in the site flow - and will request the user to select their preferences (or unselect their dislikes) from a pre-determined list of common foods from each of the three macronutrient categories (Protein/Carbohydrates & Fats). 
+*4. Meal Planning Page:* The Meal planning page is the final step in the site flow - and will request the user to select their preferences (or unselect their dislikes) from a pre-determined list of common foods from each of the three macronutrient categories (Protein/Carbohydrates & Fats). This page is also hidden from the user via javascript functionality, as it is also dependent on the output from calculations on pages 2 and 3.
 
 Completion of this activity will trigger Javascript to build the choices into an array per macro group, and then return one random food choice per macro group within boundaries of: 
 - (1) Total daily calories are to equal step 1 output (with a possible small error bar +/- tolerance factor for rounding depending on step 3)
@@ -186,7 +183,9 @@ The header is common to all pages, and contains a simple blue border with white 
 
 **Responsive Navigation Bar:** 
 
-The Nav bar contains links to all four site pages, and contains a highlight to both show the user which page they are currently on, as well as highlighting when the user scrolls over a clickable link. The Nav bar is also fully responsive down to a ultra small screen sizes below 300 pixels in width, and is positioned to disappear off the page when users scroll down, to help maximise screen content on smaller devices.
+The Nav bar contains links to all four site pages, and contains a highlight to both show the user which page they are currently on, as well as highlighting when the user scrolls over a clickable link. The Nav bar is also fully responsive from ultra-wide down to mobile device screen sizes below 300 pixels in width, and is positioned to disappear off the page when users scroll down, to help maximise screen content on smaller devices.
+
+As detailed in the scope section above, the Nav bar feature also acts as a control over the site flow - using javascript to restrict the user's ability to access downstream calculations without having first completed the pre-requisite site sections. Specifically - via hiding the macro-mix and meal plan pages until the required calorie calculations have been completed by the user
 
 ![alt text](readme/navbar.png)
 
@@ -206,6 +205,10 @@ Each page contains a header, which either welcomes the user (Home Page) or gives
 
 The site contains three clickable navigation buttons - a "Begin" button on the home page, a "Next Step" button on the MyCalories page, and a "To Final Step" button on the Macro-Mix page. These buttons are features added to aid the user in traversing the site flow, and are formatted with a grey background and black text to differentiate them from the site headers & content to allow easy navigation of the site for the user.
 
+Similar to the Nav bar feature, the Navigation buttons also act as a controls over the site flow - using javascript to restrict the user's ability to access downstream calculations without having first completed the pre-requisite site sections. 
+
+This is achieved via Javascript event listeners calibrated to unhide the "Next Step" buttons on both the calorie calculation, and macro-mix pages, only when the required click events or local storage entries are present - signifying the availability of the information required for error-free functioning of the downstream pages. 
+
 ![alt text](readme/navbutton.png)
 
 **Calorie Calculation Form:** 
@@ -213,6 +216,30 @@ The site contains three clickable navigation buttons - a "Begin" button on the h
 The Calorie Calculation form takes inputs from the user via HTML data entry fields allowing Javascript to use these inputs as variables in a pre-determined set of formulas, and returning a personalised calorie target for the user. The form is set against a dark background with slight transparency, to ensure foreground text is not distracted by the background imagery, and features three numeric input fields for age, weight & height, as well as two drop down menus for gender and activity level selection. Lastly, the form also contains a calculation button feature, further detailed below
 
 ![alt text](readme/calorie_form.png)
+
+**Data-entry Modals**
+
+To control the data-entry into the calorie calculation form - I have used a combination of Javascript, HTML, and CSS to setup several modals to act as checks, aiding with error prevention and calculation integrity control. 
+
+These modals are configured to appear only when data entry guidelines have been violated, helping to accentuate the user-friendly experience during use of the site. 
+
+The modals will trigger when a field has a numeric value outside a pre-defined range (age, weight or height), has not been selected from a drop-down menu (gender & activity-level), or the field has been left blank (all fields) - thus helping ensure good quality data is input into the javascript calculations.
+
+Age check modal:
+![alt text](readme/age_modal.png)
+
+Weight check modal:
+![alt text](readme/weight_modal.png)
+
+Height check modal:
+![alt text](readme/height_modal.png)
+
+Gender check modal:
+![alt text](readme/gender_modal.png)
+
+Activity-Level check modal:
+![alt text](readme/activity_modal.png)
+
 
 **Calculation Buttons:** 
 
@@ -236,7 +263,9 @@ Lastly, the final calculate button is on the Meal Plan Generator page, where the
 
 **Macronutrient Split Option Display/Selector**
 
-The user is presented with three common macronutrient split options via this feature - it is a table formatted using the site's color palette for consistency, and displays to the user the details of each of the three options, together with a clickable radio button for each option. Upon the selection of a split option, a button will appear, allowing the user to click to apply the pre-defined split to their PDCT
+The user is presented with three common macronutrient split options via this feature - it is a table formatted using the site's color palette for consistency, and displays to the user the details of each of the three options, together with a clickable radio button for each option. 
+
+Upon the selection of a split option, a button will appear, allowing the user to click to apply the pre-defined split to their PDCT
 
 ![alt text](readme/macro_display.png)
 
@@ -248,18 +277,25 @@ The final feature on the macros page is a table to display the user's PDCT alloc
 
 **Food Selection Tables**
 
-This feature allows the user to select/de-select a range of food for inclusion/exclusion from their generated meal plan ideas. The table is structured via three fieldset elements, each with a legend title, and each containing several common sample foods per macronutrient category. Each food within each macronutrient category then has a checkbox which allows the user to specifiy their individua personalised choices, to be fed as inputs to the random meal generator:
+This feature allows the user to select/de-select a range of food for inclusion/exclusion from their generated meal plan ideas. The table is structured via three fieldset elements, each with a legend title, and each containing several common sample foods per macronutrient category. 
+
+Each food within each macronutrient category then has a checkbox which allows the user to specifiy their individua personalised choices, to be fed as inputs to the random meal generator:
 
 ![alt text](readme/food_selection.png)
 
 **Meal-Plan Generator Output Display**
 
-The final feature on the meal-generation page is the output display which houses the randomly generated meal plans for each meal. The table is formatted consistently with the site's color palette, and with the previous site tables - and displays a breakdown for the user of some meal plan ideas across breakfast, lunch, and dinner, with one food per macronutrient category. The meal plan generation is triggered by a button covered in the section above.
+The final feature on the meal-generation page is the output display which houses the randomly generated meal plans for each meal. 
+
+The table is formatted consistently with the site's color palette, and with the previous site tables, and displays a breakdown for the user of some meal plan ideas across breakfast, lunch, and dinner, with one food per macronutrient category. 
+
+The meal plan generation is triggered by a button covered in the section above.
 
 ![alt text](readme/meal_output.png)
 
 ### Features Left to implement:
 
+**Units of measurement - Metric and Imperial** - As illustrated on the overall concept wireframe, originally the intent was to allow multiple units of measurement for the calorie calculation inputs (e.g. height in centimeters, inches, meters or feet etc) depending on the user's preference - however in the interests of meeting project deadlines and avoiding scope creep, I decided to value engineer this feature out of the final product.
 
 **Calorie goal scenario PDCT adjustment:** - Originally it was my intention to include a feature to allow the user to apply a scalar to their PDCT to either lose, gain, or maintain weight. To lose weight, a 10% reduction would be applied to the PDCT, to gain weight, a 10% increase would be applied, and to maintain their current weight, no scalar would be applied. This feature was descoped due to project deadlines.
 
@@ -268,9 +304,26 @@ The final feature on the meal-generation page is the output display which houses
 **Download to CSV:** The final feature left to implement was a "download to CSV" option for the Meal generation page. This feature would have allowed the user to click a button to download a copy of their calorie target, macro splits, and meal plans which they could then save, or print for their own use. However I decided to descope the feature to prioritise other more critical elements of the site's functionality.
 
 ## Testing
-### Generic Testing
-- I completed testing of the website pages in multiple broswers: Chrome, Firefox, Edge, and Safari, and also used DevTools to confirm that the project is responsive, functional and aesthetically pleasing on all standard screen sizes
-- Additionally I tested the site on different devices, operating systems and form factors - Desktop & Laptop (Windows) Ipad Tablet (IOS), and Galaxy Note 10 Phone (Android)
+
+### Browser Testing
+I completed testing of the website pages in multiple broswers: Chrome, Firefox, Edge, and Safari, and also used DevTools to confirm that the project is responsive, functional and aesthetically pleasing on all standard screen sizes
+
+Google Chrome:
+
+Microsoft Edge:
+
+Firefox:
+
+Safari:
+
+### Device Testing
+Additionally I tested the site on different devices, operating systems and form factors - physically testing on Desktop (Windows) Ipad Tablet (IOS), and Galaxy Note 10 Phone (Android), and virtually testing multiple form factors via the dev tools auditing suite:
+
+Android Galaxy Note 10 (Phone):
+
+Windows 10 (Desktop):
+
+Apple Ipad (Tablet):
 
 ### HTML Testing
 During the testing phase I used the W3C Validator to confirm that all HTML code was error free & functioned as expected - the only warnings from the validation were related to articles & sections without headings - which are acceptable in this context as they are used in place of divs when working with flex in HTML to optimise the site layout
