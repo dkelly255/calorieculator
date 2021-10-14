@@ -26,7 +26,9 @@ The Site Scope is informed by the Strategy above, in terms of the Functional Spe
 
 To ensure control of the site scope my overall Project Management approach was to use a constantly evolving personal issue & item [Tracking File](scope_tracker.docx)
 
-This was simply a very basic Microsoft Word document which I kept live and regularly added to/deleted from as the project scope evolved - I found this helped in bringing the project scope through the development process and to identify and avoid issue such as scope creep which may otherwise been detrimental to the User Experience. The original document is included in the repository for context, and can be downloaded by [Clicking Here](scope_tracker.docx) 
+This was simply a very basic Microsoft Word document which I kept live and regularly added to/deleted from as the project scope evolved - I found this helped in bringing the project scope through the development process and to identify and avoid issue such as scope creep which may otherwise been detrimental to the User Experience. 
+
+The original document is included in the repository for context, and can be downloaded by [Clicking Here](scope_tracker.docx) 
 
 ### **Structure**
 The site is structured via a 4 page layout, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow - with access controls around the third and fourth apges, to ensure a user cannot prematurely attempt downstream calculations minimising the potential for errors/logic clashes. The four pages map as follows:
