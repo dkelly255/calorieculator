@@ -631,7 +631,8 @@ from which the user can select/unselect when creating their meal plans */
 #food-heading,
 p {
     padding-left: 5px;
-    text-align: left;
+    text-align: center;
+    
 }
 
 /* Align the headers of each food choice list towards the left of the fieldsets via legend text-alignment */

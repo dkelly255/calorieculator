@@ -5,12 +5,41 @@ const breakfastAllocation = 0.25;
 const lunchAllocation = 0.35;
 const dinnerAllocation = 0.40;
 
+
 // Add variable for the DOM element button with id "generate-meals" 
 let generateMealButton = document.getElementById("generate-meals");
+
+generateMealButton.classList.add("hide");
 
 // Add an eventlistener to generate meal button to listen for a "click" event and run the 
 // function "runMealGenerator when the event occurs"
 generateMealButton.addEventListener("click", runMealGenerator);
+
+// find all input fields
+const proteinInputs = document.querySelectorAll("input[class='protein-input']");
+console.log(proteinInputs[0].checked)
+const carbInputs = document.querySelectorAll("input[class='carb-input']");
+console.log(carbInputs)
+const fatInputs = document.querySelectorAll("input[class='fat-input']");
+console.log(fatInputs)
+const allInputs = document.querySelectorAll("input[type='checkbox']");
+console.log(allInputs)
+// add click event-listener for all input buttons
+allInputs.forEach((input) => {
+    input.addEventListener("click", checkAllInputs);
+});
+
+// check if any input buttons are 'checked'
+function checkAllInputs() {
+    // if the generateMealButton button is 'not' hidden, then unhide it
+    
+    if (generateMealButton.classList.contains("hide")) {
+        generateMealButton.classList.remove("hide");
+    }
+}
+
+
+
 
 // Defining the Function to generate meal ideas on click of button above
 function runMealGenerator() {

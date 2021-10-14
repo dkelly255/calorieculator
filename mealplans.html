@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <!-- Standard html head content tags -->
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Description for SEO & accessibility -->
-     <meta name="description" content="Calorie Calculation & Control">
-     <!-- SEO key terms for accessibility -->
-     <meta name="keywords" content="healthy eating, calorie control, macronutrient, meal-plan">
-     <!-- Link to css stylesheet for styling page content -->
-     <link rel="stylesheet" href="assets/css/style.css">
-     <!-- Link for importation of favicon to display in browser tab header -->
-     <link rel='icon' sizes="192x192" href="assets/images/favicon.png" type="image/x-icon">
-     <!-- Title for display in browser tab header -->
-     <title>CalorieCulator</title>
+    <!-- Standard html head content tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description for SEO & accessibility -->
+    <meta name="description" content="Calorie Calculation & Control">
+    <!-- SEO key terms for accessibility -->
+    <meta name="keywords" content="healthy eating, calorie control, macronutrient, meal-plan">
+    <!-- Link to css stylesheet for styling page content -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Link for importation of favicon to display in browser tab header -->
+    <link rel='icon' sizes="192x192" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- Title for display in browser tab header -->
+    <title>CalorieCulator</title>
 </head>
+
 <body>
     <!-- Main Header with logo & icon -->
     <header>
@@ -29,8 +31,8 @@
             <li><a href="macros.html">Macro-Mix</a></li>
             <li><a href="mealplans.html" class="active">Meal Plans</a></li>
         </ul>
-    </nav> 
-    
+    </nav>
+
     <!-- Main section of page - container to house child content and allow flex styling (see style.css) -->
     <main id="page3Container">
         <!-- Welcome message greeting with icon-->
@@ -42,107 +44,107 @@
         <section id="foodListContainer">
             <!-- Small section for direction to the user - instructions on how to proceed -->
             <section class="food-groups" id="generator_instructions">
-                <h3 id="food-heading">Instructions</h3>                
-                <p>Please select foods for inclusion in meal plans:</p>                
-            </section>            
+                <h3 id="food-heading">Instructions</h3>
+                <p>Please select at least one food from each group for inclusion in meal plans:</p>
+            </section>
             <!-- Fieldset to contain checkboxes for each Protein food option for selection by user -->
-            <fieldset class="food-groups">
+            <fieldset class="food-groups" id="proteinFieldset">
                 <legend>Protein:</legend>
-                    <!-- Each Protein input is housed in a div to enable dematcation & styling -->
-                    <div>
-                        <label for="chicken">Chicken</label>
-                        <input class="protein-input" type="checkbox" id="chicken" name="chicken" checked>
-                    </div>
-                    <div>
-                        <label for="turkey">Turkey</label>
-                        <input class="protein-input" type="checkbox" id="turkey" name="turkey" checked>
-                    </div>
-                    <div>
-                        <label for="fish">Fish</label>
-                        <input class="protein-input" type="checkbox" id="fish" name="fish" checked>
-                    </div>
-                    <div>
-                        <label for="beef">beef</label>
-                        <input class="protein-input" type="checkbox" id="beef" name="beef" checked>
-                    </div>
-                    <div>
-                        <label for="eggs">eggs</label>
-                        <input class="protein-input" type="checkbox" id="eggs" name="eggs" checked>
-                    </div>    
-                    <div>    
-                        <label for="pork">pork</label>
-                        <input class="protein-input" type="checkbox" id="pork" name="pork" checked> 
-                    </div>
-            </fieldset>         
-        <!-- Fieldset to contain checkboxes for each Carbohydrate food option -->
+                <!-- Each Protein input is housed in a div to enable dematcation & styling -->
+                <div>
+                    <label for="chicken">Chicken</label>
+                    <input class="protein-input" type="checkbox" id="chicken" name="chicken">
+                </div>
+                <div>
+                    <label for="turkey">Turkey</label>
+                    <input class="protein-input" type="checkbox" id="turkey" name="turkey">
+                </div>
+                <div>
+                    <label for="fish">Fish</label>
+                    <input class="protein-input" type="checkbox" id="fish" name="fish">
+                </div>
+                <div>
+                    <label for="beef">beef</label>
+                    <input class="protein-input" type="checkbox" id="beef" name="beef">
+                </div>
+                <div>
+                    <label for="eggs">eggs</label>
+                    <input class="protein-input" type="checkbox" id="eggs" name="eggs">
+                </div>
+                <div>
+                    <label for="pork">pork</label>
+                    <input class="protein-input" type="checkbox" id="pork" name="pork">
+                </div>
+            </fieldset>
+            <!-- Fieldset to contain checkboxes for each Carbohydrate food option -->
             <fieldset class="food-groups">
                 <legend>Carbohydrate:</legend>
-                    <!-- Each Carbohydrate input is housed in a div to enable dematcation & styling -->
-                    <div>
-                        <label for="bread">Bread</label>
-                        <input class="carb-input" type="checkbox" id="bread" name="bread" checked>
-                    </div>
-                    <div>
-                        <label for="pasta">Pasta</label>
-                        <input class="carb-input" type="checkbox" id="pasta" name="pasta" checked>
-                    </div>
-                    <div>
-                        <label for="rice">Rice</label>
-                        <input class="carb-input" type="checkbox" id="rice" name="rice" checked>
-                    </div>
-                    <div>
-                        <label for="oats">Oats</label>
-                        <input class="carb-input" type="checkbox" id="oats" name="oats" checked>
-                    </div>
-                    <div>
-                        <label for="cereal">Cereal</label>
-                        <input class="carb-input" type="checkbox" id="cereal" name="cereal" checked>
-                    </div>    
-                    <div>    
-                        <label for="quinoa">Quinoa</label>
-                        <input class="carb-input" type="checkbox" id="quinoa" name="quinoa" checked> 
-                    </div>
+                <!-- Each Carbohydrate input is housed in a div to enable dematcation & styling -->
+                <div>
+                    <label for="bread">Bread</label>
+                    <input class="carb-input" type="checkbox" id="bread" name="bread">
+                </div>
+                <div>
+                    <label for="pasta">Pasta</label>
+                    <input class="carb-input" type="checkbox" id="pasta" name="pasta">
+                </div>
+                <div>
+                    <label for="rice">Rice</label>
+                    <input class="carb-input" type="checkbox" id="rice" name="rice">
+                </div>
+                <div>
+                    <label for="oats">Oats</label>
+                    <input class="carb-input" type="checkbox" id="oats" name="oats">
+                </div>
+                <div>
+                    <label for="cereal">Cereal</label>
+                    <input class="carb-input" type="checkbox" id="cereal" name="cereal">
+                </div>
+                <div>
+                    <label for="quinoa">Quinoa</label>
+                    <input class="carb-input" type="checkbox" id="quinoa" name="quinoa">
+                </div>
             </fieldset>
             <!-- Fieldset to contain checkboxes for each Fat food option -->
             <fieldset class="food-groups">
                 <legend>Fat:</legend>
-                    <!-- Each Fat input is housed in a div to enable dematcation & styling -->
-                    <div>
-                        <label for="butter">Butter</label>
-                        <input class="fat-input" type="checkbox" id="butter" name="butter" checked>
-                    </div>
-                    <div>
-                        <label for="cheese">Cheese</label>
-                        <input class="fat-input" type="checkbox" id="cheese" name="cheese" checked>
-                    </div>
-                    <div>
-                        <label for="cream">Cream</label>
-                        <input class="fat-input" type="checkbox" id="cream" name="cream" checked>
-                    </div>
-                    <div>
-                        <label for="nuts">Nuts</label>
-                        <input class="fat-input" type="checkbox" id="nuts" name="nuts" checked>
-                    </div>
-                    <div>
-                        <label for="bacon">Bacon</label>
-                        <input class="fat-input" type="checkbox" id="bacon" name="bacon" checked>
-                    </div>    
-                    <div>    
-                        <label for="olive-oil">Olive Oil</label>
-                        <input class="fat-input" type="checkbox" id="olive-oil" name="olive-oil" checked> 
-                    </div>
-            </fieldset>   
-        <!-- End of foodListContainer section -->
-     <!-- Button to allow the user proceed to generate meal plan ideas when they have selected
+                <!-- Each Fat input is housed in a div to enable dematcation & styling -->
+                <div>
+                    <label for="butter">Butter</label>
+                    <input class="fat-input" type="checkbox" id="butter" name="butter">
+                </div>
+                <div>
+                    <label for="cheese">Cheese</label>
+                    <input class="fat-input" type="checkbox" id="cheese" name="cheese">
+                </div>
+                <div>
+                    <label for="cream">Cream</label>
+                    <input class="fat-input" type="checkbox" id="cream" name="cream">
+                </div>
+                <div>
+                    <label for="nuts">Nuts</label>
+                    <input class="fat-input" type="checkbox" id="nuts" name="nuts">
+                </div>
+                <div>
+                    <label for="bacon">Bacon</label>
+                    <input class="fat-input" type="checkbox" id="bacon" name="bacon">
+                </div>
+                <div>
+                    <label for="olive-oil">Olive Oil</label>
+                    <input class="fat-input" type="checkbox" id="olive-oil" name="olive-oil">
+                </div>
+            </fieldset>
+            <!-- End of foodListContainer section -->
+            <!-- Button to allow the user proceed to generate meal plan ideas when they have selected
         All foods they wish to include/exclude -->
-        <section id="generate-container">            
-            <button id="generate-meals">Generate A Meal Plan</button>                
-        </section>       
-    </section>
-       
+            <section id="generate-container">
+                <button id="generate-meals" >Generate A Meal Plan</button>
+            </section>
+        </section>
+
         <!-- This section houses the output of the meal plan generator & will display the randomly selected foods
         in a series of tables below - across Breakfast, Lunch and Dinner  -->
-        <section id="mealplan-container">         
+        <section id="mealplan-container">
             <!-- Breakfast section of Mealplan generation ideas -->
             <section class="meal-box" id="breakfast">
                 <!-- This Breakfast table will be populated by Javascript with the user's personalised daily calorie target, split
@@ -156,7 +158,7 @@
                             <th>Calories</th>
                         </tr>
                     </thead>
-                        
+
                     <tbody>
                         <tr>
                             <td>Protein</td>
@@ -181,7 +183,7 @@
                             <td id="breakfast-total-food"></td>
                             <td id="breakfast-total-grams"></td>
                             <td id="breakfast-total-calories"></td>
-                        </tr>   
+                        </tr>
                     </tbody>
                 </table>
             </section>
@@ -198,8 +200,8 @@
                             <th>Calories</th>
                         </tr>
                     </thead>
-                        
-                    <tbody>                        
+
+                    <tbody>
                         <tr>
                             <td>Protein</td>
                             <td id="lunch-protein-food"></td>
@@ -223,7 +225,7 @@
                             <td id="lunch-total-food"></td>
                             <td id="lunch-total-grams"></td>
                             <td id="lunch-total-calories"></td>
-                        </tr>   
+                        </tr>
                     </tbody>
                 </table>
             </section>
@@ -240,7 +242,7 @@
                             <th>Calories</th>
                         </tr>
                     </thead>
-                        
+
                     <tbody>
                         <tr>
                             <td>Protein</td>
@@ -265,7 +267,7 @@
                             <td id="dinner-total-food"></td>
                             <td id="dinner-total-grams"></td>
                             <td id="dinner-total-calories"></td>
-                        </tr>   
+                        </tr>
                     </tbody>
                 </table>
             </section>
@@ -281,7 +283,7 @@
                     </thead>
                     <tbody>
                         <tr id="grandSubTotal">
-                            <td id="total-header">All Meals</td>                            
+                            <td id="total-header">All Meals</td>
                             <td id="total-total-grams"></td>
                             <td id="total-total-calories"></td>
                         </tr>
@@ -299,28 +301,30 @@
             <p>Connect With Us:</p>
             <!-- Social media links, with clickable icons -->
             <ul class="socials">
-                <li><a href="http://facebook.com" target="_blank" rel="noopener" 
+                <li><a href="http://facebook.com" target="_blank" rel="noopener"
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="http://instagram.com" target="_blank" rel="noopener" 
-                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="http://twitter.com" target="_blank" rel="noopener" 
+                <li><a href="http://instagram.com" target="_blank" rel="noopener"
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li><a href="http://twitter.com" target="_blank" rel="noopener"
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="http://youtube.com" target="_blank" rel="noopener" 
+                <li><a href="http://youtube.com" target="_blank" rel="noopener"
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="http://linkedin.com" target="_blank" rel="noopener" 
+                <li><a href="http://linkedin.com" target="_blank" rel="noopener"
                         aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="https://github.com/dkelly255" target="_blank" rel="noopener" 
-                            aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://github.com/dkelly255" target="_blank" rel="noopener"
+                        aria-label="Visit Us On Youtube (Opens in new browser)"><i class="fab fa-github"></i></a></li>
             </ul>
         </section>
         <!-- copyright statements for footer -->
         <section class="footer-bottom">
             <p>Copyrights &copy; CalorieCulator 2021. All rights reserved.</p>
-        </section>    
+        </section>
     </footer>
     <!-- fontawesome scripts for linking into page content -->
     <script src="https://kit.fontawesome.com/45a746d079.js" crossorigin="anonymous"></script>
     <!-- Javascript functionality programmed on meals.js file and added to page via this scipt tag -->
     <script src="assets/js/meals.js"></script>
 </body>
+
 </html>
