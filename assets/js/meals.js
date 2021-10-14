@@ -1,9 +1,9 @@
 /* jshint esversion: 8 */
 
 // Fixed allocation of percentage calories per meal
-const breakfastAllocation = 0.30;
+const breakfastAllocation = 0.25;
 const lunchAllocation = 0.35;
-const dinnerAllocation = 0.35;
+const dinnerAllocation = 0.40;
 
 // Add variable for the DOM element button with id "generate-meals" 
 let generateMealButton = document.getElementById("generate-meals");
