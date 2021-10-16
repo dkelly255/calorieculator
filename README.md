@@ -58,7 +58,7 @@ To drive the early site interface & navigvation design efforts, I am using wiref
 
 [Click here](calculations_wireframe.xlsx) to view & download original Excel File - snapshot below:
 
-![alt text](readme/site_plan.png)
+![alt text](readme/site-plan.png)
 
 The full original document is also linked above downloadable from the repository should there be a need to dive down further into the detailed formulas & mechanics originally put together as a guide:
 
