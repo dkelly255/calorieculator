@@ -775,3 +775,7 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
     text-decoration: none;
     cursor: pointer;
 }
+
+#ageModal {
+    z-index: 2;
+}
