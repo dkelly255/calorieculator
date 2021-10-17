@@ -474,6 +474,7 @@ Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https:
 - The Navigation Bar & Logo ideas were apated from ideas in a tutorial from Skillthrive [Navbar Tutorial](https://www.youtube.com/watch?v=PwWHL3RyQgk)
 - The Footer was adapted from ideas in a tutorial from Code Opacity [Footer Tutorial](https://www.youtube.com/watch?v=zdA3qZNH1vc)
 - The Modal programming was adapted from a W3Schools HowTo on CSS/Javascript Modals [Modals HowTo](https://www.w3schools.com/howto/howto_css_modals.asp)
+- Javascript function checkAllInputs was arrived at via [Stack Overflow](https://stackoverflow.com/) as noted in the javascript comments on meal.js. User [derpischer](https://stackoverflow.com/users/3776927/derpirscher) provided guidance on how to solve my problem of having the meal generation button hidden until selection of at least one of each list of 6x foods per macro group had occured. The link to the original question and answer on Stack Overflow are shown [by clicking here](https://stackoverflow.com/questions/69571703/how-can-i-hide-a-button-until-at-least-three-input-checkboxes-one-from-each-sep) and the comments in meals.js clearly call out the credits for this code adaption being attributed to derpischer & Stack Overflow.
 
  ### Content
 
@@ -482,7 +483,7 @@ Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https:
  - The [Harris-Benedict equation](https://www.omnicalculator.com/health/bmr-harris-benedict-equation#what-is-the-harris-benedict-equation) was used for the activity level adjustments, and was sourced from [Omnicalculator.com](https://www.omnicalculator.com/health/bmr-harris-benedict-equation#what-is-the-harris-benedict-equation) 
  - The [Macronutrient split options](https://betterme.world/articles/macro-split-for-cutting/) ideas were taken from [betterme.world](https://betterme.world/articles/macro-split-for-cutting/)
  - The [calories per gram estimates](https://www.nhs.uk/live-well/healthy-weight/calorie-checker/) on each food group were taken from [NHS.co.uk](https://www.nhs.uk/live-well/healthy-weight/calorie-checker/)
- - Javascript function checkAllInputs was arrived at via [Stack Overflow](https://stackoverflow.com/) as noted in the javascript comments on meal.js. User [derpischer](https://stackoverflow.com/users/3776927/derpirscher) provided guidance on how to solve my problem of having the meal generation button hidden until selection of at least one of each list of 6x foods per macro group had occured. The link to the original question and answer on Stack Overflow are shown [by clicking here](https://stackoverflow.com/questions/69571703/how-can-i-hide-a-button-until-at-least-three-input-checkboxes-one-from-each-sep) and the comments in meals.js clearly call out the credits for this code adaption being attributed to derpischer & Stack Overflow.
+ 
 
  ### Media
 - As per above - The images in the Site were taken from [Pixabay](https://pixabay.com/)
