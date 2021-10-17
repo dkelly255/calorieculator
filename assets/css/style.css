@@ -737,7 +737,7 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 3; /* Sit on top */
     padding-top: 35vh; /* Location of the box */
     left: 0;
     top: 0;
@@ -766,7 +766,7 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
     color: #aaaaaa;
     float: right;
     font-size: 28px;
-    font-weight: bold;
+    font-weight: bold;    
 }
 
 .close:hover,
@@ -776,6 +776,6 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
     cursor: pointer;
 }
 
-#ageModal {
+#activityModal {
     z-index: 2;
 }
