@@ -1,12 +1,14 @@
 /* jshint esversion: 8 */
 
-
-
-// Set a variable equal to the DOM element button with id "`carry`-pdct" 
+// Set a variable equal to the DOM element button with id "carry-pdct" 
 let carryPdct = document.getElementById("carry-pdct");
 
 // Attach an event listener to the variable, to run function "importPdct" when a "click" event occurs
 carryPdct.addEventListener("click", importPdct);
+
+let macroSplitDisplay = document.getElementById("choose-macro");
+macroSplitDisplay.classList.add("hide");
+
 
 // Defining the importPdct function to be ran by event listener above
 function importPdct() {
@@ -18,6 +20,7 @@ function importPdct() {
         document.getElementById("pdct-box").innerHTML = "";
     }
     document.getElementById("pdct-box").innerHTML = localStorage.pdct;
+    macroSplitDisplay.classList.remove("hide");
 }
 
 let linkMeals = document.getElementById("linkMeals");
