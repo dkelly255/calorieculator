@@ -4,7 +4,7 @@
 - CalorieCulator is a lifestyle improvement site allowing users to calculate a personalised daily calorie target, apply a range of Macronutrient options, and generate sample meal plans
 - The site will initially request the user to input several key measurements (height, weight, age etc) - these measurements will then be used by JavaScript to populate a standard formula for base-metabolic-rate (BMR) and the Harris-Benedict Equation (both detailed further below) to calculate and return the user's Personalised Daily Calorie Target (PDCT)
 - The next step is to ask the user to choose their macronutrient goals from a list of three options - when combined with the calorie output from step 1, this will allow Javascript to calculate a simple personalised protein/carb/fat macronutrient split for the user
-- Finally the site will show the user a list of common foods per macronutrient category - the user will select/unselect their preferences & the site will use the list to generate simple meal plan ideas that fit within the user's Calorie & Macro calculations, generating combinations of food options from each category's inventory of foods to provide variety 
+- Finally the site will show the user a list of common foods per macronutrient category - the user will select/unselect their preferences & Javascript will use the list of selections to generate simple meal plan ideas that fit within the user's personal Calorie & Macro calculations, generating combinations of food options from each category's inventory of foods to provide variety 
 
 ![alt text](readme/images/am-i-responsive.png)
 
@@ -401,6 +401,7 @@ I used the Jshint.com Javascript validation service to validate all of the site'
 ![alt text](readme/images/macros-js-validation.png)
 
 *File: meals.js - javascript supporting mealplans.html:*
+
 ![alt text](readme/images/meals-js-validation.png)
 
 ### Accessibility Testing
