@@ -6,7 +6,7 @@
 - The next step is to ask the user to choose their macronutrient goals from a list of three options - when combined with the calorie output from step 1, this will allow Javascript to calculate a simple personalised protein/carb/fat macronutrient split for the user
 - Finally the site will show the user a list of common foods per macronutrient category - the user will select/unselect their preferences & the site will use the list to generate simple meal plan ideas that fit within the user's Calorie & Macro calculations, generating combinations of food options from each category's inventory of foods to provide variety 
 
-![alt text](readme/am_i_responsive.png)
+![alt text](readme/am-i-responsive.png)
 
 ## User Experience
 
@@ -72,7 +72,7 @@ The full original document is also linked above downloadable from the repository
 
 *Calorie Calculation Page:*
 
-![alt text](readme/calorie_calculation.png)
+![alt text](readme/calorie-calculation.png)
 
 *Macro Mix Page HTML:*
 
@@ -170,7 +170,7 @@ The first four Planes of UX enabled the Surface Plane to take shape in terms of 
     - I used the [Coolors](https://coolors.co) color consultation website to generate a [color palette](https://coolors.co/074a88-ffffff-000000) to underpin the content of the site
     - This consists of [Yale Blue](https://coolors.co/074a88-ffffff-000000) (#074A88) and [Black](https://coolors.co/074a88-ffffff-000000) (#000000) backgrounds and highlights behind [White](https://coolors.co/074a88-ffffff-000000) (#FFFFFF) text and borders to ensure sufficient contrast, and that foreground text is never distracted by background imagery
 
-    ![alt text](readme/color_palette.png)
+    ![alt text](readme/color-palette.png)
 - #### Typography
     - I chose the [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserrat) font to aid readability & help promote a positive emotional response from the external users of the site.  
     ![alt text](readme/typography.png)
@@ -214,7 +214,7 @@ The site footer contains the CalorieCulator logo, as well as clickable links to 
 
 Each page contains a header, which either welcomes the user (Home Page) or gives the user direction and instruction on the function of the current page (Calorie Calculation, Macro-Mix, and Meal Plan pages). The Site headers are set against a black background, with white text and white borders to ensure a high contrast ratio, promote consistency in the look & feel of the site across pages, and to help avoid the user becoming disorientated as they anvigate the site flow & functionality. For consistency & readability, the same format is used to display the user's PDCT on the calorie caluclation page and the macro-mix pages.
 
-![alt text](readme/page_titles.png)
+![alt text](readme/page-titles.png)
 
 **Navigation Buttons:** 
 
@@ -230,7 +230,7 @@ This is achieved via Javascript event listeners calibrated to unhide the "Next S
 
 The Calorie Calculation form takes inputs from the user via HTML data entry fields allowing Javascript to use these inputs as variables in a pre-determined set of formulas, and returning a personalised calorie target for the user. The form is set against a dark background with slight transparency, to ensure foreground text is not distracted by the background imagery, and features three numeric input fields for age, weight & height, as well as two drop down menus for gender and activity level selection. Lastly, the form also contains a calculation button feature, further detailed below
 
-![alt text](readme/calorie_form.png)
+![alt text](readme/calorie-form.png)
 
 **Data-entry Modals**
 
@@ -241,19 +241,24 @@ These modals are configured to appear only when data entry guidelines have been 
 The modals will trigger when a field has a numeric value outside a pre-defined range (age, weight or height), has not been selected from a drop-down menu (gender & activity-level), or the field has been left blank (all fields) - thus helping ensure good quality data is input into the javascript calculations.
 
 Age check modal:
-![alt text](readme/age_modal.png)
+
+![alt text](readme/age-modal.png)
 
 Weight check modal:
-![alt text](readme/weight_modal.png)
+
+![alt text](readme/weight-modal.png)
 
 Height check modal:
-![alt text](readme/height_modal.png)
+
+![alt text](readme/height-modal.png)
 
 Gender check modal:
-![alt text](readme/gender_modal.png)
+
+![alt text](readme/gender-modal.png)
 
 Activity-Level check modal:
-![alt text](readme/activity_modal.png)
+
+![alt text](readme/activity-modal.png)
 
 
 **Calculation Buttons:** 
@@ -262,19 +267,23 @@ The site features four calculation/instruction buttons at various points - each 
 
 The Calorie Calculation page contains a "Calculate My PDCT" button - triggering the Javascript PDCT calculation function & output storage via an event listener, programmed on script.js.  
 
-![alt text](readme/calculate_button.png)
+![alt text](readme/calculate-button.png)
 
 The Macro-mix page contains a "Begin - Import My PDCT" button - triggering Javascript to get the previously calculated PDCT from local storage & display for the user in preparation for the application of the Macronutrient split options to follow
 
-![alt text](readme/macro_button_1.png)
+![alt text](readme/macro-button-1.png)
 
-And also contains a button which is programmed to be hidden until the user has selected a Macronutrient split option, when the user has selected an option, Javascript will use CSS attributes & the DOM model to make the button visible & clickable for the user to calculate & display their personal macro split
+This page additionally contains a button which is programmed to be hidden until the user has selected a Macronutrient split option, when the user has selected an option, Javascript will use CSS attributes & the DOM model to make the button visible & clickable for the user to calculate & display their personal macro split
 
-![alt text](readme/macro_button_2.png)
+![alt text](readme/macro-button-2.png)
+
+On the Meal Generation page, the first clickable button gives the user the option to "select all" available foods from each food group. This is in consideration of the potential time to be saved for most users, and will save on mouse clicks/screen taps in selecting multiple foods. I have used Javascript to program the instructions to select all the input boxes when the button is clicked, as well as to unhide the "generate meals" button (covered next below)
+
+![alt text](readme/selectall.png)
 
 Lastly, the final calculate button is on the Meal Plan Generator page, where the user can click a button after selecting their desired food choices, to trigger the generation of meal plan ideas. This button is also programmed to be hidden until the user has selected at least one food from each group - to prevent any calculation errors and maintain positive User Experience
 
-![alt text](readme/meal_button.png)
+![alt text](readme/meal-button.png)
 
 **Macronutrient Split Option Display/Selector**
 
@@ -282,31 +291,29 @@ The user is presented with three common macronutrient split options via this fea
 
 Upon the selection of a split option, a button will appear, allowing the user to click to apply the pre-defined split to their PDCT
 
-![alt text](readme/macro_display.png)
+![alt text](readme/macro-display.png)
 
 **Personal Macro Calorie Allocation table**
 
-The final feature on the macros page is a table to display the user's PDCT allocated according to their chosen Macronutrient mix. This table is formatted consistently and uses the same color palette as the rest of the site:
+The final feature on the macros page is a table to display the user's PDCT allocated according to their chosen Macronutrient mix. This table is formatted consistently and uses the same color palette as the rest of the site, and will also remain hidden via Javascript & CSS until pre-requisite requirements have been completed by the user from a flow-control and UX perspective: 
 
-![alt text](readme/personal_macros.png)
+![alt text](readme/personal-macros.png)
 
 **Food Selection Tables**
 
 This feature allows the user to select/de-select a range of food for inclusion/exclusion from their generated meal plan ideas. The table is structured via three fieldset elements, each with a legend title, and each containing several common sample foods per macronutrient category. 
 
-Each food within each macronutrient category then has a checkbox which allows the user to specifiy their individua personalised choices, to be fed as inputs to the random meal generator, and is controlled by a Javascript function ensuring meal generation cannot be triggered until sufficient food selections have been made by the user:
+Each food within each macronutrient category then has a checkbox which allows the user to specifiy their individual personalised choices, to be fed as inputs to the random meal generator, and is controlled by a Javascript function ensuring meal generation cannot be triggered until sufficient food selections have been made by the user. The Select All button helps save time in circumstances where a user may wish to pick many/all foods from the options.
 
-![alt text](readme/food_selection.png)
+![alt text](readme/food-selection.png)
 
 **Meal-Plan Generator Output Display**
 
-The final feature on the meal-generation page is the output display which houses the randomly generated meal plans for each meal. 
+The final feature on the meal-generation page is the output display which houses the randomly generated meal plans for each meal - this table is hidden via javascript until the user has completed the pre-requisite activities of confirming their food selections from each macronutrient group, and will continuosly update each time the user clicks to generate a meal plan.
 
-The table is formatted consistently with the site's color palette, and with the previous site tables, and displays a breakdown for the user of some meal plan ideas across breakfast, lunch, and dinner, with one food per macronutrient category. 
+The table is formatted consistently with the site's color palette & previous site tables, and displays a breakdown for the user of some meal plan ideas across breakfast, lunch, and dinner, with one food per macronutrient category - and the actual meal plan generation is triggered by the "generate" button covered in the previous section above.
 
-The meal plan generation is triggered by a button covered in the section above.
-
-![alt text](readme/meal_output.png)
+![alt text](readme/meal-output.png)
 
 ### Features Left to implement:
 
@@ -350,7 +357,7 @@ Additionally I tested the site on different devices, operating systems and form 
 
 - **Windows 10 (Desktop):**
 
-![alt text](readme/windows_pc.png)
+![alt text](readme/windows-pc.png)
 
 - **Apple Ipad (Tablet):**
 
@@ -361,36 +368,36 @@ During the testing phase I used the W3C Validator to confirm that all HTML code 
 
 **Home Page:**
 
-![alt text](readme/home_html_validation.png)
+![alt text](readme/home-html-validation.png)
 
 **Calorie Calculation Page:**
 
-![alt text](readme/calories_html_validation.png)
+![alt text](readme/calories-html-validation.png)
 
 **Macro Mix Page HTML:**
 
-![alt text](readme/macros_html_validation.png)
+![alt text](readme/macros-html-validation.png)
 
 **Meal Planning Page HTML:**
 
-![alt text](readme/mealplans_html_validation.png)
+![alt text](readme/mealplans-html-validation.png)
 
 ### CSS Testing
 - The CSS Jigsaw Validator was used to confirm that the CSS code was error free & functioned as expected.
 - As my CSS Code was contained in a single stylesheet (style.css) - I was able to validate the full website's styling via one direct input
 
-![alt text](readme/css_validation.png)
+![alt text](readme/css-validation.png)
 
 ### Javascript Testing
 
 I used the Jshint.com Javascript validation service to validate all of the site's Javascript, and confirmed that no errors or warnings were present per illustrations below:
 
 *script.js - javascript supporting calories.html:*
-![alt text](readme/script_js_validation.png)
+![alt text](readme/script-js-validation.png)
 *macros.js - javascript supporting macros.html:*
-![alt text](readme/macros_js_validation.png)
+![alt text](readme/macros-js-validation.png)
 *meals.js - javascript supporting mealplans.html:*
-![alt text](readme/meals_js_validation.png)
+![alt text](readme/meals-js-validation.png)
 
 ### Accessibility Testing
 The DevTools suite, and Lighthouse were used to audit the site's accessibility and found the only accessiblity deficiencies in the site were driven by Search Engine Optimisation 
@@ -399,37 +406,37 @@ The **pre-SEO adjusted** Lighthouse scores (with SEO deficiency) are shown below
 
 *Homepage Lighthouse Scores (pre-SEO adjustment):*
 
-![alt text](readme/home_lighthouse.png)
+![alt text](readme/home-lighthouse.png)
 
 *Calorie Calculation Page Lighthouse Scores (pre-SEO adjustment):*
 
-![alt text](readme/calories_lighthouse.png)
+![alt text](readme/calories-lighthouse.png)
 
 *Macro Split Page Lighthouse Scores (pre-SEO adjustment):*
 
-![alt text](readme/macros_lighthouse.png)
+![alt text](readme/macros-lighthouse.png)
 
 *Meal Generation Page Lighthouse Scores (pre-SEO adjustment):*
 
-![alt text](readme/meals_lighthouse.png)
+![alt text](readme/meals-lighthouse.png)
 
 After adding a description and keywords to the Head of each HTML page, the SEO scores were improved to 100%, leaving the final Lighthouse/Accesibilty scores per page below:
 
 *Homepage Lighthouse Scores (post-SEO adjustment):*
 
-![alt text](readme/post_seo_home.png)
+![alt text](readme/post-seo-home.png)
 
 *Calorie Calculation Page Lighthouse Scores (post-SEO adjustment):*
 
-![alt text](readme/post_seo_calories.png)
+![alt text](readme/post-seo-calories.png)
 
 *Macro Split Page Lighthouse Scores (post-SEO adjustment):*
 
-![alt text](readme/post_seo_macros.png)
+![alt text](readme/post-seo-macros.png)
 
 *Meal Generation Page Lighthouse Scores (post-SEO adjustment):*
 
-![alt text](readme/post_seo_meals.png)
+![alt text](readme/post-seo-meals.png)
 
 ### Resolved Bugs
 - Initially I found that my Javascript formulas were not working - however this was simply because I needed to add a script tag with a separate Javascript (.js) files for each HTML page and was easily resolved
@@ -438,15 +445,15 @@ After adding a description and keywords to the Head of each HTML page, the SEO s
 
 Protein Bug Example:
 
-![alt text](readme/generator_bug1_protein.png)
+![alt text](readme/generator-bug1-protein.png)
 
 Carbohydrate Bug Example:
 
-![alt text](readme/generator_bug1_carbs.png)
+![alt text](readme/generator-bug1-carbs.png)
 
 Fat Bug Example:
 
-![alt text](readme/generator_bug1_fat.png)
+![alt text](readme/generator-bug1-fat.png)
 
 I identified and solved this issue by removing the negative one adjustments from all sections of the function:
 
@@ -473,13 +480,13 @@ Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https:
 ### Code 
 - The Navigation Bar & Logo ideas were apated from ideas in a tutorial from Skillthrive [Navbar Tutorial](https://www.youtube.com/watch?v=PwWHL3RyQgk)
 - The Footer was adapted from ideas in a tutorial from Code Opacity [Footer Tutorial](https://www.youtube.com/watch?v=zdA3qZNH1vc)
-- The Modal programming was adapted from a W3Schools HowTo on CSS/Javascript Modals [Modals HowTo](https://www.w3schools.com/howto/howto_css_modals.asp)
+- The Modal programming was adapted from a W3Schools HowTo on CSS/Javascript Modals [Modals HowTo](https://www.w3schools.com/howto/howto-css-modals.asp)
 - Javascript function checkAllInputs was arrived at via [Stack Overflow](https://stackoverflow.com/) as noted in the javascript comments on meal.js. User [derpischer](https://stackoverflow.com/users/3776927/derpirscher) provided guidance on how to solve my problem of having the meal generation button hidden until selection of at least one of each list of 6x foods per macro group had occured. The link to the original question and answer on Stack Overflow are shown [by clicking here](https://stackoverflow.com/questions/69571703/how-can-i-hide-a-button-until-at-least-three-input-checkboxes-one-from-each-sep) and the comments in meals.js clearly call out the credits for this code adaption being attributed to derpischer & Stack Overflow.
 
  ### Content
 
  - The [Hero Image](https://pixabay.com/photos/salad-food-italian-tasty-wooden-2068220/) was sourced from [Pixabay](https://pixabay.com/photos/salad-food-italian-tasty-wooden-2068220/) and is free for commercial use with no attribution required
- - The [BMR](https://www.medicinenet.com/what_is_the_formula_to_calculate_bmr/article.htm) (Base Metabolic Rate) formulas for both Male & Female were taken from [Medicinenet.com](https://www.medicinenet.com/what_is_the_formula_to_calculate_bmr/article.htm)
+ - The [BMR](https://www.medicinenet.com/what-is-the-formula-to-calculate-bmr/article.htm) (Base Metabolic Rate) formulas for both Male & Female were taken from [Medicinenet.com](https://www.medicinenet.com/what-is-the-formula-to-calculate-bmr/article.htm)
  - The [Harris-Benedict equation](https://www.omnicalculator.com/health/bmr-harris-benedict-equation#what-is-the-harris-benedict-equation) was used for the activity level adjustments, and was sourced from [Omnicalculator.com](https://www.omnicalculator.com/health/bmr-harris-benedict-equation#what-is-the-harris-benedict-equation) 
  - The [Macronutrient split options](https://betterme.world/articles/macro-split-for-cutting/) ideas were taken from [betterme.world](https://betterme.world/articles/macro-split-for-cutting/)
  - The [calories per gram estimates](https://www.nhs.uk/live-well/healthy-weight/calorie-checker/) on each food group were taken from [NHS.co.uk](https://www.nhs.uk/live-well/healthy-weight/calorie-checker/)
