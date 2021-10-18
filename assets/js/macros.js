@@ -67,7 +67,7 @@ function splitMacros(event) {
         linkMeals.classList.remove("hide");
         toFinalStepBtn.classList.remove("hide");
         yourMacrosSection.classList.remove("hide");
-    };
+    }
 
     let protein, carbs, fat;
     // Apply the "standard" macronutrient split if "standard" radio button has been selected by user 

@@ -46,25 +46,23 @@ function calculateCalories(event) {
     const heightSpan = document.getElementById("heightSpan");
     const genderSpan = document.getElementById("genderSpan");
     const activitySpan = document.getElementById("activitySpan");
-    // Create an array to store the contents of numeric data entry variables for flow control/checks
-    const checks = [age, weight, height];
     /* First "if" statement within function - checks if inputs are populated, and whether the user is male or female, 
     and uses the appropriate BMR formula accordingly, whilst alerting user via modals if inputs have not been populated*/
     if (age < 18 || age > 95) {
         ageModal.style.display = "block";
         ageSpan.onclick = function () {
             ageModal.style.display = "none";
-        }
+        };
     } else if (weight < 85 || weight > 800) {
         weightModal.style.display = "block";
         weightSpan.onclick = function () {
             weightModal.style.display = "none";
-        }
+        };
     } else if (height < 36 || height > 107) {
         heightModal.style.display = "block";
         heightSpan.onclick = function () {
             heightModal.style.display = "none";
-        }
+        };
     } else if (gender == "male") {
         bmr = 66 + (6.3 * weight) + (12.9 * height) - (6.8 * age);
     } else if (gender == "female") {
@@ -73,7 +71,7 @@ function calculateCalories(event) {
         genderModal.style.display = "block";
         genderSpan.onclick = function () {
             genderModal.style.display = "none";
-        }
+        };
     }
     /* Second if statement which checks which Activity level the user has selected, and sets the value
     of the "multiplier" variable accordingly, and alerts the user if an activity level has not been selected*/
@@ -91,7 +89,7 @@ function calculateCalories(event) {
         activityModal.style.display = "block";
         activitySpan.onclick = function () {
             activityModal.style.display = "none";
-        }
+        };
     }
     /* Declaring & defining the variable "calories" which is the output of the formula and holds the user's
     personal daily calorie target calculation*/
@@ -112,5 +110,5 @@ function calculateCalories(event) {
         pdctSection.classList.remove("hide");
         nextStepBtn.classList.remove("hide");
         linkMacro.classList.remove("hide");
-    };
+    }
 }

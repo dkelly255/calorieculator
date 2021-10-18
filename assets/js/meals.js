@@ -12,12 +12,12 @@ generateMealButton.classList.add("hide");
 mealDisplayTable.classList.add("hide");
 
 // Add functionality for a "select all" option on foods list to improve UX
-let selectAll = document.getElementById("selectAll")
-selectAll.addEventListener("click", tickAllFoods)
+let selectAll = document.getElementById("selectAll");
+selectAll.addEventListener("click", tickAllFoods);
 
 // function to iterate over all available foods, tick the checkboxes & unhide the next step button
 function tickAllFoods() {
-    let foods = document.getElementsByTagName("input")
+    let foods = document.getElementsByTagName("input");
     for (let i = 0; i < foods.length; i++) {
         if (!foods[i].checked) {
             foods[i].checked = true;

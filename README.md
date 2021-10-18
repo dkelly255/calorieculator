@@ -392,11 +392,15 @@ During the testing phase I used the W3C Validator to confirm that all HTML code 
 
 I used the Jshint.com Javascript validation service to validate all of the site's Javascript, and confirmed that no errors or warnings were present per illustrations below:
 
-*script.js - javascript supporting calories.html:*
-![alt text](readme/images/script-js-validation.png)
-*macros.js - javascript supporting macros.html:*
+*File: calories.js - javascript supporting calories.html:*
+
+![alt text](readme/images/calories-js-validation.png)
+
+*File: macros.js - javascript supporting macros.html:*
+
 ![alt text](readme/images/macros-js-validation.png)
-*meals.js - javascript supporting mealplans.html:*
+
+*File: meals.js - javascript supporting mealplans.html:*
 ![alt text](readme/images/meals-js-validation.png)
 
 ### Accessibility Testing
