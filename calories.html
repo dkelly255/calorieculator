@@ -64,7 +64,7 @@
                     <input class="height-input pdctInput" id="height" name="height" type="number" required>
                 </section>
 
-                <section>
+                <section class="calorieSelects">
                     <!-- Gender input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
                     <label for="gender">Gender:</label>
                     <select class="pdctInput" name="gender-options" id="gender">
@@ -74,16 +74,18 @@
                     </select>
                 </section>
 
-                <!-- Activity input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
-                <label for="activity">Activity Level:</label>
-                <select class="pdctInput" name="activity-options" id="activity">
-                    <option value="">Please Select</option>
-                    <option value="sedentary">Sedentary</option>
-                    <option value="lightlyActive">Lightly Active</option>
-                    <option value="moderatelyActive">Moderately Active</option>
-                    <option value="veryActive">Very Active</option>
-                    <option value="extraActive">Extra Active</option>
-                </select>
+                <section class="calorieSelects">
+                    <!-- Activity input - drop-down menu utilised to reflect limited selections and utilised downstream in js logic -->
+                    <label for="activity">Activity Level:</label>
+                    <select class="pdctInput" name="activity-options" id="activity">
+                        <option value="">Activity Level</option>
+                        <option value="sedentary">Sedentary</option>
+                        <option value="lightlyActive">Lightly Active</option>
+                        <option value="moderatelyActive">Moderately Active</option>
+                        <option value="veryActive">Very Active</option>
+                        <option value="extraActive">Extra Active</option>
+                    </select>
+                </section>
                 <!-- Button for user to click to trigger calculation of PDCT upon completion of form inputs above -->
                 <section class="button-container">
                     <button id="calculate-pdct">Calculate My PDCT</button>

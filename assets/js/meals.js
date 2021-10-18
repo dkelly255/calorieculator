@@ -6,11 +6,27 @@ const lunchAllocation = 0.35;
 const dinnerAllocation = 0.40;
 
 
-// Add variable for the DOM element button with id "generate-meals" 
+// Add variable for the DOM element buttons with ids below & add "hide class" 
 let generateMealButton = document.getElementById("generate-meals");
 let mealDisplayTable = document.getElementById("mealplan-container");
 generateMealButton.classList.add("hide");
 mealDisplayTable.classList.add("hide");
+
+// Add functionality for a "select all" option on foods list to improve UX
+let selectAll = document.getElementById("selectAll")
+selectAll.addEventListener("click", tickAllFoods)
+
+// function to iterate over all available foods, tick the checkboxes & unhide the next step button
+function tickAllFoods() {
+    let foods = document.getElementsByTagName("input")
+    console.log(foods)
+    for (let i=0; i < foods.length; i++) {
+        if (!foods[i].checked) {
+            foods[i].checked = true;
+        }
+    }
+    generateMealButton.classList.remove("hide");
+}
 
 // Add an eventlistener to generate meal button to listen for a "click" event and run the 
 // function "runMealGenerator when the event occurs"

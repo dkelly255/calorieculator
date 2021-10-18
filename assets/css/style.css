@@ -377,8 +377,9 @@ footer {
 /* setting flex display properties for overall form container main element within which the PDCT data entry occurs */
 .formcontainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content:center ;
     align-items: center;
     color: white;
     margin-top: 15px;
@@ -434,6 +435,16 @@ parent container using flex */
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 20px;
+}
+
+.calorieSelects {
+    display: flex;
+    justify-content: space-between;
+}
+
+select {
+    height:23px;
+    max-width:150px;
 }
 
 /* Setting styling for PDCT Display Box to display user's PDCT after calculation*/
@@ -777,4 +788,8 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
 
 #activityModal {
     z-index: 2;
+}
+
+#selectAll {
+    margin-top: 5px;
 }
