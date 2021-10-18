@@ -175,18 +175,17 @@ The first four Planes of UX enabled the Surface Plane to take shape in terms of 
     - I chose the [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserrat) font to aid readability & help promote a positive emotional response from the external users of the site.  
     ![alt text](readme/images/typography.png)
 
-    - I also used [Fontawesome](https://fontawesome.com/) to embed the fire icons,  to help emphasise important elements of the site, and to help with generating a positive emotional response with the site users, and for the favicon image, added to the top of all the site's pages via the head element of the HTML to help with the User Experience & create a professional feel when browsing
-
+    - I also used [Fontawesome](https://fontawesome.com/) to embed the fire icons,  to help emphasise important elements of the site, and to help with generating a positive emotional response with the site users, and for the favicon, added to the top of all the site's pages via the head element of the HTML to help with the User Experience & create a professional feel when browsing:
+    
     ![alt text](readme/images/favicon.png)
 
 - #### Imagery
     - The site is lighter on imagery as it is primarily a calculation engine - however the the hero image is used on all four pages of the site and helps grab the users initial attention before allowing them focus on the content, whilst also being orientated towards the overall site theme of healthy eating. The imagehas a relatively dark background which helps with ensuring a high contrast ratio for the foreground text throughout the site
 
-
     ![alt text](assets/images/home1.jpg)
 
     - At all times I have ensured that foreground information and content is never distracted by this background imagery by using opacity setting on the color palettes. 
-    - The imagery is fully detailed in the Credits section, and is primarily sourced from both [Pexels](pexel.com) and [Pixabay](pixabay.com)
+    - The imagery is fully detailed in the Credits section, and is primarily sourced from [Pixabay](pixabay.com)
         
 
 ## Features
@@ -194,15 +193,15 @@ The first four Planes of UX enabled the Surface Plane to take shape in terms of 
 
 **Header:** 
 
-The header is common to all pages, and contains a simple blue border with white borders consistent with the site's design, against which the CalorieCulator logo is set. The header is positioned to remain visible when scrolling down the page on smaller displays.
+The header is common to all pages, and contains a simple Yale Blue background with white borders consistent with the site's design, against which the CalorieCulator logo is set. The header is positioned to remain visible when scrolling down the page on smaller displays.
 
 ![alt text](readme/images/header.png)
 
 **Responsive Navigation Bar:** 
 
-The Nav bar contains links to all four site pages, and contains a highlight to both show the user which page they are currently on, as well as highlighting when the user scrolls over a clickable link. The Nav bar is also fully responsive from ultra-wide down to mobile device screen sizes below 300 pixels in width, and is positioned to disappear off the page when users scroll down, to help maximise screen content on smaller devices.
+The Nav bar contains links to all four site pages, and contains a highlight to both show the user which page they are currently on, as well as highlighting when the user scrolls over a clickable link. The Nav bar is also fully responsive from ultra-wide down to mobile device screen sizes below 300 pixels in width, and is positioned to disappear off the page when users scroll down, to help maximise viewable screen content on smaller devices.
 
-As detailed in the scope section above, the Nav bar feature also acts as a control over the site flow - using javascript to restrict the user's ability to access downstream calculations without having first completed the pre-requisite site sections. Specifically - via hiding the macro-mix and meal plan pages until the required calorie calculations have been completed by the user
+As detailed in the scope section above, the Nav bar feature also acts as a flow-control feature over the site content - using javascript to restrict the user's ability to access downstream calculations without having first completed the pre-requisite site sections. Specifically - via hiding the macro-mix and meal plan pages until the required calorie calculations have been completed by the user
 
 ![alt text](readme/images/navbar.png)
 
@@ -214,7 +213,7 @@ The site footer contains the CalorieCulator logo, as well as clickable links to 
 
 **Page Titles:** 
 
-Each page contains a header, which either welcomes the user (Home Page) or gives the user direction and instruction on the function of the current page (Calorie Calculation, Macro-Mix, and Meal Plan pages). The Site headers are set against a black background, with white text and white borders to ensure a high contrast ratio, promote consistency in the look & feel of the site across pages, and to help avoid the user becoming disorientated as they anvigate the site flow & functionality. For consistency & readability, the same format is used to display the user's PDCT on the calorie caluclation page and the macro-mix pages.
+Each page contains a header, which either welcomes the user (Home Page) or gives the user direction and instruction on the function of the current page (Calorie Calculation, Macro-Mix, and Meal Plan pages). The Site headers are set against a black background, with white text and white borders to ensure a high contrast ratio, promote consistency in the look & feel of the site across pages, and to help avoid the user becoming disorientated as they navigate the site flow & functionality. For consistency & readability, the same format is used to display the user's PDCT on the calorie caluclation page and the macro-mix pages.
 
 ![alt text](readme/images/page-titles.png)
 
@@ -265,7 +264,7 @@ Activity-Level check modal:
 
 **Calculation Buttons:** 
 
-The site features four calculation/instruction buttons at various points - each of which trigger Javascript to perform certain tasks & interactivity. 
+The site features five calculation and instruction buttons at various points - each of which trigger Javascript to perform certain tasks & interactivity. 
 
 The Calorie Calculation page contains a "Calculate My PDCT" button - triggering the Javascript PDCT calculation function & output storage via an event listener, programmed on script.js.  
 
@@ -279,7 +278,7 @@ This page additionally contains a button which is programmed to be hidden until 
 
 ![alt text](readme/images/macro-button-2.png)
 
-On the Meal Generation page, the first clickable button gives the user the option to "select all" available foods from each food group. This is in consideration of the potential time to be saved for most users, and will save on mouse clicks/screen taps in selecting multiple foods. I have used Javascript to program the instructions to select all the input boxes when the button is clicked, as well as to unhide the "generate meals" button (covered next below)
+On the Meal Generation page, the first clickable button gives the user the option to "select all" available foods from each food group. This is in consideration of the potential time to be saved for most users, and will save on mouse clicks/screen taps in selecting multiple foods, whic also carries an ergonomic benefit. I have used Javascript to program the instructions to select all the input boxes when the button is clicked, as well as to unhide the "generate meals" button (covered next below)
 
 ![alt text](readme/images/selectall.png)
 
@@ -314,6 +313,8 @@ Each food within each macronutrient category then has a checkbox which allows th
 The final feature on the meal-generation page is the output display which houses the randomly generated meal plans for each meal - this table is hidden via javascript until the user has completed the pre-requisite activities of confirming their food selections from each macronutrient group, and will continuosly update each time the user clicks to generate a meal plan.
 
 The table is formatted consistently with the site's color palette & previous site tables, and displays a breakdown for the user of some meal plan ideas across breakfast, lunch, and dinner, with one food per macronutrient category - and the actual meal plan generation is triggered by the "generate" button covered in the previous section above.
+
+From a flow-control perspective, the table will remain hidden via Javascript & CSS until the pre-requisite conditions have been met by the user:
 
 ![alt text](readme/images/meal-output.png)
 
@@ -366,7 +367,7 @@ Additionally I tested the site on different devices, operating systems and form 
 ![alt text](readme/images/ipad.png)
 
 ### **HTML Testing**
-During the testing phase I used the W3C Validator to confirm that all HTML code was error free & functioned as expected - the only warnings from the validation were related to articles & sections without headings - which are acceptable in this context as they are used in place of divs when working with flex in HTML to optimise the site layout
+During the testing phase I used the W3C Validator to confirm that all HTML code was error free & functioned as expected - the only warnings from the validation were related to articles & sections without headings - which are acceptable in this context as they are used in place of divs from a semantic perspective and when working with flex in HTML to optimise the site layout
 
 **Home Page:**
 
@@ -385,8 +386,8 @@ During the testing phase I used the W3C Validator to confirm that all HTML code 
 ![alt text](readme/images/mealplans-html-validation.png)
 
 ### CSS Testing
-- The CSS Jigsaw Validator was used to confirm that the CSS code was error free & functioned as expected.
-- As my CSS Code was contained in a single stylesheet (style.css) - I was able to validate the full website's styling via one direct input
+- The CSS Jigsaw Validator was used to confirm that the CSS code was error free & functioned as expected, the two warning are generic in relation to importation of stylesheets and are of no impact to the site.
+- My CSS Code was contained in a single stylesheet (style.css) so I was able to validate the full website's styling via one direct input
 
 ![alt text](readme/images/css-validation.png)
 
@@ -407,7 +408,7 @@ I used the Jshint.com Javascript validation service to validate all of the site'
 ![alt text](readme/images/meals-js-validation.png)
 
 ### Accessibility Testing
-The DevTools suite, and Lighthouse were used to audit the site's accessibility and found the only accessiblity deficiencies in the site were driven by Search Engine Optimisation 
+The DevTools suite, and Lighthouse were used to audit the site's accessibility and found the only initial accessiblity deficiencies in the site were driven by Search Engine Optimisation 
 
 The **pre-SEO adjusted** Lighthouse scores (with SEO deficiency) are shown below for reference
 
