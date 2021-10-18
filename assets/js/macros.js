@@ -1,11 +1,12 @@
 /* jshint esversion: 8 */
 
-// Set a variable equal to the DOM element button with id "carry-pdct" 
+// Set variable equal to the DOM element button with id "carry-pdct" 
 let carryPdct = document.getElementById("carry-pdct");
 
-// Attach an event listener to the variable, to run function "importPdct" when a "click" event occurs
+// Attach event listener to the variable, to run function "importPdct" when a "click" event occurs
 carryPdct.addEventListener("click", importPdct);
 
+// Hide the "choose-macro" table until PDCT has been imported
 let macroSplitDisplay = document.getElementById("choose-macro");
 macroSplitDisplay.classList.add("hide");
 
@@ -61,7 +62,7 @@ appropriate macronutrient split in each case*/
 function splitMacros(event) {
     // Prevent default submission of form when button is clicked
     event.preventDefault();
-
+// Keep havbar link to next page, next step button, and macro display table hidden until pdct is present in local storage
     if (localStorage.getItem("pdct")) {
         linkMeals.classList.remove("hide");
         toFinalStepBtn.classList.remove("hide");

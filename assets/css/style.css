@@ -116,7 +116,7 @@ a {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height:10vh;
+    height: 10vh;
     text-align: center;
 }
 
@@ -132,8 +132,8 @@ with varying content depending on page */
     background: black;
     min-width: 280px;
     margin-bottom: 25px;
-    padding-left:15px;
-    padding-right:15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* Media query to aid presentation of main logo on smaller screen sizes */
@@ -377,9 +377,8 @@ footer {
 /* setting flex display properties for overall form container main element within which the PDCT data entry occurs */
 .formcontainer {
     display: flex;
-    /* flex-wrap: wrap; */
     flex-direction: column;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
     color: white;
     margin-top: 15px;
@@ -443,8 +442,8 @@ parent container using flex */
 }
 
 select {
-    height:23px;
-    max-width:150px;
+    height: 23px;
+    max-width: 150px;
 }
 
 /* Setting styling for PDCT Display Box to display user's PDCT after calculation*/
@@ -457,7 +456,7 @@ select {
     color: white;
     background: black;
     width: 280px;
-    padding-left:15px
+    padding-left: 15px
 }
 
 /* Media queries to aid layout of pdct-section and the form container on screens smaller than 400px */
@@ -490,7 +489,7 @@ select {
     display: flex;
     align-items: flex-start;
     padding: 1px;
-    width:90vw;
+    width: 90vw;
 }
 
 /* Styling for id macros-box - this triggers javascript to import  the user's PDCT from Local Storage when they click */
@@ -560,9 +559,9 @@ the user's PDCT and macro split combination */
     justify-content: flex-start;
     align-items: center;
     margin-right: 10px;
-    /* width:90vw; */
 }
 
+/* Media queries for responsivity on macros page */
 @media screen and (max-width:950px) {
     #macro-step2 {
         width: 90vw;
@@ -586,10 +585,9 @@ the user's PDCT and macro split combination */
     #macro-container {
         justify-content: center;
     }
-
 }
 
-/* Adding header to  table displaying user's macro-nutrient split applied to their PDCT */
+/* Adding header to table displaying user's macro-nutrient split applied to their PDCT */
 #yourmacros {
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
@@ -649,7 +647,7 @@ from which the user can select/unselect when creating their meal plans */
 p {
     padding-left: 5px;
     text-align: center;
-    
+
 }
 
 /* Align the headers of each food choice list towards the left of the fieldsets via legend text-alignment */
@@ -706,7 +704,6 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
 
 /* Applying corrective styles to the meal generator page container to aid with page flow and presentation*/
 #generate-container {
-    /* width:95vw; */
     display: flex;
     justify-content: space-around;
     margin-bottom: 25px;
@@ -744,18 +741,19 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
 }
 
 /* Addition of modals for error messages */
+/* Credits - W3Schools Modal tutorial - see linked in readme */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 3; /* Sit on top */
+    display: none; /* Keep hidden by default */
+    position: fixed; /* Stay fixed in place on page */
+    z-index: 3; /* Pull to front of display */
     padding-top: 35vh; /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100%; /* Ensure full width of screen*/
+    height: 100%; /* Ensure Full height of screen */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0); /* Fallback background color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity for background */
 }
 
 /* Modal Content */
@@ -765,20 +763,23 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    color: #074A88;    
+    color: #074A88;
 }
 
+/* Centering content in modal paragraphs for readability & responsivity */
 .modal-content p {
     text-align: center;
 }
-/* The Close Button */
+
+/* Stylings for the "Close" Button  on modals*/
 .close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
-    font-weight: bold;    
+    font-weight: bold;
 }
 
+/* Display cursor change when user hovers over close button to improve UX */
 .close:hover,
 .close:focus {
     color: #000;
@@ -786,10 +787,12 @@ setting backgrounds to opaque black to allow the fonts to stand out and be easil
     cursor: pointer;
 }
 
+/* Pushing activity Modal to behind prior fields to appear in sequence to the user */
 #activityModal {
     z-index: 2;
 }
 
+/* removing padding from final site button to keep instruction box sizing consistent*/
 #selectAll {
     margin-top: 5px;
 }
