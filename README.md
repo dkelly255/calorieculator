@@ -1,4 +1,4 @@
-# ![alt text](readme/logo.png)
+# ![alt text](readme/images/logo.png)
 
 ## Introduction
 - CalorieCulator is a lifestyle improvement site allowing users to calculate a personalised daily calorie target, apply a range of Macronutrient options, and generate sample meal plans
@@ -6,7 +6,7 @@
 - The next step is to ask the user to choose their macronutrient goals from a list of three options - when combined with the calorie output from step 1, this will allow Javascript to calculate a simple personalised protein/carb/fat macronutrient split for the user
 - Finally the site will show the user a list of common foods per macronutrient category - the user will select/unselect their preferences & the site will use the list to generate simple meal plan ideas that fit within the user's Calorie & Macro calculations, generating combinations of food options from each category's inventory of foods to provide variety 
 
-![alt text](readme/am-i-responsive.png)
+![alt text](readme/images/am-i-responsive.png)
 
 ## User Experience
 
@@ -24,11 +24,11 @@ The Site Scope is informed by the Strategy above, in terms of the Functional Spe
 - The site's scope encompasses the informational benefits of choosing to measure and control caloric intake, set against background images to help a user visually internalise aspects of the activity, as well as three interactive pages to allow the user calculate their calorie targets, macronutrient splits, and meal plans
 - I have also demarcated the original possible list of site scope into **"existing features"** and **"features yet to implement"** - with the former containing the final features of the live site in the spirit of ensuring a Minimum Viable Product (MVP) that would meet project deadlines
 
-To ensure control of the site scope my overall Project Management approach was to use a constantly evolving personal issue & item [Tracking File](assets/documents/scope-tracker.docx)
+To ensure control of the site scope my overall Project Management approach was to use a constantly evolving personal issue & item [Tracking File](readme/documents/scope-tracker.docx)
 
 This was simply a very basic Microsoft Word document which I kept live and regularly added to/deleted from as the project scope evolved - I found this helped in bringing the project scope through the development process and to identify and avoid issue such as scope creep which may otherwise been detrimental to the User Experience. 
 
-The original document is included in the repository for context, and can be downloaded by [Clicking Here](assets/documents/scope-tracker.docx) 
+The original document is included in the repository for context, and can be downloaded by [Clicking Here](readme/documents/scope-tracker.docx) 
 
 ### **Structure**
 The site is structured via a 4 page layout, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow - with access controls around the third and fourth pages, to ensure a user cannot prematurely attempt downstream calculations minimising the potential for errors/logic clashes. The four pages map as follows:
@@ -56,31 +56,31 @@ To drive the early site interface & navigvation design efforts, I am using wiref
 
 #### *Site Wireframe - Original Skeleton Concept:*
 
-[Click here](assets/documents/calculations-wireframe.xlsx) to view & download original Excel File - snapshot below:
+[Click here](readme/documents/calculations-wireframe.xlsx) to view & download original Excel File - snapshot below:
 
-![alt text](readme/site-plan.png)
+![alt text](readme/images/site-plan.png)
 
 The full original document is also linked above downloadable from the repository should there be a need to dive down further into the detailed formulas & mechanics originally put together as a guide:
 
 *Individual page wireframes*:
 
-[Click here](assets/documents/site-wireframe.pptx) to view & download original Powerpoint File - snapshots below:
+[Click here](readme/documents/site-wireframe.pptx) to view & download original Powerpoint File - snapshots below:
 
 *Home Page:*
 
-![alt text](readme/home.png)
+![alt text](readme/images/home.png)
 
 *Calorie Calculation Page:*
 
-![alt text](readme/calorie-calculation.png)
+![alt text](readme/images/calorie-calculation.png)
 
 *Macro Mix Page HTML:*
 
-![alt text](readme/macros.png)
+![alt text](readme/images/macros.png)
 
 *Meal Planning Page HTML:*
 
-![alt text](readme/planner.png)
+![alt text](readme/images/planner.png)
 
 #### *Javascript Skeleton:*
 
@@ -170,10 +170,10 @@ The first four Planes of UX enabled the Surface Plane to take shape in terms of 
     - I used the [Coolors](https://coolors.co) color consultation website to generate a [color palette](https://coolors.co/074a88-ffffff-000000) to underpin the content of the site
     - This consists of [Yale Blue](https://coolors.co/074a88-ffffff-000000) (#074A88) and [Black](https://coolors.co/074a88-ffffff-000000) (#000000) backgrounds and highlights behind [White](https://coolors.co/074a88-ffffff-000000) (#FFFFFF) text and borders to ensure sufficient contrast, and that foreground text is never distracted by background imagery
 
-    ![alt text](readme/color-palette.png)
+    ![alt text](readme/images/color-palette.png)
 - #### Typography
     - I chose the [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserrat) font to aid readability & help promote a positive emotional response from the external users of the site.  
-    ![alt text](readme/typography.png)
+    ![alt text](readme/images/typography.png)
 
     - I also used [Fontawesome](https://fontawesome.com/) to embed the fire icons,  to help emphasise important elements of the site, and to help with generating a positive emotional response with the site users, and for the favicon image, added to the top of all the site's pages via the head element of the HTML to help with the User Experience & create a professional feel when browsing
 
@@ -194,7 +194,7 @@ The first four Planes of UX enabled the Surface Plane to take shape in terms of 
 
 The header is common to all pages, and contains a simple blue border with white borders consistent with the site's design, against which the CalorieCulator logo is set. The header is positioned to remain visible when scrolling down the page on smaller displays.
 
-![alt text](readme/header.png)
+![alt text](readme/images/header.png)
 
 **Responsive Navigation Bar:** 
 
@@ -202,19 +202,19 @@ The Nav bar contains links to all four site pages, and contains a highlight to b
 
 As detailed in the scope section above, the Nav bar feature also acts as a control over the site flow - using javascript to restrict the user's ability to access downstream calculations without having first completed the pre-requisite site sections. Specifically - via hiding the macro-mix and meal plan pages until the required calorie calculations have been completed by the user
 
-![alt text](readme/navbar.png)
+![alt text](readme/images/navbar.png)
 
 **Footer:** 
 
 The site footer contains the CalorieCulator logo, as well as clickable links to various external Social Media sites where users can connect. The links will always open in a new tab, and the footer is fully resposive using media queries from large screens down to small mobile devices. It contains a combination of Yale blue and black backgrounds, with white text and borders to ensure high contrast ratios and for consistency with the site's design & color scheme.
 
-![alt text](readme/footer.png)
+![alt text](readme/images/footer.png)
 
 **Page Titles:** 
 
 Each page contains a header, which either welcomes the user (Home Page) or gives the user direction and instruction on the function of the current page (Calorie Calculation, Macro-Mix, and Meal Plan pages). The Site headers are set against a black background, with white text and white borders to ensure a high contrast ratio, promote consistency in the look & feel of the site across pages, and to help avoid the user becoming disorientated as they anvigate the site flow & functionality. For consistency & readability, the same format is used to display the user's PDCT on the calorie caluclation page and the macro-mix pages.
 
-![alt text](readme/page-titles.png)
+![alt text](readme/images/page-titles.png)
 
 **Navigation Buttons:** 
 
@@ -224,13 +224,13 @@ Similar to the Nav bar feature, the Navigation buttons also act as a controls ov
 
 This is achieved via Javascript event listeners calibrated to unhide the "Next Step" buttons on both the calorie calculation, and macro-mix pages, only when the required click events or local storage entries are present - signifying the availability of the information required for error-free functioning of the downstream pages. 
 
-![alt text](readme/navbutton.png)
+![alt text](readme/images/navbutton.png)
 
 **Calorie Calculation Form:** 
 
 The Calorie Calculation form takes inputs from the user via HTML data entry fields allowing Javascript to use these inputs as variables in a pre-determined set of formulas, and returning a personalised calorie target for the user. The form is set against a dark background with slight transparency, to ensure foreground text is not distracted by the background imagery, and features three numeric input fields for age, weight & height, as well as two drop down menus for gender and activity level selection. Lastly, the form also contains a calculation button feature, further detailed below
 
-![alt text](readme/calorie-form.png)
+![alt text](readme/images/calorie-form.png)
 
 **Data-entry Modals**
 
@@ -242,23 +242,23 @@ The modals will trigger when a field has a numeric value outside a pre-defined r
 
 Age check modal:
 
-![alt text](readme/age-modal.png)
+![alt text](readme/images/age-modal.png)
 
 Weight check modal:
 
-![alt text](readme/weight-modal.png)
+![alt text](readme/images/weight-modal.png)
 
 Height check modal:
 
-![alt text](readme/height-modal.png)
+![alt text](readme/images/height-modal.png)
 
 Gender check modal:
 
-![alt text](readme/gender-modal.png)
+![alt text](readme/images/gender-modal.png)
 
 Activity-Level check modal:
 
-![alt text](readme/activity-modal.png)
+![alt text](readme/images/activity-modal.png)
 
 
 **Calculation Buttons:** 
@@ -267,23 +267,23 @@ The site features four calculation/instruction buttons at various points - each 
 
 The Calorie Calculation page contains a "Calculate My PDCT" button - triggering the Javascript PDCT calculation function & output storage via an event listener, programmed on script.js.  
 
-![alt text](readme/calculate-button.png)
+![alt text](readme/images/calculate-button.png)
 
 The Macro-mix page contains a "Begin - Import My PDCT" button - triggering Javascript to get the previously calculated PDCT from local storage & display for the user in preparation for the application of the Macronutrient split options to follow
 
-![alt text](readme/macro-button-1.png)
+![alt text](readme/images/macro-button-1.png)
 
 This page additionally contains a button which is programmed to be hidden until the user has selected a Macronutrient split option, when the user has selected an option, Javascript will use CSS attributes & the DOM model to make the button visible & clickable for the user to calculate & display their personal macro split
 
-![alt text](readme/macro-button-2.png)
+![alt text](readme/images/macro-button-2.png)
 
 On the Meal Generation page, the first clickable button gives the user the option to "select all" available foods from each food group. This is in consideration of the potential time to be saved for most users, and will save on mouse clicks/screen taps in selecting multiple foods. I have used Javascript to program the instructions to select all the input boxes when the button is clicked, as well as to unhide the "generate meals" button (covered next below)
 
-![alt text](readme/selectall.png)
+![alt text](readme/images/selectall.png)
 
 Lastly, the final calculate button is on the Meal Plan Generator page, where the user can click a button after selecting their desired food choices, to trigger the generation of meal plan ideas. This button is also programmed to be hidden until the user has selected at least one food from each group - to prevent any calculation errors and maintain positive User Experience
 
-![alt text](readme/meal-button.png)
+![alt text](readme/images/meal-button.png)
 
 **Macronutrient Split Option Display/Selector**
 
@@ -291,13 +291,13 @@ The user is presented with three common macronutrient split options via this fea
 
 Upon the selection of a split option, a button will appear, allowing the user to click to apply the pre-defined split to their PDCT
 
-![alt text](readme/macro-display.png)
+![alt text](readme/images/macro-display.png)
 
 **Personal Macro Calorie Allocation table**
 
 The final feature on the macros page is a table to display the user's PDCT allocated according to their chosen Macronutrient mix. This table is formatted consistently and uses the same color palette as the rest of the site, and will also remain hidden via Javascript & CSS until pre-requisite requirements have been completed by the user from a flow-control and UX perspective: 
 
-![alt text](readme/personal-macros.png)
+![alt text](readme/images/personal-macros.png)
 
 **Food Selection Tables**
 
@@ -305,7 +305,7 @@ This feature allows the user to select/de-select a range of food for inclusion/e
 
 Each food within each macronutrient category then has a checkbox which allows the user to specifiy their individual personalised choices, to be fed as inputs to the random meal generator, and is controlled by a Javascript function ensuring meal generation cannot be triggered until sufficient food selections have been made by the user. The Select All button helps save time in circumstances where a user may wish to pick many/all foods from the options.
 
-![alt text](readme/food-selection.png)
+![alt text](readme/images/food-selection.png)
 
 **Meal-Plan Generator Output Display**
 
@@ -313,7 +313,7 @@ The final feature on the meal-generation page is the output display which houses
 
 The table is formatted consistently with the site's color palette & previous site tables, and displays a breakdown for the user of some meal plan ideas across breakfast, lunch, and dinner, with one food per macronutrient category - and the actual meal plan generation is triggered by the "generate" button covered in the previous section above.
 
-![alt text](readme/meal-output.png)
+![alt text](readme/images/meal-output.png)
 
 ### Features Left to implement:
 
@@ -334,70 +334,70 @@ I completed testing of the website pages in multiple broswers: Chrome, Firefox, 
 
 **Google Chrome:**
 
-![alt text](readme/chrome.png)
+![alt text](readme/images/chrome.png)
 
 **Microsoft Edge:**
 
-![alt text](readme/edge.png)
+![alt text](readme/images/edge.png)
 
 **Firefox:**
 
-![alt text](readme/ffox.png)
+![alt text](readme/images/ffox.png)
 
 **Safari:**
 
-![alt text](readme/safari.png)
+![alt text](readme/images/safari.png)
 
 ### **Device Testing**
 Additionally I tested the site on different devices, operating systems and form factors - physically testing on Desktop (Windows) Ipad Tablet (IOS), and Galaxy Note 10 Phone (Android), and virtually testing multiple form factors via the dev tools auditing suite:
 
 - **Android Galaxy Note 10 (Phone):**
 
-![alt text](readme/note10.png)
+![alt text](readme/images/note10.png)
 
 - **Windows 10 (Desktop):**
 
-![alt text](readme/windows-pc.png)
+![alt text](readme/images/windows-pc.png)
 
 - **Apple Ipad (Tablet):**
 
-![alt text](readme/ipad.png)
+![alt text](readme/images/ipad.png)
 
 ### **HTML Testing**
 During the testing phase I used the W3C Validator to confirm that all HTML code was error free & functioned as expected - the only warnings from the validation were related to articles & sections without headings - which are acceptable in this context as they are used in place of divs when working with flex in HTML to optimise the site layout
 
 **Home Page:**
 
-![alt text](readme/home-html-validation.png)
+![alt text](readme/images/home-html-validation.png)
 
 **Calorie Calculation Page:**
 
-![alt text](readme/calories-html-validation.png)
+![alt text](readme/images/calories-html-validation.png)
 
 **Macro Mix Page HTML:**
 
-![alt text](readme/macros-html-validation.png)
+![alt text](readme/images/macros-html-validation.png)
 
 **Meal Planning Page HTML:**
 
-![alt text](readme/mealplans-html-validation.png)
+![alt text](readme/images/mealplans-html-validation.png)
 
 ### CSS Testing
 - The CSS Jigsaw Validator was used to confirm that the CSS code was error free & functioned as expected.
 - As my CSS Code was contained in a single stylesheet (style.css) - I was able to validate the full website's styling via one direct input
 
-![alt text](readme/css-validation.png)
+![alt text](readme/images/css-validation.png)
 
 ### Javascript Testing
 
 I used the Jshint.com Javascript validation service to validate all of the site's Javascript, and confirmed that no errors or warnings were present per illustrations below:
 
 *script.js - javascript supporting calories.html:*
-![alt text](readme/script-js-validation.png)
+![alt text](readme/images/script-js-validation.png)
 *macros.js - javascript supporting macros.html:*
-![alt text](readme/macros-js-validation.png)
+![alt text](readme/images/macros-js-validation.png)
 *meals.js - javascript supporting mealplans.html:*
-![alt text](readme/meals-js-validation.png)
+![alt text](readme/images/meals-js-validation.png)
 
 ### Accessibility Testing
 The DevTools suite, and Lighthouse were used to audit the site's accessibility and found the only accessiblity deficiencies in the site were driven by Search Engine Optimisation 
@@ -406,37 +406,37 @@ The **pre-SEO adjusted** Lighthouse scores (with SEO deficiency) are shown below
 
 *Homepage Lighthouse Scores (pre-SEO adjustment):*
 
-![alt text](readme/home-lighthouse.png)
+![alt text](readme/images/home-lighthouse.png)
 
 *Calorie Calculation Page Lighthouse Scores (pre-SEO adjustment):*
 
-![alt text](readme/calories-lighthouse.png)
+![alt text](readme/images/calories-lighthouse.png)
 
 *Macro Split Page Lighthouse Scores (pre-SEO adjustment):*
 
-![alt text](readme/macros-lighthouse.png)
+![alt text](readme/images/macros-lighthouse.png)
 
 *Meal Generation Page Lighthouse Scores (pre-SEO adjustment):*
 
-![alt text](readme/meals-lighthouse.png)
+![alt text](readme/images/meals-lighthouse.png)
 
 After adding a description and keywords to the Head of each HTML page, the SEO scores were improved to 100%, leaving the final Lighthouse/Accesibilty scores per page below:
 
 *Homepage Lighthouse Scores (post-SEO adjustment):*
 
-![alt text](readme/post-seo-home.png)
+![alt text](readme/images/post-seo-home.png)
 
 *Calorie Calculation Page Lighthouse Scores (post-SEO adjustment):*
 
-![alt text](readme/post-seo-calories.png)
+![alt text](readme/images/post-seo-calories.png)
 
 *Macro Split Page Lighthouse Scores (post-SEO adjustment):*
 
-![alt text](readme/post-seo-macros.png)
+![alt text](readme/images/post-seo-macros.png)
 
 *Meal Generation Page Lighthouse Scores (post-SEO adjustment):*
 
-![alt text](readme/post-seo-meals.png)
+![alt text](readme/images/post-seo-meals.png)
 
 ### Resolved Bugs
 - Initially I found that my Javascript formulas were not working - however this was simply because I needed to add a script tag with a separate Javascript (.js) files for each HTML page and was easily resolved
@@ -445,15 +445,15 @@ After adding a description and keywords to the Head of each HTML page, the SEO s
 
 Protein Bug Example:
 
-![alt text](readme/generator-bug1-protein.png)
+![alt text](readme/images/generator-bug1-protein.png)
 
 Carbohydrate Bug Example:
 
-![alt text](readme/generator-bug1-carbs.png)
+![alt text](readme/images/generator-bug1-carbs.png)
 
 Fat Bug Example:
 
-![alt text](readme/generator-bug1-fat.png)
+![alt text](readme/images/generator-bug1-fat.png)
 
 I identified and solved this issue by removing the negative one adjustments from all sections of the function:
 
