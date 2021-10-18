@@ -24,9 +24,9 @@ The Site Scope is informed by the Strategy above, in terms of the Functional Spe
 - The site's scope encompasses the informational benefits of choosing to measure and control caloric intake, set against background images to help a user visually internalise aspects of the activity, as well as three interactive pages to allow the user calculate their calorie targets, macronutrient splits, and meal plans
 - I have also demarcated the original possible list of site scope into **"existing features"** and **"features yet to implement"** - with the former containing the final features of the live site in the spirit of ensuring a Minimum Viable Product (MVP) that would meet project deadlines
 
-To ensure control of the site scope my overall Project Management approach was to use a constantly evolving personal issue & item [Tracking File](readme/documents/scope-tracker.docx)
+To ensure control of the site scope my overall Project Management approach was to use a constantly evolving basic [Scope Tracking File](readme/documents/scope-tracker.docx)
 
-This was simply a very basic Microsoft Word document which I kept live and regularly added to/deleted from as the project scope evolved - I found this helped in bringing the project scope through the development process and to identify and avoid issue such as scope creep which may otherwise been detrimental to the User Experience. 
+This was simply a very basic Microsoft Word document which I kept live and regularly added to/deleted from as the project scope evolved - I found this helped in bringing the project scope through the development process and to identify and avoid issues such as scope creep which may otherwise been detrimental to the User Experience. 
 
 The original document is included in the repository for context, and can be downloaded by [Clicking Here](readme/documents/scope-tracker.docx) 
 
@@ -116,21 +116,21 @@ B. Macro Mix Page
     
     5. Option 1: Standard Split
 
-        Protein = PDCT * 20%
-        Carbohydrate = PDCT * 50%
+        Protein = PDCT * 25%
+        Carbohydrate = PDCT * 45%
         Fat = PDCT * 30%
 
     6. Option 2: High Protein
 
-        Protein = PDCT * 45%
-        Carbohydrate = PDCT * 30%
+        Protein = PDCT * 40%
+        Carbohydrate = PDCT * 35%
         Fat = PDCT * 25%
 
-    7. Option 3: High Carbohydrate
+    7. Option 3: Low Carbohydrate
 
-        Protein = PDCT * 20%
+        Protein = PDCT * 35%
         Carbohydrate = PDCT * 10%
-        Fat = PDCT * 70%
+        Fat = PDCT * 55%
 
 C. Meal Planner Page
 
@@ -148,7 +148,7 @@ C. Meal Planner Page
     10. Foods Lookup Index (Static)
 
         Pre-populate with:
-        - a fixed index (currently 1 - 5, can be expanded to provide variety)
+        - a fixed index (currently 1 - 6, can be expanded to provide variety)
         - food name (e.g. chicken for protein, rice for carbohydrate, cheese for fat etc)
         - estimated calories per gram (source from internet)
 
@@ -156,7 +156,7 @@ C. Meal Planner Page
 
         - An array of (foods) by (meals)
         - Each array element will contain
-            - Food name: a random number generated between 1-5 (or length of index in formula 10) and pulled from formula 10's index
+            - Food name: a random number generated between 1-6 (or length of index in formula 10) and pulled from formula 10's index
             - Meal name: the meal being planned (breakfast, lunch or dinner)
             - Calorie allowance: from formula 9
             - Quantity: of the food (in grams) required to meet the calorie per meal per macro, by dividing formula 9's output by the food's static calories per gram (lookup to formula 10 array)
@@ -176,6 +176,8 @@ The first four Planes of UX enabled the Surface Plane to take shape in terms of 
     ![alt text](readme/images/typography.png)
 
     - I also used [Fontawesome](https://fontawesome.com/) to embed the fire icons,  to help emphasise important elements of the site, and to help with generating a positive emotional response with the site users, and for the favicon image, added to the top of all the site's pages via the head element of the HTML to help with the User Experience & create a professional feel when browsing
+
+    ![alt text](readme/images/favicon.png)
 
 - #### Imagery
     - The site is lighter on imagery as it is primarily a calculation engine - however the the hero image is used on all four pages of the site and helps grab the users initial attention before allowing them focus on the content, whilst also being orientated towards the overall site theme of healthy eating. The imagehas a relatively dark background which helps with ensuring a high contrast ratio for the foreground text throughout the site
