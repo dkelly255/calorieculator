@@ -28,8 +28,6 @@ To ensure control of the site scope my overall Project Management approach was t
 
 This was simply a very basic Microsoft Word document which I kept live and regularly added to/deleted from as the project scope evolved - I found this helped in bringing the project scope through the development process and to identify and avoid issues such as scope creep which may otherwise been detrimental to the User Experience. 
 
-The original document is included in the repository for context, and can be downloaded by [Clicking Here](readme/documents/scope-tracker.pdf) 
-
 ### **Structure**
 The site is structured via a 4 page layout, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow - with access controls around the third and fourth pages, to ensure a user cannot prematurely attempt downstream calculations minimising the potential for errors/logic clashes. The four pages map as follows:
 
@@ -64,7 +62,7 @@ The full original document is also linked above downloadable from the repository
 
 *Individual page wireframes*:
 
-[Click here](readme/documents/site-wireframe.pdf) to view & download original Powerpoint File - snapshots below:
+[Click here](readme/documents/site-wireframe.pdf) to view & download a pdf of the original file - snapshots below:
 
 *Home Page:*
 
