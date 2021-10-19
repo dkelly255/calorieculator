@@ -24,11 +24,11 @@ The Site Scope is informed by the Strategy above, in terms of the Functional Spe
 - The site's scope encompasses the informational benefits of choosing to measure and control caloric intake, set against background images to help a user visually internalise aspects of the activity, as well as three interactive pages to allow the user calculate their calorie targets, macronutrient splits, and meal plans
 - I have also demarcated the original possible list of site scope into **"existing features"** and **"features yet to implement"** - with the former containing the final features of the live site in the spirit of ensuring a Minimum Viable Product (MVP) that would meet project deadlines
 
-To ensure control of the site scope my overall Project Management approach was to use a constantly evolving basic [Scope Tracking File](readme/documents/scope-tracker.docx)
+To ensure control of the site scope my overall Project Management approach was to use a constantly evolving basic [Scope Tracking File](readme/documents/scope-tracker.pdf)
 
 This was simply a very basic Microsoft Word document which I kept live and regularly added to/deleted from as the project scope evolved - I found this helped in bringing the project scope through the development process and to identify and avoid issues such as scope creep which may otherwise been detrimental to the User Experience. 
 
-The original document is included in the repository for context, and can be downloaded by [Clicking Here](readme/documents/scope-tracker.docx) 
+The original document is included in the repository for context, and can be downloaded by [Clicking Here](readme/documents/scope-tracker.pdf) 
 
 ### **Structure**
 The site is structured via a 4 page layout, with a header, navigation bar and footer common to all pages, to help the user traverse the site flow - with access controls around the third and fourth pages, to ensure a user cannot prematurely attempt downstream calculations minimising the potential for errors/logic clashes. The four pages map as follows:
@@ -64,7 +64,7 @@ The full original document is also linked above downloadable from the repository
 
 *Individual page wireframes*:
 
-[Click here](readme/documents/site-wireframe.pptx) to view & download original Powerpoint File - snapshots below:
+[Click here](readme/documents/site-wireframe.pdf) to view & download original Powerpoint File - snapshots below:
 
 *Home Page:*
 
