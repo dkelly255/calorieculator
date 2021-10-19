@@ -290,7 +290,7 @@ The user is presented with three common macronutrient split options via this fea
 
 Upon the selection of a split option, a button will appear, allowing the user to click to apply the pre-defined split to their PDCT
 
-![alt text](readme/images/macro-display.png)
+![alt text](readme/images/macro-display-table.png)
 
 **Personal Macro Calorie Allocation table**
 
